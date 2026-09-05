@@ -31,6 +31,9 @@
 \usepackage[numbers]{natbib}
 \usepackage{changes}
 \usepackage{xcolor}
+\usepackage{booktabs} % Required for professional table lines
+\usepackage{siunitx}  % Optional but highly recommended for numeric alignment
+
 %%%Author macros
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
 \tsc{WGM}
@@ -211,7 +214,7 @@
 	%EgyPLI \cite{r10}, Bdmedileaves \cite{r11}, Flowers \cite{r12} and Flowers Recognition
 	%KAGGLE dataset \cite{r13}. 
 	
-	\begin{enumerate}
+	\begin{itemize}
 		\item \textbf{EPLI}: EPLI (introduced as EgyPLI in \cite{r10}) contains 3,588 JPG images of size $256\times256$ pixels.  
 		There are images of 8 species including apple, berry, fig, guava, orange, plum, persimmon, and tomato. 
 		%, including both normal and diseased leaves. \zahid{are these are images of leaves or the fruits?} 
@@ -230,14 +233,32 @@
 		\item \textbf{KFLR}:  This kaggle dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
 		However, the kaggle version contains 4,242 JPG images of resulation of $320\times240$ pixels. 
 		\zahid{is this different than the above FLRS?}
-	\end{enumerate}
-
-	%\subsection{Dataset Distribution}	
+	\end{itemize}
 	
-	\subsection{Training Configuration}
+	\noindent
+	\textbf{Dataset preparation.} 
+	The BDML dataset is already splitted into training, validation and testing sets. We split the other three datasets into training, validation and test subsets with an approximate ratio of $80\%$, $10\%$ and $10\%$. 
+	Table \ref{tab:classwise_dataset_distribution} presents the class-wise training, validation, and test splits. 
+	\zahid{did you preserve the class distributions in the three splits?}
+		
+	\zahid{did you do this? or already in the sources?}
+	To simplify explainability and localization analysis, the test images have been manually annotated to generate corresponding JSON files. 
+	These JSON annotations describe the polygonal boundaries of the target leaf in each image. 
+	The JSON files have been converted into binary masks. 
+	Here, each mask represents only the target leaf region and excludes the background and other objects in the scene.
+	
+	\include{tables/tbl_dataset_distribution}
+	%\subsection{Dataset Distribution}	
+		
+	\subsection{Baseline models and evaluation metrics.}
+	
+	
+	\subsection{Training Configurations}
 	
 	\subsection{Classification Performance}
-	\subsection{Creating JSON files of test images }
+	%\subsection{Creating JSON files of test images }
+	% moved above in dataset prep. section
+	
 	\subsection{Adding Perturbations}
 	\subsubsection{Gaussian Blur}
 	\subsubsection{Gaussian Noise}
