@@ -251,7 +251,7 @@
 	%\subsection{Dataset Distribution}	
 		
 	\subsection{Baseline models and evaluation metrics.}
-	
+	TBD
 	
 	\subsection{Training Configurations}
 	
@@ -259,18 +259,38 @@
 	%\subsection{Creating JSON files of test images }
 	% moved above in dataset prep. section
 	
-	\subsection{Adding Perturbations}
-	\subsubsection{Gaussian Blur}
-	\subsubsection{Gaussian Noise}
-	\subsubsection{Brightness Adjustment}
-	% hue shift was 15, made it 10 as in code
-	\subsubsection{Hue Shift}	
-	% times 1 but here was 0.5
-	\subsubsection{Contrast Adjustment}
-	\subsubsection{Gamma Correction}
-	\subsubsection{Motion Blur}
-	\subsubsection{JPEG Compression}
-	\subsubsection{Random Occlusion}
+	\subsection{Perturbation methods}
+	To evaluate the robustness of the proposed framework under distribution shifts and common image corruptions, we have applied nine image perturbation methods to the test set. 
+	%As summarized in Table~\ref{tab:perturbations}, 
+	\zahid{if anything in the table is missing below, add it in the corresponding bullet}
+	%These perturbations simulate realistic degradations that may occur during image acquisition, compression, transmission, or environmental variation. 
+	The perturbation parameters have been fixed across all experiments to ensure reproducibility and enable fair comparisons among different CNN architectures. 
+	The details of the perturbations are given below: \zahid{missing references here. Add 1 or more references to papers applying these for the same reason? i.e., evaluation under purturbation}
+	
+	\begin{itemize}
+		\item \textbf{Gaussian Blur:} Applied using a $5 \times 5$ kernel to simulate the loss of fine spatial details caused by defocus or low-quality imaging conditions.
+		
+		\item \textbf{Gaussian Noise:} Additive Gaussian noise with zero mean and standard deviation 0.05 has been introduced to model sensor noise and random intensity fluctuations.
+		
+		\item \textbf{Brightness Adjustment:} Increased by adding a constant value of 0.2 to normalized pixel intensities, after which values have been clipped to the valid range $[0,1]$.
+		
+		% hue shift was 15, made it 10 as in code
+		\item \textbf{Hue Shift:} Hue values in the HSV color space have been shifted by 15 units while preserving the saturation and value channels, simulating color variations caused by illumination or camera characteristics.
+		
+		% times 1 but here was 0.5
+		\item \textbf{Contrast Adjustment:} Modified using mean-centered linear scaling: $ I' = (I - \mu_I)\times 0.5 + \mu_I$, where $I$ denotes the input image and $\mu_I$ represents the mean pixel intensity (computed per channel). 
+		The resulting values have been clipped to the range $[0,1]$.
+		
+		% its gamma = 1 in code, here was 2
+		\item \textbf{Gamma Correction:} Nonlinear illumination changes have been simulated using gamma correction: $I' = I^{2.0}$, where pixel intensities have been raised to the power of $\gamma = 2.0$.
+		
+		\item \textbf{Motion Blur:} Simulated using a $7 \times 7$ horizontal averaging kernel to emulate camera or object motion during image acquisition.
+		
+		\item \textbf{JPEG Compression:} Artifacts have been introduced by encoding and decoding the images with a quality factor of 30, simulating degradation due to lossy storage or transmission.
+		
+		\item \textbf{Random Occlusion:} A randomly positioned rectangular region corresponding to 20\% of the image height and 20\% of the image width has been masked by setting its pixel values to zero, thereby simulating partial object occlusion.
+	\end{itemize}
+	
 	
 	\subsection{Grad-CAM Visualization}
 	
