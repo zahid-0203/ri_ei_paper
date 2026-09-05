@@ -1,0 +1,296 @@
+%% 
+%% Copyright 2019-2024 Elsevier Ltd
+%% 
+%% This file is part of the 'CAS Bundle'.
+%% --------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.3c of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'CAS Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for cas-sc documentclass for 
+%% double column output.
+
+\documentclass[a4paper,fleqn]{cas-dc}
+
+
+% If the frontmatter runs over more than one page
+% use the longmktitle option.
+
+%\documentclass[a4paper,fleqn,longmktitle]{cas-sc}
+
+%\usepackage[numbers]{natbib}
+%\usepackage[authoryear]{natbib}
+%\usepackage[authoryear,longnamesfirst]{natbib}
+\usepackage[numbers]{natbib}
+\usepackage{changes}
+\usepackage{xcolor}
+%%%Author macros
+\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
+\tsc{WGM}
+\tsc{QE}
+%%%
+
+% Uncomment and use as if needed
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newdefinition{rmk}{Remark}
+%\newproof{pf}{Proof}
+%\newproof{pot}{Proof of Theorem \ref{thm}}
+
+\begin{document}
+	\let\WriteBookmarks\relax
+	\def\floatpagepagefraction{1}
+	\def\textpagefraction{.001}
+	
+	% Short title
+	\shorttitle{TI and RI for CNN Reliability Evaluation}    
+	
+	% Short author
+	\shortauthors{Mehedi et al}  
+	
+	% Main title of the paper
+	\title [mode = title]{Beyond Accuracy: Trustworthy Index and Robustness Index for Evaluating CNN Reliability}  
+	
+	% Title footnote mark
+	% eg: \tnotemark[1]
+	%\tnotemark[1] 
+	
+	% Title footnote 1.
+	% eg: \tnotetext[1]{Title footnote text}
+	%\tnotetext[1]{} 
+	
+	% First author
+	%
+	% Options: Use if required
+	% eg: \author[1,3]{Author Name}[type=editor,
+	%       style=chinese,
+	%       auid=000,
+	%       bioid=1,
+	%       prefix=Sir,
+	%       orcid=0000-0000-0000-0000,
+	%       facebook=<facebook id>,
+	%       twitter=<twitter id>,
+	%       linkedin=<linkedin id>,
+	%       gplus=<gplus id>]
+	
+	\author[1]{Ragib Mehedi}%[<options>]
+	\ead{ragib6627@gmail.com}
+	\cormark[1]
+	\credit{Conceptualization, Methodology, Software, Investigation, Formal analysis, Writing – Original Draft, Writing – Review \& Editing}
+	
+	\author[1]{Azmain Inquaid Haque}
+	\ead{azmaininquaidhaque@gmail.com}
+	\credit{Investigation, Data Curation, Software, Validation}
+	
+	\author[2]{Md. Nazmul Abdal}
+	\ead{nazmul.abdal@ulab.edu.bd}
+	\credit{Data Curation}
+	
+	
+	\author[1]{Abdullah Al Noman}
+	\ead{noman@cse.ku.ac.bd}
+	\cormark[1]
+	\credit{Supervision, Writing – Review \& Editing}
+	% Corresponding author indication
+	
+	
+	\author[1]{Md. Zahidul Islam}
+	\ead{zahid@cseku.ac.bd}
+	\credit{Supervision, Writing – Review \& Editing }
+	
+	\affiliation[1]{ organization={Computer Science and Engineering Discipline, Khulna University}, addressline={Sher-E-Bangla Rd}, city={Khulna}, country={Bangladesh} } 
+	\affiliation[2]{ organization={Department of Computer Science and Engineering, University of Liberal Arts Bangladesh}, city={Dhaka}, postcode={1207}, country={Bangladesh} }
+	
+	\cortext[1]{Corresponding author}
+	
+	% For a title note without a number/mark
+	%\nonumnote{}
+	
+	% Here goes the abstract
+	
+	% Define the command \mycom that takes 1 argument (#1) and makes it green
+	\newcommand{\zahid}[1]{{\color{green}#1}}
+	
+	\begin{abstract}
+	TBD
+	\end{abstract}
+	
+	% Use if graphical abstract is present
+	%\begin{graphicalabstract}
+	%\includegraphics{}
+	%\end{graphicalabstract}
+	
+	% Research highlights
+	%\begin{highlights}
+	%	TBD
+	%\end{highlights}
+	
+	
+	% Keywords
+	% Each keyword is seperated by \sep
+	\begin{keywords}
+		Explainable AI (XAI), Trustworthiness, Robustness, CNN, Grad-CAM, Perturbation Analysis, Plant Leaf Classification
+	\end{keywords}
+	
+	\maketitle
+	
+	\section{Introduction}
+	\label{sec:introduction}
+	\zahid{\textbf{We need to explain CNN reliability and XAI from title. }}
+	
+	Despite excellent accuracy, a model may not be reliable. 
+	Explainability methods, such as Grad-CAM, show that a model may rely mainly on background and irrelevant regions instead of focused objects \cite{r5, r6, r7}. 
+	This raises questions about reliability and trustworthiness. \zahid{we are not working to imrpove relaiability??}
+	
+	\zahid{Traditional CNN model evaluation meausres fail to indicate the reliability of the correspoinding model.}
+	
+	To address this limitation (\zahid{we did not say the limitation yet}), we have proposed two novel evaluation metrics: Trustworthy Index (TI) and Robustness Index (RI) using explainable AI (XAI) methods. 
+	We highlight the importance of object reliability (\zahid{is this correct? or model reliability?}) as well as accuracy. 
+	TI integrates accuracy and object reliability (\zahid{??}) in clean images. 
+	RI measures the robustness under various perturbations. \zahid{need to define robustness with ref}
+	Robustness measures how close the model's accuracy and explanations (object reliance) under perturbation remain to the outputs on clean images (\zahid{good but not clear - remember if you have to think to understand a sentence - you should probably rewrite it!}). 
+	
+	The proposed measures TI and RI rely on the fact that \textit{how much a model's predictions rely on real objects instead of the background}. 
+	We introduce a new score named LMOS (Localization Mask	Overlap Score) to indicate this fact. 
+	
+	
+	As red and yellow regions of the Grad-CAM visualization have stronger influence than other regions for predictions, we consider them as decision-relevant. \zahid{why do we need this sentence?}
+	
+	LMOS defines when the model relies on something to make decisions, what ratio of that reliance falls on focus objects. \zahid{not clear}
+	
+	A model has high accuracy but low LMOS may be affected by shortcut learning, overfitting, bias, and reliance on background features. \zahid{can we show this - i.e., a model having high acc but low LMOS and has one or more of the mentioned problems?}
+	 \textbf{A model is trustworthy if it has high accuracy and high LMOS. 
+	 	Similarly, a model is considered robust under perturbations if it maintains high accuracy stability, and high LMOS stability under perturbations. }
+	
+	\zahid{need clear distinctions between EI and RI - what EI shows must be different than RI}
+	
+	Models with high TI is considered reliable as both the model accuracy and object reliance are high. 
+	Models with moderate to low TI means its accuracy or object focus, or both, are low and limited. 
+	
+	To evaluate the robustness of the models, we have applied nine perturbations (noise, blur, hue, occlusion, etc.) to the test images and then calculated accuracy and LMOS scores after each perturbation. 
+	
+	The mean LMOS stability under a perturbation has been obtained by averaging the image-wise LMOS stability values across all test samples. 
+	Then, ERI under a perturbation has been calculated as the mean of both stabilities. 
+	Finally, the mean ERI across all perturbations has been calculated and a ranking has been made according to the mean ERI. 
+	Like ETI, a model with hight ERI indicates that both its accuracy and object focus remain stable under the use of perturbations. 
+	A moderate/low ERI reveals that its accuracy, or focus on object, or both change with the use of perturbations.
+	
+	\textbf{Two questions that the proposed measures can answer - How trustworty a model is? Trustworty means - predictions are based on real objects in the images. How robust a model is? Robustness means - performance of the model will not degrade under purturbations. }
+	
+	\zahid{
+	To show in exp:
+	\begin{itemize}
+		\item Acc high but not relaiable - may be low robustness or predictions based on BG. 
+		\item a model having high acc but low LMOS and has one or more of the mentioned problems
+		\item A model is trustworthy if it has high accuracy and high LMOS - show this. Idea: models with high ACC an high LMOS making more predictions based on objects in images rather than BGs
+		\item Show LMOS still works with purturbations and ACC and other traditional measure fails. 
+		\item Justify distinctions between EI and RI
+		\item Show - traditional measures fail under purturbations but proposed measures hold. 
+	\end{itemize}
+	}
+	
+	\section{Problem Definition}
+	
+	\section{Related Works}
+	
+	
+	\section{System Architecture}
+	
+	
+	\section{Materials and Methods}
+	
+	\subsection{Dataset}
+
+	\subsection{Dataset Distribution}	
+	
+	\subsection{Training Configuration}
+	
+	\subsection{Classification Performance}
+	\subsection{Creating JSON files of test images }
+	\subsection{Adding Perturbations}
+	\subsubsection{Gaussian Blur}
+	\subsubsection{Gaussian Noise}
+	\subsubsection{Brightness Adjustment}
+	% hue shift was 15, made it 10 as in code
+	\subsubsection{Hue Shift}	
+	% times 1 but here was 0.5
+	\subsubsection{Contrast Adjustment}
+	\subsubsection{Gamma Correction}
+	\subsubsection{Motion Blur}
+	\subsubsection{JPEG Compression}
+	\subsubsection{Random Occlusion}
+	
+	\subsection{Grad-CAM Visualization}
+	
+	\subsection{Necessary Scores Definition}
+	\subsubsection{LMOS (Localization Mask Overlap Score) }
+	\subsubsection{Accuracy Stability }
+	\subsubsection{LMOS Stability Under Perturbations }
+	
+	\subsection{ETI, Explainable Trustworthy Index}
+	\subsubsection{Ablation Study}
+	
+	\subsection{Explainable Robustness Index (ERI)}
+	
+	\subsubsection{Ablation Study}
+
+
+	\section{Result and Discussion}
+	\subsection{Grad-CAM Visualization}
+	\label{sec:gradcam_visualization}
+	\subsubsection{Threshold Justification}
+	\label{sec:threshold_justification}
+	
+	\subsection{Explainable Trustworthiness Index (ETI)}
+	
+	\subsection{Explainable Robustness Index (ERI)}
+	\subsubsection{EgyPLI}
+	\subsubsection{BDMediLeaves}
+	\subsubsection{Flowers}
+	\subsubsection{Flowers Recognition KAGGLE Dataset}
+	
+	\subsection{Cross-Dataset Analysis}
+	
+	
+	\section{Limitations}
+	
+	\section{Future Work}
+	
+	
+	\section{Conclusion}     
+	\label{sec:conclusion}
+	
+	
+	
+	\section*{Data and Code availability}
+	
+	Supplementary code and data (including \texttt{.json} files and
+	\texttt{.keras} files) associated with this research are available at:
+	
+	\url{https://github.com/ragib1996/ETI_ERI}
+	
+	\printcredits
+	
+	
+	\section*{Acknowledgments}
+	
+	\section*{Disclosure statement}
+	
+	\section*{Funding}
+	
+	
+	%\bibliographystyle{cas-model2-names}
+	\bibliographystyle{ieeetr}
+	
+	% Loading bibliography database
+	\bibliography{cas-refs}
+	
+\end{document}
+
