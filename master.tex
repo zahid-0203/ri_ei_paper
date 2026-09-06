@@ -33,6 +33,7 @@
 \usepackage{xcolor}
 \usepackage{booktabs} % Required for professional table lines
 \usepackage{siunitx}  % Optional but highly recommended for numeric alignment
+\usepackage{amsmath}
 
 %%%Author macros
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
@@ -202,8 +203,6 @@
 	\section{Problem Definition}
 	%TBD
 	
-	\section{Related Works}
-	
 	
 	\section{System Architecture}
 	
@@ -247,19 +246,187 @@
 	The JSON files have been converted into binary masks. 
 	Here, each mask represents only the target leaf region and excludes the background and other objects in the scene.
 	
-	\include{tables/tbl_dataset_distribution}
+	\input{tables/tbl_dataset_distribution}
 	%\subsection{Dataset Distribution}	
 		
 	\subsection{Baseline models and evaluation metrics.}
 	TBD
 	
-	\subsection{Training Configurations}
-	
 	\subsection{Classification Performance}
 	%\subsection{Creating JSON files of test images }
 	% moved above in dataset prep. section
 	
+	\subsection{Implementation of the Proposed Measures}
+	 \noindent
+	 \textbf{Localization Mask Overlap Score (LMOS).} 
+	We have proposed LMOS to measure the consistency between model-generated explanations and ground-truth object regions. 
+	LMOS calculates how much a model focuses on true object regions for prediction.
+	
+	Let $H \in \mathbb{R}^{h \times w}$ denote the Grad-CAM heatmap generated from the last convolutional layer of a network. 
+	$H$ is resized to the model's input image size.  
+	The resized heatmap size is $299 \times 299$ for Xception, $224\times224$ for other models. A binary attention map is obtained from $H$ by thresholding:
+	%\begin{equation}
+	$$\hat H (i,j) = \mathbb{I}\left( \mathrm{Resize}(H)(i,j) > \tau \right)$$
+	%\end{equation}
+	where $\mathbb{I}(\cdot)$ is an indicator function and $\tau$ is the threshold \zahid{to or for??}. 
+	%We set $\tau=0.7$ as we consider only red and yellow pixels to calculate LMOS as those pixels are the most activated and decision-relevant for predictions. 
+	We set $\tau=0.7$ to restrict our LMOS calculations to red and yellow pixels, as the red and yelow pixels exhibit the highest activation levels in model predictions. 
+	Hence, $\hat{H}(i,j)$ is a binary mask representing the activated decision-relevant regions. 
+	
+	%Masks have been created from JSON files of test images and resized into the input image size (299*299 for Xception, 224*224 for others). 
+	% use h and w to express height and width every where
+	%
+	%Here, object pixel values are assigned 1, others 0. already said since it is binary
+	
+	The Localization Mask Overlap Score (LMOS) is defined as the proportion of activated decision-relevant regions inside the object region and the  total activated decision-relevant regions as:
+	%\begin{equation}
+	$$\mathrm{LMOS}  \frac{\sum_{i=1}^{H}\sum_{j=1}^{W} \hat{H}(i,j)\, M(i,j)} {\sum_{i=1}^{H}\sum_{j=1}^{W} \hat{H}(i,j)}$$
+	%\end{equation}
+	where $M \in \{0,1\}^{h \times w}$ denote the resized ground-truth binary segmentation mask.  
+	%We have derived the mean LMOS, L for all test images. 
+	\zahid{waht is L here?}
+	
+	\zahid{how do we get M???}
+	
+	\noindent
+	\textbf{Accuracy Stability.}
+	To evaluate performance robustness against input perturbations, we compute Accuracy Stability ($S_{\rm{acc}}$)  \zahid{if not introduced by you cite}, which measures the consistency between the classification accuracy on perturbed images and the baseline accuracy on clean test images.
+	
+	Let $acc_{\rm{clean}}$ denote the classification accuracy on the original test set and $acc_{\rm{perturbed}}$ denote the classification accuracy obtained on the test set after applying a specific perturbation $p$. 
+	The $S_{\rm{acc}}$ under a given perturbation, $p$ is defined as:
+	%begin{equation}
+	$$	S_{\mathrm{acc}}^{p} = 1 - \frac{|acc_{\mathrm{clean}} - acc_{\mathrm{perturbed}}|}
+		{acc_{\mathrm{clean}} + acc_{\mathrm{perturbed}} + \epsilon}$$
+	%\end{equation}
+	where $\epsilon$ is a small positive constant introduced to avoid division by zero error.
+	
+	A higher value of $S_{\mathrm{acc}}^p$ indicates that the model maintains its classification performance more consistently under the corresponding perturbed condition $p$. 
+	To obtain an overall measure of accuracy stability, the perturbation-specific stability scores are averaged across all $p \in P$ ($P$ is the set of all purturbation methods used in the experiments, see Section \ref{sec:perturbation_methods}) as:
+	
+	%\begin{equation}
+	$$\overline{S}_{\text{acc}} = \frac{1}{P} \sum_{p=1}^{P} S_{\text{acc}}^{p}$$
+	%\end{equation}
+	%where $S_{\text{acc}}^{(p)}$ denotes the accuracy stability under the $p$-th perturbation and $P$ is the total %number of evaluated perturbations. In this study, $P=9$.
+	
+	
+	
+	\subsubsection{LMOS Stability Under Perturbations }
+	LMOS Stability measures how closely the model's object reliance under perturbation remains to its object reliance on clean images.
+	To evaluate the robustness under input perturbations, we have measured the stability of LMOS when input images are perturbed.
+	
+	For each test sample, we have computed LMOS for both the original image and its perturbed version.  Let N be the number of test samples in a test set. Let $LMOS_{\text{clean}}$ denote the LMOS value computed from an original image and $LMOS_{\text{perturbed}}$ denote the LMOS value computed from the corresponding perturbed image.
+	
+	To quantify the consistency between these two values, we define the LMOS stability under a perturbation:
+	
+	
+	\begin{equation}
+		S_{\text{LMOS}} = 1 - \frac{|LMOS_{\text{clean}} - LMOS_{\text{perturbed}}|}{LMOS_{\text{clean}} + LMOS_{\text{perturbed}} + \epsilon},
+	\end{equation}
+	
+	where $\epsilon$ is a small constant to avoid division by zero.
+	
+	A higher value of $S_{\text{LMOS}}$ indicates that the model's reliance on the focus object remains more consistent under the corresponding perturbation. The LMOS stability under a perturbation $p$ is calculated as an average across all $N$ test samples as:
+	
+	\begin{equation}
+		{S}_{\text{LMOS}}^{(p)}
+		=
+		\frac{1}{N}
+		\sum_{i=1}^{N}
+		S_{\text{LMOS},i}^{(p)}
+	\end{equation}
+	
+	where $S_{\text{LMOS},i}^{(p)}$ denotes the LMOS stability of the $i$-th test sample under the perturbation $p$, and $N$ represents the total number of test samples.
+	
+	To obtain an overall measure of LMOS stability across all evaluated perturbations, the perturbation-specific LMOS stability scores are subsequently averaged as:
+	
+	\begin{equation}
+		\overline{S}_{\text{LMOS}}
+		=
+		\frac{1}{P}
+		\sum_{p=1}^{P}
+		{S}_{\text{LMOS}}^{(p)}.
+	\end{equation}
+	
+	where $P$ denotes the total number of evaluated perturbations. In this study, $P=9$.
+	
+	
+	
+	\subsection{ETI, Explainable Trustworthy Index}
+	In order to define trustworthiness, we have proposed  Explainable Trustworthy Index (ETI). ETI of a CNN model combines its accuracy and explainable consistency, mean LMOS. 
+	
+	Let $acc \in [0,1]$ denote the classification accuracy and $L \in [0,1]$ denote the mean LMOS across all test samples. The ETI is defined as:
+	\[
+	\mathrm{ETI} = \frac{acc + L}{2}.
+	\]
+	
+	
+	
+	In this study, both components are equally important. Both ${acc}$ and ${L}$ are normalized to the range [0,1] and represent complementary components of model reliability. Accuracy measures predictive performance, whereas ${L}$ measures the mean explanation consistency with the target object. Since neither component alone is sufficient to estimate trustworthiness, equal weighting has been adopted to avoid favoring either predictive performance or explanatory quality.
+	
+	\subsubsection{Ablation Study}
+	To analyze the ablation study, we have calculated two variants of ETI:
+	
+	\[
+	\mathrm{ETI}_{\text{w/o L}} = \frac{acc}{2}, \quad
+	\mathrm{ETI}_{\text{w/o acc}} = \frac{L}{2}.
+	\]
+	
+	
+	\subsection{Explainable Robustness Index (ERI)}
+	
+	To jointly evaluate the robustness of both classification performance and explainability under input perturbations, we have proposed the \textit{Explainable Robustness Index} (ERI). Unlike accuracy stability and LMOS stability, which separately assess the consistency of predictive performance and model localization behavior, ERI provides a unified measure of robustness by combining the accuracy stability and LMOS stability.
+	
+	Let ${s}_{\text{acc}}^{{p}}$ be accuracy stability and ${s}_{\text{LMOS}}^{{p}}$ be LMOS stability under perturbation p. Now, ERI under perturbation p is calculated as:
+	
+	
+	\begin{equation}
+		ERI^{{p}} =
+		\frac{
+			{S}_{\text{acc}}^{{p}}
+			+
+			{S}_{\text{LMOS}}^{{p}}
+		}{2}.
+	\end{equation}
+	
+	Let $\overline{S}_{\text{acc}}$ denote the overall accuracy stability and $\overline{S}_{\text{LMOS}}$ denote the overall LMOS stability, both obtained by averaging their corresponding perturbation-specific stability scores across the $P$ evaluated perturbations. The proposed ERI is defined as:
+	
+	\begin{equation}
+		ERI =
+		\frac{
+			\overline{S}_{\text{acc}}
+			+
+			\overline{S}_{\text{LMOS}}
+		}{2}.
+	\end{equation}
+	
+	Here, $\overline{S}_{\text{acc}}$ represents the overall consistency of classification accuracy between clean and perturbed inputs, while $\overline{S}_{\text{LMOS}}$ represents the overall consistency of the model's reliance on the focus object under perturbations. Therefore, ERI jointly captures two complementary dimensions of robustness: \textit{predictive stability} and \textit{explanatory stability}.
+	
+	Since both component scores are bounded in the same range, the resulting ERI also provides a normalized measure of overall robustness. A higher ERI indicates that a model simultaneously maintains its classification performance and preserves its object-focused behavior across the evaluated perturbations. Conversely, a lower ERI indicates that the model exhibits greater instability in one or both dimensions.
+	
+	\subsubsection{Ablation Study}
+	
+	To analyze the contribution of the individual components of ERI, we calculate two variants by removing one component at a time:
+	
+	\begin{equation}
+		\mathrm{ERI}_{\text{w/o LMOS}} =
+		\frac{\overline{S}_{\text{acc}}}{2},
+		\qquad
+		\mathrm{ERI}_{\text{w/o acc}} =
+		\frac{\overline{S}_{\text{LMOS}}}{2}.
+	\end{equation}
+	
+	
+	\subsubsection{LMOS (Localization Mask Overlap Score) }
+	\subsubsection{Accuracy Stability }
+	\subsubsection{LMOS Stability Under Perturbations }
+	
+	\subsection{Grad-CAM Visualization}
+	Grad-CAM visualization shows that CNN models often	predictcorrectlybuttheysometimesrelyonthebackground
+	or non-object regions. Besides, under perturbations, their	relianceon objectpixels hugely changes. 
+	\zahid{it is not necessary here. We may include the implemenation of grad-cam in the method implementation section above}
+	
 	\subsection{Perturbation methods}
+	\label{sec:perturbation_methods}
 	To evaluate the robustness of the proposed framework under distribution shifts and common image corruptions, we have applied nine image perturbation methods to the test set. 
 	%As summarized in Table~\ref{tab:perturbations}, 
 	\zahid{if anything in the table is missing below, add it in the corresponding bullet}
@@ -292,20 +459,17 @@
 	\end{itemize}
 	
 	
-	\subsection{Grad-CAM Visualization}
+	\subsection{Training Configurations}
+	We used TensorFlow/Keras on the Kaggle \zahid{cite kaggle} environment with two NVIDIA Tesla T4 GPUs to trainining and evaluation of all the CNN models in our experiments. 
+	The training configuration has followed the settings adopted in the original EgyPLI study\cite{r10}. \zahid{what are these? please specify. is it only for EgyPLI or all 4 datasets??}
+	The custom CNN was trained from scratch, while other models have been initialized with ImageNet-pretrained weights \zahid{cite here} and their backbone layers have been frozen.
 	
-	\subsection{Necessary Scores Definition}
-	\subsubsection{LMOS (Localization Mask Overlap Score) }
-	\subsubsection{Accuracy Stability }
-	\subsubsection{LMOS Stability Under Perturbations }
+	For the pretrained models, the original classification heads have been removed and replaced with a common classification head consisting of Global Average Pooling \zahid{cite}, a dropout layer \zahid{cite} with dropout rate 0.3, a fully connected layer with 128 ReLU units \zahid{cite}, and the final softmax layer \cite{??} has been configured according to the number of classes in each dataset. 
+	%The custom CNN has followed its original convolutional architecture. 
+	The Adam optimiser \zahid{cite} has been used with a learning rate of $5\times10^{-5}$ and categorical cross-entropy loss \zahid{arg1} in all model optimizations. 
+	%We have used TensorFlow/Keras Functional API, while the original EgyPLI research used the sequential API. This implementation choice does not alter the underlying CNN architectures or their corresponding backbone configurations.
 	
-	\subsection{ETI, Explainable Trustworthy Index}
-	\subsubsection{Ablation Study}
-	
-	\subsection{Explainable Robustness Index (ERI)}
-	
-	\subsubsection{Ablation Study}
-
+	%The trained models have been subsequently evaluated on clean and perturbed test images. Their classification accuracy and Grad-CAM-based LMOS have been used to calculate accuracy stability, LMOS stability, ETI, and ERI.
 
 	\section{Result and Discussion}
 	\subsection{Grad-CAM Visualization}
@@ -324,11 +488,11 @@
 	
 	\subsection{Cross-Dataset Analysis}
 	
+	%\subsection{Ablation Study}
+	%\subsubsection{}
+	%\subsubsection{}
 	
-	\section{Limitations}
-	
-	\section{Future Work}
-	
+	\section{Related Works}
 	
 	\section{Conclusion}     
 	\label{sec:conclusion}
