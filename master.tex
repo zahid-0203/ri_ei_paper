@@ -203,6 +203,7 @@
 	\section{Problem Definition}
 	%TBD
 	
+	\zahid{add a table of notations here}
 	
 	\section{System Architecture}
 	
@@ -280,7 +281,7 @@
 	
 	The Localization Mask Overlap Score (LMOS) is defined as the proportion of activated decision-relevant regions inside the object region and the  total activated decision-relevant regions as:
 	%\begin{equation}
-	$$\mathrm{LMOS}  \frac{\sum_{i=1}^{H}\sum_{j=1}^{W} \hat{H}(i,j)\, M(i,j)} {\sum_{i=1}^{H}\sum_{j=1}^{W} \hat{H}(i,j)}$$
+	$$\mathrm{LMOS}  \frac{\sum_{i=1}^{h}\sum_{j=1}^{w} \hat{h}(i,j)\, M(i,j)} {\sum_{i=1}^{h}\sum_{j=1}^{w} \hat{H}(i,j)}$$
 	%\end{equation}
 	where $M \in \{0,1\}^{h \times w}$ denote the resized ground-truth binary segmentation mask.  
 	%We have derived the mean LMOS, L for all test images. 
@@ -308,22 +309,24 @@
 	%\end{equation}
 	%where $S_{\text{acc}}^{(p)}$ denotes the accuracy stability under the $p$-th perturbation and $P$ is the total %number of evaluated perturbations. In this study, $P=9$.
 	
+	\zahid{proposed measures EI and RI. they use LMOS. What are the additional measures - stability ??? Need to clarify.}
 	
-	
-	\subsubsection{LMOS Stability Under Perturbations }
+	\noindent
+	\textbf{LMOS Stability Under Perturbations }
 	LMOS Stability measures how closely the model's object reliance under perturbation remains to its object reliance on clean images.
-	To evaluate the robustness under input perturbations, we have measured the stability of LMOS when input images are perturbed.
+	**To evaluate the robustness under input perturbations, we have measured the stability of LMOS when input images are perturbed.**
 	
-	For each test sample, we have computed LMOS for both the original image and its perturbed version.  Let N be the number of test samples in a test set. Let $LMOS_{\text{clean}}$ denote the LMOS value computed from an original image and $LMOS_{\text{perturbed}}$ denote the LMOS value computed from the corresponding perturbed image.
+	For each test sample, we have computed LMOS for both the original image and its perturbed version.  
+	Let $N$ be the number of test samples in a test set. 
+	Let $LMOS_{\text{clean}}$ denote the LMOS value computed from an original image and $LMOS_{\text{perturbed}}$ denote the LMOS value computed from the corresponding perturbed image.
 	
 	To quantify the consistency between these two values, we define the LMOS stability under a perturbation:
+	%\begin{equation}
+	$$S_{\textrm{LMOS}} = 1 - \frac{|LMOS_{\textrm{clean}} - LMOS_{\textrm{perturbed}}|}{LMOS_{\textrm{clean}} + LMOS_{\textrm{perturbed}} + \epsilon}$$, 
+	%\end{equation}
+	where $\epsilon$ is a small constant to avoid division by zero error. 
 	
-	
-	\begin{equation}
-		S_{\text{LMOS}} = 1 - \frac{|LMOS_{\text{clean}} - LMOS_{\text{perturbed}}|}{LMOS_{\text{clean}} + LMOS_{\text{perturbed}} + \epsilon},
-	\end{equation}
-	
-	where $\epsilon$ is a small constant to avoid division by zero.
+	\zahid{why not the denominator is using abs values?}
 	
 	A higher value of $S_{\text{LMOS}}$ indicates that the model's reliance on the focus object remains more consistent under the corresponding perturbation. The LMOS stability under a perturbation $p$ is calculated as an average across all $N$ test samples as:
 	
