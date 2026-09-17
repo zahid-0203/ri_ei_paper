@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: cas-dc-template.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+Database file #1: cas-refs.bib
+Warning--entry type for "r12" isn't style-file defined
+--line 108 of file cas-refs.bib
+Warning--empty year in r14
+You've used 42 entries,
+            1876 wiz_defined-function locations,
+            701 strings with 12310 characters,
+and the built_in function-call counts, 11679 in all, are:
+= -- 1063
+> -- 605
+< -- 0
++ -- 217
+- -- 175
+* -- 830
+:= -- 1687
+add.period$ -- 43
+call.type$ -- 42
+change.case$ -- 42
+chr.to.int$ -- 0
+cite$ -- 43
+duplicate$ -- 633
+empty$ -- 1055
+format.name$ -- 175
+if$ -- 2821
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 40
+newline$ -- 130
+num.names$ -- 42
+pop$ -- 171
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 415
+stack$ -- 0
+substring$ -- 610
+swap$ -- 266
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 95
+width$ -- 44
+write$ -- 391
+(There were 2 warnings)
