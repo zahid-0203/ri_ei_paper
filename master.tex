@@ -20,7 +20,6 @@
 \documentclass[a4paper,fleqn]{cas-dc}
 
 
-
 % If the frontmatter runs over more than one page
 % use the longmktitle option.
 
@@ -61,7 +60,7 @@
 	\shortauthors{Mehedi et al}  
 	
 	% Main title of the paper
-	\title [mode = title]{Beyond Accuracy: Trustworthy Index and Robustness Index for Evaluating CNN}  
+	\title [mode = title]{Beyond Accuracy: Explainable Trustworthy Index and Explainable Robustness Index for Evaluating CNN}  
 	
 	% Title footnote mark
 	% eg: \tnotemark[1]
@@ -107,7 +106,7 @@
 	
 	
 	\author[1]{Md. Zahidul Islam}
-	\ead{zahid@cseku.ac.bd}
+	\ead{zahid@cse.ku.ac.bd}
 	\credit{Supervision, Writing – Review \& Editing }
 	
 	\affiliation[1]{ organization={Computer Science and Engineering Discipline, Khulna University}, city={Khulna}, postcode={9208}, country={Bangladesh} } 
@@ -124,7 +123,7 @@
 	\newcommand{\zahid}[1]{{\color{green}#1}}
 	
 	\begin{abstract}
-	TBD
+	Deep neural networks often achieve high classification accuracy. Despite high accuracy, the reliability of CNN models remains a concern. Sometimes CNN models may rely on background or irrelevant features, undermining trustworthiness. Besides, with the use of perturbations, models' accuracy and object reliance may decline. Such degradation raises questions about their robustness. In this research, we have proposed two novel evaluation metrics: the \textbf{Explainable Trustworthy Index (ETI)} and the \textbf{Explainable Robustness Index (ERI)}. ETI combines accuracy with the \textbf{Localization Mask Overlap Score (LMOS)}, which measures the proportion of Grad-CAM salient pixels that fall within the ground-truth object regions. A model with high ETI clearly indicates that both its accuracy and object reliance are high and satisfactory. ERI extends this to perturbed inputs by jointly evaluating accuracy stability and LMOS stability.  Like ETI, a model with high ERI indicates that both its accuracy and object focus remain stable under the use of perturbations. We have used eight CNN architectures on four datasets and nine perturbations (e.g., noise, blur, motion blur, occlusion) to calculate ETI and ERI. We have demonstrated that high accuracy sometimes does not guarantee high ETI or ERI. For instance, on the EPLI dataset, Custom CNN has achieved 99.45\% accuracy but the lowest ETI (0.5922) due to poor object localization. It has also provided the lowest ERI. ETI and ERI provide a more holistic assessment of model reliability for safety-critical applications.
 	\end{abstract}
 	
 	% Use if graphical abstract is present
@@ -148,44 +147,134 @@
 	
 	\section{Introduction}
 	\label{sec:introduction}
-	\zahid{\textbf{We need to explain CNN reliability and XAI from title. }}
+	%\zahid{\textbf{We need to explain CNN reliability and XAI from title. }}
+	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such as medical imaging, agriculture, and astronomy, where predictions support important decision-making processes  \cite{r1}\cite{r2}\cite{r3}\cite{r4}. 
+	In such applications, classification accuracy is an essential performance measure, but accuracy alone does not necessarily indicate whether a model is reliable. 
+	A CNN model is considered reliable when its predictions are strictly grounded in task-relevant visual features rather than spurious correlations.
+	\zahid{Wu, J., Kang, W., Tang, H., Hong, Y., & Yan, Y. (2024). On the faithfulness of vision transformer explanations. 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 10936–10945. https://doi.org/10.1109/cvpr52733.2024.01040
+
+	Zafar, A. (2026). Evaluating visual grounding in multimodal medical reasoning. International Conference on Learning Representations (ICLR) Workshop.}
+	 \zahid{provide one or model example images from your dataset with sample images and explain it.} 
+	Therefore, beyond predictive accuracy, models must be quantitatively evaluated to determine whether their predictions depend on task-relevant regions rather than irrelevant background cues. 
+	% continuing introducing the problem
+	Despite excellent accuracy, a model may not provide reliable predictions. 
+	Explainability methods, such as Grad-CAM \cite{??}, show that a model may rely mainly on background and irrelevant regions instead of focused objects \cite{r5, r6, r7}. 
+	This raises questions about reliability and trustworthiness. %\zahid{we are not working to imrpove relaiability??}
 	
-	Despite excellent accuracy, a model may not be reliable. 
-	Explainability methods, such as Grad-CAM, show that a model may rely mainly on background and irrelevant regions instead of focused objects \cite{r5, r6, r7}. 
-	This raises questions about reliability and trustworthiness. \zahid{we are not working to imrpove relaiability??}
+	%\zahid{Traditional CNN model evaluation meausres fail to indicate the reliability of the correspoinding model.}
 	
-	\zahid{Traditional CNN model evaluation meausres fail to indicate the reliability of the correspoinding model.}
+	% problem of domain-shift 
+	% Model behavior can also change due to perturbations commonly occur in real-world such as during image aquisition. 
+	%Model behavior can shift due to real-world perturbations. 
+	%, such as those occurring during image acquisition. 
+	%Common distortions (e.g., noise, blur, brightness/contrast adjustments, hue shifts, compression, and occlusion) can alter both CNN accuracy and the specific visual regions driving model predictions.
+	%Common changes such as noise, blur, brightness variation, hue shift, contrast modification, compression, and occlusion can alter both classification performance and the visual regions emphasized by a CNN \cite{r4,r5,r9}.  
+	%That is, a model maintaining relatively high accuracy under perturbations may become visually inconsistent  \cite{r4,r5,r9}. 
+	Model behavior can shift due to real-world perturbations e.g., noise, blur, lighting shifts, compression, and occlusion. 
+	These distortions can alter both CNN accuracy and the visual regions driving predictions. 
+	Consequently, even when a model maintains relatively high accuracy under perturbations, its underlying visual explanations may still become inconsistent \cite{r4,r5,r9}.
+	Conventional robustness evaluation methods are 
+	primarily based on accuracy change under perturbation. 
+	They do not capture whether the model maintains consistent reliance on task-relevant regions under perturbed conditions. These observations motivate an evaluation framework that considers both predictive behavior and explanation behavior.
+	% above paragraph is good to go
 	
-	To address this limitation (\zahid{we did not say the limitation yet}), we have proposed two novel evaluation metrics: Trustworthy Index (TI) and Robustness Index (RI) using explainable AI (XAI) methods. 
-	We highlight the importance of object reliability (\zahid{is this correct? or model reliability?}) as well as accuracy. 
-	TI integrates accuracy and object reliability (\zahid{??}) in clean images. 
-	RI measures the robustness under various perturbations. \zahid{need to define robustness with ref}
-	Robustness measures how close the model's accuracy and explanations (object reliance) under perturbation remain to the outputs on clean images (\zahid{good but not clear - remember if you have to think to understand a sentence - you should probably rewrite it!}). 
+	% moving towards the generic solution
+	Explainable Artificial Intelligence (XAI) provides a framework for examining visual evidences used by CNNs for their predictions. 
+	In particular, Grad-CAM generates class-discriminative heatmaps that highlight image regions contributing to a model's prediction \cite{r5,r6,r7}. 
+	Such explanations can reveal whether a model achieves high classification accuracy by focusing substantially on background or other irrelevant regions rather than target objects. 
+	Previous studies have shown that background information and spurious correlations can influence deep neural network decisions and may lead to shortcut learning \cite{r9} \zahid{add more relevent refs}. 
+	Consequently, a highly accurate model does not confirm that the predictions are made on appropriate object-level information. 
+	This creates an important distinction between predictive performance and explainable reliability. %Now it is necessary to evaluate whether a model's accuracy is based on task-relevant regions. 
+	This is the motivation for evaluating a framework that combines accuracy and object focus.
+	% above paragraph sounds okay
+		
+	% proposed solution
+	%To address this limitation (\zahid{we did not say the limitation yet}), 
+	We have proposed two novel evaluation metrics: Explainable Trustworthy Index (ETI) and Explainable Robustness Index (ERI) using XAI methods. 
+	Our objective is not to modify or improve CNN models, rather to provide quantitative measures for evaluating and comparing their
+	reliability and robustness. 
+	ETI measures baseline reliability on unperturbed images by jointly evaluating classification accuracy and object-focused explanation quality. 
+	In contrast, ERI measures robustness to input perturbations by assessing whether accuracy and explanation quality remain consistent with clean-image behavior.
+	%ETI evaluates model reliability on clean, unperturbed images by jointly considering classification accuracy and object-focused explanation quality. 
+	%In contrast, ERI evaluates robustness under input perturbations
+	%by measuring whether both classification performance and
+	%object-focused explanations remain stable compared with
+	%clean-image behavior. 
+	In essence, ETI and ERI address two different questions: ETI asks ``Whether a model is accurate and appropriately focused on the target object under normal conditions?'', whereas ERI asks ``Whether these properties remain stable when the input is perturbed?''
 	
-	The proposed measures TI and RI rely on the fact that \textit{how much a model's predictions rely on real objects instead of the background}. 
-	We introduce a new score named LMOS (Localization Mask	Overlap Score) to indicate this fact. 
+	%We highlight the importance of object reliability (\zahid{is this correct? or model reliability?}) as well as accuracy. 
+	%TI integrates accuracy and object reliability (\zahid{??}) in clean images. 
+	%RI measures the robustness under various perturbations. \zahid{need to define robustness with ref}
+	%Robustness measures how close the model's accuracy and explanations (object reliance) under perturbation remain to the outputs on clean images (\zahid{good but not clear - remember if you have to think to understand a sentence - you should probably rewrite it!}). 
+	
+	%The proposed measures TI and RI rely on the fact that \textit{how much a model's predictions rely on real objects instead of the background}. 
+	%We introduce a new score named LMOS (Localization Mask	Overlap Score) to indicate this fact. 
+	
+	We introduce the Localization Mask Overlap Score (LMOS) to quantify object-focused explanation quality. 
+	For each test image, we create a ground-truth mask for the target object excluding the background. 
+	We use Grad-CAM \cite{??} to identify the image regions contributing to the model's prediction. 
+	LMOS quantifies the proportion of the model's decision-relevant activation that overlaps with the annotated target-object region. 
+	%Grad-CAM highlights key predictive regions using a color heatmap, where red and yellow denote the highest activation and strongest influence on the decision.
+	It is observed that in Grad-CAM visualizations, red and yellow regions in images are activated most i.e., red and yellow have greater influence than other colors on models' predictions \zahid{any ref to this??}. 
+   	We integrate this principle into LMOS; a higher LMOS value indicates that a larger proportion of the model's highlighted regions falls within the target object boundary rather than the background.
+	%So we consider them as decision-relevant. Therefore, a higher LMOS indicates that a larger proportion of the model's highlighted regions is located within the target object rather than outside it. LMOS provides a quantitative measure that can be compared across CNN architectures and datasets.
+	
+	%As red and yellow regions of the Grad-CAM visualization have stronger influence than other regions for predictions, we consider them as decision-relevant. \zahid{why do we need this sentence?}
+	
+	%LMOS defines when the model relies on something to make decisions, what ratio of that reliance falls on focus objects. \zahid{not clear}
+	
+	%A model has high accuracy but low LMOS may be affected by shortcut learning, overfitting, bias, and reliance on background features. \zahid{can we show this - i.e., a model having high acc but low LMOS and has one or more of the mentioned problems?}
+	% \textbf{A model is trustworthy if it has high accuracy and high LMOS. 
+	% 	Similarly, a model is considered robust under perturbations if it maintains high accuracy stability, and high LMOS stability under perturbations. }
+	
+	%\zahid{need clear distinctions between EI and RI - what EI shows must be different than RI}
+	
+	%Models with high TI is considered reliable as both the model accuracy and object reliance are high. 
+	%Models with moderate to low TI means its accuracy or object focus, or both, are low and limited. 
+	
+	To comprehensively evaluate the proposed metrics, we conduct experiments using four public real-world datasets comprising two leaf image datasets:  EPLI \cite{r10}, BDML\cite{r11} and two flower image datasets: FLRS \cite{r12}, FR \cite{r13}. 
+	Eight CNN architectures are trained and evaluated on the datasets. %For the test images, target-object masks are manually annotated to provide the spatial reference required for LMOS calculation. 
+	%Grad-CAM explanations are generated for both clean and perturbed test images. 
+	We evaluate nine perturbations, including Gaussian noise, Gaussian blur, brightness adjustment, hue shift, contrast adjustment, gamma correction, motion blur, JPEG compression, and random occlusion \zahid{cite all the methods}. 
+	For each CNN architecture, ETI is calculated on clean images, while ERI is calculated from accuracy stability and LMOS stability across the evaluated perturbations.
+	
+	We empirically demonstrate the importance of combining accuracy with LMOS in ETI. 
+	For example, a custom CNN achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.1900, resulting in the lowest ETI score of 0.5922 among the evaluated models. \zahid{what is the consequence?? e.g., XX\% of predictions are based on background??}
+	In contrast, the MobileNetV2 \cite{??} also achieves 99.45\% accuracy but obtains a substantially higher mean LMOS of 0.7765 and an ETI of 0.8855. \zahid{what is the consequence?? e.g., XX\% of predictions are based on background, must be less than custom CNN??}
+	This demonstrates that models with similar high accuracy can exhibit substantially different levels of object-focused reliance and the model with higher LMOS should be selected for real-world deployment. 
+	%A high accuracy score alone therefore cannot distinguish between a model that makes predictions while focusing on the target object and a model that achieves similar accuracy while emphasizing regions outside the target object. 
+	%Importantly, low LMOS does not by itself indicate shortcut learning, bias, or overfitting; rather. It provides quantitative evidence that the model's decision-relevant activation is insufficiently aligned with the target object, which demands further investigation.
+	Importantly, a low LMOS score does not inherently denote shortcut learning or overfitting, but rather quantifies the extent to which a model's salient activations diverge from the target object.
+	
+	ERI combines \emph{accuracy stability} and \emph{LMOS stability} to provide a joint measure of explainable robustness. 
+	This distinction is important because predictive stability and explanation stability are not correlated. 
+	For example, on the EPLI dataset, the Custom CNN under contrast perturbation maintains relatively high accuracy stability of 0.8494 but has substantially lower LMOS stability of 0.4545. 
+	Conversely, ResNet50 under the same perturbation exhibits relatively low accuracy stability of 0.4599 but higher LMOS stability of 0.7830. 
+	\zahid{what is the consequence of this??}
+	These demonstrate that accuracy stability alone cannot fully characterize robustness: a model may preserve its predictive performance while substantially changing its object-focused behavior, or it may preserve its visual focus while its predictive performance deteriorates. 
+	%ERI therefore evaluates these two complementary dimensions jointly.
 	
 	
-	As red and yellow regions of the Grad-CAM visualization have stronger influence than other regions for predictions, we consider them as decision-relevant. \zahid{why do we need this sentence?}
+	%The significance of ETI and ERI lies in their ability to capture specific aspects of CNN reliability and robustness that conventional accuracy-based evaluation overlook. 
+	%A higher ETI indicates stronger joint performance in classification accuracy and object-focused explanation alignment under clean inputs, whereas a lower ETI indicates weaker performance in one or both of these dimensions. 
+	%ERI extends this evaluation to perturbed inputs by jointly considering the stability of predictive performance and object-focused explanations relative to clean-image behavior. 
+	%We note that a higher ETI or ERI should not be interpreted as higher overall trustworthiness and robustness. 
+	%Trustworthiness and robustness may involve many other factors beyond the properties evaluated in this work. 
+	%Instead, we focus specifically on predictive accuracy, object-focused explanation quality, and their stability under perturbations. 
+	%Together, ETI and ERI provide complementary measures for comparing CNN models beyond conventional accuracy-based evaluation methods.
+	The significance of ETI and ERI lies in their ability to capture key dimensions of CNN reliability and robustness that standard accuracy metrics overlook. 
+	However, a high ETI or ERI score should not be equated with overall model trustworthiness, which encompasses broader factors beyond the scope of this work. 
+	Rather, these metrics focus specifically on predictive accuracy, object-focused explanation quality, and their stability under input perturbations - offering complementary criteria for evaluating CNN models beyond conventional accuracy benchmarks.
 	
-	LMOS defines when the model relies on something to make decisions, what ratio of that reliance falls on focus objects. \zahid{not clear}
+	%To evaluate the robustness of the models, we have applied nine perturbations (noise, blur, hue, occlusion, etc.) to the test images and then calculated accuracy and LMOS scores after each perturbation. 
 	
-	A model has high accuracy but low LMOS may be affected by shortcut learning, overfitting, bias, and reliance on background features. \zahid{can we show this - i.e., a model having high acc but low LMOS and has one or more of the mentioned problems?}
-	 \textbf{A model is trustworthy if it has high accuracy and high LMOS. 
-	 	Similarly, a model is considered robust under perturbations if it maintains high accuracy stability, and high LMOS stability under perturbations. }
+	%The mean LMOS stability under a perturbation has been obtained by averaging the image-wise LMOS stability values across all test samples. 
+	%Then, ERI under a perturbation has been calculated as the mean of both stabilities. 
+	%Finally, the mean ERI across all perturbations has been calculated and a ranking has been made according to the mean ERI. 
+	%Like ETI, a model with hight ERI indicates that both its accuracy and object focus remain stable under the use of perturbations. 
+	%A moderate/low ERI reveals that its accuracy, or focus on object, or both change with the use of perturbations.
 	
-	\zahid{need clear distinctions between EI and RI - what EI shows must be different than RI}
-	
-	Models with high TI is considered reliable as both the model accuracy and object reliance are high. 
-	Models with moderate to low TI means its accuracy or object focus, or both, are low and limited. 
-	
-	To evaluate the robustness of the models, we have applied nine perturbations (noise, blur, hue, occlusion, etc.) to the test images and then calculated accuracy and LMOS scores after each perturbation. 
-	
-	The mean LMOS stability under a perturbation has been obtained by averaging the image-wise LMOS stability values across all test samples. 
-	Then, ERI under a perturbation has been calculated as the mean of both stabilities. 
-	Finally, the mean ERI across all perturbations has been calculated and a ranking has been made according to the mean ERI. 
-	Like ETI, a model with hight ERI indicates that both its accuracy and object focus remain stable under the use of perturbations. 
-	A moderate/low ERI reveals that its accuracy, or focus on object, or both change with the use of perturbations.
+	---
 	
 	\textbf{Two questions that the proposed measures can answer - How trustworty a model is? Trustworty means - predictions are based on real objects in the images. How robust a model is? Robustness means - performance of the model will not degrade under purturbations. }
 	
@@ -202,7 +291,36 @@
 	}
 	
 	\section{Problem Definition}
-	%TBD
+	\label{sec:problem_def}
+	Let  $\mathcal{D}=\{(x_i,y_i,M_i)\}_{i=1}^{N}$ be a dataset containing $N$ images, where $x_i\in \mathbb R^{n\times m}$ is the $i$-th image, $y_i$ is its ground-truth label, and $M_i$ is the corresponding ground-truth mask of the target object. 
+	%Let $\mathcal{F}$ denote a set of $K$ CNN architectures evaluated on the same test dataset. Here, $\mathcal{F} = \{f_1, f_2, \ldots, f_K\}$. 
+	
+	Conventional evaluation primarily measures the classification accuracy of a model. 
+	Let \(acc\in[0,1]\) denote the classification accuracy of model %\(f_k\)
+	on the clean test set. Although acc measures predictive performance, it does not indicate whether the model's decision-relevant activation is spatially aligned with the target object. Two CNNs may therefore achieve similar or even identical accuracy while relying on substantially different image regions. In particular, a model may achieve high accuracy while its Grad-CAM activation highlights the activated regions concentrated outside the target object. Hence, accuracy alone is insufficient to distinguish models according to their object-focused explanatory behavior.
+	
+	To quantify this aspect, let \(H_{i}\) denote the Grad-CAM heatmap generated by a model for image \(x_i\), and \(LMOS_{i} \in[0,1]\) denote the Localization Mask Overlap Score (LMOS) of the i-th image, which measures the ratio between the overlap between the decision-relevant regions of \(H_{i}\) and the ground-truth object mask \(M_i\) and the total highlighted regions, \(H_{i}\). Let L denote the mean LMOS over all test images. The first problem is therefore to evaluate CNN models by jointly considering their predictive performance and object-focused explanation quality rather than relying on classification accuracy alone. Formally, the objective is to obtain an evaluation measure \(T\) that considers both \(A\) and \(L\):
+	
+	$$
+	T = \Psi(acc,L),
+	$$
+	
+	where \(\Psi(\cdot)\) combines predictive accuracy and object-focused explanation quality. In this work, this problem is addressed by the proposed Explainable Trustworthy Index (ETI), and  \(\Psi(\cdot)\) is a mean function.
+	
+	The second problem concerns the behavior of CNN models when the input images undergo perturbations. Let \(\mathcal{P}=\{p_1,p_2,\ldots,p_P\}\) denote a set of input perturbations, and let \(p(x_i)\) represent the perturbed version of \(x_i\) under perturbation \(p\). A robust CNN should not only preserve its predictive performance under such changes but should also maintain a similar object-focused activation pattern relative to its behavior on the corresponding clean image. Therefore, accuracy stability and explanation stability need to be considered jointly.
+	
+	Let %\(A_k^{clean}\) and \(A_k^{p}\)
+	$acc_{\text{clean}}$ and $acc_{\text{perturbed}}$ denote the classification accuracy of a model on the clean and perturbed test sets, respectively. Similarly, let %\(L_{i,k}^{clean}\) and \(L_{i,k}^{p}\) 
+	$LMOS_{\text{clean}}$ and $LMOS_{\text{perturbed}}$ denote the LMOS values for the clean and perturbed versions of the \(i\)-th test image.  The perturbation-specific accuracy stability and LMOS stability are therefore defined as measures of how closely the model preserves its predictive performance and object-focused behavior relative to the clean condition. The second problem is to obtain an evaluation measure \(R\) that jointly captures these two forms of stability across the evaluated perturbations:
+	
+	$$
+	R = \Phi(S_{\text{acc}},  S_{\text{LMOS}}),
+	$$
+	
+	where \(S_{\text{acc}}\) and \(S _ {\text{LMOS}} \) represent the overall accuracy stability and LMOS stability of a model. In this work, this problem is addressed by the proposed Explainable Robustness Index (ERI).
+	
+	Therefore, the overall evaluation problem addressed in this study is to distinguish CNN architectures not only according to how accurately they classify clean images, but also according to whether their decision-relevant activation is aligned with the intended target object and whether both predictive performance and object-focused behavior remain stable under input perturbations. ETI addresses the first aspect on clean inputs, whereas ERI addresses the stability of these properties under perturbations. The two indices are complementary and are not intended to represent the overall trustworthiness or robustness of a CNN across all possible dimensions.
+	
 	
 	\zahid{add a table of notations here}
 	
