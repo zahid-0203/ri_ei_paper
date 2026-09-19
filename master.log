@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  13 SEP 2026 10:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  19 SEP 2026 21:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -564,357 +564,102 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip72
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count356
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/changes\changes.sty
-Package: changes 2021/07/15 v4.2.1 changes package
-
-*** changes package 2021/07/15 v4.2.1 ***
-ulem-option 'normalem,normalbf', passed to package ulem
-truncate-option 'breakall,fit', passed to package truncate
-(C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
-\UL@box=\box66
-\UL@hyphenbox=\box67
-\UL@skip=\skip73
-\UL@hook=\toks34
-\UL@height=\dimen274
-\UL@pe=\count357
-\UL@pixel=\dimen275
-\ULC@box=\box68
-Package: ulem 2019/11/18
-\ULdepth=\dimen276
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.sty
-Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
-Package: todonotes 2024/01/05
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks35
-\pgfutil@tempdima=\dimen277
-\pgfutil@tempdimb=\dimen278
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box69
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
-Package: pgfrcs 2026-08-01 v3.1.12 (3.1.12)
-))
-Package: pgf 2026-08-01 v3.1.12 (3.1.12)
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
-Package: pgfsys 2026-08-01 v3.1.12 (3.1.12)
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks36
-\pgfkeys@temptoks=\toks37
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks38
-))
-\pgf@x=\dimen279
-\pgf@y=\dimen280
-\pgf@xa=\dimen281
-\pgf@ya=\dimen282
-\pgf@xb=\dimen283
-\pgf@yb=\dimen284
-\pgf@xc=\dimen285
-\pgf@yc=\dimen286
-\pgf@xd=\dimen287
-\pgf@yd=\dimen288
-\w@pgf@writea=\write3
-\r@pgf@reada=\read3
-\c@pgf@counta=\count358
-\c@pgf@countb=\count359
-\c@pgf@countc=\count360
-\c@pgf@countd=\count361
-\t@pgf@toka=\toks39
-\t@pgf@tokb=\toks40
-\t@pgf@tokc=\toks41
-\pgf@sys@id@count=\count362
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
-File: pgf.cfg 2026-08-01 v3.1.12 (3.1.12)
-)
-Driver file for pgf: pgfsys-pdftex.def
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2026-08-01 v3.1.12 (3.1.12)
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2026-08-01 v3.1.12 (3.1.12)
-))) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgfsyssoftpath@smallbuffer@items=\count363
-\pgfsyssoftpath@bigbuffer@items=\count364
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2026-08-01 v3.1.12 (3.1.12)
-)) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
-Package: pgfcore 2026-08-01 v3.1.12 (3.1.12)
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen289
-\pgfmath@count=\count365
-\pgfmath@box=\box70
-\pgfmath@toks=\toks42
-\pgfmath@stack@operand=\toks43
-\pgfmath@stack@operation=\toks44
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count366
-)) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgf@picminx=\dimen290
-\pgf@picmaxx=\dimen291
-\pgf@picminy=\dimen292
-\pgf@picmaxy=\dimen293
-\pgf@pathminx=\dimen294
-\pgf@pathmaxx=\dimen295
-\pgf@pathminy=\dimen296
-\pgf@pathmaxy=\dimen297
-\pgf@xx=\dimen298
-\pgf@xy=\dimen299
-\pgf@yx=\dimen300
-\pgf@yy=\dimen301
-\pgf@zx=\dimen302
-\pgf@zy=\dimen303
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgf@path@lastx=\dimen304
-\pgf@path@lasty=\dimen305
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgf@shorten@end@additional=\dimen306
-\pgf@shorten@start@additional=\dimen307
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgfpic=\box71
-\pgf@hbox=\box72
-\pgf@layerbox@main=\box73
-\pgf@picture@serial@count=\count367
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgflinewidth=\dimen308
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgf@pt@x=\dimen309
-\pgf@pt@y=\dimen310
-\pgf@pt@temp=\dimen311
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2026-08-01 v3.1.12 (3.1.12)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2026-08-01 v3.1.12 (3.1.12)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2026-08-01 v3.1.12 (3.1.12)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgfarrowsep=\dimen312
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgf@max=\dimen313
-\pgf@sys@shading@range@num=\count368
-\pgf@shadingcount=\count369
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2026-08-01 v3.1.12 (3.1.12)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgfexternal@startupbox=\box74
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2026-08-01 v3.1.12 (3.1.12)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2026-08-01 v3.1.12 (3.1.12)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2026-08-01 v3.1.12 (3.1.12)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2026-08-01 v3.1.12 (3.1.12)
-))) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgfnodeparttextbox=\box75
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2026-08-01 v3.1.12 (3.1.12)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2026-08-01 v3.1.12 (3.1.12)
-\pgf@nodesepstart=\dimen314
-\pgf@nodesepend=\dimen315
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2026-08-01 v3.1.12 (3.1.12)
-)) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
-Package: pgffor 2026-08-01 v3.1.12 (3.1.12)
-\pgffor@iter=\dimen316
-\pgffor@skip=\dimen317
-\pgffor@stack=\toks45
-\pgffor@toks=\toks46
-)) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
-Package: tikz 2026-08-01 v3.1.12 (3.1.12)
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgf@plot@mark@count=\count370
-\pgfplotmarksize=\dimen318
-)
-\tikz@lastx=\dimen319
-\tikz@lasty=\dimen320
-\tikz@lastxsaved=\dimen321
-\tikz@lastysaved=\dimen322
-\tikz@lastmovetox=\dimen323
-\tikz@lastmovetoy=\dimen324
-\tikzleveldistance=\dimen325
-\tikzsiblingdistance=\dimen326
-\tikz@figbox=\box76
-\tikz@figbox@bg=\box77
-\tikz@tempbox=\box78
-\tikz@tempbox@bg=\box79
-\tikztreelevel=\count371
-\tikznumberofchildren=\count372
-\tikznumberofcurrentchild=\count373
-\tikz@fig@count=\count374
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\pgfmatrixcurrentrow=\count375
-\pgfmatrixcurrentcolumn=\count376
-\pgf@matrix@numberofcolumns=\count377
-)
-\tikz@expandcount=\count378
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2026-08-01 v3.1.12 (3.1.12)
-))) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2026-08-01 v3.1.12 (3.1.12)
-) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
-Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count379
-\calc@Bcount=\count380
-\calc@Adimen=\dimen327
-\calc@Bdimen=\dimen328
-\calc@Askip=\skip74
-\calc@Bskip=\skip75
-LaTeX Info: Redefining \setlength on input line 86.
-LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count381
-\calc@Cskip=\skip76
-)
-\c@@todonotes@numberoftodonotes=\count382
-)
-\c@Changes@AuthorCount=\count383
-\c@Changes@Author=\count384
-\c@Changes@addedCount=\count385
-\c@Changes@deletedCount=\count386
-\c@Changes@replacedCount=\count387
-\c@Changes@highlightCount=\count388
-\c@Changes@commentCount=\count389
-\c@authorcommentcount=\count390
-
-
-C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/changes\changes.sty:783: Package changes Error: Command comment is already defined..
-
-See the changes package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.783 \Changes@set@commandname{comment}
-                                       
-Try package option commandnameprefix with "always" or "ifneeded", e.g. usepackage[commandnameprefix=always]{changes}
-
-
-C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/changes\changes.sty:794: LaTeX Error: Command \comment already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.794 }
-       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/truncate\truncate.sty
-Package: truncate 2001/08/20  ver 3.6
-\@Trunc@RestHyph=\toks47
-)
-\Changestruncatewidth=\skip77
-\Changes@summary@width=\skip78
 ) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2026-08-23 v3.5.6 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count391
-\l__siunitx_number_exponent_fixed_int=\count392
-\l__siunitx_number_min_decimal_int=\count393
-\l__siunitx_number_min_integer_int=\count394
-\l__siunitx_number_round_precision_int=\count395
-\l__siunitx_number_lower_threshold_int=\count396
-\l__siunitx_number_upper_threshold_int=\count397
-\l__siunitx_number_group_first_int=\count398
-\l__siunitx_number_group_size_int=\count399
-\l__siunitx_number_group_min_int=\count400
-\l__siunitx_number_group_minimum_int=\count401
-\l__siunitx_compound_count_int=\count402
+\l__siunitx_number_uncert_offset_int=\count357
+\l__siunitx_number_exponent_fixed_int=\count358
+\l__siunitx_number_min_decimal_int=\count359
+\l__siunitx_number_min_integer_int=\count360
+\l__siunitx_number_round_precision_int=\count361
+\l__siunitx_number_lower_threshold_int=\count362
+\l__siunitx_number_upper_threshold_int=\count363
+\l__siunitx_number_group_first_int=\count364
+\l__siunitx_number_group_size_int=\count365
+\l__siunitx_number_group_min_int=\count366
+\l__siunitx_number_group_minimum_int=\count367
+\l__siunitx_compound_count_int=\count368
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
 )
-\l__siunitx_table_tmp_box=\box80
-\l__siunitx_table_tmp_dim=\dimen329
-\l__siunitx_table_column_width_dim=\dimen330
-\l__siunitx_table_integer_box=\box81
-\l__siunitx_table_decimal_box=\box82
-\l__siunitx_table_uncert_box=\box83
-\l__siunitx_table_before_box=\box84
-\l__siunitx_table_after_box=\box85
-\l__siunitx_table_before_dim=\dimen331
-\l__siunitx_table_carry_dim=\dimen332
-\l__siunitx_unit_tmp_int=\count403
-\l__siunitx_unit_position_int=\count404
-\l__siunitx_unit_total_int=\count405
-\l__siunitx_sexagesimal_tmp_dim=\dimen333
-\l__siunitx_sexagesimal_marker_box=\box86
-\l__siunitx_sexagesimal_unit_box=\box87
+\l__siunitx_table_tmp_box=\box66
+\l__siunitx_table_tmp_dim=\dimen274
+\l__siunitx_table_column_width_dim=\dimen275
+\l__siunitx_table_integer_box=\box67
+\l__siunitx_table_decimal_box=\box68
+\l__siunitx_table_uncert_box=\box69
+\l__siunitx_table_before_box=\box70
+\l__siunitx_table_after_box=\box71
+\l__siunitx_table_before_dim=\dimen276
+\l__siunitx_table_carry_dim=\dimen277
+\l__siunitx_unit_tmp_int=\count369
+\l__siunitx_unit_position_int=\count370
+\l__siunitx_unit_total_int=\count371
+\l__siunitx_sexagesimal_tmp_dim=\dimen278
+\l__siunitx_sexagesimal_marker_box=\box72
+\l__siunitx_sexagesimal_unit_box=\box73
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 52.
-LaTeX Font Info:    Trying to load font information for T1+stix on input line 52.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 50.
+LaTeX Font Info:    Trying to load font information for T1+stix on input line 50.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\t1stix.fd
 File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
 ) (master.aux)
 \openout1 = `master.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 52.
-LaTeX Font Info:    Trying to load font information for LS1+stix on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 50.
+LaTeX Font Info:    Trying to load font information for LS1+stix on input line 50.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 52.
-LaTeX Font Info:    Trying to load font information for LS2+stix on input line 52.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 50.
+LaTeX Font Info:    Trying to load font information for LS2+stix on input line 50.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stix.fd
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    ... okay on input line 50.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count406
-\scratchdimen=\dimen334
-\scratchbox=\box88
-\nofMPsegments=\count407
-\nofMParguments=\count408
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count409
-\MPscratchDim=\dimen335
-\MPnumerator=\count410
-\makeMPintoPDFobject=\count411
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count372
+\scratchdimen=\dimen279
+\scratchbox=\box74
+\nofMPsegments=\count373
+\nofMParguments=\count374
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count375
+\MPscratchDim=\dimen280
+\MPnumerator=\count376
+\makeMPintoPDFobject=\count377
+\everyMPtoPDFconversion=\toks35
 ) (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Command `\dddot' is already robust on input line 52.
-LaTeX Info: Command `\ddddot' is already robust on input line 52.
-Package hyperref Info: Link coloring ON on input line 52.
-\@outlinefile=\write4
-\openout4 = `master.out'.
+LaTeX Info: Command `\dddot' is already robust on input line 50.
+LaTeX Info: Command `\ddddot' is already robust on input line 50.
+Package hyperref Info: Link coloring ON on input line 50.
+ (master.out) (master.out)
+\@outlinefile=\write3
+\openout3 = `master.out'.
 
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
@@ -956,186 +701,176 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 52.
-\verbatim@out=\write5
-\openout5 = `master.abs'.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 50.
+\verbatim@out=\write4
+\openout4 = `master.abs'.
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 144--145
+Underfull \hbox (badness 2707) in paragraph at lines 142--143
 []\T1/stix/m/n/8 Explainable AI (XAI), Trust-wor-thi-
  []
 
-LaTeX Font Info:    Trying to load font information for LS1+stixscr on input line 147.
+LaTeX Font Info:    Trying to load font information for LS1+stixscr on input line 145.
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stixex on input line 147.
+LaTeX Font Info:    Trying to load font information for LS2+stixex on input line 145.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 147.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 145.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 147.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 145.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input line 147.
+LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input line 145.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stixbb on input line 147.
+LaTeX Font Info:    Trying to load font information for LS1+stixbb on input line 145.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stixcal on input line 147.
+LaTeX Font Info:    Trying to load font information for LS2+stixcal on input line 145.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stixsf on input line 147.
+LaTeX Font Info:    Trying to load font information for LS1+stixsf on input line 145.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stixtt on input line 147.
+LaTeX Font Info:    Trying to load font information for LS2+stixtt on input line 145.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 )
-Overfull \hbox (123.62721pt too wide) detected at line 147
+Overfull \hbox (123.62721pt too wide) detected at line 145
 []
  []
 
 (master.abs)
 
-Package hyperref Warning: Ignoring empty anchor on input line 147.
+Package hyperref Warning: Ignoring empty anchor on input line 145.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 147.
+Package hyperref Warning: Ignoring empty anchor on input line 145.
 
 
-Package natbib Warning: Citation `r5' on page 1 undefined on input line 154.
+LaTeX Warning: File `thumbnails/cas-email.jpeg' not found on input line 145.
 
 
-Package natbib Warning: Citation `r6' on page 1 undefined on input line 154.
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:145: Package pdftex.def Error: File `thumbnails/cas-email.jpeg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 	\maketitle
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 145.
+(C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 6.80005pt on input line 145.
 
 
-Package natbib Warning: Citation `r7' on page 1 undefined on input line 154.
-
-LaTeX Font Info:    Trying to load font information for TS1+stix on input line 202.
-(C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
-File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
-) [1{C:/Users/samin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-t1.enc}
+Package hyperref Warning: Ignoring empty anchor on input line 145.
 
 
-{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-ts1.enc}{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-
-Package natbib Warning: Citation `r10' on page 2 undefined on input line 219.
-
-
-Package natbib Warning: Citation `r10' on page 2 undefined on input line 224.
-
-
-Package natbib Warning: Citation `r11' on page 2 undefined on input line 226.
-
-
-Package natbib Warning: Citation `r11' on page 2 undefined on input line 228.
-
-
-Package natbib Warning: Citation `r12' on page 2 undefined on input line 230.
-
-
-Package natbib Warning: Citation `r12' on page 2 undefined on input line 231.
-
-
-Underfull \hbox (badness 1087) in paragraph at lines 230--233
-[]\T1/stix/b/n/10 FLRS\T1/stix/m/n/10 : FLRS (or Flow-ers [\T1/stix/b/n/10 ? \T1/stix/m/n/10 ]) is a large im-age
+Underfull \hbox (badness 1668) in paragraph at lines 150--158
+\T1/stix/m/n/10 as med-i-cal imag-ing, agri-cul-ture, and as-tron-omy, where
  []
 
 
-LaTeX Warning: Reference `tab:classwise_dataset_distribution' on page 2 undefined on input line 244.
-
-(tables/tbl_dataset_distribution.tex) [2]
-
-LaTeX Warning: Reference `eq:lmos' on page 3 undefined on input line 305.
+Underfull \hbox (badness 1622) in paragraph at lines 150--158
+\T1/stix/m/n/10 pre-dic-tions de-pend on task-relevant re-gions rather than
+ []
 
 
-LaTeX Warning: Reference `sec:perturbation_methods' on page 3 undefined on input line 328.
+Underfull \hbox (badness 1845) in paragraph at lines 177--185
+[]\T1/stix/m/n/10 Explainable Ar-ti-fi-cial In-tel-li-gence (XAI) pro-vides a
+ []
+
+[1{C:/Users/samin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-t1.enc}
 
 
-LaTeX Warning: Reference `sec:perturbation_methods' on page 3 undefined on input line 337.
+{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+Underfull \hbox (badness 1400) in paragraph at lines 208--216
+[]\T1/stix/m/n/10 We in-tro-duce the Lo-cal-iza-tion Mask Over-lap Score
+ []
 
-[3]
-Underfull \hbox (badness 1997) in paragraph at lines 436--439
+[2]
+LaTeX Font Info:    Trying to load font information for TS1+stix on input line 327.
+ (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
+File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
+)
+Underfull \hbox (badness 1132) in paragraph at lines 338--340
+[]\T1/stix/b/n/10 FLRS\T1/stix/m/n/10 : FLRS (or Flow-ers [[]]) is a large im-age
+ []
+
+(tables/tbl_dataset_distribution.tex) [3{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-ts1.enc}] [4]
+Underfull \hbox (badness 1997) in paragraph at lines 529--532
 \T1/stix/m/n/10 ten pre-dict-cor-rectly-but-theysome-times-re-ly-on-the-back-ground
  []
 
 
-Overfull \hbox (1.95804pt too wide) in paragraph at lines 460--462
+Overfull \hbox (1.95804pt too wide) in paragraph at lines 550--552
 []\T1/stix/b/n/10 Contrast Ad-just-ment: \T1/stix/m/n/10 Mod-i-fied us-ing mean-centered
  []
 
-
-Package natbib Warning: Citation `r10' on page 4 undefined on input line 476.
-
-
-Package natbib Warning: Citation `??' on page 4 undefined on input line 479.
-
-[4]
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 516.
- (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
-File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
-)
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 516.
- (master.bbl
+(Font)              scaled to size 8.50006pt on input line 606.
+[5]
+Overfull \hbox (3.16129pt too wide) in paragraph at lines 611--612
+\T1/stix/m/n/10 Draft, Writ-ing ^^U Re-view & Edit-ing. \T1/stix/b/n/10 Az-main In-quaid Haque:
+ []
 
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-)
+Underfull \hbox (badness 1509) in paragraph at lines 611--612
+\T1/stix/m/n/10 In-ves-ti-ga-tion, Data Cu-ra-tion, Soft-ware, Val-i-da-tion. \T1/stix/b/n/10 Md.
+ []
 
-Package natbib Warning: There were undefined citations.
 
-\Changes@OutFile=\write6
-\openout6 = `master.soc'.
+Underfull \hbox (badness 1931) in paragraph at lines 611--612
+\T1/stix/b/n/10 Naz-mul Ab-dal: \T1/stix/m/n/10 Data Cu-ra-tion. \T1/stix/b/n/10 Ab-dul-lah Al No-man:
+ []
 
-\tf@loc=\write7
-\openout7 = `master.loc'.
+(master.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 58--61
+[]\T1/stix/m/n/8 A. Ma-maev, ``Flow-ers recog-ni-tion | kag-gle,'' 2018.
+ []
 
-[5{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc}
 
-] (master.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 58--61
+\T1/stix/m/n/8 https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
+ []
+
+) [6] (master.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-07-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `master.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `master.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `master.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31721 strings out of 467501
- 625776 string characters out of 5408550
- 977600 words of memory out of 5000000
- 60392 multiletter control sequences out of 15000+600000
- 729168 words of font info for 164 fonts, out of 8000000 for 9000
+ 20866 strings out of 467501
+ 384009 string characters out of 5408550
+ 776544 words of memory out of 5000000
+ 49749 multiletter control sequences out of 15000+600000
+ 732099 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,8n,122p,520b,1126s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Bold.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-BoldItalic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Italic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsi0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathbb.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathex.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathit.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on master.pdf (5 pages, 305637 bytes).
+ 89i,8n,98p,1677b,1039s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Bold.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-BoldItalic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Italic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsi0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathbb.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathcal.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathex.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathit.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
+Output written on master.pdf (6 pages, 329843 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

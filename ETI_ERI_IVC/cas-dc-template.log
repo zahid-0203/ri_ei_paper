@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  17 SEP 2026 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  19 SEP 2026 21:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/samin/Downloads/ETI_ERI_IVC/cas-dc-template.tex
-(c:/Users/samin/Downloads/ETI_ERI_IVC/cas-dc-template.tex
+**"e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/ETI_ERI_IVC/cas-dc-template.tex"
+(e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/ETI_ERI_IVC/cas-dc-template.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-07-20>
 (cas-dc.cls
@@ -1154,12 +1154,12 @@ Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  18472 strings out of 467501
- 288645 string characters out of 5408550
+ 288859 string characters out of 5408550
  765104 words of memory out of 5000000
  47305 multiletter control sequences out of 15000+600000
  744274 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,14n,117p,3536b,667s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,14n,117p,3554b,667s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Bold.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-BoldItalic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Italic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss0800.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx0800.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathbb.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathcal.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathex.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathit.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
 Output written on cas-dc-template.pdf (20 pages, 12690332 bytes).
 PDF statistics:

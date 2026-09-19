@@ -1,3 +1,62 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{r1}
+R.~Archana and P.~E. Jeevaraj, ``Deep learning models for digital image
+  processing: a review,'' {\em Artificial intelligence review}, vol.~57, no.~1,
+  p.~11, 2024.
+
+\bibitem{r2}
+D.~Shen, G.~Wu, and H.-I. Suk, ``Deep learning in medical image analysis,''
+  {\em Annual review of biomedical engineering}, vol.~19, pp.~221--248, 2017.
+
+\bibitem{r3}
+A.~Abade, P.~A. Ferreira, and F.~de~Barros~Vidal, ``Plant diseases recognition
+  on images using convolutional neural networks: A systematic review,'' {\em
+  Computers and Electronics in Agriculture}, vol.~185, p.~106125, 2021.
+
+\bibitem{r4}
+F.~Lanusse {\em et~al.}, ``The dawes review 10: The impact of deep learning for
+  the analysis of galaxy surveys,'' {\em Publications of the Astronomical
+  Society of Australia}, vol.~40, p.~e001, 2023.
+
+\bibitem{r5}
+R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra,
+  ``Grad-cam: Visual explanations from deep networks via gradient-based
+  localization,'' in {\em Proceedings of the IEEE international conference on
+  computer vision}, pp.~618--626, 2017.
+
+\bibitem{r6}
+R.~Geirhos, P.~Rubisch, C.~Michaelis, M.~Bethge, F.~A. Wichmann, and
+  W.~Brendel, ``Imagenet-trained cnns are biased towards texture; increasing
+  shape bias improves accuracy and robustness,'' in {\em International
+  conference on learning representations}, 2018.
+
+\bibitem{r7}
+A.~Nguyen, J.~Yosinski, and J.~Clune, ``Deep neural networks are easily fooled:
+  High confidence predictions for unrecognizable images,'' in {\em Proceedings
+  of the IEEE conference on computer vision and pattern recognition},
+  pp.~427--436, 2015.
+
+\bibitem{r9}
+C.~Szegedy, W.~Zaremba, I.~Sutskever, J.~Bruna, D.~Erhan, I.~Goodfellow, and
+  R.~Fergus, ``Intriguing properties of neural networks,'' {\em arXiv preprint
+  arXiv:1312.6199}, 2013.
+
+\bibitem{r10}
+A.~M. Sarhan and M.~A. Shaheen, ``Egypli: A real-life annotated image dataset
+  for egyptian plant leaf identification,'' {\em Scientific Data}, 2026.
+
+\bibitem{r11}
+S.~Islam, M.~R. Ahmed, S.~Islam, M.~M.~A. Rishad, S.~Ahmed, T.~R. Utshow, and
+  M.~I. Siam, ``Bdmedileaves: a leaf images dataset for bangladeshi medicinal
+  plants identification,'' {\em Data in Brief}, vol.~50, p.~109488, 2023.
+
+\bibitem{r12}
+T.~T. Team, ``Flowers,'' jan 2019.
+
+\bibitem{r13}
+A.~Mamaev, ``Flowers recognition | kaggle,'' 2018.
+\newblock https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
+  (accessed July 13, 2026).
 
 \end{thebibliography}

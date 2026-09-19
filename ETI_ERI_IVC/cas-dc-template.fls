@@ -1,6 +1,6 @@
-PWD c:\Users\samin\Downloads\ETI_ERI_IVC
+PWD e:\Ragib\Noman_vai\Zahid Sir\ri_ei_paper\ETI_ERI_IVC
 INPUT C:\Users\samin\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\samin\Downloads\ETI_ERI_IVC\cas-dc-template.tex
+INPUT e:\Ragib\Noman_vai\Zahid Sir\ri_ei_paper\ETI_ERI_IVC\cas-dc-template.tex
 OUTPUT cas-dc-template.log
 INPUT .\cas-dc.cls
 INPUT cas-dc.cls
