@@ -6,7 +6,7 @@ The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
 Warning--entry type for "r12" isn't style-file defined
---line 215 of file cas-refs.bib
+--line 166 of file cas-refs.bib
 You've used 12 entries,
             1876 wiz_defined-function locations,
             550 strings with 5798 characters,

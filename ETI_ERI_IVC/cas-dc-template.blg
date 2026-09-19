@@ -6,47 +6,47 @@ The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
 Warning--entry type for "r12" isn't style-file defined
---line 215 of file cas-refs.bib
+--line 166 of file cas-refs.bib
 Warning--empty year in r14
-You've used 42 entries,
+You've used 48 entries,
             1876 wiz_defined-function locations,
-            701 strings with 12310 characters,
-and the built_in function-call counts, 11679 in all, are:
-= -- 1063
-> -- 605
+            730 strings with 13597 characters,
+and the built_in function-call counts, 13455 in all, are:
+= -- 1223
+> -- 707
 < -- 0
-+ -- 217
-- -- 175
-* -- 830
-:= -- 1687
-add.period$ -- 43
-call.type$ -- 42
-change.case$ -- 42
++ -- 253
+- -- 205
+* -- 968
+:= -- 1949
+add.period$ -- 49
+call.type$ -- 48
+change.case$ -- 48
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 633
-empty$ -- 1055
-format.name$ -- 175
-if$ -- 2821
+cite$ -- 49
+duplicate$ -- 725
+empty$ -- 1205
+format.name$ -- 205
+if$ -- 3245
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 40
-newline$ -- 130
-num.names$ -- 42
-pop$ -- 171
+int.to.str$ -- 48
+missing$ -- 46
+newline$ -- 148
+num.names$ -- 48
+pop$ -- 190
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 415
+skip$ -- 475
 stack$ -- 0
-substring$ -- 610
-swap$ -- 266
+substring$ -- 704
+swap$ -- 306
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 95
-width$ -- 44
-write$ -- 391
+while$ -- 109
+width$ -- 50
+write$ -- 450
 (There were 2 warnings)

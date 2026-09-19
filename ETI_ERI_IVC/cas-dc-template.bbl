@@ -19,6 +19,16 @@ F.~Lanusse {\em et~al.}, ``The dawes review 10: The impact of deep learning for
   the analysis of galaxy surveys,'' {\em Publications of the Astronomical
   Society of Australia}, vol.~40, p.~e001, 2023.
 
+\bibitem{r4.1}
+A.~Zafar, L.~K. Murali, and A.~Vashist, ``Beyond accuracy: Evaluating visual
+  grounding in multimodal medical reasoning,'' {\em arXiv preprint
+  arXiv:2603.03437}, 2026.
+
+\bibitem{r4.2}
+J.~Wu, W.~Kang, H.~Tang, Y.~Hong, and Y.~Yan, ``On the faithfulness of vision
+  transformer explanations,'' in {\em 2024 IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition (CVPR)}, pp.~10936--10945, IEEE, 2024.
+
 \bibitem{r5}
 R.~R. Selvaraju, M.~Cogswell, A.~Das, R.~Vedantam, D.~Parikh, and D.~Batra,
   ``Grad-cam: Visual explanations from deep networks via gradient-based
@@ -43,10 +53,31 @@ P.~R. Bassi, S.~S. Dertkigil, and A.~Cavalli, ``Improving deep neural network
   propagation optimization,'' {\em Nature Communications}, vol.~15, no.~1,
   p.~291, 2024.
 
+\bibitem{r8.1}
+R.~Geirhos, J.-H. Jacobsen, C.~Michaelis, R.~Zemel, W.~Brendel, M.~Bethge, and
+  F.~A. Wichmann, ``Shortcut learning in deep neural networks,'' {\em Nature
+  Machine Intelligence}, vol.~2, no.~11, pp.~665--673, 2020.
+
+\bibitem{r8.2}
+K.~Xiao, L.~Engstrom, A.~Ilyas, and A.~Madry, ``Noise or signal: The role of
+  image backgrounds in object recognition,'' {\em arXiv preprint
+  arXiv:2006.09994}, 2020.
+
 \bibitem{r9}
 C.~Szegedy, W.~Zaremba, I.~Sutskever, J.~Bruna, D.~Erhan, I.~Goodfellow, and
   R.~Fergus, ``Intriguing properties of neural networks,'' {\em arXiv preprint
   arXiv:1312.6199}, 2013.
+
+\bibitem{r9.1}
+I.~Kim, S.~Rajaraman, and S.~Antani, ``Visual interpretation of convolutional
+  neural network predictions in classifying medical image modalities,'' {\em
+  Diagnostics}, vol.~9, no.~2, p.~38, 2019.
+
+\bibitem{r9.2}
+A.~S.~M. Sayeed, S.~A. Birahim, M.~S. Ullah, Y.~Islam, A.~Paul, M.~A. Hasan,
+  M.~Ahsan, and M.~Kowalski, ``Explainable and secure federated learning for
+  privacy-enhancing skin cancer classification using a lightweight multi-scale
+  cnn,'' {\em Scientific Reports}, vol.~16, no.~1, p.~11414, 2026.
 
 \bibitem{r10}
 A.~M. Sarhan and M.~A. Shaheen, ``Egypli: A real-life annotated image dataset
