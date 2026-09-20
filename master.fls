@@ -318,6 +318,10 @@ INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\t1-stix
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\cm-super\cm-super-t1.enc
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\t1-stixgeneral-italic.tfm
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\t1-stixgeneral-bold.tfm
+INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\tex\latex\stix\ts1stix.fd
+INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\tex\latex\stix\ts1stix.fd
+INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\tex\latex\stix\ts1stix.fd
+INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\ts1-stixgeneral.tfm
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\stix-mathrm.tfm
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\stix-mathrm.tfm
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\stix-mathit.tfm
@@ -347,11 +351,8 @@ INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\stix-ma
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\stix-mathtt.tfm
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\stix-mathtt.tfm
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecss1000.tfm
+INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\stix\stix-ts1.enc
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\t1-stixgeneral-bold.tfm
-INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\tex\latex\stix\ts1stix.fd
-INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\tex\latex\stix\ts1stix.fd
-INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\tex\latex\stix\ts1stix.fd
-INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\ts1-stixgeneral.tfm
 INPUT .\tables\tbl_dataset_distribution.tex
 INPUT .\tables\tbl_dataset_distribution.tex
 INPUT .\tables\tbl_dataset_distribution.tex
@@ -374,7 +375,6 @@ INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\stix-ma
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\stix-mathtt.tfm
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsi0900.tfm
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\t1-stixgeneral-bolditalic.tfm
-INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\stix\stix-ts1.enc
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\stix\t1-stixgeneral.tfm
 INPUT C:\Users\samin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\inconsolata\t1-zi4r-0.tfm
 INPUT .\master.bbl
