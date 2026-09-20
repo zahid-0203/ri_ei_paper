@@ -148,18 +148,25 @@
 	\section{Introduction}
 	\label{sec:introduction}
 	%\zahid{\textbf{We need to explain CNN reliability and XAI from title. }}
-	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such as medical imaging, agriculture, and astronomy, where predictions support important decision-making processes  \cite{r1}\cite{r2}\cite{r3}\cite{r4}. 
-	In such applications, classification accuracy is an essential performance measure, but accuracy alone does not necessarily indicate whether a model is reliable. 
-	A CNN model is considered reliable when its predictions are strictly grounded in task-relevant visual features rather than spurious correlations.
+	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such 
+    as medical imaging, agriculture, and astronomy, where predictions support important decision-making processes
+	\cite{r1}\cite{r2}\cite{r3}\cite{r4}. In such applications, classification accuracy is an essential performance
+	measure, but accuracy alone does not necessarily indicate whether a model is reliable. A CNN model is considered 
+	reliable when its predictions are strictly grounded in task-relevant visual features rather than spurious 
+	correlations\cite{r5}.
 	\zahid{Wu, J., Kang, W., Tang, H., Hong, Y., \& Yan, Y. (2024). On the faithfulness of vision transformer explanations. 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 10936–10945. https://doi.org/10.1109/cvpr52733.2024.01040
 
-	Zafar, A. (2026). Evaluating visual grounding in multimodal medical reasoning. International Conference on Learning Representations (ICLR) Workshop.}
-	 \zahid{provide one or model example images from your dataset with sample images and explain it.} 
-	Therefore, beyond predictive accuracy, models must be quantitatively evaluated to determine whether their predictions depend on task-relevant regions rather than irrelevant background cues. 
-	% continuing introducing the problem
-	Despite excellent accuracy, a model may not provide reliable predictions. 
-	Explainability methods, such as Grad-CAM \cite{r5}, show that a model may rely mainly on background and irrelevant regions instead of focused objects \cite{r5, r6, r7}.
-	This raises questions about reliability and trustworthiness. %\zahid{we are not working to imrpove relaiability??}
+	Zafar, A. (2026). Evaluating visual grounding in multimodal medical reasoning. International Conference on Learning Representations (ICLR) Workshop} already added 
+	\\
+
+	 \zahid{provide one or model example images from your dataset with sample images and explain it.} \\
+
+	Therefore, beyond predictive accuracy, models must be quantitatively evaluated to determine whether 
+	their predictions depend on task-relevant regions rather than irrelevant background cues. % continuing introducing the problem 
+	Despite excellent accuracy, a model may not provide reliable predictions. Explainability methods, such as 
+	Grad-CAM \cite{r6}, show that a model may rely mainly on  background and irrelevant regions instead of 
+	focused objects \cite{ r7, r8}. This raises questions about reliability and trustworthiness. 
+	%\zahid{we are not working to imrpove relaiability??}
 	
 	%\zahid{Traditional CNN model evaluation meausres fail to indicate the reliability of the correspoinding model.}
 	
@@ -170,19 +177,23 @@
 	%Common distortions (e.g., noise, blur, brightness/contrast adjustments, hue shifts, compression, and occlusion) can alter both CNN accuracy and the specific visual regions driving model predictions.
 	%Common changes such as noise, blur, brightness variation, hue shift, contrast modification, compression, and occlusion can alter both classification performance and the visual regions emphasized by a CNN \cite{r4,r5,r9}.  
 	%That is, a model maintaining relatively high accuracy under perturbations may become visually inconsistent  \cite{r4,r5,r9}. 
-	Model behavior can shift due to real-world perturbations e.g., noise, blur, lighting shifts, compression, and occlusion. 
-	These distortions can alter both CNN accuracy and the visual regions driving predictions. 
-	Consequently, even when a model maintains relatively high accuracy under perturbations, its underlying visual explanations may still become inconsistent \cite{r4,r5,r9}.
-	Conventional robustness evaluation methods are 
-	primarily based on accuracy change under perturbation. 
-	They do not capture whether the model maintains consistent reliance on task-relevant regions under perturbed conditions. These observations motivate an evaluation framework that considers both predictive behavior and explanation behavior.
+	Model behavior can shift due to real-world perturbations e.g., noise, blur, lighting shifts, compression, 
+	and occlusion. These distortions can alter both CNN accuracy and the visual regions driving predictions. 
+	Consequently, even when a model maintains relatively high accuracy under perturbations, 
+	its underlying visual explanations may still become inconsistent \cite{r5,r9}. Conventional robustness 
+	evaluation methods are primarily based on accuracy change under perturbation. They do not capture whether the model
+	maintains consistent reliance on task-relevant regions under perturbed conditions. These observations motivate an evaluation 
+	ramework that considers both predictive behavior and explanation behavior.
 	% above paragraph is good to go
 	
 	% moving towards the generic solution
 	Explainable Artificial Intelligence (XAI) provides a framework for examining visual evidences used by CNNs for their predictions. 
-	In particular, Grad-CAM generates class-discriminative heatmaps that highlight image regions contributing to a model's prediction \cite{r5,r6,r7}. 
-	Such explanations can reveal whether a model achieves high classification accuracy by focusing substantially on background or other irrelevant regions rather than target objects. 
-	Previous studies have shown that background information and spurious correlations can influence deep neural network decisions and may lead to shortcut learning \cite{r9} \zahid{add more relevent refs}. 
+	In particular, Grad-CAM generates class-discriminative heatmaps that highlight image regions contributing to a model's prediction
+	 \cite{r6}. The faithfulness of such explanations is an important consideration, since explanation scores should meaningfully 
+	reflect the influence of the corresponding image regions on the model’s prediction \cite{r10}. Such explanations can reveal whether a 
+	model achieves high classification accuracy by focusing substantially on 
+	background or other irrelevant regions rather than target objects. Previous studies have shown that background information and 
+	spurious correlations can influence deep neural network decisions and may lead to shortcut learning \cite{r11, r12, r13} %\zahid{add more relevent refs}. 
 	Consequently, a highly accurate model does not confirm that the predictions are made on appropriate object-level information. 
 	This creates an important distinction between predictive performance and explainable reliability. %Now it is necessary to evaluate whether a model's accuracy is based on task-relevant regions. 
 	This is the motivation for evaluating a framework that combines accuracy and object focus.
@@ -200,7 +211,8 @@
 	%by measuring whether both classification performance and
 	%object-focused explanations remain stable compared with
 	%clean-image behavior. 
-	In essence, ETI and ERI address two different questions: ETI asks ``Whether a model is accurate and appropriately focused on the target object under normal conditions?'', whereas ERI asks ``Whether these properties remain stable when the input is perturbed?''
+	In essence, ETI and ERI address two different questions: ETI asks ``Whether a model is accurate and appropriately focused on the target object 
+	under normal conditions?'', whereas ERI asks ``Whether these properties remain stable when the input is perturbed?''
 	
 	%We highlight the importance of object reliability (\zahid{is this correct? or model reliability?}) as well as accuracy. 
 	%TI integrates accuracy and object reliability (\zahid{??}) in clean images. 
@@ -212,10 +224,11 @@
 	
 	We introduce the Localization Mask Overlap Score (LMOS) to quantify object-focused explanation quality. 
 	For each test image, we create a ground-truth mask for the target object excluding the background. 
-	We use Grad-CAM \cite{r5} to identify the image regions contributing to the model's prediction.
+	We use Grad-CAM \cite{r6} to identify the image regions contributing to the model's prediction.
 	LMOS quantifies the proportion of the model's decision-relevant activation that overlaps with the annotated target-object region. 
 	%Grad-CAM highlights key predictive regions using a color heatmap, where red and yellow denote the highest activation and strongest influence on the decision.
-	It is observed that in Grad-CAM visualizations, red and yellow regions in images are activated most i.e., red and yellow have greater influence than other colors on models' predictions \zahid{any ref to this??}. 
+	It is observed that in Grad-CAM visualizations, red and yellow regions in images are activated most i.e., red and yellow have 
+	greater influence than other colors on models' predictions \cite{r14} \cite{r15}. %\zahid{any ref to this??}. 
    	We integrate this principle into LMOS; a higher LMOS value indicates that a larger proportion of the model's highlighted regions falls within the target object boundary rather than the background.
 	%So we consider them as decision-relevant. Therefore, a higher LMOS indicates that a larger proportion of the model's highlighted regions is located within the target object rather than outside it. LMOS provides a quantitative measure that can be compared across CNN architectures and datasets.
 	
@@ -232,15 +245,15 @@
 	%Models with high TI is considered reliable as both the model accuracy and object reliance are high. 
 	%Models with moderate to low TI means its accuracy or object focus, or both, are low and limited. 
 	
-	To comprehensively evaluate the proposed metrics, we conduct experiments using four public real-world datasets comprising two leaf image datasets:  EPLI \cite{r10}, BDML\cite{r11} and two flower image datasets: FLRS \cite{r12}, FR \cite{r13}. 
+	To comprehensively evaluate the proposed metrics, we conduct experiments using four public real-world datasets comprising two leaf image datasets:  EPLI \cite{r16}, BDML\cite{r17} and two flower image datasets: FLRS \cite{r18}, FR \cite{r19}. 
 	Eight CNN architectures are trained and evaluated on the datasets. %For the test images, target-object masks are manually annotated to provide the spatial reference required for LMOS calculation. 
 	%Grad-CAM explanations are generated for both clean and perturbed test images. 
 	We evaluate nine perturbations, including Gaussian noise, Gaussian blur, brightness adjustment, hue shift, contrast adjustment, gamma correction, motion blur, JPEG compression, and random occlusion \zahid{cite all the methods}. 
 	For each CNN architecture, ETI is calculated on clean images, while ERI is calculated from accuracy stability and LMOS stability across the evaluated perturbations.
 	
 	We empirically demonstrate the importance of combining accuracy with LMOS in ETI. 
-	For example, a custom CNN achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.1900, resulting in the lowest ETI score of 0.5922 among the evaluated models. \zahid{what is the consequence?? e.g., XX\% of predictions are based on background??}
-	In contrast, the MobileNetV2 also achieves 99.45\% accuracy but obtains a substantially higher mean LMOS of 0.7765 and an ETI of 0.8855. \zahid{what is the consequence?? e.g., XX\% of predictions are based on background, must be less than custom CNN??}
+	For example, a custom CNN achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.1900, resulting in the lowest ETI score of 0.5922 among the evaluated models. Its LMOS is only 0.1900, indicating that only 19.00\% of its decision-relevant activation, on average, falls within the annotated target-object regions, while the remaining 81.00\% lies outside these regions. \zahid{what is the consequence??  e.g., XX\% of predictions are based on background??}
+	In contrast, the MobileNetV2 also achieves 99.45\% accuracy but obtains a substantially higher mean LMOS of 0.7765, indicating that 77.65\% of its decision-relevant activation falls within the target-object regions, with only 22.35\% outside them and an ETI of 0.8855. \zahid{what is the consequence?? e.g., XX\% of predictions are based on background, must be less than custom CNN??}
 	This demonstrates that models with similar high accuracy can exhibit substantially different levels of object-focused reliance and the model with higher LMOS should be selected for real-world deployment. 
 	%A high accuracy score alone therefore cannot distinguish between a model that makes predictions while focusing on the target object and a model that achieves similar accuracy while emphasizing regions outside the target object. 
 	%Importantly, low LMOS does not by itself indicate shortcut learning, bias, or overfitting; rather. It provides quantitative evidence that the model's decision-relevant activation is insufficiently aligned with the target object, which demands further investigation.
@@ -248,8 +261,8 @@
 	
 	ERI combines \emph{accuracy stability} and \emph{LMOS stability} to provide a joint measure of explainable robustness. 
 	This distinction is important because predictive stability and explanation stability are not correlated. 
-	For example, on the EPLI dataset, the Custom CNN under contrast perturbation maintains relatively high accuracy stability of 0.8494 but has substantially lower LMOS stability of 0.4545. 
-	Conversely, ResNet50 under the same perturbation exhibits relatively low accuracy stability of 0.4599 but higher LMOS stability of 0.7830. 
+	For example, on the EPLI dataset, the Custom CNN under contrast perturbation maintains relatively high accuracy stability of 0.8494 but has substantially lower LMOS stability of 0.4545. This indicates that, although its predictive performance remains comparatively stable, its object-focused explanation changes substantially relative to the clean-image condition. 
+	Conversely, ResNet50 under the same perturbation exhibits relatively low accuracy stability of 0.4599 but higher LMOS stability of 0.7830, indicating that its object-focused explanation remains comparatively more consistent despite a larger change in predictive performance. 
 	\zahid{what is the consequence of this??}
 	These demonstrate that accuracy stability alone cannot fully characterize robustness: a model may preserve its predictive performance while substantially changing its object-focused behavior, or it may preserve its visual focus while its predictive performance deteriorates. 
 	%ERI therefore evaluates these two complementary dimensions jointly.
@@ -290,9 +303,10 @@
 	\end{itemize}
 	}
 	
+	
 	\section{Problem Definition}
 	\label{sec:problem_def}
-	Let  $\mathcal{D}=\{(x_i,y_i,M_i)\}_{i=1}^{N}$ be a dataset containing $N$ images, where $x_i\in \mathbb R^{n\times m}$ is the $i$-th image, $y_i$ is its ground-truth label, and $M_i$ is the corresponding ground-truth mask of the target object. 
+	Let  $\mathcal{D}=\{(x_i,y_i,M_i)\}_{i=1}^{N}$ be a dataset containing $N$ test images, where $x_i\in \mathbb R^{n\times m}$ is the $i$-th image, $y_i$ is its ground-truth label, and $M_i$ is the corresponding ground-truth mask of the target object. 
 	%Let $\mathcal{F}$ denote a set of $K$ CNN architectures evaluated on the same test dataset. Here, $\mathcal{F} = \{f_1, f_2, \ldots, f_K\}$. 
 	Conventional evaluation methods primarily measure the classification accuracy of a model. 
 	Let $acc\in[0,1]$ denote the classification accuracy of a model. 
@@ -307,11 +321,11 @@
 	%We want to develop a scoring function $\mathrm{LMOS}_i \in[0,1]$ that will measure the ratio between the overlap between the decision-relevant regions of $H_i$ and the ground-truth object mask $M_i$. 
 	We seek to quantify the alignment between a model's rationale and its predictions. 
 	Let $H_i$ denote the Grad-CAM heatmap corresponding to image $x_i$ and prediction $\hat{y}_i$. 
-	We define a scoring function $\mathrm{LMOS}_i \in [0, 1]$ to measure the overlap ratio between the decision-relevant regions of $H_i$ and the ground-truth object mask $M_i$.
+	We define a scoring function $\mathrm{LMOS}_i \in [0, 1]$ to measure the overlap ratio between the decision-relevant regions of $H_i$ and the ground-truth object mask $M_i$ %and $ L$ is the mean LMOS value across all images.
 	%and the total highlighted regions, \(H_{i}\). 
 	To indicate model trustworthiness and robustness, we address the following two sub problems in this paper.
 	
-	Firstly, we want to evaluate CNN models considering both their accuracy ($acc$) and object-focused explanation quality ($\mathrm{LMOS}$). 
+	Firstly, we want to evaluate CNN models considering both their accuracy ($acc$) and mean object-focused explanation quality ($\mathrm{LMOS}$). 
 	Formally, the objective is to develop an evaluation measure $T$ as a function of $acc$ and $\mathrm{LMOS}$: $T = \Psi(acc, \mathrm{LMOS})$. 
 	We address this problem by the proposed Explainable Trustworthy Index (ETI).
 	
@@ -322,11 +336,41 @@
 	%Let $acc_{\mathrm{clean}}$ and $acc_{\mathrm{perturbed}}$ denote the classification accuracy of a model on the clean and perturbed test sets, respectively. 
 	%Similarly, also let $\mathrm{LMOS}_{\mathrm{clean}}$ and $\mathrm{LMOS}_{\mathrm{perturbed}}$ denote the LMOS values for the clean and perturbed versions of the test set. 
 	%The perturbation-specific accuracy stability and LMOS stability are therefore defined as measures of how closely the model preserves its predictive performance and object-focused behavior relative to the clean condition. 
-	Let $S_{\mathrm{acc}}$ and $S _ {\mathrm{LMOS}}$ represent the overall accuracy stability (the model's ability to perform under purturbation) and LMOS stability (the model's ability to use the object-focused are for making predictions) of a model. 
+	Let $S_{\mathrm{acc}}$ and $S _ {\mathrm{LMOS}}$ represent the overall accuracy stability (the model's stability to perform under purturbation) and LMOS stability (the model's stability to remain the object-focused for making predictions) of a model. 
 	Our second problem is to obtain an evaluation measure $R$ that jointly captures these two forms of stability across the evaluated perturbations: $R = \Phi(S_{\mathrm{acc}},  S_{\mathrm{LMOS}})$. 
-	We propose Explainable Robustness Index (ERI) to address this problem.
+	We propose Explainable Robustness Index (ERI) to address this problem. Table \ref{tab:notation} has described each notation clearly.
 	
 	%Therefore, the overall evaluation problem addressed in this study is to distinguish CNN architectures not only according to how accurately they classify clean images, but also according to whether their decision-relevant activation is aligned with the intended target object and whether both predictive performance and object-focused behavior remain stable under input perturbations. ETI addresses the first aspect on clean inputs, whereas ERI addresses the stability of these properties under perturbations. The two indices are complementary and are not intended to represent the overall trustworthiness or robustness of a CNN across all possible dimensions.
+
+    \begin{table}[t]
+	\centering
+	\caption{Notation used in the problem formulation.}
+	\label{tab:notation}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Notation} & \textbf{Description} \\
+		\midrule
+		$\mathcal{D}$ & Dataset of $N$ images with labels and target masks \\
+		$N$ & Number of images in the dataset \\
+		$x_i$ & $i$-th input image \\
+		$y_i$ & Ground-truth class label of $x_i$ \\
+		$\hat{y}_i$ & Predicted class label for $x_i$ \\
+		$M_i$ & Ground-truth binary mask of the target object in $x_i$ \\
+		$H_i$ & Grad-CAM heatmap for $x_i$ and $\hat{y}_i$ \\
+		$\mathrm{LMOS}_i$ & Object-focused localization score for $x_i$ \\
+		$\mathrm{LMOS}$ & Mean LMOS over the evaluated dataset \\
+		$acc$ & Classification accuracy of a CNN \\
+		$\mathcal{P}$ & Set of $P$ input perturbations \\
+		$P$ & Number of evaluated perturbations \\
+		$S_{\mathrm{acc}}$ & Overall accuracy stability under perturbations \\
+		$S_{\mathrm{LMOS}}$ & Overall LMOS stability under perturbations \\
+		$T$ & Generic evaluation measure based on $acc$ and $\mathrm{LMOS}$ \\
+		$R$ & Generic robustness measure based on $S_{\mathrm{acc}}$ and $S_{\mathrm{LMOS}}$ \\
+		$\Psi(\cdot)$ & Function combining accuracy and LMOS \\
+		$\Phi(\cdot)$ & Function combining accuracy and LMOS stability \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 	
 	
 	\zahid{add a table of notations here}
@@ -341,23 +385,23 @@
 	%KAGGLE dataset \cite{r13}. 
 	
 	\begin{itemize}
-		\item \textbf{EPLI}: EPLI (introduced as EgyPLI in \cite{r10}) contains 3,588 JPG images of size $256\times256$ pixels.  
+		\item \textbf{EPLI}: EPLI (introduced as EgyPLI in \cite{r16}) contains 3,588 JPG images of size $256\times256$ pixels.  
 		There are images of 8 species including apple, berry, fig, guava, orange, plum, persimmon, and tomato. 
 		%, including both normal and diseased leaves. \zahid{are these are images of leaves or the fruits?} 
 		%The images were captured under natural uncontrolled environment. 
 		%The images are in JPG format and the size is $256\times256$. 
-		The dataset is annotated for image‑level classification  \cite{r10}.
+		The dataset is annotated for image‑level classification  \cite{r16}.
 		
-		\item \textbf{BDML:} BDML(also known as BDMediLeaves \cite{r11}) is a dataset of 2,029 original leaf images (augmented to 38,606) from 10 medicinal plant species. 
+		\item \textbf{BDML:} BDML(also known as BDMediLeaves \cite{r17}) is a dataset of 2,029 original leaf images (augmented to 38,606) from 10 medicinal plant species. 
 		They are captured with an iPhone 13 under natural light at $3024\times 4032$ resolution. 
-		This dataset is designed for machine learning‑based species identification. We used the original dataset (not the augmented one) in our experiments \cite{r11}.
+		This dataset is designed for machine learning‑based species identification. We used the original dataset (not the augmented one) in our experiments \cite{r17}.
 		
-		\item \textbf{FLRS}: FLRS (or Flowers \cite{r12}) is a large image dataset for flower classification containing 3,670 training images of five flower species including daisies, tulips, sunflowers, dandelions, and roses. 
-		It is available through the TensorFlow Datasets (TFDS) collection \cite{r12}. 
+		\item \textbf{FLRS}: FLRS (or Flowers \cite{r18}) is a large image dataset for flower classification containing 3,670 training images of five flower species including daisies, tulips, sunflowers, dandelions, and roses. 
+		It is available through the TensorFlow Datasets (TFDS) collection \cite{r18}. 
 		\zahid{what is the resolution of the images in this dataset?}
 		
-		\item \textbf{KFLR}:  This kaggle dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
-		However, the kaggle version contains 4,242 JPG images of resulation of $320\times240$ pixels. 
+		\item \textbf{KFLR}:  This kaggle \cite{r19} dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
+		However, the kaggle version contains 4,242 JPG images of resulation of $320\times240$ pixels. Although the image classes are the same as FLRS, the image samples are different.  This repository was also used in previous research \cite {r20, r21}.
 		\zahid{is this different than the above FLRS?}
 	\end{itemize}
 	
