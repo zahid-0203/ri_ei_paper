@@ -110,4 +110,115 @@ M.~To{\u{g}}a{\c{c}}ar, B.~Ergen, and Z.~C{\"o}mert, ``Classification of flower
   selection methods in convolutional neural network models,'' {\em
   Measurement}, vol.~158, p.~107703, 2020.
 
+\bibitem{r22}
+F.~Javed, S.~Ruijs, and A.~Kosiakova, ``Beyond accuracy: Reliability and
+  uncertainty estimation in convolutional neural networks,'' {\em Available at
+  SSRN 6030753}.
+
+\bibitem{r23}
+S.~Ao, S.~Rueger, and A.~Siddharthan, ``Empirical optimal risk to quantify
+  model trustworthiness for failure detection,'' {\em arXiv preprint
+  arXiv:2308.03179}, 2023.
+
+\bibitem{r24}
+A.~Nastoska, B.~Jancheska, M.~Rizinski, and D.~Trajanov, ``Evaluating
+  trustworthiness in ai: Risks, metrics, and applications across industries,''
+  {\em Electronics}, vol.~14, no.~13, p.~2717, 2025.
+
+\bibitem{r25}
+M.~Pal, H.~N. Saha, and A.~Chakrabarti, ``The trust-aware xai (taxai)
+  framework: a quantitative model for interpretable and reliable clinical ai
+  systems,'' {\em Scientific Reports}, 2026.
+
+\bibitem{r26}
+F.~Zhang, Q.~Wang, and J.~Zhao, ``Ar2: Attention-guided repair for the
+  robustness of cnns against common corruptions,'' {\em arXiv preprint
+  arXiv:2507.06332}, 2025.
+
+\bibitem{r27}
+D.~Hendrycks and T.~Dietterich, ``Benchmarking neural network robustness to
+  common corruptions and perturbations,'' {\em arXiv preprint
+  arXiv:1903.12261}, 2019.
+
+\bibitem{r28}
+D.~Su, H.~Zhang, H.~Chen, J.~Yi, P.-Y. Chen, and Y.~Gao, ``Is robustness the
+  cost of accuracy?--a comprehensive study on the robustness of 18 deep image
+  classification models,'' in {\em European Conference on Computer Vision},
+  pp.~644--661, Springer, 2018.
+
+\bibitem{r29}
+R.~Taori, A.~Dave, V.~Shankar, N.~Carlini, B.~Recht, and L.~Schmidt,
+  ``Measuring robustness to natural distribution shifts in image
+  classification,'' {\em Advances in neural information processing systems},
+  vol.~33, pp.~18583--18599, 2020.
+
+\bibitem{r30}
+D.~Hendrycks, N.~Mu, E.~D. Cubuk, B.~Zoph, J.~Gilmer, and B.~Lakshminarayanan,
+  ``Augmix: A simple data processing method to improve robustness and
+  uncertainty,'' {\em arXiv preprint arXiv:1912.02781}, 2019.
+
+\bibitem{r31}
+S.~Schneider, E.~Rusak, L.~Eck, O.~Bringmann, W.~Brendel, and M.~Bethge,
+  ``Improving robustness against common corruptions by covariate shift
+  adaptation,'' {\em Advances in neural information processing systems},
+  vol.~33, pp.~11539--11551, 2020.
+
+\bibitem{r32}
+J.~Guo, W.~Bao, J.~Wang, Y.~Ma, X.~Gao, G.~Xiao, A.~Liu, J.~Dong, X.~Liu, and
+  W.~Wu, ``A comprehensive evaluation framework for deep model robustness,''
+  {\em Pattern Recognition}, vol.~137, p.~109308, 2023.
+
+\bibitem{r33}
+T.~Mahmud, K.~Barua, A.~Barua, N.~Basnin, S.~Das, M.~S. Hossain, and
+  K.~Andersson, ``Explainable ai for tomato leaf disease detection: Insights
+  into model interpretability,'' in {\em 2023 26th International Conference on
+  Computer and Information Technology (ICCIT)}, pp.~1--6, IEEE, 2023.
+
+\bibitem{r34}
+B.~Singh, R.~P. Sharma, and S.~Dey, ``Interpretable plant leaf disease
+  detection using attention-enhanced cnn,'' {\em arXiv preprint
+  arXiv:2512.17864}, 2025.
+
+\bibitem{r35}
+S.~M. Shawon, F.~L. Niha, O.~H. Sinan, M.~J. Abed, M.~Al~Qwaid, M.~T. Sarker,
+  and H.~Zubair, ``Integrating federated learning and explainable ai for plant
+  disease detection: A systematic review of recent advances in precision
+  agriculture,'' {\em International Journal of Computational Intelligence
+  Systems}, 2026.
+
+\bibitem{r36}
+S.~Rahimiaghdam and H.~Alemdar, ``Evaluating the quality of visual explanations
+  on chest x-ray images for thorax diseases classification,'' {\em Neural
+  Computing and Applications}, vol.~36, no.~17, pp.~10239--10255, 2024.
+
+\bibitem{r37}
+H.~Baniecki, M.~Chrabaszcz, A.~Holzinger, B.~Pfeifer, A.~Saranti, and
+  P.~Biecek, ``Be careful when evaluating explanations regarding ground
+  truth,'' {\em arXiv preprint arXiv:2311.04813}, 2023.
+
+\bibitem{r38}
+S.~Repetto, I.~Maljkovic, M.~Lotto, A.~E. Cin{\`a}, S.~Vascon, and F.~Roli,
+  ``Evaluating the robustness of explainable ai in medical image recognition
+  under natural and adversarial data corruption,'' {\em Machine Learning},
+  vol.~115, no.~1, p.~4, 2026.
+
+\bibitem{r39}
+G.~Zheng, W.~Ye, and A.~Zhang, ``Shortcutprobe: Probing prediction shortcuts
+  for learning robust models,'' {\em arXiv preprint arXiv:2505.13910}, 2025.
+
+\bibitem{r40}
+R.~Guidotti, ``Evaluating local explanation methods on ground truth,'' {\em
+  Artificial Intelligence}, vol.~291, p.~103428, 2021.
+
+\bibitem{r41}
+R.~C. Fong and A.~Vedaldi, ``Interpretable explanations of black boxes by
+  meaningful perturbation,'' in {\em 2017 IEEE international conference on
+  computer vision (ICCV)}, pp.~3449--3457, IEEE, 2017.
+
+\bibitem{r42}
+E.~Kim, S.~Kim, J.~Lee, H.~Kim, and S.~Yoon, ``Bridging the gap between
+  classification and localization for weakly supervised object localization,''
+  in {\em 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pp.~14238--14247, IEEE, 2022.
+
 \end{thebibliography}

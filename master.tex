@@ -33,6 +33,8 @@
 \usepackage{booktabs} % Required for professional table lines
 \usepackage{siunitx}  % Optional but highly recommended for numeric alignment
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{array}
 
 %%%Author macros
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
@@ -83,7 +85,7 @@
 	%       linkedin=<linkedin id>,
 	%       gplus=<gplus id>]
 	
-	\author[1]{Ragib Mehedi}%[<options>]
+	\author[1]{Ragib Mehedi}[orcid=0009-0003-1555-7338]
 	\ead{ragib6627@gmail.com}
 	\cormark[1]
 	\credit{Conceptualization, Methodology, Software, Investigation, Formal analysis, Writing – Original Draft, Writing – Review \& Editing}
@@ -94,11 +96,13 @@
 	
 	\author[2]{Md. Nazmul Abdal}
 	\ead{nazmul.abdal@ulab.edu.bd}
+    \ead[url]{https://ulab.edu.bd/faculty/md-nazmul-abdal}
 	\credit{Data Curation}
 	
 	
 	\author[1]{Abdullah Al Noman}
 	\ead{noman@cse.ku.ac.bd}
+    \ead[url]{https://ku.ac.bd/discipline/cse/faculty/noman}
 	\cormark[1]
 	\credit{Supervision, Writing – Review \& Editing}
 	% Corresponding author indication
@@ -106,6 +110,7 @@
 	
 	\author[1]{Md. Zahidul Islam}
 	\ead{zahid@cse.ku.ac.bd}
+    \ead[url]{https://ku.ac.bd/discipline/cse/faculty/zahid}
 	\credit{Supervision, Writing – Review \& Editing }
 	
 	\affiliation[1]{ organization={Computer Science and Engineering Discipline, Khulna University}, city={Khulna}, postcode={9208}, country={Bangladesh} } 
@@ -151,8 +156,8 @@
 	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such 
     as medical imaging, agriculture, and astronomy, where predictions support important decision-making processes
 	\cite{r1}\cite{r2}\cite{r3}\cite{r4}. In such applications, classification accuracy is an essential performance
-	measure, but accuracy alone does not necessarily indicate whether a model is reliable. A CNN model is considered 
-	reliable when its predictions are strictly grounded in task-relevant visual features rather than spurious 
+	measure, but accuracy alone does not necessarily indicate whether a model is reliable. A CNN model is considered more
+	reliable when its predictions are grounded in task-relevant visual features rather than spurious 
 	correlations\cite{r5}.
 	\zahid{Wu, J., Kang, W., Tang, H., Hong, Y., \& Yan, Y. (2024). On the faithfulness of vision transformer explanations. 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 10936–10945. https://doi.org/10.1109/cvpr52733.2024.01040
 
@@ -228,7 +233,7 @@
 	LMOS quantifies the proportion of the model's decision-relevant activation that overlaps with the annotated target-object region. 
 	%Grad-CAM highlights key predictive regions using a color heatmap, where red and yellow denote the highest activation and strongest influence on the decision.
 	It is observed that in Grad-CAM visualizations, red and yellow regions in images are activated most i.e., red and yellow have 
-	greater influence than other colors on models' predictions \cite{r14} \cite{r15}. %\zahid{any ref to this??}. 
+	greater influence than other colors on models' predictions \cite{r14} \cite{r15}. So we consider them as decision-relevant regions. \zahid{any ref to this??}. 
    	We integrate this principle into LMOS; a higher LMOS value indicates that a larger proportion of the model's highlighted regions falls within the target object boundary rather than the background.
 	%So we consider them as decision-relevant. Therefore, a higher LMOS indicates that a larger proportion of the model's highlighted regions is located within the target object rather than outside it. LMOS provides a quantitative measure that can be compared across CNN architectures and datasets.
 	
@@ -286,9 +291,249 @@
 	%Finally, the mean ERI across all perturbations has been calculated and a ranking has been made according to the mean ERI. 
 	%Like ETI, a model with hight ERI indicates that both its accuracy and object focus remain stable under the use of perturbations. 
 	%A moderate/low ERI reveals that its accuracy, or focus on object, or both change with the use of perturbations.
-	
+
+
+
+
+
+
+\begin{table*}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\caption{Grad-CAM visualization on EPLI}
+\label{tab:model_robustness}
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{C{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm}}
+\hline
+
+\textbf{Model} &
+\textbf{Original} &
+\textbf{Segmented} &
+\textbf{Clean} &
+\textbf{Hue} &
+\textbf{Blur} &
+\textbf{Contrast} &
+\textbf{Compression}
+\\
+\hline
+
+\begin{tabular}[c]{l}
+Model: Xception \\
+Accuracy: 99.45\% \\
+Mean LMOS: 0.7638\\
+ETI: 0.8791 \\
+ERI: 0.9346
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png} \\[-1mm]
+\scriptsize Apple % Original image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png} \\[-1mm]
+\scriptsize %Segmented image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+\\
+\hline
+
+\begin{tabular}[c]{l}
+Model: Custom CNN \\
+Accuracy: 99.45\% \\
+Mean LMOS: 0.1900\\
+ETI: 0.5922 \\
+ERI: 0.9346
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png} \\[-1mm]
+\scriptsize Apple % Original image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png} \\[-1mm]
+\scriptsize %Segmented image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png} \\[-1mm]
+\scriptsize LMOS: 0.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png} \\[-1mm]
+\scriptsize LMOS: 0.00 
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png} \\[-1mm]
+\scriptsize LMOS: 0.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png} \\[-1mm]
+\scriptsize LMOS: 0.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png} \\[-1mm]
+\scriptsize LMOS: 0.00
+\end{tabular}
+\\
+\hline
+
+\end{tabular}%
+}
+\end{table*}
+
+
+
+\begin{table*}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\caption{Grad-CAM visualization on BDML}
+\label{tab:model_robustness}
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{C{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm}}
+\hline
+
+\textbf{Model} &
+\textbf{Original} &
+\textbf{Segmented} &
+\textbf{Clean} &
+\textbf{Hue} &
+\textbf{Blur} &
+\textbf{Contrast} &
+\textbf{Compression}
+\\
+\hline
+
+\begin{tabular}[c]{l}
+Model: Inception V3 \\
+Accuracy: 93.07\% \\
+Mean LMOS: 0.3344 \\
+ETI: 0.6325 \\
+ERI: 0.7898
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_original.png} \\[-1mm]
+\scriptsize Apple % Original image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_segmented.png} \\[-1mm]
+\scriptsize %Segmented image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_clean.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_hue.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_blur.png} \\[-1mm]
+\scriptsize LMOS: 0.903
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_contrast.png} \\[-1mm]
+\scriptsize LMOS: 0.812
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_compression.png} \\[-1mm]
+\scriptsize LMOS: 0.785
+\end{tabular}
+\\
+\hline
+
+\begin{tabular}[c]{l}
+Model: Custom CNN \\
+Accuracy: 99.45\% \\
+Mean LMOS: 0.1900\\
+ETI: 0.5922 \\
+ERI: 0.9346
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_original.png} \\[-1mm]
+\scriptsize Apple % Original image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png} \\[-1mm]
+\scriptsize %Segmented image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_clean.png} \\[-1mm]
+\scriptsize LMOS: 0.965 (wrong prediction)
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_hue.png} \\[-1mm]
+\scriptsize LMOS: 0.00 (wrong prediction)
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_blur.png} \\[-1mm]
+\scriptsize LMOS: 0.817 (wrong prediction)
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png} \\[-1mm]
+\scriptsize LMOS: 0.759 (wrong prediction)
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_compression.png} \\[-1mm]
+\scriptsize LMOS: 0.937 (wrong prediction)
+\end{tabular}
+\\
+\hline
+
+\end{tabular}%
+}
+\end{table*}
+
+
+
+    
 	---
-	
+
 	\textbf{Two questions that the proposed measures can answer - How trustworty a model is? Trustworty means - predictions are based on real objects in the images. How robust a model is? Robustness means - performance of the model will not degrade under purturbations. }
 	
 	\zahid{
@@ -302,7 +547,8 @@
 		\item Show - traditional measures fail under purturbations but proposed measures hold. 
 	\end{itemize}
 	}
-	
+
+    
 	
 	\section{Problem Definition}
 	\label{sec:problem_def}
@@ -674,6 +920,17 @@
 	%\subsubsection{}
 	
 	\section{Related Works}
+Javed et al. introduced two approaches: a Bayesian approximation
+via Monte Carlo Dropout and the nonparametric Conformal Prediction framework to measure uncertainty \cite{r22}. Although CNN models are excellent for classification, their predictions are often wrong but overconfident. If wrong predictions receive high confidence, the models are overconfident and difficult to trust. These models suffer from poor calibration. Their research indicates that accuracy alone cannot make a model reliable. Recent studies have proposed trustworthiness metrics based on uncertainty estimation and failure detection. Ao et al. \cite{r23} proposed the Excess Area Under the Optimal Risk-Coverage Curve, E-AUoptRC, to evaluate model performance under the risk–coverage (RC) framework. They also introduced the Trust Index (TI), which displays model performance at the optimal coverage point and serves as a complementary metric to overall accuracy. E-AUoptRC and TI provide more trustworthiness of CNN models than other indices/metrics. Nastoska et al. proposed frameworks and metrics to evaluate AI trustworthiness, including fairness, transparency, privacy, and security\cite{r24}. They experimented with various frameworks such as the NIST AI Risk Management Framework (AI RMF), the AI Trust Framework and Maturity Model (AI-TMM), and ISO/IEC standards. Their study includes a comparative analysis of existing standards and their applications in the industry to describe theirabout generalizing effectiveness. Pal et al. proposed the Trust-Aware Explainable Artificial Intelligence (TAXAI) framework. It introduces a quantitative Trust Index for evaluating explainable AI systems in clinical applications\cite{r25}. The framework combines algorithmic transparency, interpretability alignment, and compliance-oriented reliability into a unique trust evaluation model. It is not similar to traditional XAI methods that primarily generate explanations. In contrast, TAXAI focuses on measuring the trustworthiness and reliability of explanations through a normalized trust score.
+
+Zhang et al. proposed AR2, a repair method to improve robustness to corruption without changing the architecture. It aligns the class activation maps (CAMs) for clean and corrupted images and encourages the model to maintain consistency  \cite{r26}. Although AR2 enhances robustness under perturbations, it does not provide any explainable score or index under various perturbations. In contrast, our proposed Explainable Robustness Index (ERI) directly measures the stability of Grad-CAM explanations under perturbations. It provides an explainability-based robustness evaluation. Hendrycks and Dietterich \cite{r27} introduced ImageNet-C and ImageNet-P. Their research evaluates performance under corruption and perturbations. They found negligible changes under corruption from AlexNet to ResNet classifiers. This research calculates performance degradation under distribution shifts but does not assess the stability of model explanations.  Su et al. evaluated the robustness of deep image classification models against various perturbations and demonstrated that high classification accuracy does not necessarily imply high robustness \cite{r28}. This work motivated us to investigate robustness beyond predictive accuracy. Taori et al. defined robustness during natural distribution shifts and emphasized that robustness should be evaluated separately from standard predictive accuracy \cite{r29}. This work further motivated us to evaluate robustness beyond predictive accuracy. Hendrycks et al. proposed AugMix, a data-processing method designed to improve the robustness of image classification models under common corruptions while maintaining performance on clean images \cite{r30}. This research is very motivating for our evaluation of robustness beyond standard predictive accuracy. Schneider et al. evaluated robustness under common image corruptions and showed that covariate-shift adaptation using corrupted test samples can substantially improve model performance under such distribution shifts \cite{r31}. Guo et al. proposed a model robustness evaluation framework \cite{r32}. It contains 23 comprehensive and rigorous metrics. These metrics consider two key aspects of adversarial learning: data and model.
+
+Bassi et al. demonstrated the impact of background on the model's decision \cite {r11}. Background may cause shortcut learning. Layer-wise Relevance Propagation (LRP) explores the model's decision. They revealed that background bias influence on deep learning models can be minimized by LRP heatmaps without increasing computation cost. By injecting synthetic bias in the image's background, they compared their approach to eight state-of-the-art DNNs. Their approach remained more robust.  Grad-CAM and saliency-based methods have been widely utilized to interpret CNN-based classification systems in various sectors, such as plant disease detection. They provide trustworthiness and important insights for decision-making and predictions\cite{r33}. Attention-based and explainability-guided CNN architectures have been widely explored in recent applications. For example, Singh et al. have proposed CBAM-enhanced VGG16 models for plant leaf disease classification. They presented the effectiveness of their research through comprehensive evaluation and interpretability analysis, such as Grad-CAM, Grad-CAM++, and Layer-wise Relevance Propagation (LRP), to make the system more transparent and reliable for smart farming. \cite{r34}. Shawon et al. highlight the growing application of explainable AI techniques such as Grad-CAM, SHAP, and LIME in plant disease detection. They emphasize concerns about generalizing models under real-world conditions and environmental variability, although they provide high accuracy\cite{r35}. However, these works primarily focus on applying interpretability methods rather than quantitatively evaluating explanation quality or robustness, which motivates the need for metrics such as ERI and ETI. A significant problem of Explainable AI is the unavailability of quantifiable metrics to evaluate or measure explanation quality. Rahimiaghdam and Alemdar addressed the issue and proposed evaluative and quantitative metrics of explanation quality in medical imaging \cite{r36}. Baniecki.
+et al. expressed the quality of classifiers as the consistency of explanations and ground truth/segmentation masks. They proposed a framework that evaluates robustness by combining deep neural networks with explanations. Similar tasks are widely used in medical imaging. They introduced a fine-tuning approach that aligns model–explanation pipelines with ground truth. \cite{r37}.  Repetto et al. evaluated the robustness of ExAI methods under various perturbations. They systematically measured the stability of ExAI techniques against both natural noise and adversarial manipulations that change explanations but not predictions. Finally, they introduced some evaluative metrics and proposed a protocol to assess the reliability of ExAI methods\cite{r38}. Zheng et al. proposed a spurious bias
+mitigation framework, ShortcutProbe\cite{r39}. Here, there is no need for annotation and labeling. ShortcutProbe detects prediction shortcuts that may lessen robustness. The models were retrained again to become invariant to these shortcuts and more robust.  Guidotti et al. propose an approach that allows evaluating the local explanation methods using ground-truth explanations \cite{r40}. We have been motivated by this ground-truth-based evaluation perspective to quantify the spatial alignment between Grad-CAM evidence and ground-truth object regions, leading to the proposed Localization Mask Overlap Score (LMOS). Fong and Vedaldi proposed a general framework that can learn different kinds of explanations for any black-box algorithm and another framework to find the image region most responsible for a classifier decision \cite{r41}. Kim et al. attempted to find out the gap between classification and localization in weakly supervised object localization and showed that CAM-based methods tend to emphasize the most discriminative object parts rather than the complete object region \cite{r42}.
+
+
+
 	
 	\section{Conclusion}     
 	\label{sec:conclusion}

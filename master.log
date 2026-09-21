@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  20 SEP 2026 21:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  21 SEP 2026 21:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -598,43 +598,43 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages 
 \l__siunitx_sexagesimal_marker_box=\box72
 \l__siunitx_sexagesimal_unit_box=\box73
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 50.
-LaTeX Font Info:    Trying to load font information for T1+stix on input line 50.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 52.
+LaTeX Font Info:    Trying to load font information for T1+stix on input line 52.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\t1stix.fd
 File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
 ) (master.aux)
 \openout1 = `master.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 50.
-LaTeX Font Info:    Trying to load font information for LS1+stix on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 52.
+LaTeX Font Info:    Trying to load font information for LS1+stix on input line 52.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 50.
-LaTeX Font Info:    Trying to load font information for LS2+stix on input line 50.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 52.
+LaTeX Font Info:    Trying to load font information for LS2+stix on input line 52.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stix.fd
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    ... okay on input line 52.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count372
@@ -654,10 +654,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Command `\dddot' is already robust on input line 50.
-LaTeX Info: Command `\ddddot' is already robust on input line 50.
-Package hyperref Info: Link coloring ON on input line 50.
- (master.out) (master.out)
+LaTeX Info: Command `\dddot' is already robust on input line 52.
+LaTeX Info: Command `\ddddot' is already robust on input line 52.
+Package hyperref Info: Link coloring ON on input line 52.
 \@outlinefile=\write3
 \openout3 = `master.out'.
 
@@ -701,171 +700,663 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 50.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 52.
 \verbatim@out=\write4
 \openout4 = `master.abs'.
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 142--143
+Underfull \hbox (badness 2707) in paragraph at lines 147--148
 []\T1/stix/m/n/8 Explainable AI (XAI), Trust-wor-thi-
  []
 
-LaTeX Font Info:    Trying to load font information for LS1+stixscr on input line 145.
+LaTeX Font Info:    Trying to load font information for LS1+stixscr on input line 150.
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stixex on input line 145.
+LaTeX Font Info:    Trying to load font information for LS2+stixex on input line 150.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 145.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 150.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 145.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 150.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input line 145.
+LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input line 150.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stixbb on input line 145.
+LaTeX Font Info:    Trying to load font information for LS1+stixbb on input line 150.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stixcal on input line 145.
+LaTeX Font Info:    Trying to load font information for LS2+stixcal on input line 150.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stixsf on input line 145.
+LaTeX Font Info:    Trying to load font information for LS1+stixsf on input line 150.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stixtt on input line 145.
+LaTeX Font Info:    Trying to load font information for LS2+stixtt on input line 150.
  (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 )
-Overfull \hbox (123.62721pt too wide) detected at line 145
+Overfull \hbox (123.62721pt too wide) detected at line 150
 []
  []
 
 (master.abs)
 
-Package hyperref Warning: Ignoring empty anchor on input line 145.
+Package hyperref Warning: Ignoring empty anchor on input line 150.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 145.
+Package hyperref Warning: Ignoring empty anchor on input line 150.
 
 
-LaTeX Warning: File `thumbnails/cas-email.jpeg' not found on input line 145.
+Package natbib Warning: Citation `r1' on page 1 undefined on input line 158.
 
 
-e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:145: Package pdftex.def Error: File `thumbnails/cas-email.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.145 	\maketitle
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 145.
-(C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
-File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 6.80005pt on input line 145.
+Package natbib Warning: Citation `r2' on page 1 undefined on input line 158.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 145.
+Package natbib Warning: Citation `r3' on page 1 undefined on input line 158.
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 151--159
+Package natbib Warning: Citation `r4' on page 1 undefined on input line 158.
+
+
+Package natbib Warning: Citation `r5' on page 1 undefined on input line 161.
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 156--164
 \T1/stix/m/n/10 as med-i-cal imag-ing, agri-cul-ture, and as-tron-omy, where
  []
 
 
-Underfull \hbox (badness 1337) in paragraph at lines 151--159
+Underfull \hbox (badness 1337) in paragraph at lines 156--164
 \T1/stix/m/n/10 Vi-sion and Pat-tern Recog-ni-tion (CVPR), 10936^^U10945.
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 159--161
+Underfull \hbox (badness 1412) in paragraph at lines 164--166
 \T1/stix/m/n/10 ti-modal med-i-cal rea-son-ing. In-ter-na-tional Con-fer-ence on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--161
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 190--201
+Package natbib Warning: Citation `r6' on page 1 undefined on input line 172.
+
+
+Package natbib Warning: Citation `r7' on page 1 undefined on input line 173.
+
+
+Package natbib Warning: Citation `r8' on page 1 undefined on input line 173.
+
+
+Package natbib Warning: Citation `r5' on page 1 undefined on input line 188.
+
+
+Package natbib Warning: Citation `r9' on page 1 undefined on input line 188.
+
+
+Package natbib Warning: Citation `r6' on page 1 undefined on input line 197.
+
+
+Package natbib Warning: Citation `r10' on page 1 undefined on input line 198.
+
+
+Package natbib Warning: Citation `r11' on page 1 undefined on input line 201.
+
+
+Package natbib Warning: Citation `r12' on page 1 undefined on input line 201.
+
+
+Package natbib Warning: Citation `r13' on page 1 undefined on input line 201.
+
+
+Underfull \hbox (badness 1845) in paragraph at lines 195--206
 []\T1/stix/m/n/10 Explainable Ar-ti-fi-cial In-tel-li-gence (XAI) pro-vides a
  []
 
 [1{C:/Users/samin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-t1.enc}
 
 
-{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-Underfull \hbox (badness 1400) in paragraph at lines 225--234
+{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+
+Package natbib Warning: Citation `r6' on page 2 undefined on input line 232.
+
+
+Package natbib Warning: Citation `r14' on page 2 undefined on input line 236.
+
+
+Package natbib Warning: Citation `r15' on page 2 undefined on input line 236.
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 230--239
 []\T1/stix/m/n/10 We in-tro-duce the Lo-cal-iza-tion Mask Over-lap Score
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 225--234
-\T1/stix/m/n/10 (LMOS) to quan-tify object-focused ex-pla-na-tion qual-ity.
- []
+Package natbib Warning: Citation `r16' on page 2 undefined on input line 253.
 
-LaTeX Font Info:    Trying to load font information for TS1+stix on input line 304.
+
+Package natbib Warning: Citation `r17' on page 2 undefined on input line 253.
+
+
+Package natbib Warning: Citation `r18' on page 2 undefined on input line 253.
+
+
+Package natbib Warning: Citation `r19' on page 2 undefined on input line 253.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:412: Package array Error:  Illegal pream-token (3.5cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:412: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:412: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:412: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:412: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:412: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:412: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:412: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.412 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png, id=14, 300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png, id=15, 300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png, id=16, 300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png, id=17, 300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png, id=18, 300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png, id=19, 300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png, id=20, 300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png, id=21, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png, id=22, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png, id=23, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png, id=24, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png, id=25, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png, id=26, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png, id=27, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png Graphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png  used on input line 412.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:529: Package array Error:  Illegal pream-token (3.5cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.529 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:529: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.529 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:529: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.529 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:529: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.529 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:529: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.529 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:529: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.529 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:529: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.529 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+e:/Ragib/Noman_vai/Zahid Sir/ri_ei_paper/master.tex:529: Package array Error:  Illegal pream-token (2.2cm): `c' used.
+
+See the array package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.529 }
+       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<images/Introduction/BDML/Xception/IMG_9012_original.png, id=28, 300.12125pt x 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_original.png Graphic file (type png)
+<use images/Introduction/BDML/Xception/IMG_9012_original.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_original.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/BDML/Xception/IMG_9012_segmented.png, id=29, 300.12125pt x 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_segmented.png Graphic file (type png)
+<use images/Introduction/BDML/Xception/IMG_9012_segmented.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_segmented.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/BDML/Xception/IMG_9012_clean.png, id=30, 300.12125pt x 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_clean.png Graphic file (type png)
+<use images/Introduction/BDML/Xception/IMG_9012_clean.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_clean.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/BDML/Xception/IMG_9012_hue.png, id=31, 300.12125pt x 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_hue.png Graphic file (type png)
+<use images/Introduction/BDML/Xception/IMG_9012_hue.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_hue.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/BDML/Xception/IMG_9012_blur.png, id=32, 300.12125pt x 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_blur.png Graphic file (type png)
+<use images/Introduction/BDML/Xception/IMG_9012_blur.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_blur.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/BDML/Xception/IMG_9012_contrast.png, id=33, 300.12125pt x 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_contrast.png Graphic file (type png)
+<use images/Introduction/BDML/Xception/IMG_9012_contrast.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_contrast.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/BDML/Xception/IMG_9012_compression.png, id=34, 300.12125pt x 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_compression.png Graphic file (type png)
+<use images/Introduction/BDML/Xception/IMG_9012_compression.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_compression.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+<images/Introduction/BDML/Inception_V3/IMG_9012_original.png, id=35, 224.84pt x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_original.png Graphic file (type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_original.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_original.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png, id=36, 224.84pt x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png Graphic file (type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/BDML/Inception_V3/IMG_9012_clean.png, id=37, 224.84pt x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_clean.png Graphic file (type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_clean.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_clean.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/BDML/Inception_V3/IMG_9012_hue.png, id=38, 224.84pt x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_hue.png Graphic file (type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_hue.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_hue.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/BDML/Inception_V3/IMG_9012_blur.png, id=39, 224.84pt x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_blur.png Graphic file (type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_blur.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_blur.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png, id=40, 224.84pt x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png Graphic file (type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+<images/Introduction/BDML/Inception_V3/IMG_9012_compression.png, id=41, 224.84pt x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_compression.png Graphic file (type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_compression.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_compression.png  used on input line 529.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    Trying to load font information for TS1+stix on input line 549.
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 ) [2{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-ts1.enc}]
-Overfull \hbox (24.93817pt too wide) in paragraph at lines 349--373
+
+LaTeX Warning: Reference `tab:notation' on page 3 undefined on input line 587.
+
+
+Overfull \hbox (24.93817pt too wide) in paragraph at lines 595--619
  [][] 
  []
 
+[3 <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png (PNG copy)> <./images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png (PNG copy)> <./images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png (PNG copy)> <./images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png (PNG copy)> <./images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png (PNG copy)> <./images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png (PNG copy)> <./images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png (PNG copy)> <./images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png (PNG copy)> <./images/Introduction/BDML/Xception/IMG_9012_original.png (PNG copy)> <./images/Introduction/BDML/Xception/IMG_9012_segmented.png (PNG copy)> <./images/Introduction/BDML/Xception/IMG_9012_clean.png (PNG copy)> <./images/Introduction/BDML/Xception/IMG_9012_hue.png (PNG copy)> <./images/Introduction/BDML/Xception/IMG_9012_blur.png (PNG copy)> <./images/Introduction/BDML/Xception/IMG_9012_contrast.png (PNG copy)> <./images/Introduction/BDML/Xception/IMG_9012_compression.png (PNG copy)> <./images/Introduction/BDML/Inception_V3/IMG_9012_original.png (PNG copy)> <./images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png (PNG copy)> <./images/Introduction/BDML/Inception_V3/IMG_9012_clean.png (PNG copy)> <./images/Introduction/BDML/Inception_V3/IMG_9012_hue.png (PNG copy)> <./images/Introduction/BDML/Inception_V3/IMG_9012_blur.png (PNG copy)> <./images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png (PNG copy)> <./images/Introduction/BDML/Inception_V3/IMG_9012_compression.png (PNG copy)>]
 
-Underfull \hbox (badness 1132) in paragraph at lines 399--402
-[]\T1/stix/b/n/10 FLRS\T1/stix/m/n/10 : FLRS (or Flow-ers [[]]) is a large im-age
+Package natbib Warning: Citation `r16' on page 4 undefined on input line 634.
+
+
+Package natbib Warning: Citation `r16' on page 4 undefined on input line 639.
+
+
+Package natbib Warning: Citation `r17' on page 4 undefined on input line 641.
+
+
+Package natbib Warning: Citation `r17' on page 4 undefined on input line 643.
+
+
+Package natbib Warning: Citation `r18' on page 4 undefined on input line 645.
+
+
+Package natbib Warning: Citation `r18' on page 4 undefined on input line 646.
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 645--648
+[]\T1/stix/b/n/10 FLRS\T1/stix/m/n/10 : FLRS (or Flow-ers [\T1/stix/b/n/10 ? \T1/stix/m/n/10 ]) is a large im-age
  []
 
-[3] (tables/tbl_dataset_distribution.tex) [4] [5]
-Underfull \hbox (badness 1997) in paragraph at lines 605--608
+
+Package natbib Warning: Citation `r19' on page 4 undefined on input line 649.
+
+
+Package natbib Warning: Citation `r20' on page 4 undefined on input line 650.
+
+
+Package natbib Warning: Citation `r21' on page 4 undefined on input line 650.
+
+
+LaTeX Warning: Reference `tab:classwise_dataset_distribution' on page 4 undefined on input line 659.
+
+(tables/tbl_dataset_distribution.tex) [4]
+
+LaTeX Warning: Reference `eq:lmos' on page 5 undefined on input line 720.
+
+
+LaTeX Warning: Reference `sec:perturbation_methods' on page 5 undefined on input line 743.
+
+
+LaTeX Warning: Reference `sec:perturbation_methods' on page 5 undefined on input line 752.
+
+[5]
+Underfull \hbox (badness 1997) in paragraph at lines 851--854
 \T1/stix/m/n/10 ten pre-dict-cor-rectly-but-theysome-times-re-ly-on-the-back-ground
  []
 
 
-Overfull \hbox (1.95804pt too wide) in paragraph at lines 629--631
+Overfull \hbox (1.95804pt too wide) in paragraph at lines 875--877
 []\T1/stix/b/n/10 Contrast Ad-just-ment: \T1/stix/m/n/10 Mod-i-fied us-ing mean-centered
  []
 
+[6]
+
+Package natbib Warning: Citation `r10' on page 7 undefined on input line 891.
+
+
+Package natbib Warning: Citation `r22' on page 7 undefined on input line 924.
+
+
+Package natbib Warning: Citation `r23' on page 7 undefined on input line 924.
+
+
+Package natbib Warning: Citation `r24' on page 7 undefined on input line 924.
+
+
+Package natbib Warning: Citation `r25' on page 7 undefined on input line 924.
+
+
+Package natbib Warning: Citation `r26' on page 7 undefined on input line 926.
+
+
+Package natbib Warning: Citation `r27' on page 7 undefined on input line 926.
+
+
+Package natbib Warning: Citation `r28' on page 7 undefined on input line 926.
+
+
+Package natbib Warning: Citation `r29' on page 7 undefined on input line 926.
+
+
+Package natbib Warning: Citation `r30' on page 7 undefined on input line 926.
+
+
+Package natbib Warning: Citation `r31' on page 7 undefined on input line 926.
+
+
+Package natbib Warning: Citation `r32' on page 7 undefined on input line 926.
+
+[7]
+
+Package natbib Warning: Citation `r11' on page 8 undefined on input line 928.
+
+
+Package natbib Warning: Citation `r33' on page 8 undefined on input line 928.
+
+
+Package natbib Warning: Citation `r34' on page 8 undefined on input line 928.
+
+
+Package natbib Warning: Citation `r35' on page 8 undefined on input line 928.
+
+
+Package natbib Warning: Citation `r36' on page 8 undefined on input line 928.
+
+
+Package natbib Warning: Citation `r37' on page 8 undefined on input line 929.
+
+
+Package natbib Warning: Citation `r38' on page 8 undefined on input line 929.
+
+
+Package natbib Warning: Citation `r39' on page 8 undefined on input line 930.
+
+
+Package natbib Warning: Citation `r40' on page 8 undefined on input line 930.
+
+
+Package natbib Warning: Citation `r41' on page 8 undefined on input line 930.
+
+
+Package natbib Warning: Citation `r42' on page 8 undefined on input line 930.
+
+
+Underfull \hbox (badness 1248) in paragraph at lines 928--931
+\T1/stix/m/n/10 based clas-si-fi-ca-tion sys-tems in var-i-ous sec-tors, such as
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 928--931
+\T1/stix/m/n/10 pre-hen-sive eval-u-a-tion and in-ter-pretabil-ity anal-y-sis, such
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 928--931
+\T1/stix/m/n/10 la-bel-ing. Short-cut-Probe de-tects pre-dic-tion short-cuts that
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 942.
+(C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 685.
+(Font)              scaled to size 8.50006pt on input line 942.
+ (master.bbl [8{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 6.80005pt on input line 93.
 
-Overfull \hbox (3.16129pt too wide) in paragraph at lines 690--691
-\T1/stix/m/n/10 Draft, Writ-ing ^^U Re-view & Edit-ing. \T1/stix/b/n/10 Az-main In-quaid Haque:
- []
-
-
-Underfull \hbox (badness 1509) in paragraph at lines 690--691
-\T1/stix/m/n/10 In-ves-ti-ga-tion, Data Cu-ra-tion, Soft-ware, Val-i-da-tion. \T1/stix/b/n/10 Md.
- []
-
-
-Underfull \hbox (badness 1931) in paragraph at lines 690--691
-\T1/stix/b/n/10 Naz-mul Ab-dal: \T1/stix/m/n/10 Data Cu-ra-tion. \T1/stix/b/n/10 Ab-dul-lah Al No-man:
- []
-
-[6] (master.bbl
 Underfull \hbox (badness 2772) in paragraph at lines 92--95
 []\T1/stix/m/n/8 T. T. Team, ``Flow-ers.'' [][]$\T1/zi4/m/n/8 http : / / download . tensorflow . org / example _
  []
@@ -880,26 +1371,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--100
 \T1/stix/m/n/8 https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
  []
 
-) [7] (master.aux)
+
+Underfull \hbox (badness 1939) in paragraph at lines 178--181
+[]\T1/stix/m/n/8 B. Singh, R. P. Sharma, and S. Dey, ``In-ter-pretable plant leaf
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 178--181
+\T1/stix/m/n/8 dis-ease de-tec-tion us-ing attention-enhanced cnn,'' \T1/stix/m/it/8 arXiv preprint
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 206--208
+[]\T1/stix/m/n/8 G. Zheng, W. Ye, and A. Zhang, ``Short-cut-probe: Prob-ing pre-
+ []
+
+
+Underfull \hbox (badness 5847) in paragraph at lines 206--208
+\T1/stix/m/n/8 dic-tion short-cuts for learn-ing ro-bust mod-els,'' \T1/stix/m/it/8 arXiv preprint
+ []
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+[9] (master.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-07-20>
  ***********
-Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `master.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `master.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20905 strings out of 467501
- 384401 string characters out of 5408550
- 775749 words of memory out of 5000000
- 49777 multiletter control sequences out of 15000+600000
- 732099 words of font info for 165 fonts, out of 8000000 for 9000
+ 21153 strings out of 467501
+ 397520 string characters out of 5408550
+ 818083 words of memory out of 5000000
+ 50004 multiletter control sequences out of 15000+600000
+ 732858 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,11n,98p,1677b,1117s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Bold.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-BoldItalic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Italic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsi0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathbb.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathcal.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathex.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathit.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on master.pdf (7 pages, 343251 bytes).
+ 89i,19n,98p,2311b,1166s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Bold.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-BoldItalic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Italic.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsi0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss0800.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx0900.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathbb.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathcal.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathex.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathit.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb>
+Output written on master.pdf (9 pages, 3614997 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
