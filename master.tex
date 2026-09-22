@@ -296,7 +296,8 @@
 
 
 
-
+% EgyPLI idx = 11
+% BDML idx = 10
 \begin{table*}[htbp]
 \centering
 \renewcommand{\arraystretch}{1.5}
@@ -328,7 +329,7 @@ ERI: 0.9346
 &
 \begin{tabular}[c]{c}
 \includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png} \\[-1mm]
-\scriptsize Apple % Original image
+\scriptsize Apple (EPLI) % Original image
 \end{tabular}
 &
 \begin{tabular}[c]{c}
@@ -368,12 +369,12 @@ Model: Custom CNN \\
 Accuracy: 99.45\% \\
 Mean LMOS: 0.1900\\
 ETI: 0.5922 \\
-ERI: 0.9346
+ERI: 0.7944
 \end{tabular}
 &
 \begin{tabular}[c]{c}
 \includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png} \\[-1mm]
-\scriptsize Apple % Original image
+\scriptsize Apple (EPLI) % Original image
 \end{tabular}
 &
 \begin{tabular}[c]{c}
@@ -408,44 +409,18 @@ ERI: 0.9346
 \\
 \hline
 
-\end{tabular}%
-}
-\end{table*}
-
-
-
-\begin{table*}[htbp]
-\centering
-\renewcommand{\arraystretch}{1.5}
-\caption{Grad-CAM visualization on BDML}
-\label{tab:model_robustness}
-
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{C{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm}}
-\hline
-
-\textbf{Model} &
-\textbf{Original} &
-\textbf{Segmented} &
-\textbf{Clean} &
-\textbf{Hue} &
-\textbf{Blur} &
-\textbf{Contrast} &
-\textbf{Compression}
-\\
-\hline
 
 \begin{tabular}[c]{l}
-Model: Inception V3 \\
-Accuracy: 93.07\% \\
-Mean LMOS: 0.3344 \\
-ETI: 0.6325 \\
-ERI: 0.7898
+Model: Xception \\
+Accuracy: 95.05\% \\
+Mean LMOS: 0.7800 \\
+ETI: 0.8653 \\
+ERI: 0.8982
 \end{tabular}
 &
 \begin{tabular}[c]{c}
 \includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_original.png} \\[-1mm]
-\scriptsize Apple % Original image
+\scriptsize Ocimum tenuiflorum (BDML) % Original image
 \end{tabular}
 &
 \begin{tabular}[c]{c}
@@ -481,16 +456,16 @@ ERI: 0.7898
 \hline
 
 \begin{tabular}[c]{l}
-Model: Custom CNN \\
-Accuracy: 99.45\% \\
-Mean LMOS: 0.1900\\
-ETI: 0.5922 \\
-ERI: 0.9346
+Model: Inception V3 \\
+Accuracy: 93.07\% \\
+Mean LMOS: 0.3344\\
+ETI: 0.6325 \\
+ERI: 0.7898
 \end{tabular}
 &
 \begin{tabular}[c]{c}
 \includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_original.png} \\[-1mm]
-\scriptsize Apple % Original image
+\scriptsize Ocimum tenuiflorum (BDML) % Original image
 \end{tabular}
 &
 \begin{tabular}[c]{c}
@@ -500,27 +475,27 @@ ERI: 0.9346
 &
 \begin{tabular}[c]{c}
 \includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_clean.png} \\[-1mm]
-\scriptsize LMOS: 0.965 (wrong prediction)
+\scriptsize LMOS: 0.383 
 \end{tabular}
 &
 \begin{tabular}[c]{c}
 \includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_hue.png} \\[-1mm]
-\scriptsize LMOS: 0.00 (wrong prediction)
+\scriptsize LMOS: 0.659 
 \end{tabular}
 &
 \begin{tabular}[c]{c}
 \includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_blur.png} \\[-1mm]
-\scriptsize LMOS: 0.817 (wrong prediction)
+\scriptsize LMOS: 0.477
 \end{tabular}
 &
 \begin{tabular}[c]{c}
 \includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png} \\[-1mm]
-\scriptsize LMOS: 0.759 (wrong prediction)
+\scriptsize LMOS: 0.390 (wrong prediction)
 \end{tabular}
 &
 \begin{tabular}[c]{c}
 \includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_compression.png} \\[-1mm]
-\scriptsize LMOS: 0.937 (wrong prediction)
+\scriptsize LMOS: 0.176
 \end{tabular}
 \\
 \hline
@@ -528,6 +503,223 @@ ERI: 0.9346
 \end{tabular}%
 }
 \end{table*}
+
+
+
+
+
+
+
+
+% FLRS  idx = 10
+\begin{table*}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\caption{Grad-CAM visualization on Flower datasets}
+\label{tab:model_robustness}
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{C{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm}}
+\hline
+
+\textbf{Model} &
+\textbf{Original} &
+\textbf{Segmented} &
+\textbf{Clean} &
+\textbf{Hue} &
+\textbf{Blur} &
+\textbf{Contrast} &
+\textbf{Compression}
+\\
+\hline
+
+\begin{tabular}[c]{l}
+Model: Xception \\
+Accuracy: 88.28\% \\
+Mean LMOS: 0.6869 \\
+ETI: 0.7849 \\
+ERI: 0.9308
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_original.png} \\[-1mm]
+\scriptsize Rose (FLRS) % Original image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_segmented.png} \\[-1mm]
+\scriptsize %Segmented image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_clean.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blur.png} \\[-1mm]
+\scriptsize LMOS: 1.0
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_contrast.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_compression.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+\\
+\hline
+
+\begin{tabular}[c]{l}
+Model: Inception V3 \\
+Accuracy: 82.29\% \\
+Mean LMOS: 0.3749\\
+ETI: 0.5989 \\
+ERI: 0.8593
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_original.png} \\[-1mm]
+\scriptsize Rose (FLRS) % Original image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_segmented.png} \\[-1mm]
+\scriptsize %Segmented image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_clean.png} \\[-1mm]
+\scriptsize LMOS: 0.305
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_hue.png} \\[-1mm]
+\scriptsize LMOS: 0.219
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_blur.png} \\[-1mm]
+\scriptsize LMOS: 0.181 
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_contrast.png} \\[-1mm]
+\scriptsize LMOS: 0.219 
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_compression.png} \\[-1mm]
+\scriptsize LMOS: 0.214
+\end{tabular}
+\\
+\hline
+
+
+\begin{tabular}[c]{l}
+Model: Xception \\
+Accuracy: 90.32\% \\
+Mean LMOS: 0.6029 \\
+ETI: 0.7531 \\
+ERI: 0.9689
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png} \\[-1mm]
+\scriptsize Daisy (FR) % Original image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png} \\[-1mm]
+\scriptsize %Segmented image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png} \\[-1mm]
+\scriptsize LMOS: 1.0
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png} \\[-1mm]
+\scriptsize LMOS: 1.00
+\end{tabular}
+\\
+\hline
+
+
+\begin{tabular}[c]{l}
+Model: Inception V3 \\
+Accuracy: 88.25\% \\
+Mean LMOS: 0.3063\\
+ETI: 0.5944 \\
+ERI: 0.8827
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png} \\[-1mm]
+\scriptsize Daisy (FR) % Original image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png} \\[-1mm]
+\scriptsize %Segmented image
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png} \\[-1mm]
+\scriptsize LMOS: 0.633
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png} \\[-1mm]
+\scriptsize LMOS: 0.583
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png} \\[-1mm]
+\scriptsize LMOS: 0.550 
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png} \\[-1mm]
+\scriptsize LMOS: 0.388 
+\end{tabular}
+&
+\begin{tabular}[c]{c}
+\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.png} \\[-1mm]
+\scriptsize LMOS: 0.505
+\end{tabular}
+\\
+\hline
+
+\end{tabular}%
+}
+\end{table*}
+
+
 
 
 
@@ -646,7 +838,7 @@ ERI: 0.9346
 		It is available through the TensorFlow Datasets (TFDS) collection \cite{r18}. 
 		\zahid{what is the resolution of the images in this dataset?}
 		
-		\item \textbf{KFLR}:  This kaggle \cite{r19} dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
+		\item \textbf{FR}:  This kaggle \cite{r19} dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
 		However, the kaggle version contains 4,242 JPG images of resulation of $320\times240$ pixels. Although the image classes are the same as FLRS, the image samples are different.  This repository was also used in previous research \cite {r20, r21}.
 		\zahid{is this different than the above FLRS?}
 	\end{itemize}
