@@ -36,6 +36,9 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{array}
+%\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
 
 %%%Author macros
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
@@ -128,6 +131,7 @@
 	\newcommand{\zahid}[1]{{\color{green}#1}}
 	
 	\begin{abstract}
+	\zahid{tbd}
 	Deep neural networks often achieve high classification accuracy. Despite high accuracy, the reliability of CNN models remains a concern. Sometimes CNN models may rely on background or irrelevant features, undermining trustworthiness. Besides, with the use of perturbations, models' accuracy and object reliance may decline. Such degradation raises questions about their robustness. In this research, we have proposed two novel evaluation metrics: the \textbf{Explainable Trustworthy Index (ETI)} and the \textbf{Explainable Robustness Index (ERI)}. ETI combines accuracy with the \textbf{Localization Mask Overlap Score (LMOS)}, which measures the proportion of Grad-CAM salient pixels that fall within the ground-truth object regions. A model with high ETI clearly indicates that both its accuracy and object reliance are high and satisfactory. ERI extends this to perturbed inputs by jointly evaluating accuracy stability and LMOS stability.  Like ETI, a model with high ERI indicates that both its accuracy and object focus remain stable under the use of perturbations. We have used eight CNN architectures on four datasets and nine perturbations (e.g., noise, blur, motion blur, occlusion) to calculate ETI and ERI. We have demonstrated that high accuracy sometimes does not guarantee high ETI or ERI. For instance, on the EPLI dataset, Custom CNN has achieved 99.45\% accuracy but the lowest ETI (0.5922) due to poor object localization. It has also provided the lowest ERI. ETI and ERI provide a more holistic assessment of model reliability for safety-critical applications.
 	\end{abstract}
 	
@@ -151,29 +155,19 @@
 	\maketitle
 	
 	
-
-	
 	\section{Introduction}
 	\label{sec:introduction}
 	%\zahid{\textbf{We need to explain CNN reliability and XAI from title. }}
-	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such 
-    as medical imaging, agriculture, and astronomy, where predictions support important decision-making processes
-	\cite{r1}\cite{r2}\cite{r3}\cite{r4}. In such applications, classification accuracy is an essential performance
-	measure, but accuracy alone does not necessarily indicate whether a model is reliable. A CNN model is considered more
-	reliable when its predictions are grounded in task-relevant visual features rather than spurious 
-	correlations\cite{r5}.
-	\zahid{Wu, J., Kang, W., Tang, H., Hong, Y., \& Yan, Y. (2024). On the faithfulness of vision transformer explanations. 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 10936–10945. https://doi.org/10.1109/cvpr52733.2024.01040
-
-	Zafar, A. (2026). Evaluating visual grounding in multimodal medical reasoning. International Conference on Learning Representations (ICLR) Workshop} already added 
-	\\
-
-	 \zahid{provide one or model example images from your dataset with sample images and explain it.} \\
-
-	Therefore, beyond predictive accuracy, models must be quantitatively evaluated to determine whether 
-	their predictions depend on task-relevant regions rather than irrelevant background cues. % continuing introducing the problem 
-	Despite excellent accuracy, a model may not provide reliable predictions. Explainability methods, such as 
-	Grad-CAM \cite{r6}, show that a model may rely mainly on  background and irrelevant regions instead of 
-	focused objects \cite{ r7, r8}. This raises questions about reliability and trustworthiness. 
+	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such as medical imaging, agriculture, and astronomy, where predictions support important decision-making processes \cite{r1, r2, r3, r4}. 
+	In such applications, classification accuracy is an essential performance measure, but accuracy alone does not necessarily indicate whether a model is reliable. 
+	A CNN model is considered more reliable when its predictions are grounded in task-relevant visual features rather than spurious correlations \cite{r5}.
+	%\zahid{Wu, J., Kang, W., Tang, H., Hong, Y., \& Yan, Y. (2024). On the faithfulness of vision transformer explanations. 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 10936–10945. https://doi.org/10.1109/cvpr52733.2024.01040
+	%Zafar, A. (2026). Evaluating visual grounding in multimodal medical reasoning. International Conference on Learning Representations (ICLR) Workshop} already added 
+	%\\
+	 %\zahid{provide one or model example images from your dataset with sample images and explain it.} \\
+	Therefore, beyond predictive accuracy, models must be quantitatively evaluated to determine whether their predictions depend on task-relevant regions rather than irrelevant background cues. % continuing introducing the problem 
+	Despite excellent accuracy, a model may not provide reliable predictions. Explainability methods, such as Grad-CAM \cite{r6}, show that a model may rely mainly on  background and irrelevant regions instead of  focused objects \cite{ r7, r8}. 
+	This raises questions about reliability and trustworthiness. 
 	%\zahid{we are not working to imrpove relaiability??}
 	
 	%\zahid{Traditional CNN model evaluation meausres fail to indicate the reliability of the correspoinding model.}
@@ -185,33 +179,32 @@
 	%Common distortions (e.g., noise, blur, brightness/contrast adjustments, hue shifts, compression, and occlusion) can alter both CNN accuracy and the specific visual regions driving model predictions.
 	%Common changes such as noise, blur, brightness variation, hue shift, contrast modification, compression, and occlusion can alter both classification performance and the visual regions emphasized by a CNN \cite{r4,r5,r9}.  
 	%That is, a model maintaining relatively high accuracy under perturbations may become visually inconsistent  \cite{r4,r5,r9}. 
-	Model behavior can shift due to real-world perturbations e.g., noise, blur, lighting shifts, compression, 
-	and occlusion. These distortions can alter both CNN accuracy and the visual regions driving predictions. 
+	Model behavior can shift due to real-world perturbations e.g., \textit{noise}, \textit{blur}, \textit{lighting shifts}, \textit{compression}, and \textit{occlusion}. 
+	These distortions can alter both CNN accuracy and the visual regions driving predictions. 
 	Consequently, even when a model maintains relatively high accuracy under perturbations, 
-	its underlying visual explanations may still become inconsistent \cite{r5,r9}. Conventional robustness 
-	evaluation methods are primarily based on accuracy change under perturbation. They do not capture whether the model
-	maintains consistent reliance on task-relevant regions under perturbed conditions. These observations motivate an evaluation 
-	ramework that considers both predictive behavior and explanation behavior.
+	its underlying visual explanations may still become inconsistent \cite{r5,r9}. 
+	Conventional robustness evaluation methods are primarily based on accuracy change under perturbation. 
+	They do not capture whether the model maintains consistent reliance on task-relevant regions under perturbed conditions. 
+	These observations motivate an evaluation ramework that considers both predictive behavior and explanation behavior.
 	% above paragraph is good to go
 	
 	% moving towards the generic solution
 	Explainable Artificial Intelligence (XAI) provides a framework for examining visual evidences used by CNNs for their predictions. 
-	In particular, Grad-CAM generates class-discriminative heatmaps that highlight image regions contributing to a model's prediction
-	 \cite{r6}. The faithfulness of such explanations is an important consideration, since explanation scores should meaningfully 
-	reflect the influence of the corresponding image regions on the model’s prediction \cite{r10}. Such explanations can reveal whether a 
-	model achieves high classification accuracy by focusing substantially on 
-	background or other irrelevant regions rather than target objects. Previous studies have shown that background information and 
-	spurious correlations can influence deep neural network decisions and may lead to shortcut learning \cite{r11, r12, r13} %\zahid{add more relevent refs}. 
+	In particular, Grad-CAM generates class-discriminative heatmaps that highlight image regions contributing to a model's predictions \cite{r6, r10}. 
+	We refer to the Grad-CAM heatmaps as explanations of the corresponding model's predictions. 
+	%The faithfulness of such explanations is an important consideration, since explanation scores should meaningfully reflect the influence of the corresponding image regions on the model’s predictions \cite{r10}. 
+	Such explanations can reveal whether a model achieves high classification accuracy by focusing substantially on background or other irrelevant regions rather than target objects. Previous studies have shown that background information and spurious correlations can influence deep neural network decisions and may lead to shortcut learning \cite{r11, r12, r13} %\zahid{add more relevent refs}. 
 	Consequently, a highly accurate model does not confirm that the predictions are made on appropriate object-level information. 
 	This creates an important distinction between predictive performance and explainable reliability. %Now it is necessary to evaluate whether a model's accuracy is based on task-relevant regions. 
-	This is the motivation for evaluating a framework that combines accuracy and object focus.
+	%Motivated by these observations, we propose metrices combining accuracy and object focus.
+	Motivated by these observations, we propose metrics that integrate accuracy with object focus.
+	%This is the motivation for evaluating a framework that combines accuracy and object focus.
 	% above paragraph sounds okay
 		
 	% proposed solution
 	%To address this limitation (\zahid{we did not say the limitation yet}), 
-	We have proposed two novel evaluation metrics: Explainable Trustworthy Index (ETI) and Explainable Robustness Index (ERI) using XAI methods. 
-	Our objective is not to modify or improve CNN models, rather to provide quantitative measures for evaluating and comparing their
-	reliability and robustness. 
+	We propose two novel evaluation metrics: Explainable Trustworthy Index (ETI) and Explainable Robustness Index (ERI) using XAI methods. 
+	Our objective is not to modify or improve CNN models, rather to provide quantitative measures for evaluating and comparing their reliability and robustness. 
 	ETI measures baseline reliability on unperturbed images by jointly evaluating classification accuracy and object-focused explanation quality. 
 	In contrast, ERI measures robustness to input perturbations by assessing whether accuracy and explanation quality remain consistent with clean-image behavior.
 	%ETI evaluates model reliability on clean, unperturbed images by jointly considering classification accuracy and object-focused explanation quality. 
@@ -230,13 +223,35 @@
 	%The proposed measures TI and RI rely on the fact that \textit{how much a model's predictions rely on real objects instead of the background}. 
 	%We introduce a new score named LMOS (Localization Mask	Overlap Score) to indicate this fact. 
 	
-	We introduce the Localization Mask Overlap Score (LMOS) to quantify object-focused explanation quality. 
-	For each test image, we create a ground-truth mask for the target object excluding the background. 
-	We use Grad-CAM \cite{r6} to identify the image regions contributing to the model's prediction.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=.98\columnwidth]{images/figure1.pdf}
+		\caption{Comparison between traditional accuracy and the proposed XAI-based metrics (ETI and ERI). Although both Xception and the custom CNN achieve identical $99.45\%$ validation accuracy, Grad-CAM heatmaps reveal that the custom CNN relies on background context. 
+		The proposed ETI and ERI metrics successfully capture this flaw by producing lower scores for the custom model.}
+		\label{fig:figure1}
+	\end{figure}
+	
+	%Figure \ref{fig:figure1} illustrates the distinctive characteristic of our XAI based metrics over the traditinal accuracy.  
+	%Here, we show the predictions of two models - Xception and a Custom CNN model (see \ref{sec:detials of Xception and Custom CNN}) on the same image. 
+	%Both of the models are trained from the same training set for a leaf classification task and have achieved high accuraices (both $99.45\%$) on the same validation dataset. 
+	%We compute the ETI and ERI scores of the models and find that Xception model has higher ETI and ERI scores (0.88 and 0.93 respectively) than the custom CNN model (0.59 and 0.79 respectively). 
+	%Inspecting the Grad-CAM heatmap reveals that infact the custom CNN model predicts based on the background rather than the leaf object. 
+	%Selecting the custom CNN based on the accuracy would be a wrong choice in this scenario and the proposed metrics indicating that. 
+	Figure~\ref{fig:figure1} illustrates the distinct advantages of our XAI-based metrics over traditional accuracy. 
+	Here, we show the predictions of two models - Xception and a custom CNN (detailed in Section~\ref{sec:detials of Xception and Custom CNN}) - on the same sample test image. 
+	Both models were trained on identical training data for a leaf classification task, with each achieving an accuracy of $99.45\%$ on the validation set. 
+	However, evaluating the models using our proposed metrics reveals that Xception achieves significantly higher ETI and ERI scores ($0.88$ and $0.93$) compared to the custom CNN ($0.59$ and $0.79$). 
+	Inspecting the Grad-CAM heatmaps confirms that the custom CNN relies heavily on background rather than the leaf object itself. 
+	While standard accuracy fails to identify this flaw, our proposed metrics correctly indicate that selecting the custom CNN would lead to sub-optimal model deployment.
+	
+	
+	We introduce the Localization Mask Overlap Score (LMOS), used in both ETI and ERI,  to quantify object-focused explanation quality. 
+	%For each test image, we create a ground-truth mask for the target object excluding the background. 
+	%We use Grad-CAM \cite{r6} to identify the image regions contributing to the model's prediction.
 	LMOS quantifies the proportion of the model's decision-relevant activation that overlaps with the annotated target-object region. 
 	%Grad-CAM highlights key predictive regions using a color heatmap, where red and yellow denote the highest activation and strongest influence on the decision.
-	It is observed that in Grad-CAM visualizations, red and yellow regions in images are activated most i.e., red and yellow have 
-	greater influence than other colors on models' predictions \cite{r14} \cite{r15}. So we consider them as decision-relevant regions. \zahid{any ref to this??}. 
+	It is observed that in Grad-CAM visualizations, red and yellow regions in images are activated most i.e., red and yellow have greater influence than other colors on models' predictions \cite{r14,r15}. 
+	%So we consider them as decision-relevant regions. \zahid{any ref to this??}. 
    	We integrate this principle into LMOS; a higher LMOS value indicates that a larger proportion of the model's highlighted regions falls within the target object boundary rather than the background.
 	%So we consider them as decision-relevant. Therefore, a higher LMOS indicates that a larger proportion of the model's highlighted regions is located within the target object rather than outside it. LMOS provides a quantitative measure that can be compared across CNN architectures and datasets.
 	
@@ -256,7 +271,7 @@
 	To comprehensively evaluate the proposed metrics, we conduct experiments using four public real-world datasets comprising two leaf image datasets:  EPLI \cite{r16}, BDML\cite{r17} and two flower image datasets: FLRS \cite{r18}, FR \cite{r19}. 
 	Eight CNN architectures are trained and evaluated on the datasets. %For the test images, target-object masks are manually annotated to provide the spatial reference required for LMOS calculation. 
 	%Grad-CAM explanations are generated for both clean and perturbed test images. 
-	We evaluate nine perturbations, including Gaussian noise, Gaussian blur, brightness adjustment, hue shift, contrast adjustment, gamma correction, motion blur, JPEG compression, and random occlusion \zahid{cite all the methods}. 
+	We evaluate nine perturbations, including Gaussian noise, Gaussian blur, brightness adjustment, hue shift, contrast adjustment, gamma correction, motion blur, JPEG compression, and random occlusion. 
 	For each CNN architecture, ETI is calculated on clean images, while ERI is calculated from accuracy stability and LMOS stability across the evaluated perturbations.
 	
 	We empirically demonstrate the importance of combining accuracy with LMOS in ETI. 
@@ -296,432 +311,430 @@
 	%A moderate/low ERI reveals that its accuracy, or focus on object, or both change with the use of perturbations.
 
 
-
-
-
-% EgyPLI idx = 11
-% BDML idx = 10
-\begin{table*}[htbp]
-\centering
-\renewcommand{\arraystretch}{1.5}
-\caption{Grad-CAM visualization on EPLI}
-\label{tab:model_robustness}
-
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{C{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm}}
-\hline
-
-\textbf{Model} &
-\textbf{Original} &
-\textbf{Segmented} &
-\textbf{Clean} &
-\textbf{Hue} &
-\textbf{Blur} &
-\textbf{Contrast} &
-\textbf{Compression}
-\\
-\hline
-
-\begin{tabular}[c]{l}
-Model: Xception \\
-Accuracy: 99.45\% \\
-Mean LMOS: 0.7638\\
-ETI: 0.8791 \\
-ERI: 0.9346
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png} \\[-1mm]
-\scriptsize Apple (EPLI) % Original image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png} \\[-1mm]
-\scriptsize %Segmented image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-\\
-\hline
-
-\begin{tabular}[c]{l}
-Model: Custom CNN \\
-Accuracy: 99.45\% \\
-Mean LMOS: 0.1900\\
-ETI: 0.5922 \\
-ERI: 0.7944
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png} \\[-1mm]
-\scriptsize Apple (EPLI) % Original image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png} \\[-1mm]
-\scriptsize %Segmented image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png} \\[-1mm]
-\scriptsize LMOS: 0.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png} \\[-1mm]
-\scriptsize LMOS: 0.00 
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png} \\[-1mm]
-\scriptsize LMOS: 0.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png} \\[-1mm]
-\scriptsize LMOS: 0.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png} \\[-1mm]
-\scriptsize LMOS: 0.00
-\end{tabular}
-\\
-\hline
-
-
-\begin{tabular}[c]{l}
-Model: Xception \\
-Accuracy: 95.05\% \\
-Mean LMOS: 0.7800 \\
-ETI: 0.8653 \\
-ERI: 0.8982
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_original.png} \\[-1mm]
-\scriptsize Ocimum tenuiflorum (BDML) % Original image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_segmented.png} \\[-1mm]
-\scriptsize %Segmented image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_clean.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_hue.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_blur.png} \\[-1mm]
-\scriptsize LMOS: 0.903
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_contrast.png} \\[-1mm]
-\scriptsize LMOS: 0.812
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_compression.png} \\[-1mm]
-\scriptsize LMOS: 0.785
-\end{tabular}
-\\
-\hline
-
-\begin{tabular}[c]{l}
-Model: Inception V3 \\
-Accuracy: 93.07\% \\
-Mean LMOS: 0.3344\\
-ETI: 0.6325 \\
-ERI: 0.7898
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_original.png} \\[-1mm]
-\scriptsize Ocimum tenuiflorum (BDML) % Original image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png} \\[-1mm]
-\scriptsize %Segmented image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_clean.png} \\[-1mm]
-\scriptsize LMOS: 0.383 
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_hue.png} \\[-1mm]
-\scriptsize LMOS: 0.659 
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_blur.png} \\[-1mm]
-\scriptsize LMOS: 0.477
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png} \\[-1mm]
-\scriptsize LMOS: 0.390 (wrong prediction)
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_compression.png} \\[-1mm]
-\scriptsize LMOS: 0.176
-\end{tabular}
-\\
-\hline
-
-\end{tabular}%
-}
-\end{table*}
-
-
-
-
-
-
-
-
-% FLRS  idx = 10
-\begin{table*}[htbp]
-\centering
-\renewcommand{\arraystretch}{1.5}
-\caption{Grad-CAM visualization on Flower datasets}
-\label{tab:model_robustness}
-
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{C{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm}}
-\hline
-
-\textbf{Model} &
-\textbf{Original} &
-\textbf{Segmented} &
-\textbf{Clean} &
-\textbf{Hue} &
-\textbf{Blur} &
-\textbf{Contrast} &
-\textbf{Compression}
-\\
-\hline
-
-\begin{tabular}[c]{l}
-Model: Xception \\
-Accuracy: 88.28\% \\
-Mean LMOS: 0.6869 \\
-ETI: 0.7849 \\
-ERI: 0.9308
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_original.png} \\[-1mm]
-\scriptsize Rose (FLRS) % Original image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_segmented.png} \\[-1mm]
-\scriptsize %Segmented image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_clean.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blur.png} \\[-1mm]
-\scriptsize LMOS: 1.0
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_contrast.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_compression.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-\\
-\hline
-
-\begin{tabular}[c]{l}
-Model: Inception V3 \\
-Accuracy: 82.29\% \\
-Mean LMOS: 0.3749\\
-ETI: 0.5989 \\
-ERI: 0.8593
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_original.png} \\[-1mm]
-\scriptsize Rose (FLRS) % Original image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_segmented.png} \\[-1mm]
-\scriptsize %Segmented image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_clean.png} \\[-1mm]
-\scriptsize LMOS: 0.305
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_hue.png} \\[-1mm]
-\scriptsize LMOS: 0.219
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_blur.png} \\[-1mm]
-\scriptsize LMOS: 0.181 
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_contrast.png} \\[-1mm]
-\scriptsize LMOS: 0.219 
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_compression.png} \\[-1mm]
-\scriptsize LMOS: 0.214
-\end{tabular}
-\\
-\hline
-
-
-\begin{tabular}[c]{l}
-Model: Xception \\
-Accuracy: 90.32\% \\
-Mean LMOS: 0.6029 \\
-ETI: 0.7531 \\
-ERI: 0.9689
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png} \\[-1mm]
-\scriptsize Daisy (FR) % Original image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png} \\[-1mm]
-\scriptsize %Segmented image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png} \\[-1mm]
-\scriptsize LMOS: 1.0
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png} \\[-1mm]
-\scriptsize LMOS: 1.00
-\end{tabular}
-\\
-\hline
-
-
-\begin{tabular}[c]{l}
-Model: Inception V3 \\
-Accuracy: 88.25\% \\
-Mean LMOS: 0.3063\\
-ETI: 0.5944 \\
-ERI: 0.8827
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png} \\[-1mm]
-\scriptsize Daisy (FR) % Original image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png} \\[-1mm]
-\scriptsize %Segmented image
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png} \\[-1mm]
-\scriptsize LMOS: 0.633
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png} \\[-1mm]
-\scriptsize LMOS: 0.583
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png} \\[-1mm]
-\scriptsize LMOS: 0.550 
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png} \\[-1mm]
-\scriptsize LMOS: 0.388 
-\end{tabular}
-&
-\begin{tabular}[c]{c}
-\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.png} \\[-1mm]
-\scriptsize LMOS: 0.505
-\end{tabular}
-\\
-\hline
-
-\end{tabular}%
-}
-\end{table*}
-
+%
+%
+%
+%% EgyPLI idx = 11
+%% BDML idx = 10
+%\begin{table*}[htbp]
+%\centering
+%\renewcommand{\arraystretch}{1.5}
+%\caption{Grad-CAM visualization on EPLI}
+%\label{tab:model_robustness}
+%
+%\resizebox{\textwidth}{!}{%
+%\begin{tabular}{C{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm}}
+%\hline
+%
+%\textbf{Model} &
+%\textbf{Original} &
+%\textbf{Segmented} &
+%\textbf{Clean} &
+%\textbf{Hue} &
+%\textbf{Blur} &
+%\textbf{Contrast} &
+%\textbf{Compression}
+%\\
+%\hline
+%
+%\begin{tabular}[c]{l}
+%Model: Xception \\
+%Accuracy: 99.45\% \\
+%Mean LMOS: 0.7638\\
+%ETI: 0.8791 \\
+%ERI: 0.9346
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png} \\[-1mm]
+%\scriptsize Apple (EPLI) % Original image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png} \\[-1mm]
+%\scriptsize %Segmented image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%\\
+%\hline
+%
+%\begin{tabular}[c]{l}
+%Model: Custom CNN \\
+%Accuracy: 99.45\% \\
+%Mean LMOS: 0.1900\\
+%ETI: 0.5922 \\
+%ERI: 0.7944
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png} \\[-1mm]
+%\scriptsize Apple (EPLI) % Original image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png} \\[-1mm]
+%\scriptsize %Segmented image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png} \\[-1mm]
+%\scriptsize LMOS: 0.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png} \\[-1mm]
+%\scriptsize LMOS: 0.00 
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png} \\[-1mm]
+%\scriptsize LMOS: 0.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png} \\[-1mm]
+%\scriptsize LMOS: 0.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png} \\[-1mm]
+%\scriptsize LMOS: 0.00
+%\end{tabular}
+%\\
+%\hline
+%
+%
+%\begin{tabular}[c]{l}
+%Model: Xception \\
+%Accuracy: 95.05\% \\
+%Mean LMOS: 0.7800 \\
+%ETI: 0.8653 \\
+%ERI: 0.8982
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_original.png} \\[-1mm]
+%\scriptsize Ocimum tenuiflorum (BDML) % Original image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_segmented.png} \\[-1mm]
+%\scriptsize %Segmented image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_clean.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_hue.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_blur.png} \\[-1mm]
+%\scriptsize LMOS: 0.903
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_contrast.png} \\[-1mm]
+%\scriptsize LMOS: 0.812
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Xception/IMG_9012_compression.png} \\[-1mm]
+%\scriptsize LMOS: 0.785
+%\end{tabular}
+%\\
+%\hline
+%
+%\begin{tabular}[c]{l}
+%Model: Inception V3 \\
+%Accuracy: 93.07\% \\
+%Mean LMOS: 0.3344\\
+%ETI: 0.6325 \\
+%ERI: 0.7898
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_original.png} \\[-1mm]
+%\scriptsize Ocimum tenuiflorum (BDML) % Original image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png} \\[-1mm]
+%\scriptsize %Segmented image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_clean.png} \\[-1mm]
+%\scriptsize LMOS: 0.383 
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_hue.png} \\[-1mm]
+%\scriptsize LMOS: 0.659 
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_blur.png} \\[-1mm]
+%\scriptsize LMOS: 0.477
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png} \\[-1mm]
+%\scriptsize LMOS: 0.390 (wrong prediction)
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/BDML/Inception_V3/IMG_9012_compression.png} \\[-1mm]
+%\scriptsize LMOS: 0.176
+%\end{tabular}
+%\\
+%\hline
+%
+%\end{tabular}%
+%\end{table*}
+%
+%
+%
+%
+%
+%
+%
+%
+%% FLRS  idx = 10
+%\begin{table*}[htbp]
+%\centering
+%\renewcommand{\arraystretch}{1.5}
+%\caption{Grad-CAM visualization on Flower datasets}
+%\label{tab:model_robustness}
+%
+%\resizebox{\textwidth}{!}{%
+%\begin{tabular}{C{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm}}
+%\hline
+%
+%\textbf{Model} &
+%\textbf{Original} &
+%\textbf{Segmented} &
+%\textbf{Clean} &
+%\textbf{Hue} &
+%\textbf{Blur} &
+%\textbf{Contrast} &
+%\textbf{Compression}
+%\\
+%\hline
+%
+%\begin{tabular}[c]{l}
+%Model: Xception \\
+%Accuracy: 88.28\% \\
+%Mean LMOS: 0.6869 \\
+%ETI: 0.7849 \\
+%ERI: 0.9308
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_original.png} \\[-1mm]
+%\scriptsize Rose (FLRS) % Original image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_segmented.png} \\[-1mm]
+%\scriptsize %Segmented image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_clean.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blur.png} \\[-1mm]
+%\scriptsize LMOS: 1.0
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_contrast.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_compression.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%\\
+%\hline
+%
+%\begin{tabular}[c]{l}
+%Model: Inception V3 \\
+%Accuracy: 82.29\% \\
+%Mean LMOS: 0.3749\\
+%ETI: 0.5989 \\
+%ERI: 0.8593
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_original.png} \\[-1mm]
+%\scriptsize Rose (FLRS) % Original image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_segmented.png} \\[-1mm]
+%\scriptsize %Segmented image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_clean.png} \\[-1mm]
+%\scriptsize LMOS: 0.305
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_hue.png} \\[-1mm]
+%\scriptsize LMOS: 0.219
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_blur.png} \\[-1mm]
+%\scriptsize LMOS: 0.181 
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_contrast.png} \\[-1mm]
+%\scriptsize LMOS: 0.219 
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_compression.png} \\[-1mm]
+%\scriptsize LMOS: 0.214
+%\end{tabular}
+%\\
+%\hline
+%
+%
+%\begin{tabular}[c]{l}
+%Model: Xception \\
+%Accuracy: 90.32\% \\
+%Mean LMOS: 0.6029 \\
+%ETI: 0.7531 \\
+%ERI: 0.9689
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png} \\[-1mm]
+%\scriptsize Daisy (FR) % Original image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png} \\[-1mm]
+%\scriptsize %Segmented image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png} \\[-1mm]
+%\scriptsize LMOS: 1.0
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png} \\[-1mm]
+%\scriptsize LMOS: 1.00
+%\end{tabular}
+%\\
+%\hline
+%
+%
+%\begin{tabular}[c]{l}
+%Model: Inception V3 \\
+%Accuracy: 88.25\% \\
+%Mean LMOS: 0.3063\\
+%ETI: 0.5944 \\
+%ERI: 0.8827
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png} \\[-1mm]
+%\scriptsize Daisy (FR) % Original image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png} \\[-1mm]
+%\scriptsize %Segmented image
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png} \\[-1mm]
+%\scriptsize LMOS: 0.633
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png} \\[-1mm]
+%\scriptsize LMOS: 0.583
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png} \\[-1mm]
+%\scriptsize LMOS: 0.550 
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png} \\[-1mm]
+%\scriptsize LMOS: 0.388 
+%\end{tabular}
+%&
+%\begin{tabular}[c]{c}
+%\includegraphics[width=2cm]{images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.png} \\[-1mm]
+%\scriptsize LMOS: 0.505
+%\end{tabular}
+%\\
+%\hline
+%
+%\end{tabular}%
+%\end{table*}
+%
 
 
 
@@ -779,42 +792,15 @@ ERI: 0.8827
 	%The perturbation-specific accuracy stability and LMOS stability are therefore defined as measures of how closely the model preserves its predictive performance and object-focused behavior relative to the clean condition. 
 	Let $S_{\mathrm{acc}}$ and $S _ {\mathrm{LMOS}}$ represent the overall accuracy stability (the model's stability to perform under purturbation) and LMOS stability (the model's stability to remain the object-focused for making predictions) of a model. 
 	Our second problem is to obtain an evaluation measure $R$ that jointly captures these two forms of stability across the evaluated perturbations: $R = \Phi(S_{\mathrm{acc}},  S_{\mathrm{LMOS}})$. 
-	We propose Explainable Robustness Index (ERI) to address this problem. Table \ref{tab:notation} has described each notation clearly.
+	We propose Explainable Robustness Index (ERI) to address this problem. 
+	Table \ref{tab:notation} describes the notations used in the article.
 	
 	%Therefore, the overall evaluation problem addressed in this study is to distinguish CNN architectures not only according to how accurately they classify clean images, but also according to whether their decision-relevant activation is aligned with the intended target object and whether both predictive performance and object-focused behavior remain stable under input perturbations. ETI addresses the first aspect on clean inputs, whereas ERI addresses the stability of these properties under perturbations. The two indices are complementary and are not intended to represent the overall trustworthiness or robustness of a CNN across all possible dimensions.
-
-    \begin{table}[t]
-	\centering
-	\caption{Notation used in the problem formulation.}
-	\label{tab:notation}
-	\begin{tabular}{ll}
-		\toprule
-		\textbf{Notation} & \textbf{Description} \\
-		\midrule
-		$\mathcal{D}$ & Dataset of $N$ images with labels and target masks \\
-		$N$ & Number of images in the dataset \\
-		$x_i$ & $i$-th input image \\
-		$y_i$ & Ground-truth class label of $x_i$ \\
-		$\hat{y}_i$ & Predicted class label for $x_i$ \\
-		$M_i$ & Ground-truth binary mask of the target object in $x_i$ \\
-		$H_i$ & Grad-CAM heatmap for $x_i$ and $\hat{y}_i$ \\
-		$\mathrm{LMOS}_i$ & Object-focused localization score for $x_i$ \\
-		$\mathrm{LMOS}$ & Mean LMOS over the evaluated dataset \\
-		$acc$ & Classification accuracy of a CNN \\
-		$\mathcal{P}$ & Set of $P$ input perturbations \\
-		$P$ & Number of evaluated perturbations \\
-		$S_{\mathrm{acc}}$ & Overall accuracy stability under perturbations \\
-		$S_{\mathrm{LMOS}}$ & Overall LMOS stability under perturbations \\
-		$T$ & Generic evaluation measure based on $acc$ and $\mathrm{LMOS}$ \\
-		$R$ & Generic robustness measure based on $S_{\mathrm{acc}}$ and $S_{\mathrm{LMOS}}$ \\
-		$\Psi(\cdot)$ & Function combining accuracy and LMOS \\
-		$\Phi(\cdot)$ & Function combining accuracy and LMOS stability \\
-		\bottomrule
-	\end{tabular}
-\end{table}
+	
+	\input{tables/notations}
 	
 	
-	\zahid{add a table of notations here}
+	%\zahid{add a table of notations here}
 	
 	\section{System Architecture}
 	

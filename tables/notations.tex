@@ -1,0 +1,29 @@
+\begin{table}[t]
+	\centering
+	\caption{Notation used in problem formulation.}
+	\label{tab:notation}
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Notation} & \textbf{Description} \\
+		\midrule
+		$\mathcal{D}$ & Dataset of $N$ images with labels and target masks \\
+		$N$ & Number of images in the dataset \\
+		$x_i$ & $i$-th input image \\
+		$y_i$ & Ground-truth class label of $x_i$ \\
+		$\hat{y}_i$ & Predicted class label for $x_i$ \\
+		$M_i$ & Ground-truth binary mask of the target object in $x_i$ \\
+		$H_i$ & Grad-CAM heatmap for $x_i$ and $\hat{y}_i$ \\
+		$\mathrm{LMOS}_i$ & Object-focused localization score for $x_i$ \\
+		$\mathrm{LMOS}$ & Mean LMOS over the evaluated dataset \\
+		$acc$ & Classification accuracy of a CNN \\
+		$\mathcal{P}$ & Set of $P$ input perturbations \\
+		$P$ & Number of evaluated perturbations \\
+		$S_{\mathrm{acc}}$ & Overall accuracy stability under perturbations \\
+		$S_{\mathrm{LMOS}}$ & Overall LMOS stability under perturbations \\
+		$T$ & Generic evaluation measure based on $acc$ and $\mathrm{LMOS}$ \\
+		$R$ & Generic robustness measure based on $S_{\mathrm{acc}}$ and $S_{\mathrm{LMOS}}$ \\
+		$\Psi(\cdot)$ & Function combining accuracy and LMOS \\
+		$\Phi(\cdot)$ & Function combining accuracy and LMOS stability \\
+		\bottomrule
+	\end{tabular}
+\end{table}
