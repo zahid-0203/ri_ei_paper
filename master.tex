@@ -200,6 +200,8 @@
 	Motivated by these observations, we propose metrics that integrate accuracy with object focus.
 	%This is the motivation for evaluating a framework that combines accuracy and object focus.
 	% above paragraph sounds okay
+	
+	% related work and gap - missing
 		
 	% proposed solution
 	%To address this limitation (\zahid{we did not say the limitation yet}), 
@@ -231,6 +233,7 @@
 		\label{fig:figure1}
 	\end{figure}
 	
+	% solution specific to the problem statement
 	%Figure \ref{fig:figure1} illustrates the distinctive characteristic of our XAI based metrics over the traditinal accuracy.  
 	%Here, we show the predictions of two models - Xception and a Custom CNN model (see \ref{sec:detials of Xception and Custom CNN}) on the same image. 
 	%Both of the models are trained from the same training set for a leaf classification task and have achieved high accuraices (both $99.45\%$) on the same validation dataset. 
@@ -244,13 +247,14 @@
 	Inspecting the Grad-CAM heatmaps confirms that the custom CNN relies heavily on background rather than the leaf object itself. 
 	While standard accuracy fails to identify this flaw, our proposed metrics correctly indicate that selecting the custom CNN would lead to sub-optimal model deployment.
 	
-	
-	We introduce the Localization Mask Overlap Score (LMOS), used in both ETI and ERI,  to quantify object-focused explanation quality. 
+	% solution idea
+	We introduce the Localization Mask Overlap Score (LMOS) to quantify object-focused explanation quality which is the proportion of the model's decision-relevant activation that overlaps with the annotated target-object region. 
+	LMOS is used in both ETI and ERI calculation.  
 	%For each test image, we create a ground-truth mask for the target object excluding the background. 
 	%We use Grad-CAM \cite{r6} to identify the image regions contributing to the model's prediction.
-	LMOS quantifies the proportion of the model's decision-relevant activation that overlaps with the annotated target-object region. 
+	%LMOS quantifies the proportion of the model's decision-relevant activation that overlaps with the annotated target-object region. 
 	%Grad-CAM highlights key predictive regions using a color heatmap, where red and yellow denote the highest activation and strongest influence on the decision.
-	It is observed that in Grad-CAM visualizations, red and yellow regions in images are activated most i.e., red and yellow have greater influence than other colors on models' predictions \cite{r14,r15}. 
+	It is observed that in Grad-CAM visualizations, red and yellow regions are activated most i.e., red and yellow have greater influence than other colors on models' predictions \cite{r14,r15}. 
 	%So we consider them as decision-relevant regions. \zahid{any ref to this??}. 
    	We integrate this principle into LMOS; a higher LMOS value indicates that a larger proportion of the model's highlighted regions falls within the target object boundary rather than the background.
 	%So we consider them as decision-relevant. Therefore, a higher LMOS indicates that a larger proportion of the model's highlighted regions is located within the target object rather than outside it. LMOS provides a quantitative measure that can be compared across CNN architectures and datasets.
@@ -268,25 +272,36 @@
 	%Models with high TI is considered reliable as both the model accuracy and object reliance are high. 
 	%Models with moderate to low TI means its accuracy or object focus, or both, are low and limited. 
 	
-	To comprehensively evaluate the proposed metrics, we conduct experiments using four public real-world datasets comprising two leaf image datasets:  EPLI \cite{r16}, BDML\cite{r17} and two flower image datasets: FLRS \cite{r18}, FR \cite{r19}. 
-	Eight CNN architectures are trained and evaluated on the datasets. %For the test images, target-object masks are manually annotated to provide the spatial reference required for LMOS calculation. 
-	%Grad-CAM explanations are generated for both clean and perturbed test images. 
-	We evaluate nine perturbations, including Gaussian noise, Gaussian blur, brightness adjustment, hue shift, contrast adjustment, gamma correction, motion blur, JPEG compression, and random occlusion. 
-	For each CNN architecture, ETI is calculated on clean images, while ERI is calculated from accuracy stability and LMOS stability across the evaluated perturbations.
+
 	
-	We empirically demonstrate the importance of combining accuracy with LMOS in ETI. 
-	For example, a custom CNN achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.1900, resulting in the lowest ETI score of 0.5922 among the evaluated models. Its LMOS is only 0.1900, indicating that only 19.00\% of its decision-relevant activation, on average, falls within the annotated target-object regions, while the remaining 81.00\% lies outside these regions. \zahid{what is the consequence??  e.g., XX\% of predictions are based on background??}
-	In contrast, the MobileNetV2 also achieves 99.45\% accuracy but obtains a substantially higher mean LMOS of 0.7765, indicating that 77.65\% of its decision-relevant activation falls within the target-object regions, with only 22.35\% outside them and an ETI of 0.8855. \zahid{what is the consequence?? e.g., XX\% of predictions are based on background, must be less than custom CNN??}
+	% evaluation and results
+	%To comprehensively evaluate the proposed metrics, we conduct experiments using four public real-world datasets comprising two leaf image datasets:  EPLI \cite{r16}, BDML\cite{r17} and two flower image datasets: FLRS \cite{r18}, FR \cite{r19}. 
+	%Eight CNN architectures are trained and evaluated on the datasets. %For the test images, target-object masks are manually annotated to provide the spatial reference required for LMOS calculation. 
+	%Grad-CAM explanations are generated for both clean and perturbed test images. 
+	% have not introduced purturbation yet -- skip this now
+	%We evaluate nine perturbations, including \textit{Gaussian noise}, \textit{Gaussian blur}, \textit{brightness adjustment}, \textit{hue shift}, \textit{contrast adjustment}, \textit{gamma correction}, \textit{motion blur}, \textit{JPEG compression}, \textit{and random occlusion}. 
+	%For each CNN architecture, ETI is calculated on clean images, while ERI is calculated from accuracy stability and LMOS stability across the evaluated perturbations.
+	
+	We comprehensively evaluate the proposed metrics using four real-world datasets comprising two leaf image datasets:  EPLI \cite{r16}, BDML\cite{r17} and two flower image datasets: FLRS \cite{r18}, FR \cite{r19}. 
+	Eight CNN architectures are trained and evaluated on the datasets. 
+	%We demonstrate the importance of combining accuracy with LMOS in ETI. 
+	%For example, a custom CNN achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.1900, resulting in the lowest ETI score of 0.5922 among the evaluated models. Its LMOS is only 0.1900, indicating that only 19.00\% of its decision-relevant activation, on average, falls within the annotated target-object regions, while the remaining 81.00\% lies outside these regions. 
+	%\zahid{what is the consequence??  e.g., XX\% of predictions are based on background??}
+	We demonstrate that a custom CNN  model achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.1900, resulting in the lowest ETI score of 0.5922 among the evaluated models. 
+	Its LMOS is only 0.1900, indicating that only 19.00\% of its decision-relevant activation, on average, falls within the annotated target-object regions, while the remaining 81.00\% lies outside these regions. 
+	In contrast, the MobileNetV2 model achieves 99.45\% accuracy (same as the custom CNN model) but obtains a substantially higher mean LMOS of 0.7765, indicating that 77.65\% of its decision-relevant activation falls within the target-object regions, with only 22.35\% outside them and an ETI of 0.8855. 
+	%\zahid{what is the consequence?? e.g., XX\% of predictions are based on background, must be less than custom CNN??}
 	This demonstrates that models with similar high accuracy can exhibit substantially different levels of object-focused reliance and the model with higher LMOS should be selected for real-world deployment. 
 	%A high accuracy score alone therefore cannot distinguish between a model that makes predictions while focusing on the target object and a model that achieves similar accuracy while emphasizing regions outside the target object. 
 	%Importantly, low LMOS does not by itself indicate shortcut learning, bias, or overfitting; rather. It provides quantitative evidence that the model's decision-relevant activation is insufficiently aligned with the target object, which demands further investigation.
 	Importantly, a low LMOS score does not inherently denote shortcut learning or overfitting, but rather quantifies the extent to which a model's salient activations diverge from the target object.
 	
-	ERI combines \emph{accuracy stability} and \emph{LMOS stability} to provide a joint measure of explainable robustness. 
+	The proposed ERI combines \emph{accuracy stability} and \emph{LMOS stability} to provide a joint measure of explainable robustness. 
 	This distinction is important because predictive stability and explanation stability are not correlated. 
-	For example, on the EPLI dataset, the Custom CNN under contrast perturbation maintains relatively high accuracy stability of 0.8494 but has substantially lower LMOS stability of 0.4545. This indicates that, although its predictive performance remains comparatively stable, its object-focused explanation changes substantially relative to the clean-image condition. 
-	Conversely, ResNet50 under the same perturbation exhibits relatively low accuracy stability of 0.4599 but higher LMOS stability of 0.7830, indicating that its object-focused explanation remains comparatively more consistent despite a larger change in predictive performance. 
-	\zahid{what is the consequence of this??}
+	For example, in our experiments we observe that the Custom CNN model under contrast perturbation maintains relatively high accuracy stability of 0.8494 but has substantially lower LMOS stability of 0.4545 on the EPLI dataset. 
+	This indicates that, although its predictive performance remains comparatively stable, its object-focused explanation changes substantially relative to the clean-image condition. 
+	Conversely, the ResNet50 model exhibits relatively low accuracy stability of 0.4599 but higher LMOS stability of 0.7830 under the same perturbation, indicating that its object-focused explanation remains comparatively more consistent despite a larger change in predictive performance. 
+	%\zahid{what is the consequence of this??}
 	These demonstrate that accuracy stability alone cannot fully characterize robustness: a model may preserve its predictive performance while substantially changing its object-focused behavior, or it may preserve its visual focus while its predictive performance deteriorates. 
 	%ERI therefore evaluates these two complementary dimensions jointly.
 	
@@ -756,7 +771,6 @@
 	\end{itemize}
 	}
 
-    
 	
 	\section{Problem Definition}
 	\label{sec:problem_def}
@@ -800,70 +814,17 @@
 	\input{tables/notations}
 	
 	
-	%\zahid{add a table of notations here}
+	\section{System Overview}
 	
-	\section{System Architecture}
-	
-	
-	\section{Experimental Setup}	
-	\subsection{Dataset}
-	We have used four publicly available datasets in our empirical study of the proposed evaluation measures: 
-	%EgyPLI \cite{r10}, Bdmedileaves \cite{r11}, Flowers \cite{r12} and Flowers Recognition
-	%KAGGLE dataset \cite{r13}. 
-	
-	\begin{itemize}
-		\item \textbf{EPLI}: EPLI (introduced as EgyPLI in \cite{r16}) contains 3,588 JPG images of size $256\times256$ pixels.  
-		There are images of 8 species including apple, berry, fig, guava, orange, plum, persimmon, and tomato. 
-		%, including both normal and diseased leaves. \zahid{are these are images of leaves or the fruits?} 
-		%The images were captured under natural uncontrolled environment. 
-		%The images are in JPG format and the size is $256\times256$. 
-		The dataset is annotated for image‑level classification  \cite{r16}.
-		
-		\item \textbf{BDML:} BDML(also known as BDMediLeaves \cite{r17}) is a dataset of 2,029 original leaf images (augmented to 38,606) from 10 medicinal plant species. 
-		They are captured with an iPhone 13 under natural light at $3024\times 4032$ resolution. 
-		This dataset is designed for machine learning‑based species identification. We used the original dataset (not the augmented one) in our experiments \cite{r17}.
-		
-		\item \textbf{FLRS}: FLRS (or Flowers \cite{r18}) is a large image dataset for flower classification containing 3,670 training images of five flower species including daisies, tulips, sunflowers, dandelions, and roses. 
-		It is available through the TensorFlow Datasets (TFDS) collection \cite{r18}. 
-		\zahid{what is the resolution of the images in this dataset?}
-		
-		\item \textbf{FR}:  This kaggle \cite{r19} dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
-		However, the kaggle version contains 4,242 JPG images of resulation of $320\times240$ pixels. Although the image classes are the same as FLRS, the image samples are different.  This repository was also used in previous research \cite {r20, r21}.
-		\zahid{is this different than the above FLRS?}
-	\end{itemize}
-	
-	\zahid{Specific difference between FLRS and KFLR}.
-	
-	\noindent
-	\textbf{Dataset preparation.} 
-	The BDML dataset is already splitted into training, validation and testing sets. We split the other three datasets into training, validation and test subsets with an approximate ratio of $80\%$, $10\%$ and $10\%$. 
-	Table \ref{tab:classwise_dataset_distribution} presents the class-wise training, validation, and test splits. 
-	\zahid{did you preserve the class distributions in the three splits?}
-		
-	\zahid{did you do this? or already in the sources?}
-	To simplify explainability and localization analysis, the test images have been manually annotated to generate corresponding JSON files. 
-	These JSON annotations describe the polygonal boundaries of the target leaf in each image. 
-	The JSON files have been converted into binary masks. 
-	Here, each mask represents only the target leaf region and excludes the background and other objects in the scene.
-	
-	\input{tables/tbl_dataset_distribution}
-	%\subsection{Dataset Distribution}	
-		
-	\subsection{Baseline models and evaluation metrics.}
-	TBD
-	
-	\subsection{Classification Performance}
-	%\subsection{Creating JSON files of test images }
-	% moved above in dataset prep. section
-	
-	\subsection{Implementation of the Proposed Metrics}
+	\section{Explainable Trustworthy Index and Explainable Robustness Index}
+	\label{sec:proposed_method}
 	Both of the proposed TI and RI metrics use LMOS score. 
 	LMOS measure the consistency between model-generated explanations and ground-truth object regions. 
 	\zahid{One liner on TI and RI to be added here}
-	We briefly describe the implementation details of these metrics below. 
+	%We briefly describe the implementation details of these metrics below. 
 	
-	 %\noindent
-	\subsubsection{Localization Mask Overlap Score (LMOS).} 
+	%\noindent
+	\subsection{Localization Mask Overlap Score (LMOS).} 
 	\zahid{need to say LMOS is an instance specific (or loca) measure. Other metrics e.g., acc - is a global measure - indicate overall perf. Thats why we use $\overline{LMOS}$ in TI definition, just need to say it outloud here}
 	LMOS calculates how much a model focuses on true object regions (instead of backgrouds) for prediction. 
 	Let $H \in \mathbb{R}^{h \times w}$ denote the Grad-CAM heatmap generated from the last convolutional layer of a network. 
@@ -940,8 +901,8 @@
 	%\zahid{proposed measures EI and RI. they use LMOS. What are the additional measures - stability ??? Need to clarify.}
 	
 	\textbf{Similarly, we introduce LMOS Stability to measures how closely a model's object reliance under perturbation remains to its object reliance on clean images.
-	To evaluate the robustness under input perturbations, we have measured the stability of LMOS when input images are perturbed.} \zahid{need rewriting}
-
+		To evaluate the robustness under input perturbations, we have measured the stability of LMOS when input images are perturbed.} \zahid{need rewriting}
+	
 	For each test sample, we have computed LMOS for both the original image and its perturbed version.  
 	Let $N$ be the number of test samples in a test set. 
 	Let $LMOS_{\text{clean}}$ denote the LMOS value computed from an original image and $LMOS_{\text{perturbed}}$ denote the LMOS value computed from the corresponding perturbed image.
@@ -1017,6 +978,57 @@
 	$$\mathrm{RI}_{\text{w/o LMOS}} = \frac{\overline{S}_{\text{acc}}}{2}, 
 	\quad 
 	\mathrm{RI}_{\text{w/o acc}} = \frac{\overline{S}_{\text{LMOS}}}{2}.$$
+	
+	\section{Experimental Setup}	
+	\subsection{Dataset}
+	We have used four publicly available datasets in our empirical study of the proposed evaluation measures: 
+	%EgyPLI \cite{r10}, Bdmedileaves \cite{r11}, Flowers \cite{r12} and Flowers Recognition
+	%KAGGLE dataset \cite{r13}. 
+	
+	\begin{itemize}
+		\item \textbf{EPLI}: EPLI (introduced as EgyPLI in \cite{r16}) contains 3,588 JPG images of size $256\times256$ pixels.  
+		There are images of 8 species including apple, berry, fig, guava, orange, plum, persimmon, and tomato. 
+		%, including both normal and diseased leaves. \zahid{are these are images of leaves or the fruits?} 
+		%The images were captured under natural uncontrolled environment. 
+		%The images are in JPG format and the size is $256\times256$. 
+		The dataset is annotated for image‑level classification  \cite{r16}.
+		
+		\item \textbf{BDML:} BDML(also known as BDMediLeaves \cite{r17}) is a dataset of 2,029 original leaf images (augmented to 38,606) from 10 medicinal plant species. 
+		They are captured with an iPhone 13 under natural light at $3024\times 4032$ resolution. 
+		This dataset is designed for machine learning‑based species identification. We used the original dataset (not the augmented one) in our experiments \cite{r17}.
+		
+		\item \textbf{FLRS}: FLRS (or Flowers \cite{r18}) is a large image dataset for flower classification containing 3,670 training images of five flower species including daisies, tulips, sunflowers, dandelions, and roses. 
+		It is available through the TensorFlow Datasets (TFDS) collection \cite{r18}. 
+		\zahid{what is the resolution of the images in this dataset?}
+		
+		\item \textbf{FR}:  This kaggle \cite{r19} dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
+		However, the kaggle version contains 4,242 JPG images of resulation of $320\times240$ pixels. Although the image classes are the same as FLRS, the image samples are different.  This repository was also used in previous research \cite {r20, r21}.
+		\zahid{is this different than the above FLRS?}
+	\end{itemize}
+	
+	\zahid{Specific difference between FLRS and KFLR}.
+	
+	\noindent
+	\textbf{Dataset preparation.} 
+	The BDML dataset is already splitted into training, validation and testing sets. We split the other three datasets into training, validation and test subsets with an approximate ratio of $80\%$, $10\%$ and $10\%$. 
+	Table \ref{tab:classwise_dataset_distribution} presents the class-wise training, validation, and test splits. 
+	\zahid{did you preserve the class distributions in the three splits?}
+		
+	\zahid{did you do this? or already in the sources?}
+	To simplify explainability and localization analysis, the test images have been manually annotated to generate corresponding JSON files. 
+	These JSON annotations describe the polygonal boundaries of the target leaf in each image. 
+	The JSON files have been converted into binary masks. 
+	Here, each mask represents only the target leaf region and excludes the background and other objects in the scene.
+	
+	\input{tables/tbl_dataset_distribution}
+	%\subsection{Dataset Distribution}	
+		
+	\subsection{Baseline models and evaluation metrics.}
+	TBD
+	
+	\subsection{Classification Performance}
+	%\subsection{Creating JSON files of test images }
+	% moved above in dataset prep. section
 
 	
 	%\mathrm{LMOS}
