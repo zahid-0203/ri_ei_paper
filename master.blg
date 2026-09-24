@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: master.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+Database file #1: cas-refs.bib
+Warning--empty year in r22
+You've used 42 entries,
+            1876 wiz_defined-function locations,
+            702 strings with 12250 characters,
+and the built_in function-call counts, 11526 in all, are:
+= -- 1048
+> -- 609
+< -- 0
++ -- 218
+- -- 176
+* -- 825
+:= -- 1677
+add.period$ -- 43
+call.type$ -- 42
+change.case$ -- 42
+chr.to.int$ -- 0
+cite$ -- 43
+duplicate$ -- 626
+empty$ -- 1025
+format.name$ -- 176
+if$ -- 2783
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 40
+newline$ -- 130
+num.names$ -- 42
+pop$ -- 162
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 411
+stack$ -- 0
+substring$ -- 568
+swap$ -- 266
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 91
+width$ -- 44
+write$ -- 395
+(There was 1 warning)

@@ -202,6 +202,24 @@
 	% above paragraph sounds okay
 	
 	% related work and gap - missing
+	\zahid{The gap of existing studies}
+
+    
+    Existing works have developed diverse approaches for evaluating CNN reliability, robustness, and explanation quality described in 
+	Section \ref{related_works}. Reliability has been examined through uncertainty estimation, calibration, confidence, failure detection, 
+	risk--coverage analysis, and broader trustworthiness criteria. Robustness has been evaluated through performance degradation under common 
+	corruptions, natural distribution shifts, and other perturbations, while some studies have also investigated the stability of explanations 
+	under corrupted inputs. Similarly, explanation quality and object reliance have been studied using faithfulness-based evaluation, ground-truth 
+	explanations, and spatial correspondence between explanations and relevant image regions. These studies demonstrate that reliability, robustness, 
+	and explanation quality are multidimensional concepts and can be quantified from different perspectives. However, the existing evaluation 
+	approaches generally emphasize one or a subset of these dimensions, and they do not provide a unified model-level evaluation that simultaneously 
+	considers predictive accuracy, the spatial focus of decision-relevant visual evidence, and the stability of both under input perturbations. 
+	In particular, a model may exhibit high predictive accuracy or relatively stable accuracy under perturbations while relying on visual evidence that
+	 is poorly aligned with the target object, or its visual focus may change substantially even when its predictive performance remains relatively 
+	 stable. This motivates a complementary evaluation framework that jointly examines predictive performance, object-focused explanation quality, and 
+	 explanation-aware robustness.
+
+	
 		
 	% proposed solution
 	%To address this limitation (\zahid{we did not say the limitation yet}), 
@@ -1113,6 +1131,7 @@
 	%\subsubsection{}
 	
 	\section{Related Works}
+    \label{related_works}
 Javed et al. introduced two approaches: a Bayesian approximation
 via Monte Carlo Dropout and the nonparametric Conformal Prediction framework to measure uncertainty \cite{r22}. Although CNN models are excellent for classification, their predictions are often wrong but overconfident. If wrong predictions receive high confidence, the models are overconfident and difficult to trust. These models suffer from poor calibration. Their research indicates that accuracy alone cannot make a model reliable. Recent studies have proposed trustworthiness metrics based on uncertainty estimation and failure detection. Ao et al. \cite{r23} proposed the Excess Area Under the Optimal Risk-Coverage Curve, E-AUoptRC, to evaluate model performance under the risk–coverage (RC) framework. They also introduced the Trust Index (TI), which displays model performance at the optimal coverage point and serves as a complementary metric to overall accuracy. E-AUoptRC and TI provide more trustworthiness of CNN models than other indices/metrics. Nastoska et al. proposed frameworks and metrics to evaluate AI trustworthiness, including fairness, transparency, privacy, and security\cite{r24}. They experimented with various frameworks such as the NIST AI Risk Management Framework (AI RMF), the AI Trust Framework and Maturity Model (AI-TMM), and ISO/IEC standards. Their study includes a comparative analysis of existing standards and their applications in the industry to describe theirabout generalizing effectiveness. Pal et al. proposed the Trust-Aware Explainable Artificial Intelligence (TAXAI) framework. It introduces a quantitative Trust Index for evaluating explainable AI systems in clinical applications\cite{r25}. The framework combines algorithmic transparency, interpretability alignment, and compliance-oriented reliability into a unique trust evaluation model. It is not similar to traditional XAI methods that primarily generate explanations. In contrast, TAXAI focuses on measuring the trustworthiness and reliability of explanations through a normalized trust score.
 
