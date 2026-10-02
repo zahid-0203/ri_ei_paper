@@ -34,11 +34,13 @@
 \usepackage{booktabs} % Required for professional table lines
 \usepackage{siunitx}  % Optional but highly recommended for numeric alignment
 \usepackage{amsmath}
+\usepackage{dsfont}
 \usepackage{graphicx}
 \usepackage{array}
 %\usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, positioning}
+\usepackage{tabularx} % Add to preamble
 
 %%%Author macros
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
@@ -158,7 +160,7 @@
 	\section{Introduction}
 	\label{sec:introduction}
 	%\zahid{\textbf{We need to explain CNN reliability and XAI from title. }}
-	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such as medical imaging, agriculture, and astronomy, where predictions support important decision-making processes \cite{r1, r2, r3, r4}. 
+	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such as medical imaging, agriculture, and astronomy, where predictions inform high-stakes decision-making processes \cite{r1, r2, r3, r4}. 
 	In such applications, classification accuracy is an essential performance measure, but accuracy alone does not necessarily indicate whether a model is reliable. 
 	A CNN model is considered more reliable when its predictions are grounded in task-relevant visual features rather than spurious correlations \cite{r5}.
 	%\zahid{Wu, J., Kang, W., Tang, H., Hong, Y., \& Yan, Y. (2024). On the faithfulness of vision transformer explanations. 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 10936–10945. https://doi.org/10.1109/cvpr52733.2024.01040
@@ -181,19 +183,19 @@
 	%That is, a model maintaining relatively high accuracy under perturbations may become visually inconsistent  \cite{r4,r5,r9}. 
 	Model behavior can shift due to real-world perturbations e.g., \textit{noise}, \textit{blur}, \textit{lighting shifts}, \textit{compression}, and \textit{occlusion}. 
 	These distortions can alter both CNN accuracy and the visual regions driving predictions. 
-	Consequently, even when a model maintains relatively high accuracy under perturbations, 
-	its underlying visual explanations may still become inconsistent \cite{r5,r9}. 
+	Consequently, even when a model maintains relatively high accuracy under perturbations, its underlying visual explanations may still become inconsistent \cite{r5,r9}. 
 	Conventional robustness evaluation methods are primarily based on accuracy change under perturbation. 
 	They do not capture whether the model maintains consistent reliance on task-relevant regions under perturbed conditions. 
-	These observations motivate an evaluation ramework that considers both predictive behavior and explanation behavior.
+	These observations motivate us to develop an evaluation framework that considers both predictive behavior and explanation behavior.
 	% above paragraph is good to go
 	
 	% moving towards the generic solution
 	Explainable Artificial Intelligence (XAI) provides a framework for examining visual evidences used by CNNs for their predictions. 
 	In particular, Grad-CAM generates class-discriminative heatmaps that highlight image regions contributing to a model's predictions \cite{r6, r10}. 
-	We refer to the Grad-CAM heatmaps as explanations of the corresponding model's predictions. 
+	We refer to the Grad-CAM heatmaps as explanations corresponding to a model's predictions. 
 	%The faithfulness of such explanations is an important consideration, since explanation scores should meaningfully reflect the influence of the corresponding image regions on the model’s predictions \cite{r10}. 
-	Such explanations can reveal whether a model achieves high classification accuracy by focusing substantially on background or other irrelevant regions rather than target objects. Previous studies have shown that background information and spurious correlations can influence deep neural network decisions and may lead to shortcut learning \cite{r11, r12, r13} %\zahid{add more relevent refs}. 
+	Such explanations can reveal whether a model achieves high accuracy by focusing substantially on background or other irrelevant regions rather than the target objects. 
+	Previous studies have shown that background information and spurious correlations can influence deep neural network decisions and may lead to shortcut learning \cite{r11, r12, r13}. %\zahid{add more relevent refs}. 
 	Consequently, a highly accurate model does not confirm that the predictions are made on appropriate object-level information. 
 	This creates an important distinction between predictive performance and explainable reliability. %Now it is necessary to evaluate whether a model's accuracy is based on task-relevant regions. 
 	%Motivated by these observations, we propose metrices combining accuracy and object focus.
@@ -202,24 +204,28 @@
 	% above paragraph sounds okay
 	
 	% related work and gap - missing
-	\zahid{The gap of existing studies}
-
-    
-    Existing works have developed diverse approaches for evaluating CNN reliability, robustness, and explanation quality described in 
-	Section \ref{related_works}. Reliability has been examined through uncertainty estimation, calibration, confidence, failure detection, 
-	risk--coverage analysis, and broader trustworthiness criteria. Robustness has been evaluated through performance degradation under common 
-	corruptions, natural distribution shifts, and other perturbations, while some studies have also investigated the stability of explanations 
-	under corrupted inputs. Similarly, explanation quality and object reliance have been studied using faithfulness-based evaluation, ground-truth 
-	explanations, and spatial correspondence between explanations and relevant image regions. These studies demonstrate that reliability, robustness, 
-	and explanation quality are multidimensional concepts and can be quantified from different perspectives. However, the existing evaluation 
-	approaches generally emphasize one or a subset of these dimensions, and they do not provide a unified model-level evaluation that simultaneously 
-	considers predictive accuracy, the spatial focus of decision-relevant visual evidence, and the stability of both under input perturbations. 
-	In particular, a model may exhibit high predictive accuracy or relatively stable accuracy under perturbations while relying on visual evidence that
-	 is poorly aligned with the target object, or its visual focus may change substantially even when its predictive performance remains relatively 
-	 stable. This motivates a complementary evaluation framework that jointly examines predictive performance, object-focused explanation quality, and 
-	 explanation-aware robustness.
-
+	%\zahid{The gap of existing studies}
+%    Existing works have developed diverse approaches for evaluating CNN reliability, robustness, and explanation quality. 
+%    Reliability has been examined through uncertainty estimation \cite{}, calibration \cite{}, confidence \cite{}, failure detection \cite{}, risk coverage analysis \cite{}, and broader trustworthiness criteria \cite{}. \zahid{need a ref for each of the methods}.
+%    Robustness has been evaluated through performance degradation under common corruptions \cite{}, natural distribution shifts \cite{}, and other perturbations \cite{}, while some studies have also investigated the stability of explanations under corrupted inputs \cite{}. 
+%    Moreover, explanation quality and object reliance have been studied using faithfulness-based evaluation \cite{}, ground-truth explanations \cite{}, and spatial correspondence between explanations and relevant image regions \cite{}. 
+%    These studies demonstrate that reliability, robustness, and explanation quality are multidimensional concepts and can be quantified from different perspectives. However, the existing evaluation approaches generally emphasize one or a subset of these dimensions, and they do not provide a unified model-level evaluation that simultaneously considers predictive accuracy, the spatial focus of decision-relevant visual evidence, and the stability of both under input perturbations. 
+%	A model may exhibit high predictive accuracy or relatively stable accuracy under perturbations while relying on visual evidence that is poorly aligned with the target object, or its visual focus may change substantially even when its predictive performance remains relatively stable. 
+%	%This motivates 
+%	A complementary evaluation framework that jointly examines predictive performance, object-focused explanation quality, and explanation-aware robustness is still needed.
 	
+	\zahid{need a ref to all the methods mentioned below}
+	Prior literature has established diverse methodologies for evaluating the reliability, robustness, and explanation quality of convolutional neural networks (CNNs). 
+	Specifically, reliability has been assessed via uncertainty estimation \cite{}, calibration \cite{}, confidence scoring \cite{}, failure detection \cite{}, risk-coverage trade-offs \cite{}, and broader trustworthiness frameworks \cite{}. 
+	Robustness is typically evaluated by measuring performance degradation under common corruptions \cite{}, natural distribution shifts \cite{}, and targeted input perturbations \cite{}, with recent efforts also examining how corruptions affect explanation stability \cite{}. 
+	Concurrently, explanation quality and visual feature reliance have been measured using faithfulness metrics \cite{}, ground-truth alignment \cite{}, and the spatial overlap between visual explanations and target object regions \cite{}.
+	
+	Despite these advances, existing evaluation methods typically focus on isolated dimensions. 
+	%Existing methods lack a unified, model-level evaluation framework that simultaneously accounts for predictive accuracy, the spatial fidelity of decision-relevant visual evidence, and the joint stability of both (accuracy and spatial fidelity) under input perturbations. 
+	Existing methods lack a unified, model-level evaluation framework that simultaneously accounts for predictive accuracy, the spatial fidelity of decision-relevant visual evidence, and their joint stability under input perturbations.
+	A model can maintain high accuracy, or even demonstrate stable performance under data drifts, while relying on spuriously correlated visual cues. 
+	Conversely, its underlying visual focus may shift drastically even when accuracy appears invariant. 
+	To address these limitations, a comprehensive evaluation framework is needed to jointly assess predictive performance, object-centric explanation quality, and explanation-aware robustness.
 		
 	% proposed solution
 	%To address this limitation (\zahid{we did not say the limitation yet}), 
@@ -243,7 +249,7 @@
 	%The proposed measures TI and RI rely on the fact that \textit{how much a model's predictions rely on real objects instead of the background}. 
 	%We introduce a new score named LMOS (Localization Mask	Overlap Score) to indicate this fact. 
 	
-	\begin{figure}[htbp]
+	\begin{figure}[t]
 		\centering
 		\includegraphics[width=.98\columnwidth]{images/figure1.pdf}
 		\caption{Comparison between traditional accuracy and the proposed XAI-based metrics (ETI and ERI). Although both Xception and the custom CNN achieve identical $99.45\%$ validation accuracy, Grad-CAM heatmaps reveal that the custom CNN relies on background context. 
@@ -259,7 +265,7 @@
 	%Inspecting the Grad-CAM heatmap reveals that infact the custom CNN model predicts based on the background rather than the leaf object. 
 	%Selecting the custom CNN based on the accuracy would be a wrong choice in this scenario and the proposed metrics indicating that. 
 	Figure~\ref{fig:figure1} illustrates the distinct advantages of our XAI-based metrics over traditional accuracy. 
-	Here, we show the predictions of two models - Xception and a custom CNN (detailed in Section~\ref{sec:detials of Xception and Custom CNN}) - on the same sample test image. 
+	Here, we show the predictions of two models - Xception \cite{} \zahid{cite the Xception paper} and a CustomCNN (detailed in Section~\ref{sec:cnn_architectures}) - on the same test image. 
 	Both models were trained on identical training data for a leaf classification task, with each achieving an accuracy of $99.45\%$ on the validation set. 
 	However, evaluating the models using our proposed metrics reveals that Xception achieves significantly higher ETI and ERI scores ($0.88$ and $0.93$) compared to the custom CNN ($0.59$ and $0.79$). 
 	Inspecting the Grad-CAM heatmaps confirms that the custom CNN relies heavily on background rather than the leaf object itself. 
@@ -825,7 +831,7 @@
 	Let $S_{\mathrm{acc}}$ and $S _ {\mathrm{LMOS}}$ represent the overall accuracy stability (the model's stability to perform under purturbation) and LMOS stability (the model's stability to remain the object-focused for making predictions) of a model. 
 	Our second problem is to obtain an evaluation measure $R$ that jointly captures these two forms of stability across the evaluated perturbations: $R = \Phi(S_{\mathrm{acc}},  S_{\mathrm{LMOS}})$. 
 	We propose Explainable Robustness Index (ERI) to address this problem. 
-	Table \ref{tab:notation} describes the notations used in the article.
+	Table \ref{tab:notation} describes the notations used in the article. \zahid{Recheck - table has all the notations and same as used in the text}
 	
 	%Therefore, the overall evaluation problem addressed in this study is to distinguish CNN architectures not only according to how accurately they classify clean images, but also according to whether their decision-relevant activation is aligned with the intended target object and whether both predictive performance and object-focused behavior remain stable under input perturbations. ETI addresses the first aspect on clean inputs, whereas ERI addresses the stability of these properties under perturbations. The two indices are complementary and are not intended to represent the overall trustworthiness or robustness of a CNN across all possible dimensions.
 	
@@ -836,169 +842,132 @@
 	
 	\section{Explainable Trustworthy Index and Explainable Robustness Index}
 	\label{sec:proposed_method}
-	Both of the proposed TI and RI metrics use LMOS score. 
-	LMOS measure the consistency between model-generated explanations and ground-truth object regions. 
-	\zahid{One liner on TI and RI to be added here}
+	Both of the proposed Explainable Trustworthy Index (ETI) and Explainable Robustness Index (ERI) metrics use Localization Mask Overlap Score (LMOS) that measures the consistency between model-generated explanations and ground-truth object regions. 
+	ETI assesses if predictions are grounded in actual object regions rather than background noise. 
+	ERI extends this framework to perturbed inputs, measuring joint predictive and localization stability.
 	%We briefly describe the implementation details of these metrics below. 
 	
 	%\noindent
-	\subsection{Localization Mask Overlap Score (LMOS).} 
-	\zahid{need to say LMOS is an instance specific (or loca) measure. Other metrics e.g., acc - is a global measure - indicate overall perf. Thats why we use $\overline{LMOS}$ in TI definition, just need to say it outloud here}
-	LMOS calculates how much a model focuses on true object regions (instead of backgrouds) for prediction. 
+	\subsection{Localization Mask Overlap Score (LMOS)} 
+	\label{sec:lmos}
+	LMOS calculates how much a model focuses on true object regions (instead of backgrounds) for prediction. 
 	Let $H \in \mathbb{R}^{h \times w}$ denote the Grad-CAM heatmap generated from the last convolutional layer of a network. 
-	$H$ is resized to the model's input image size.  \zahid{if H is size how can it be $ \mathbb{R}^{h \times w}$??}
-	The resized heatmap size is $299 \times 299$ for Xception, $224\times224$ for other models. 
-	A binary attention map is obtained from $H$ by thresholding:
-	%\begin{equation}
-	$$\hat H (i,j) = \mathbb{I}\left( \mathrm{Resize}(H)(i,j) > \tau \right)$$
-	%\end{equation}
-	where $\mathbb{I}(\cdot)$ is an indicator function and $\tau$ is the threshold \zahid{to or for??}. 
-	%We set $\tau=0.7$ as we consider only red and yellow pixels to calculate LMOS as those pixels are the most activated and decision-relevant for predictions. 
-	We set $\tau=0.7$ \zahid{why? through experiments or what? how $\tau=0.7$ restricts to yellow and red pixels??} to restrict our LMOS calculations to red and yellow pixels, as the red and yelow pixels exhibit the highest activation levels in model predictions. 
-	Hence, $\hat{H}(i,j)$ is a binary mask representing the activated decision-relevant regions. 
+	We obtain a binary attention map $\hat H (i,j)$ from $H$ by thresholding:
+	\begin{equation}
+		\label{eq:binary_attention_map}
+		\hat H (i,j) = \mathds{1}\bigl( H(i,j) > \tau \bigr)
+	\end{equation}
+	where $ \mathds{1}(\cdot)$ is an indicator function and $\tau$ is the threshold. 
+	We set $\tau=0.7$ (see Section \ref{sec:justification_of_tau}) to restrict our LMOS calculations to red and yellow pixels, as the red and yelow pixels exhibit the highest activation levels in model predictions. 
+	Hence, $\hat{H}(i,j)$ is a binary mask representing the activated decision-relevant regions for the corresponding predictions and input image. 
 	
-	%Masks have been created from JSON files of test images and resized into the input image size (299*299 for Xception, 224*224 for others). 
-	% use h and w to express height and width every where
-	%
-	%Here, object pixel values are assigned 1, others 0. already said since it is binary
-	
-	LMOS is defined as the ratio of activated decision-relevant regions inside the object region and the total activated decision-relevant regions. 
+	We define LMOS as the ratio of activated decision-relevant regions inside the object region and the total activated decision-relevant regions. 
 	Mathematically:
 	\begin{equation}
 		\label{eq:lmos}
-		\mathrm{LMOS}  \frac{\sum_{i=1}^{h}\sum_{j=1}^{w} \hat{h}(i,j)\, M(i,j)} {\sum_{i=1}^{h}\sum_{j=1}^{w} \hat{H}(i,j)}
+		\mathrm{LMOS}  = \frac{\sum_{i=1}^{h}\sum_{j=1}^{w} \hat{H}(i,j)\, M(i,j)} {\sum_{i=1}^{h}\sum_{j=1}^{w} \hat{H}(i,j)}
 	\end{equation}
-	where $M \in \{0,1\}^{h \times w}$ denote the resized ground-truth binary segmentation mask.  
-	%We have derived the mean LMOS, L for all test images. 
-	\zahid{waht is L here? what is $\hat h$ here?}
+	where $M \in \{0,1\}^{h \times w}$ denote the ground-truth binary segmentation mask.  
 	
-	\zahid{how do we get M???}
-	
-	\subsubsection{Trustworthy Index (TI)}
+	\subsection{Explainable Trustworthy Index (ETI)}
 	\label{sec:implementaiton_TI}
-	In this article, we propose Trustworthy Index (TI) to measure trustworthiness of a CNN model's predictions. 
-	We combine the accuracy, explainable consistency and the mean LMOS (Eq. \ref{eq:lmos}) to define TI. 
+	We propose Explainable Trustworthy Index (ETI) to measure trustworthiness of a CNN model's predictions. 
+	We combine the accuracy, explainable consistency and the mean LMOS (Eq. \ref{eq:lmos}) to define ETI. 
+	Note that the LMOS is an instance specific (or local) measure. 
+	On the other hand accuray is a global measure indicating the overall performance of a model. 
+	%Thats why we use $\overline{LMOS}$ in TI definition, just need to say it outloud here}
 	
 	Let $acc$ denote the classification accuracy of a model on test set and $\overline{\mathrm{LMOS}}$ denote the mean LMOS scores across the same test samples. 
-	We define TI defined as follows:
-	%\[
-	$$\mathrm{TI} = \frac{acc + \overline{\mathrm{LMOS}}}{2}.$$
-	%\]
+	We define ETI as follows:
+	\begin{equation}
+		\label{eq:eti}
+		\mathrm{ETI} = \frac{acc + \overline{\mathrm{LMOS}}}{2}.
+	\end{equation}
 	
 	In this study, both $acc$ and $\mathrm{LMOS}$ are equally important and are normalized to the range $[0,1]$.
 	% and represent complementary components of model reliability. 
-	$acc$ measures predictive performance, whereas $\mathrm{LMOS}$ measures the mean explanation consistency with the target object. 
+	Here, $acc$ measures the overall predictive performance of a model, whereas $\mathrm{LMOS}$ measures the mean explanation consistency specific to the target object. 
 	%Since neither component alone is sufficient to estimate trustworthiness, 
-	We provide equal weighting to both components to avoid favoring either predictive performance or explanatory quality. \zahid{need to rewrite}
+	We assign equal weighting to both components to avoid favoring either predictive performance or explanatory quality.
 	
-	%\subsubsection{Ablation Study}
-	\noindent
-	\textbf{Variations of TI}. 
-	To demonstrate the impact of LMOS and $acc$ on the proposed TI, we have calculated two variants of TI as folllows:
-	$$\mathrm{TI}_{\text{w/o LMOS}} = \frac{\text{acc}}{2}, \quad \mathrm{TI}_{\text{w/o acc}} = \frac{\text{LMOS}}{2}.$$
-	
-	\subsubsection{Robustness Index (RI)}
-	We estimate the robustness of a model by measure its' performance deviation under purturbation in the test datasets.  
+	\subsection{Explainable Robustness Index (ERI)}
+	We estimate the robustness of a model by measuring its' performance deviation under purturbation.  
 	%To evaluate performance robustness against input perturbations, we compute Accuracy Stability ($S_{\rm{acc}}$)  \zahid{if not introduced by you cite}, which measures the consistency between the classification accuracy on perturbed images and the baseline accuracy on clean test images.
-	Let $acc_c$ denote the accuracy of a model on a clean test dataset (not purturbed) and $acc_p$ denote the accuracy obtained on the test set after applying a specific perturbation $p$ (see Sec. \ref{sec:perturbation_methods} for all the purturbation methods used in this research). 
+	Let $acc_c$ be the accuracy of a model on a clean dataset (not purturbed) and $acc_p$ denote the accuracy obtained on the same dataset after applying a specific perturbation $p$ (see Sec. \ref{sec:perturbation_methods} for all the purturbation methods used in this research). 
 	We intorduce the Accuracy Stability ($S_{\rm{acc}}$) score \zahid{if not introduced by you cite} under a specific perturbation $p$ as:
 	%begin{equation}
 	$$	S_{\mathrm{acc}}^{p} = 1 - \frac{ | acc_c - acc_p | }
 	{acc_c + acc_p + \epsilon}$$
 	%\end{equation}
 	where $\epsilon$ is a small positive constant introduced to avoid division by zero error. 
-	A higher value of $S_{\mathrm{acc}}^p$ indicates that the model's performance is more consistent under the corresponding perturbed condition $p$. 
+	%A higher value of $S_{\mathrm{acc}}^p$ indicates that the model's performance is more consistent under the corresponding perturbed condition $p$. 
+	A higher $S_{\mathrm{acc}}^p$ value indicates greater performance consistency under the perturbed condition $p$.
 	
-	To estimate an overall measure of $S_{\mathrm{acc}}$, we compute $S_{\mathrm{acc}}^p$ across all $p \in P$ where $P$ is the set of all purturbation methods used in the experiments, see Section \ref{sec:perturbation_methods} and take the mean of all $S_{\mathrm{acc}}^p$. 
-	This can be defined as:
+	To estimate an overall measure of accuracy stability ($S_{\mathrm{acc}}$), we compute $S_{\mathrm{acc}}^p$ across all $p \in \mathcal P$ where $\mathcal P$ is a set of purturbation methods, see Section \ref{sec:perturbation_methods}, and take the mean of all $S_{\mathrm{acc}}^p$. 
+	We define this as follows:
 	%\begin{equation}
-	$$\overline{S}_{\text{acc}} = \frac{1}{|P|} \sum_{p=1}^{|P|} S_{\text{acc}}^{p}$$
+	$$S_{\text{acc}} = \frac{1}{|\mathcal P|} \sum_{p=1}^{|\mathcal P|} S_{\text{acc}}^{p}$$
 	%\end{equation}
 	%where $S_{\text{acc}}^{(p)}$ denotes the accuracy stability under the $p$-th perturbation and $P$ is the total %number of evaluated perturbations. In this study, $P=9$.
 	
 	%\zahid{proposed measures EI and RI. they use LMOS. What are the additional measures - stability ??? Need to clarify.}
 	
-	\textbf{Similarly, we introduce LMOS Stability to measures how closely a model's object reliance under perturbation remains to its object reliance on clean images.
-		To evaluate the robustness under input perturbations, we have measured the stability of LMOS when input images are perturbed.} \zahid{need rewriting}
+	Similarly, we measure LMOS stability ($S_{\mathrm{LMOS}}$) to quantify how consistently a model maintains its visual object focus under input perturbations relative to unperturbed images.
+	%Similarly, we computer LMOS Stability to measure how closely a model's object reliance under perturbation remains to its object reliance on clean images. 
+	%To evaluate the robustness under input perturbations, we have measured the stability of LMOS when input images are perturbed.
+	For each sample in a dataset, we comput LMOS for both the original image and its perturbed version using Eq. \ref{eq:lmos}.  
 	
-	For each test sample, we have computed LMOS for both the original image and its perturbed version.  
-	Let $N$ be the number of test samples in a test set. 
-	Let $LMOS_{\text{clean}}$ denote the LMOS value computed from an original image and $LMOS_{\text{perturbed}}$ denote the LMOS value computed from the corresponding perturbed image.
-	
-	To quantify the consistency between these two values, we define the LMOS stability under a perturbation:
+	%$N$ be the number of samples in a dataset, 
+	Let $\mathrm{LMOS}^i_c$ be the LMOS value computed from sample $i$ and $\mathrm{LMOS}^i_p$ be the LMOS value computed from the same sample $i$  after applying perturbation $p$. 
+	To quantify the consistency between these two values, we define the LMOS stability under a perturbation $p$ for sample $i$ as:
 	%\begin{equation}
-	$$S_{\textrm{LMOS}} = 1 - \frac{|LMOS_{\textrm{clean}} - LMOS_{\textrm{perturbed}}|}{LMOS_{\textrm{clean}} + LMOS_{\textrm{perturbed}} + \epsilon}$$, 
+	$$S^{p, i}_{\textrm{LMOS}} = 1 - \frac{|\mathrm{LMOS}^i_c - \mathrm{LMOS}^i_p|}{\mathrm{LMOS}^i_c + \mathrm{LMOS}^i_p + \epsilon}$$ 
 	%\end{equation}
 	where $\epsilon$ is a small constant to avoid division by zero error. 
+	A higher value of $S^{p,i}_{\textrm{LMOS}}$ indicates that the model's reliance on the focus object remains more consistent under the corresponding perturbation. 
+
+	Given there are $N$ images in a dataset, the LMOS stability under the perturbation $p$ across the entire dataset is estimated as:
+	%\begin{equation}
+	$$	S_{\mathrm{LMOS}}^p= \frac{1}{N} \sum_{i=1}^{N}S_{\mathrm{LMOS}}^{p,i}.$$
+	%\end{equation}
+ 	%$S_{\text{LMOS},i}^{(p)}$ denotes the LMOS stability of the $i$-th test sample under the perturbation $p$, and $N$ represents the total number of test samples.
 	
-	\zahid{why not the denominator is using abs values?}
-	
-	A higher value of $S_{\text{LMOS}}$ indicates that the model's reliance on the focus object remains more consistent under the corresponding perturbation. The LMOS stability under a perturbation $p$ is calculated as an average across all $N$ test samples as:
-	
-	\begin{equation}
-		{S}_{\text{LMOS}}^{(p)}
-		=
-		\frac{1}{N}
-		\sum_{i=1}^{N}
-		S_{\text{LMOS},i}^{(p)}
-	\end{equation}
-	
-	where $S_{\text{LMOS},i}^{(p)}$ denotes the LMOS stability of the $i$-th test sample under the perturbation $p$, and $N$ represents the total number of test samples.
-	
-	To obtain an overall measure of LMOS stability across all evaluated perturbations, the perturbation-specific LMOS stability scores are subsequently averaged as:
-	
-	\begin{equation}
-		\overline{S}_{\text{LMOS}}
-		=
-		\frac{1}{P}
-		\sum_{p=1}^{P}
-		{S}_{\text{LMOS}}^{(p)}.
-	\end{equation}
-	
-	where $P$ denotes the total number of evaluated perturbations. In this study, $P=9$.
-	
-	
+	To obtain an overall measure of LMOS stability across all evaluated perturbations $\mathcal P$, the perturbation-specific LMOS stability scores ($S_{\mathrm{LMOS}}^p$) are subsequently averaged as:
+	%\begin{equation}
+	$$S_{\mathrm{LMOS}}=\frac{1}{|\mathcal P|}\sum_{p=1}^{\mathcal P} S_{\mathrm{LMOS}}^p.$$
+	%\end{equation}	
+	%where $P$ denotes the total number of evaluated perturbations. In this study, $P=9$.
 	
 	%  ------ Needs checking--------------
-	To jointly evaluate the robustness of both classification performance and explainability under input perturbations, we have proposed the \textit{Explainable Robustness Index} (ERI). Unlike accuracy stability and LMOS stability, which separately assess the consistency of predictive performance and model localization behavior, ERI provides a unified measure of robustness by combining the accuracy stability and LMOS stability.
 	
-	Let ${s}_{\text{acc}}^{{p}}$ be accuracy stability and ${s}_{\text{LMOS}}^{{p}}$ be LMOS stability under perturbation p. Now, ERI under perturbation p is calculated as:
+	%To jointly evaluate the robustness of both classification performance and explainability under input perturbations, we have proposed the \textit{Explainable Robustness Index} (ERI). 
+	%Unlike accuracy stability and LMOS stability, which separately assess the consistency of predictive performance and model localization behavior, ERI provides a unified measure of robustness by combining the accuracy stability and LMOS stability.
+	To jointly evaluate the robustness of predictive accuracy and explainability under input perturbations, we propose the \textit{Explainable Robustness Index} (ERI). 
+	While accuracy stability and LMOS stability independently assess predictive consistency and visual localization behavior, ERI provides a unified robustness measure by integrating both dimensions.
 	
+	%Let ${s}_{\text{acc}}^{{p}}$ be accuracy stability and ${s}_{\text{LMOS}}^{{p}}$ be LMOS stability under perturbation p. Now, ERI under perturbation p is calculated as:
 	
+	%Let $S_{\mathrm{acc}}^{p}$ and $S_{\mathrm{LMOS}}^{p}$ denote the accuracy stability and LMOS stability under perturbation $p$, respectively. 
+	
+	The ERI under perturbation $p$ ($\mathrm{ERI}^p$) is then defined by combining the accuracy stability $S_{\mathrm{acc}}$ and LMOS stability $S_{\mathrm{LMOS}}$ as follows:
 	\begin{equation}
-		ERI^{{p}} =
-		\frac{
-			{S}_{\text{acc}}^{{p}}
-			+
-			{S}_{\text{LMOS}}^{{p}}
-		}{2}.
+		\label{eq:eri}
+		\mathrm{ERI} =\frac{S_{\mathrm{acc}}+
+			S_{\mathrm{LMOS}}}{2}.
 	\end{equation}
 	
-	Let $\overline{S}_{\text{acc}}$ denote the overall accuracy stability and $\overline{S}_{\text{LMOS}}$ denote the overall LMOS stability, both obtained by averaging their corresponding perturbation-specific stability scores across the $P$ evaluated perturbations. The proposed ERI is defined as:
+	Here, $S_{\mathrm{acc}}$ represents the overall consistency of classification accuracy between clean and perturbed inputs, while $S_{\mathrm{LMOS}}$ represents the overall consistency of the model's reliance on the focus object under perturbations. 
+	ERI jointly captures two complementary dimensions of robustness: \textit{predictive stability} and \textit{explanatory stability}.
 	
-	\begin{equation}
-		ERI =
-		\frac{
-			\overline{S}_{\text{acc}}
-			+
-			\overline{S}_{\text{LMOS}}
-		}{2}.
-	\end{equation}
-	
-	Here, $\overline{S}_{\text{acc}}$ represents the overall consistency of classification accuracy between clean and perturbed inputs, while $\overline{S}_{\text{LMOS}}$ represents the overall consistency of the model's reliance on the focus object under perturbations. Therefore, ERI jointly captures two complementary dimensions of robustness: \textit{predictive stability} and \textit{explanatory stability}.
-	
-	Since both component scores are bounded in the same range, the resulting ERI also provides a normalized measure of overall robustness. A higher ERI indicates that a model simultaneously maintains its classification performance and preserves its object-focused behavior across the evaluated perturbations. Conversely, a lower ERI indicates that the model exhibits greater instability in one or both dimensions.
-	
-	%\subsubsection{Ablation Study}
-	\noindent
-	\textbf{Variations of RI.}
-	To analyze the contribution of the individual components of RI (i.e., $S_{acc}$ and $S_{\text{LMOS}}$), we calculate two variants by removing one component at a time:
-	$$\mathrm{RI}_{\text{w/o LMOS}} = \frac{\overline{S}_{\text{acc}}}{2}, 
-	\quad 
-	\mathrm{RI}_{\text{w/o acc}} = \frac{\overline{S}_{\text{LMOS}}}{2}.$$
+	%Since both component scores are bounded in the same range, the resulting ERI also provides a normalized measure of overall robustness. 
+	%A higher ERI indicates that a model simultaneously maintains its classification performance and preserves its object-focused behavior across the evaluated perturbations. 
+	%Conversely, a lower ERI indicates that the model exhibits greater instability in one or both dimensions.
+	Since both constituent scores share a common upper and lower bound, the resulting ERI serves as a normalized metric of overall robustness. 
+	A higher ERI value signifies that a model concurrently preserves both its classification accuracy and object-centric visual focus across input perturbations. 
+	Conversely, a lower ERI reflects marked instability in either predictive performance, visual focus, or both.
 	
 	\section{Experimental Setup}	
-	\subsection{Dataset}
+	\subsection{Datasets}
 	We have used four publicly available datasets in our empirical study of the proposed evaluation measures: 
 	%EgyPLI \cite{r10}, Bdmedileaves \cite{r11}, Flowers \cite{r12} and Flowers Recognition
 	%KAGGLE dataset \cite{r13}. 
@@ -1020,15 +989,18 @@
 		\zahid{what is the resolution of the images in this dataset?}
 		
 		\item \textbf{FR}:  This kaggle \cite{r19} dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
-		However, the kaggle version contains 4,242 JPG images of resulation of $320\times240$ pixels. Although the image classes are the same as FLRS, the image samples are different.  This repository was also used in previous research \cite {r20, r21}.
-		\zahid{is this different than the above FLRS?}
+		However, the kaggle version contains 4,242 JPG images of resulation of $320\times240$ pixels. 
+		Although the image classes are the same as FLRS, the image samples are different. 
+		This dataset is used in previous research \cite {r20, r21}.
+		%\zahid{is this different than the above FLRS?}
 	\end{itemize}
 	
-	\zahid{Specific difference between FLRS and KFLR}.
+	%\zahid{Specific difference between FLRS and KFLR}.
 	
 	\noindent
 	\textbf{Dataset preparation.} 
-	The BDML dataset is already splitted into training, validation and testing sets. We split the other three datasets into training, validation and test subsets with an approximate ratio of $80\%$, $10\%$ and $10\%$. 
+	The BDML dataset is already splitted into training, validation and testing sets. 
+	We split the other three datasets into training, validation and test subsets with an approximate ratio of $80\%$, $10\%$ and $10\%$. 
 	Table \ref{tab:classwise_dataset_distribution} presents the class-wise training, validation, and test splits. 
 	\zahid{did you preserve the class distributions in the three splits?}
 		
@@ -1036,33 +1008,12 @@
 	To simplify explainability and localization analysis, the test images have been manually annotated to generate corresponding JSON files. 
 	These JSON annotations describe the polygonal boundaries of the target leaf in each image. 
 	The JSON files have been converted into binary masks. 
-	Here, each mask represents only the target leaf region and excludes the background and other objects in the scene.
+	Here, each mask represents only the target leaf region and excludes the background and other objects in the scene. 
+	\zahid{Table is missing BDML distribution}
 	
 	\input{tables/tbl_dataset_distribution}
-	%\subsection{Dataset Distribution}	
-		
-	\subsection{Baseline models and evaluation metrics.}
-	TBD
-	
-	\subsection{Classification Performance}
-	%\subsection{Creating JSON files of test images }
-	% moved above in dataset prep. section
 
-	
-	%\mathrm{LMOS}
-	
-	%% -- not processed yet
-	
-	
-%	\subsubsection{LMOS (Localization Mask Overlap Score) }
-%	\subsubsection{Accuracy Stability }
-%	\subsubsection{LMOS Stability Under Perturbations }
-	
-	\subsection{Grad-CAM Visualization}
-	Grad-CAM visualization shows that CNN models often	predictcorrectlybuttheysometimesrelyonthebackground
-	or non-object regions. Besides, under perturbations, their	relianceon objectpixels hugely changes. 
-	\zahid{it is not necessary here. We may include the implemenation of grad-cam in the method implementation section above}
-	
+
 	\subsection{Perturbation methods}
 	\label{sec:perturbation_methods}
 	To evaluate the robustness of the proposed framework under distribution shifts and common image corruptions, we have applied nine image perturbation methods to the test set. 
@@ -1097,6 +1048,83 @@
 	\end{itemize}
 	
 	
+	\subsection{Implementaion the CNN models}
+	\label{sec:cnn_architectures}
+	In our experiments, we have used the following CNN models:
+	\begin{itemize}
+		\item \textbf{MobileNetV2}:
+		\item \textbf{Xception}:
+		\item \textbf{DenseNet121}:
+		\item \textbf{InceptionResNetV2}:
+		\item \textbf{VGG16}:
+		\item \textbf{InceptionV3}:
+		\item \textbf{ResNet50}:
+		\item \textbf{CustomCNN}:
+	\end{itemize}
+	
+	
+	\subsection{Implementaion of ETI and ERI}
+	\label{sec:justification_of_tau}
+	Use used the Grad-CAM implementation from \zahid{specify}\cite{}. 
+	We apply Grad-CAM to obtain the heatmap $H$ for output of each model (described above in Section \ref{sec:cnn_architectures}). 
+	We resized the heatmaps  to the corresponding model's input image size, e.g., for Xception it is $299 \times 299$ and for other models, it is $224\times224$. 
+	
+	The next step in our method is to get the binary attention map $\hat{H}(i,j)$ for each sample image (see Eq. \ref{eq:binary_attention_map}).  
+	We select the value of threshold $\tau$ through experiments are discussed below. 
+	
+	Using the binarized heatmap $\hat{H}(i,j)$ and the ground-truth binary mask $M(i,j)$, we compute LMOS according to Eq.~\ref{eq:lmos}. 
+	We created the ground-truth binary masks from the corresponding JSON files of test images and resized into the input image size (similar to the heatmaps). This same LMOS computation procedure is subsequently used to derive the proposed ETI and ERI scores, as defined in Eq.~\ref{eq:eti} and Eq.~\ref{eq:eri}, respectively.
+	
+	
+	\input{figures/tau-search.tex}
+	
+	\noindent\textbf{Selection of the threshold $\tau$.}
+	%The value of the heatmap binarization threshold $\tau$ is important because it determines whether the decision-relevant regions are allowed to pass for heatmap binarization. 
+	The choice of the threshold parameter $\tau$ is critical, as it governs the filtering of decision-relevant regions during heatmap binarization.
+	We experimented with $\tau \in \{0.5,0.6,0.7,0.8\}$. 
+	Results of the experiments are shown in Figure \ref{fig:threshold_comparison}. \zahid{need to work on the figures}
+	
+	%At 𝜏 = 0.5, the binarized maps retain a large portion
+	%of the heatmap, including not only the highly activated
+	%red and yellow regions but also a substantial amount of
+	%green regions. Although this threshold preserves more ac-
+	%tivated pixels, the inclusion of weakly activated peripheral
+	%regions may introduce non-decision-relevant areas into the
+	%masked Grad-CAM. Consequently, it may raise a question
+	%ofwhetherheatmapbinarizationmasksonlyallowdecision-
+	%relevant regions.
+	At $\tau = 0.5$, the binarized mask retains a broad portion of the visual attribution map capturing strong activity in red and yellow regions. 
+	It also illustrates substantial weak activity in the green regions. 
+	While this lower threshold preserves more total activations, incorporating these peripheral regions risks introducing irrelevant visual evidence into the masked Grad-CAM. 
+	Consequently, this raises concerns regarding whether the resulting binary mask sufficiently isolates true decision-relevant regions.
+	
+	Increasing $\tau = 0.6$ improves selectivity by suppressing most green activations, yet it permits weakly activated peripheral regions to pass alongside core object features. Conversely, $\tau = 0.8$ imposes overly stringent constraints, retaining predominantly red regions while discarding valid, decision-relevant yellow activations. 
+	
+	As illustrated in Figure~\ref{fig:threshold_comparison}, $\tau = 0.7$ achieves an optimal balance by isolating the primary red and yellow heatmaps (representing the model's core decision-relevant evidence) while successfully suppressing low-intensity background noise. 
+	Based on this experiment, we select $\tau = 0.7$ for $\hat H(i,j)$ computation and applied consistently across all datasets, architectures, and perturbations to ensure cross-experimental comparability.
+	
+	
+	\noindent
+	\textbf{Variations of ETI}. 
+	To demonstrate the impact of LMOS and $acc$ on the proposed ETI, we have calculated two variants of ETI as folllows:
+	$$\mathrm{ETI}_{\text{w/o LMOS}} = \frac{\text{acc}}{2}, \quad \mathrm{ETI}_{\text{w/o acc}} = \frac{\overline{\mathrm{LMOS}}}{2}.$$
+	
+	\noindent
+	\textbf{Variations of ERI.}
+	To analyze the contribution of the individual components of ERI (i.e., $S_{acc}$ and $S_{\mathrm{LMOS}}$), we calculate two variants by removing one component at a time:
+	$$\mathrm{ERI}_{\text{w/o LMOS}} = \frac{S_{\text{acc}}}{2}, 
+	\quad 
+	\mathrm{ERI}_{\text{w/o acc}} = \frac{S_{\mathrm{LMOS}}}{2}.$$
+	
+	%	\subsection{Grad-CAM Visualization}
+	%	Grad-CAM visualization shows that CNN models often	predictcorrectlybuttheysometimesrelyonthebackground
+	%	or non-object regions. Besides, under perturbations, their	relianceon objectpixels hugely changes. 
+	%	\zahid{it is not necessary here. We may include the implemenation of grad-cam in the method implementation section above}
+	
+	\subsection{Evaluation metrics}
+	\zahid{Write about the accuray metric here and the Rank column in the tables.}
+	
+	
 	\subsection{Training Configurations}
 	We used TensorFlow/Keras on the Kaggle \zahid{cite kaggle} environment with two NVIDIA Tesla T4 GPUs to trainining and evaluation of all the CNN models in our experiments. 
 	The training configuration has followed the settings adopted in the original EgyPLI study\cite{r10}. \zahid{what are these? please specify. is it only for EgyPLI or all 4 datasets??}
@@ -1108,7 +1136,10 @@
 	%We have used TensorFlow/Keras Functional API, while the original EgyPLI research used the sequential API. This implementation choice does not alter the underlying CNN architectures or their corresponding backbone configurations.
 	
 	%The trained models have been subsequently evaluated on clean and perturbed test images. Their classification accuracy and Grad-CAM-based LMOS have been used to calculate accuracy stability, LMOS stability, ETI, and ERI.
-
+	
+	%----------------------------------------------------------
+	%-----------------RESULT & DISCUSSION-----------------
+	%----------------------------------------------------------
 	\section{Result and Discussion}
 	\subsection{Grad-CAM Visualization}
 	\label{sec:gradcam_visualization}
@@ -1132,20 +1163,64 @@
 	
 	\section{Related Works}
     \label{related_works}
-Javed et al. introduced two approaches: a Bayesian approximation
-via Monte Carlo Dropout and the nonparametric Conformal Prediction framework to measure uncertainty \cite{r22}. Although CNN models are excellent for classification, their predictions are often wrong but overconfident. If wrong predictions receive high confidence, the models are overconfident and difficult to trust. These models suffer from poor calibration. Their research indicates that accuracy alone cannot make a model reliable. Recent studies have proposed trustworthiness metrics based on uncertainty estimation and failure detection. Ao et al. \cite{r23} proposed the Excess Area Under the Optimal Risk-Coverage Curve, E-AUoptRC, to evaluate model performance under the risk–coverage (RC) framework. They also introduced the Trust Index (TI), which displays model performance at the optimal coverage point and serves as a complementary metric to overall accuracy. E-AUoptRC and TI provide more trustworthiness of CNN models than other indices/metrics. Nastoska et al. analyzed frameworks and metrics to evaluate AI trustworthiness, including fairness, transparency, privacy, and security\cite{r24}. They experimented with various frameworks such as the NIST AI Risk Management Framework (AI RMF), the AI Trust Framework and Maturity Model (AI-TMM), and ISO/IEC standards. Their study includes a comparative analysis of existing standards and their applications in the industry to describe their general effectiveness. Pal et al. proposed the Trust-Aware Explainable Artificial Intelligence (TAXAI) framework. It introduces a quantitative Trust Index for evaluating explainable AI systems in clinical applications\cite{r25}. The framework combines algorithmic transparency, interpretability alignment, and compliance-oriented reliability into a unique trust evaluation model. It is not similar to traditional XAI methods that primarily generate explanations. In contrast, TAXAI focuses on measuring the trustworthiness and reliability of explanations through a normalized trust score.
+    
+	\subsection{Model Reliability and Trustworthiness}
+	To move beyond standard classification accuracy, recent studies have increasingly focused on quantifying model reliability through uncertainty estimation and calibration. 
+    Javed et al. \citet{r22} integrated Bayesian Monte Carlo Dropout with nonparametric Conformal Prediction to address overconfidence in deep neural networks. 
+    To better evaluate model performance under uncertainty, Ao et al. \cite{r23} introduced the Excess Area Under the Optimal Risk-Coverage Curve ($\mathrm{E\text{-}AUoptRC}$) and the Trust Index ($\mathrm{TI}$), offering a risk-coverage perspective on model trustworthiness. 
 
-Zhang et al. proposed AR2, a repair method to improve robustness to corruption without changing the architecture. It aligns the class activation maps (CAMs) for clean and corrupted images and encourages the model to maintain consistency  \cite{r26}. Although AR2 enhances robustness under perturbations, it does not provide any explainable score or index under various perturbations. In contrast, our proposed Explainable Robustness Index (ERI) directly measures the stability of Grad-CAM explanations under perturbations. It provides an explainability-based robustness evaluation. Hendrycks and Dietterich \cite{r27} introduced ImageNet-C and ImageNet-P. Their research evaluates performance under corruption and perturbations. They found negligible changes under corruption from AlexNet to ResNet classifiers. This research calculates performance degradation under distribution shifts but does not assess the stability of model explanations.  Su et al. evaluated the robustness of deep image classification models against adversarial perturbations and demonstrated that high classification accuracy does not necessarily imply high robustness \cite{r28}. This work motivated us to investigate robustness beyond predictive accuracy. Taori et al. defined robustness during natural distribution shifts and emphasized that robustness should be evaluated separately from standard predictive accuracy \cite{r29}. This work further motivated us to evaluate robustness beyond predictive accuracy. Hendrycks et al. proposed AugMix, a data-processing method designed to improve the robustness of image classification models under common corruptions while maintaining performance on clean images \cite{r30}. This research is very motivating for our evaluation of robustness beyond standard predictive accuracy. Schneider et al. evaluated robustness under common image corruptions and showed that covariate-shift adaptation using corrupted test samples can substantially improve model performance under such distribution shifts \cite{r31}. Guo et al. proposed a model robustness evaluation framework \cite{r32}. It contains 23 comprehensive and rigorous metrics. These metrics consider two key aspects of adversarial learning: data and model.
+	At a broader level, Nastoska et al. \cite{r24} provided a comprehensive review of AI trustworthiness criteria by evaluating industrial compliance against the NIST AI Risk Management Framework and ISO/IEC standards. 
+	In domain-specific applications, Pal et al. \cite{r25} proposed the Trust-Aware Explainable Artificial Intelligence ($\mathrm{TAXAI}$) framework, which yields a normalized score by combining algorithmic transparency, interpretability alignment, and compliance reliability. 
+	While these frameworks advance the quantification of predictive trust, they generally evaluate reliability without explicitly measuring the spatial fidelity or stability of visual explanations under environmental perturbations.
 
-Bassi et al. demonstrated the impact of background on the model's decision \cite {r11}. Background may cause shortcut learning. Layer-wise Relevance Propagation (LRP) explores the model's decision. They revealed that background bias influence on deep learning models can be minimized by LRP heatmaps without increasing computation cost. By injecting synthetic bias in the image's background, they compared their approach to eight state-of-the-art DNNs. Their approach remained more robust.  Grad-CAM and saliency-based methods have been widely utilized to interpret CNN-based classification systems in various sectors, such as plant disease detection. They provide trustworthiness and important insights for decision-making and predictions\cite{r33}. Attention-based and explainability-guided CNN architectures have been widely explored in recent applications. For example, Singh et al. have proposed CBAM-enhanced VGG16 models for plant leaf disease classification. They presented the effectiveness of their research through comprehensive evaluation and interpretability analysis, such as Grad-CAM, Grad-CAM++, and Layer-wise Relevance Propagation (LRP), to make the system more transparent and reliable for smart farming. \cite{r34}. Shawon et al. highlight the growing application of explainable AI techniques such as Grad-CAM, SHAP, and LIME in plant disease detection. They emphasize concerns about generalizing models under real-world conditions and environmental variability, although they provide high accuracy\cite{r35}. However, these works primarily focus on applying interpretability methods rather than quantitatively evaluating explanation quality or robustness, which motivates the need for metrics such as ERI and ETI. A significant problem of Explainable AI is the unavailability of quantifiable metrics to evaluate or measure explanation quality. Rahimiaghdam and Alemdar addressed the issue and proposed evaluative and quantitative metrics of explanation quality in medical imaging \cite{r36}. Baniecki.
-et al. expressed the quality of classifiers as the consistency of explanations and ground truth/segmentation masks. They proposed a framework that evaluates robustness by combining deep neural networks with explanations. Similar tasks are widely used in medical imaging. They introduced a fine-tuning approach that aligns model–explanation pipelines with ground truth. \cite{r37}.  Repetto et al. evaluated the robustness of ExAI methods under various perturbations. They systematically measured the stability of ExAI techniques against both natural noise and adversarial manipulations that change explanations but not predictions. Finally, they introduced some evaluative metrics and proposed a protocol to assess the reliability of ExAI methods\cite{r38}. Zheng et al. proposed a spurious bias
-mitigation framework, ShortcutProbe\cite{r39}. Here, there is no need for annotation and labeling. ShortcutProbe detects prediction shortcuts that may lessen robustness. The models were retrained again to become invariant to these shortcuts and more robust.  Guidotti et al. propose an approach that allows evaluating the local explanation methods using ground-truth explanations \cite{r40}. We have been motivated by this ground-truth-based evaluation perspective to quantify the spatial alignment between Grad-CAM evidence and ground-truth object regions, leading to the proposed Localization Mask Overlap Score (LMOS). Fong and Vedaldi proposed a general framework that can learn different kinds of explanations for any black-box algorithm and another framework to find the image region most responsible for a classifier decision \cite{r41}. Kim et al. attempted to find out the gap between classification and localization in weakly supervised object localization and showed that CAM-based methods tend to emphasize the most discriminative object parts rather than the complete object region \cite{r42}.
+	\subsection{Predictive Robustness Under Perturbations}
+	Evaluating model performance under distribution shifts and input corruptions is essential for reliable deployment. 
+	Hendrycks and Dietterich \cite{r27} established foundational benchmarks known as ImageNet-C and ImageNet-P, to measure classification degradation under common corruptions and perturbations. 
+	Extending this, Schneider et al. \cite{r31} demonstrated that test-time covariate-shift adaptation can substantially recover predictive performance under corruptions, while Hendrycks et al. \cite{r30} proposed AugMix to improve model robustness while preserving clean accuracy. 
+	Beyond common corruptions, Su et al. \cite{r28} and Taori et al. \cite{r29} investigated adversarial and natural distribution shifts, demonstrating that high standard accuracy does not guarantee robustness and advocating for independent robustness evaluations. 
+	Furthermore, Guo et al. \cite{r32} compiled a 23-metric framework targeting adversarial data and model vulnerabilities.
 
+	While these works establish rigorous protocols for evaluating accuracy under stress, they focus exclusively on output predictions. 
+	A few recent efforts have attempted to incorporate explainability into robustness routines. 
+	Zhang et al. \cite{r26} proposed $\mathrm{AR^2}$, aligning Class Activation Maps (CAMs) between clean and corrupted images during training to enforce feature consistency. 
+	However, $\mathrm{AR^2}$ operates as a model repair mechanism rather than a quantitative evaluation index. 
+	In contrast, our proposed Explainable Robustness Index ($\mathrm{ERI}$) directly quantifies the joint stability of both predictive performance and Grad-CAM visual evidence under input perturbations.
+
+	\subsection{Explanation Quality, Localization, and Spurious Bias}
+	Visual explanation techniques e.g., Grad-CAM, Attention maps, and Layer-wise Relevance Propagation (LRP) are widely deployed to interpret CNN decisions in sensitive domains, including smart farming and plant pathology \cite{r33, r34, r35}. 
+	However, as highlighted by Shawon et al. \cite{r35}, high accuracy and visual heatmaps do not automatically guarantee model generalization under real-world variability. 
+	A critical challenge remains the reliance on shortcut learning and background bias. 
+	Bassi et al. \cite{r11} demonstrated that synthetic background biases heavily influence deep models, showing that LRP heatmaps can expose and mitigate shortcut learning without incurring high computational costs. 
+	Similarly, Zheng et al. \cite{r39} introduced ShortcutProbe to detect and retrain networks against prediction shortcuts without manual annotations.
+	
+	A fundamental bottleneck in Explainable AI (XAI) is the scarcity of quantitative metrics for evaluating explanation quality. 
+	Addressing this, Rahimiaghdam and Alemdar \cite{r36} formulated evaluative metrics for medical imaging, while Baniecki et al. \cite{r37} proposed aligning model explanation pipelines directly with ground-truth segmentation masks. 
+	Ground-truth-based evaluation was further advanced by Guidotti et al. \cite{r40}, who evaluated local explanation methods against annotated object bounds. 
+	Inspired by this perspective, our proposed Localization Mask Overlap Score ($\mathrm{LMOS}$) quantifies the spatial alignment between Grad-CAM visual evidence and target object regions. 
+	
+	Regarding explanation stability, Repetto et al. \cite{r38} systematically measured the sensitivity of XAI techniques under natural noise and adversarial manipulations that alter explanations without affecting predictions. 
+	Finally, Fong and Vedaldi \cite{r41} and Kim et al. \cite{r42} analyzed black-box attribution and weakly supervised localization, observing that CAM-based methods often concentrate on localized, highly discriminative parts rather than full object extents. 
+	Our framework builds upon these insights by offering a unified, quantitative evaluation of spatial overlap ($\mathrm{LMOS}$), explanation quality ($\mathrm{ETI}$), and perturbation stability ($\mathrm{ERI}$).
 
 	
 	\section{Conclusion}     
 	\label{sec:conclusion}
+	This paper has proposed two novel metrics, the Explainable Trustworthy Index (ETI) and the Explainable Robustness Index (ERI), to evaluate CNN models beyond classification accuracy. 
+	ETI combines accuracy with the Localization Mask Overlap Score (LMOS) to assess whether a model's predictions are grounded in the intended object rather than background or irrelevant regions. 
+	ERI extends this evaluation to perturbed inputs by jointly measuring accuracy stability and LMOS stability, capturing whether both predictive performance and object-focused reasoning remain consistent under real-world degradations.
 	
+	Across four benchmark datasets and eight CNN architectures, our results demonstrate that high classification accuracy does not guarantee high ETI or ERI. 
+	For example, on the EPLI dataset, the CustomCNN model has achieved competitive or near-perfect accuracy while obtaining the lowest ETI and ERI scores due to poor and unstable object localization and its poor stability
+	Similarly, the InceptionV3 achieves high classification accuracy across most conditions, its low ETI score reflects poor spatial focus on target object regions. 
+	Conversely, Xception consistently has achieved the highest overall ERI across all four datasets and the highest ETI on both flower datasets (FIRS and FR), despite not always achieving the highest raw accuracy. 
+	It illustrates that predictive performance and explanation quality/stability are related but distinct properties of model reliability. 
+	MobileNetV2 has outperformed higher-accuracy models on the BDML dataset in terms of ETI, reinforcing this distinction.
+	
+	The cross-dataset comparison further shows that reliability patterns vary with visual domain: leaf datasets (EPLI and BDML) have generally yielded higher ETI than flower datasets (FLRS and FR), primarily due to lower LMOS on flowers, yet this does not translate into lower robustness. 
+	Several models have attained high ERI on the flower datasets despite modest ETI. 
+	This confirms that clean-image trustworthiness (ETI) and perturbation robustness (ERI) are complementary rather than interchangeable measures of reliability.
+	
+	Overall, ETI and ERI provide a more comprehensive framework for evaluating CNNs in safety-critical or trust-sensitive applications, where accuracy alone is an insufficient proxy for whether a model reasons about the correct visual evidence and whether that reasoning holds up under realistic input perturbations.
 	
 	
 	\section*{Data and Code availability}
