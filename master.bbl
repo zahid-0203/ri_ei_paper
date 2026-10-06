@@ -68,6 +68,63 @@ K.~Xiao, L.~Engstrom, A.~Ilyas, and A.~Madry, ``Noise or signal: The role of
   image backgrounds in object recognition,'' {\em arXiv preprint
   arXiv:2006.09994}, 2020.
 
+\bibitem{r22}
+F.~Javed, S.~Ruijs, and A.~Kosiakova, ``Beyond accuracy: Reliability and
+  uncertainty estimation in convolutional neural networks,'' {\em Available at
+  SSRN 6030753}.
+
+\bibitem{r23}
+S.~Ao, S.~Rueger, and A.~Siddharthan, ``Empirical optimal risk to quantify
+  model trustworthiness for failure detection,'' {\em arXiv preprint
+  arXiv:2308.03179}, 2023.
+
+\bibitem{r27}
+D.~Hendrycks and T.~Dietterich, ``Benchmarking neural network robustness to
+  common corruptions and perturbations,'' {\em arXiv preprint
+  arXiv:1903.12261}, 2019.
+
+\bibitem{r30}
+D.~Hendrycks, N.~Mu, E.~D. Cubuk, B.~Zoph, J.~Gilmer, and B.~Lakshminarayanan,
+  ``Augmix: A simple data processing method to improve robustness and
+  uncertainty,'' {\em arXiv preprint arXiv:1912.02781}, 2019.
+
+\bibitem{r29}
+R.~Taori, A.~Dave, V.~Shankar, N.~Carlini, B.~Recht, and L.~Schmidt,
+  ``Measuring robustness to natural distribution shifts in image
+  classification,'' {\em Advances in neural information processing systems},
+  vol.~33, pp.~18583--18599, 2020.
+
+\bibitem{r28}
+D.~Su, H.~Zhang, H.~Chen, J.~Yi, P.-Y. Chen, and Y.~Gao, ``Is robustness the
+  cost of accuracy?--a comprehensive study on the robustness of 18 deep image
+  classification models,'' in {\em European Conference on Computer Vision},
+  pp.~644--661, Springer, 2018.
+
+\bibitem{r32}
+J.~Guo, W.~Bao, J.~Wang, Y.~Ma, X.~Gao, G.~Xiao, A.~Liu, J.~Dong, X.~Liu, and
+  W.~Wu, ``A comprehensive evaluation framework for deep model robustness,''
+  {\em Pattern Recognition}, vol.~137, p.~109308, 2023.
+
+\bibitem{r38}
+S.~Repetto, I.~Maljkovic, M.~Lotto, A.~E. Cin{\`a}, S.~Vascon, and F.~Roli,
+  ``Evaluating the robustness of explainable ai in medical image recognition
+  under natural and adversarial data corruption,'' {\em Machine Learning},
+  vol.~115, no.~1, p.~4, 2026.
+
+\bibitem{r36}
+S.~Rahimiaghdam and H.~Alemdar, ``Evaluating the quality of visual explanations
+  on chest x-ray images for thorax diseases classification,'' {\em Neural
+  Computing and Applications}, vol.~36, no.~17, pp.~10239--10255, 2024.
+
+\bibitem{r41}
+R.~C. Fong and A.~Vedaldi, ``Interpretable explanations of black boxes by
+  meaningful perturbation,'' in {\em 2017 IEEE international conference on
+  computer vision (ICCV)}, pp.~3449--3457, IEEE, 2017.
+
+\bibitem{r40}
+R.~Guidotti, ``Evaluating local explanation methods on ground truth,'' {\em
+  Artificial Intelligence}, vol.~291, p.~103428, 2021.
+
 \bibitem{r14}
 I.~Kim, S.~Rajaraman, and S.~Antani, ``Visual interpretation of convolutional
   neural network predictions in classifying medical image modalities,'' {\em
@@ -110,15 +167,68 @@ M.~To{\u{g}}a{\c{c}}ar, B.~Ergen, and Z.~C{\"o}mert, ``Classification of flower
   selection methods in convolutional neural network models,'' {\em
   Measurement}, vol.~158, p.~107703, 2020.
 
-\bibitem{r22}
-F.~Javed, S.~Ruijs, and A.~Kosiakova, ``Beyond accuracy: Reliability and
-  uncertainty estimation in convolutional neural networks,'' {\em Available at
-  SSRN 6030753}.
+\bibitem{r200}
+M.~Sandler, A.~Howard, M.~Zhu, A.~Zhmoginov, and L.-C. Chen, ``Mobilenetv2:
+  Inverted residuals and linear bottlenecks,'' in {\em 2018 IEEE/CVF conference
+  on computer vision and pattern recognition}, pp.~4510--4520, Ieee, 2018.
 
-\bibitem{r23}
-S.~Ao, S.~Rueger, and A.~Siddharthan, ``Empirical optimal risk to quantify
-  model trustworthiness for failure detection,'' {\em arXiv preprint
-  arXiv:2308.03179}, 2023.
+\bibitem{r202}
+G.~Huang, Z.~Liu, L.~Van Der~Maaten, and K.~Q. Weinberger, ``Densely connected
+  convolutional networks,'' in {\em 2017 IEEE conference on computer vision and
+  pattern recognition (CVPR)}, pp.~2261--2269, Ieee, 2017.
+
+\bibitem{r203}
+C.~Szegedy, S.~Ioffe, V.~Vanhoucke, and A.~Alemi, ``Inception-v4,
+  inception-resnet and the impact of residual connections on learning,'' in
+  {\em Proceedings of the AAAI conference on artificial intelligence}, vol.~31,
+  2017.
+
+\bibitem{r204}
+K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
+  large-scale image recognition,'' {\em arXiv preprint arXiv:1409.1556}, 2014.
+
+\bibitem{r205}
+C.~Szegedy, V.~Vanhoucke, S.~Ioffe, J.~Shlens, and Z.~Wojna, ``Rethinking the
+  inception architecture for computer vision,'' in {\em Proceedings of the IEEE
+  conference on computer vision and pattern recognition}, pp.~2818--2826, 2016.
+
+\bibitem{r206}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' in {\em Proceedings of the IEEE conference on computer vision
+  and pattern recognition}, pp.~770--778, 2016.
+
+\bibitem{r102}
+T.~Panboonyuen, ``Seeing isn't always believing: Analysis of grad-cam
+  faithfulness and localization reliability in lung cancer ct classification,''
+  {\em arXiv preprint arXiv:2601.12826}, 2026.
+
+\bibitem{r103}
+A.~Chattopadhay, A.~Sarkar, P.~Howlader, and V.~N. Balasubramanian,
+  ``Grad-cam++: Generalized gradient-based visual explanations for deep
+  convolutional networks,'' in {\em 2018 IEEE winter conference on applications
+  of computer vision (WACV)}, pp.~839--847, IEEE, 2018.
+
+\bibitem{r104}
+P.-J. Kindermans, S.~Hooker, J.~Adebayo, M.~Alber, K.~T. Sch{\"u}tt,
+  S.~D{\"a}hne, D.~Erhan, and B.~Kim, ``The (un) reliability of saliency
+  methods,'' in {\em Explainable AI: Interpreting, explaining and visualizing
+  deep learning}, pp.~267--280, Springer, 2019.
+
+\bibitem{r105}
+H.~Wang, Z.~Wang, M.~Du, F.~Yang, Z.~Zhang, S.~Ding, P.~Mardziel, and X.~Hu,
+  ``Score-cam: Score-weighted visual explanations for convolutional neural
+  networks,'' in {\em 2020 IEEE/CVF conference on computer vision and pattern
+  recognition workshops (CVPRW)}, pp.~111--119, IEEE, 2020.
+
+\bibitem{r106}
+P.-T. Jiang, C.-B. Zhang, Q.~Hou, M.-M. Cheng, and Y.~Wei, ``Layercam:
+  Exploring hierarchical class activation maps for localization,'' {\em IEEE
+  transactions on image processing}, vol.~30, pp.~5875--5888, 2021.
+
+\bibitem{r107}
+V.~Petsiuk, A.~Das, and K.~Saenko, ``Rise: Randomized input sampling for
+  explanation of black-box models,'' {\em arXiv preprint arXiv:1806.07421},
+  2018.
 
 \bibitem{r24}
 A.~Nastoska, B.~Jancheska, M.~Rizinski, and D.~Trajanov, ``Evaluating
@@ -130,43 +240,16 @@ M.~Pal, H.~N. Saha, and A.~Chakrabarti, ``The trust-aware xai (taxai)
   framework: a quantitative model for interpretable and reliable clinical ai
   systems,'' {\em Scientific Reports}, 2026.
 
-\bibitem{r26}
-F.~Zhang, Q.~Wang, and J.~Zhao, ``Ar2: Attention-guided repair for the
-  robustness of cnns against common corruptions,'' {\em arXiv preprint
-  arXiv:2507.06332}, 2025.
-
-\bibitem{r27}
-D.~Hendrycks and T.~Dietterich, ``Benchmarking neural network robustness to
-  common corruptions and perturbations,'' {\em arXiv preprint
-  arXiv:1903.12261}, 2019.
-
-\bibitem{r28}
-D.~Su, H.~Zhang, H.~Chen, J.~Yi, P.-Y. Chen, and Y.~Gao, ``Is robustness the
-  cost of accuracy?--a comprehensive study on the robustness of 18 deep image
-  classification models,'' in {\em European Conference on Computer Vision},
-  pp.~644--661, Springer, 2018.
-
-\bibitem{r29}
-R.~Taori, A.~Dave, V.~Shankar, N.~Carlini, B.~Recht, and L.~Schmidt,
-  ``Measuring robustness to natural distribution shifts in image
-  classification,'' {\em Advances in neural information processing systems},
-  vol.~33, pp.~18583--18599, 2020.
-
-\bibitem{r30}
-D.~Hendrycks, N.~Mu, E.~D. Cubuk, B.~Zoph, J.~Gilmer, and B.~Lakshminarayanan,
-  ``Augmix: A simple data processing method to improve robustness and
-  uncertainty,'' {\em arXiv preprint arXiv:1912.02781}, 2019.
-
 \bibitem{r31}
 S.~Schneider, E.~Rusak, L.~Eck, O.~Bringmann, W.~Brendel, and M.~Bethge,
   ``Improving robustness against common corruptions by covariate shift
   adaptation,'' {\em Advances in neural information processing systems},
   vol.~33, pp.~11539--11551, 2020.
 
-\bibitem{r32}
-J.~Guo, W.~Bao, J.~Wang, Y.~Ma, X.~Gao, G.~Xiao, A.~Liu, J.~Dong, X.~Liu, and
-  W.~Wu, ``A comprehensive evaluation framework for deep model robustness,''
-  {\em Pattern Recognition}, vol.~137, p.~109308, 2023.
+\bibitem{r26}
+F.~Zhang, Q.~Wang, and J.~Zhao, ``Ar2: Attention-guided repair for the
+  robustness of cnns against common corruptions,'' {\em arXiv preprint
+  arXiv:2507.06332}, 2025.
 
 \bibitem{r33}
 T.~Mahmud, K.~Barua, A.~Barua, N.~Basnin, S.~Das, M.~S. Hossain, and
@@ -186,34 +269,14 @@ S.~M. Shawon, F.~L. Niha, O.~H. Sinan, M.~J. Abed, M.~Al~Qwaid, M.~T. Sarker,
   agriculture,'' {\em International Journal of Computational Intelligence
   Systems}, 2026.
 
-\bibitem{r36}
-S.~Rahimiaghdam and H.~Alemdar, ``Evaluating the quality of visual explanations
-  on chest x-ray images for thorax diseases classification,'' {\em Neural
-  Computing and Applications}, vol.~36, no.~17, pp.~10239--10255, 2024.
+\bibitem{r39}
+G.~Zheng, W.~Ye, and A.~Zhang, ``Shortcutprobe: Probing prediction shortcuts
+  for learning robust models,'' {\em arXiv preprint arXiv:2505.13910}, 2025.
 
 \bibitem{r37}
 H.~Baniecki, M.~Chrabaszcz, A.~Holzinger, B.~Pfeifer, A.~Saranti, and
   P.~Biecek, ``Be careful when evaluating explanations regarding ground
   truth,'' {\em arXiv preprint arXiv:2311.04813}, 2023.
-
-\bibitem{r38}
-S.~Repetto, I.~Maljkovic, M.~Lotto, A.~E. Cin{\`a}, S.~Vascon, and F.~Roli,
-  ``Evaluating the robustness of explainable ai in medical image recognition
-  under natural and adversarial data corruption,'' {\em Machine Learning},
-  vol.~115, no.~1, p.~4, 2026.
-
-\bibitem{r39}
-G.~Zheng, W.~Ye, and A.~Zhang, ``Shortcutprobe: Probing prediction shortcuts
-  for learning robust models,'' {\em arXiv preprint arXiv:2505.13910}, 2025.
-
-\bibitem{r40}
-R.~Guidotti, ``Evaluating local explanation methods on ground truth,'' {\em
-  Artificial Intelligence}, vol.~291, p.~103428, 2021.
-
-\bibitem{r41}
-R.~C. Fong and A.~Vedaldi, ``Interpretable explanations of black boxes by
-  meaningful perturbation,'' in {\em 2017 IEEE international conference on
-  computer vision (ICCV)}, pp.~3449--3457, IEEE, 2017.
 
 \bibitem{r42}
 E.~Kim, S.~Kim, J.~Lee, H.~Kim, and S.~Yoon, ``Bridging the gap between

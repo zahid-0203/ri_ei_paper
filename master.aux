@@ -25,6 +25,16 @@
 \citation{r5,r9}
 \citation{r6,r10}
 \citation{r11,r12,r13}
+\citation{r22}
+\citation{r23}
+\citation{r27}
+\citation{r30}
+\citation{r29}
+\citation{r28,r32}
+\citation{r38}
+\citation{r36,r41}
+\citation{}
+\citation{r40}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
 \citation{r14,r15}
@@ -36,14 +46,17 @@
 \newlabel{sec:problem_def}{{2}{3}{Problem Definition}{section.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Notation used in problem formulation.}}{3}{table.1}\protected@file@percent }
 \newlabel{tab:notation}{{1}{3}{Notation used in problem formulation}{table.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}System Overview}{3}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Explainable Trustworthy Index and Explainable Robustness Index}{3}{section.4}\protected@file@percent }
-\newlabel{sec:proposed_method}{{4}{3}{Explainable Trustworthy Index and Explainable Robustness Index}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Localization Mask Overlap Score (LMOS).}{4}{subsection.4.1}\protected@file@percent }
-\newlabel{eq:lmos}{{1}{4}{Localization Mask Overlap Score (LMOS)}{equation.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Trustworthy Index (TI)}{4}{subsubsection.4.1.1}\protected@file@percent }
-\newlabel{sec:implementaiton_TI}{{4.1.1}{4}{Trustworthy Index (TI)}{subsubsection.4.1.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Robustness Index (RI)}{4}{subsubsection.4.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}System Overview}{4}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Explainable Trustworthy Index and Explainable Robustness Index}{4}{section.4}\protected@file@percent }
+\newlabel{sec:proposed_method}{{4}{4}{Explainable Trustworthy Index and Explainable Robustness Index}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Localization Mask Overlap Score (LMOS)}{4}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:lmos}{{4.1}{4}{Localization Mask Overlap Score (LMOS)}{subsection.4.1}{}}
+\newlabel{eq:binary_attention_map}{{1}{4}{Localization Mask Overlap Score (LMOS)}{equation.1}{}}
+\newlabel{eq:lmos}{{2}{4}{Localization Mask Overlap Score (LMOS)}{equation.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Explainable Trustworthy Index (ETI)}{4}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:implementaiton_TI}{{4.2}{4}{Explainable Trustworthy Index (ETI)}{subsection.4.2}{}}
+\newlabel{eq:eti}{{3}{4}{Explainable Trustworthy Index (ETI)}{equation.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Explainable Robustness Index (ERI)}{4}{subsection.4.3}\protected@file@percent }
 \citation{r16}
 \citation{r16}
 \citation{r17}
@@ -52,52 +65,110 @@
 \citation{r18}
 \citation{r19}
 \citation{r20,r21}
+\newlabel{eq:eri_p}{{4}{5}{Explainable Robustness Index (ERI)}{equation.4}{}}
+\newlabel{eq:eri}{{5}{5}{Explainable Robustness Index (ERI)}{equation.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Setup}{5}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Dataset}{5}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Baseline models and evaluation metrics.}{5}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Classification Performance}{5}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Grad-CAM Visualization}{5}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Datasets}{5}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Perturbation methods}{5}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:perturbation_methods}{{5.2}{5}{Perturbation methods}{subsection.5.2}{}}
+\citation{r200}
+\citation{r202}
+\citation{r203}
+\citation{r204}
+\citation{r205}
+\citation{r206}
+\citation{}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Class-wise distribution of the experimental datasets.}}{6}{table.2}\protected@file@percent }
+\newlabel{tab:classwise_dataset_distribution}{{2}{6}{Class-wise distribution of the experimental datasets}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Implementaion the CNN models}{6}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:cnn_architectures}{{5.3}{6}{Implementaion the CNN models}{subsection.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Implementaion of ETI and ERI}{6}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:justification_of_tau}{{5.4}{6}{Implementaion of ETI and ERI}{subsection.5.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Comparison of Grad-CAM masked visualizations under different threshold values.}}{7}{table.3}\protected@file@percent }
+\newlabel{tab:threshold_visualization}{{3}{7}{Comparison of Grad-CAM masked visualizations under different threshold values}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Evaluation metrics}{7}{subsection.5.5}\protected@file@percent }
 \citation{r10}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Grad-CAM visualization on EPLI and BDML datasets under clean and perturbed conditions.}}{8}{table.4}\protected@file@percent }
+\newlabel{tab:model_robustness_leaves}{{4}{8}{Grad-CAM visualization on EPLI and BDML datasets under clean and perturbed conditions}{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Training Configurations}{8}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Result and Discussion}{8}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Grad-CAM Visualization}{8}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:gradcam_visualization}{{6.1}{8}{Grad-CAM Visualization}{subsection.6.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Grad-CAM visualization on Flower datasets (FLRS and FR).}}{9}{table.5}\protected@file@percent }
+\newlabel{tab:model_robustness_flower}{{5}{9}{Grad-CAM visualization on Flower datasets (FLRS and FR)}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Explainable Trustworthiness Index (ETI)}{9}{subsection.6.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Comparison of classification accuracy, mean LMOS, ETI, and ablation variants across different CNN architectures on four benchmark datasets.}}{10}{table.6}\protected@file@percent }
+\newlabel{tab:eti_all_datasets}{{6}{10}{Comparison of classification accuracy, mean LMOS, ETI, and ablation variants across different CNN architectures on four benchmark datasets}{table.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Accuracy stability of different CNN architectures on EPLI under various input perturbations.}}{11}{table.7}\protected@file@percent }
+\newlabel{tab:accuracy_stability_egypli}{{7}{11}{Accuracy stability of different CNN architectures on EPLI under various input perturbations}{table.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces LMOS stability of different CNN architectures on EPLI under various input perturbations.}}{11}{table.8}\protected@file@percent }
+\newlabel{tab:lmos_stability_egypli}{{8}{11}{LMOS stability of different CNN architectures on EPLI under various input perturbations}{table.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Explainable Robustness Index (ERI)}{11}{subsection.6.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces ERI of different CNN architectures on EPLI under individual input perturbations.}}{12}{table.9}\protected@file@percent }
+\newlabel{tab:eri_perturbation_egypli}{{9}{12}{ERI of different CNN architectures on EPLI under individual input perturbations}{table.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces ERI ranking and ablation analysis of CNN architectures on EPLI}}{12}{table.10}\protected@file@percent }
+\newlabel{tab:eri_ablation_ranking_egypli}{{10}{12}{ERI ranking and ablation analysis of CNN architectures on EPLI}{table.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Accuracy stability of different CNN architectures on BDML under various input perturbations.}}{12}{table.11}\protected@file@percent }
+\newlabel{tab:accuracy_stability_bdmedileaves}{{11}{12}{Accuracy stability of different CNN architectures on BDML under various input perturbations}{table.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces LMOS stability of different CNN architectures on BDML under various input perturbations.}}{12}{table.12}\protected@file@percent }
+\newlabel{tab:lmos_stability_bdmedileaves}{{12}{12}{LMOS stability of different CNN architectures on BDML under various input perturbations}{table.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces ERI of different CNN architectures on BDML under individual input perturbations}}{13}{table.13}\protected@file@percent }
+\newlabel{tab:eri_perturbation_bdmedileaves}{{13}{13}{ERI of different CNN architectures on BDML under individual input perturbations}{table.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces ERI ranking and ablation analysis of CNN architectures on BDML}}{13}{table.14}\protected@file@percent }
+\newlabel{tab:eri_ablation_ranking_bdmedileaves}{{14}{13}{ERI ranking and ablation analysis of CNN architectures on BDML}{table.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Accuracy stability of different CNN architectures on the FLRS dataset under various input perturbations.}}{14}{table.15}\protected@file@percent }
+\newlabel{tab:accuracy_stability_tf_flowers}{{15}{14}{Accuracy stability of different CNN architectures on the FLRS dataset under various input perturbations}{table.15}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces LMOS stability of different CNN architectures on the FLRS dataset under various input perturbations.}}{14}{table.16}\protected@file@percent }
+\newlabel{tab:lmos_stability_tf_flowers}{{16}{14}{LMOS stability of different CNN architectures on the FLRS dataset under various input perturbations}{table.16}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces ERI of different CNN architectures on the FLRS dataset under individual input perturbations.}}{14}{table.17}\protected@file@percent }
+\newlabel{tab:eri_perturbation_tf_flowers}{{17}{14}{ERI of different CNN architectures on the FLRS dataset under individual input perturbations}{table.17}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces ERI ranking and ablation analysis of CNN architectures on the FLRS dataset}}{14}{table.18}\protected@file@percent }
+\newlabel{tab:eri_ablation_ranking_tf_flowers}{{18}{14}{ERI ranking and ablation analysis of CNN architectures on the FLRS dataset}{table.18}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces Accuracy stability of different CNN architectures on the FR under various input perturbations.}}{15}{table.19}\protected@file@percent }
+\newlabel{tab:accuracy_stability_flowers_recognition}{{19}{15}{Accuracy stability of different CNN architectures on the FR under various input perturbations}{table.19}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces LMOS stability of different CNN architectures on the FR under various input perturbations.}}{15}{table.20}\protected@file@percent }
+\newlabel{tab:lmos_stability_flowers_recognition}{{20}{15}{LMOS stability of different CNN architectures on the FR under various input perturbations}{table.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Cross-Dataset Analysis of ETI and ERI}{15}{subsection.6.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {21}{\ignorespaces ERI of different CNN architectures on the FR under individual input perturbations.}}{15}{table.21}\protected@file@percent }
+\newlabel{tab:eri_perturbation_flowers_recognition}{{21}{15}{ERI of different CNN architectures on the FR under individual input perturbations}{table.21}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {22}{\ignorespaces ERI ranking and ablation analysis of CNN architectures on the FR}}{15}{table.22}\protected@file@percent }
+\newlabel{tab:eri_ablation_ranking_flowers_recognition}{{22}{15}{ERI ranking and ablation analysis of CNN architectures on the FR}{table.22}{}}
+\citation{r102}
+\citation{r103}
+\citation{r104}
+\citation{r103}
+\citation{r105}
+\citation{r106}
+\citation{r107}
 \citation{r22}
 \citation{r23}
 \citation{r24}
 \citation{r25}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Class-wise distribution of the experimental datasets.}}{6}{table.2}\protected@file@percent }
-\newlabel{tab:classwise_dataset_distribution}{{2}{6}{Class-wise distribution of the experimental datasets}{table.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Perturbation methods}{6}{subsection.5.5}\protected@file@percent }
-\newlabel{sec:perturbation_methods}{{5.5}{6}{Perturbation methods}{subsection.5.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Training Configurations}{6}{subsection.5.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Result and Discussion}{6}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Grad-CAM Visualization}{6}{subsection.6.1}\protected@file@percent }
-\newlabel{sec:gradcam_visualization}{{6.1}{6}{Grad-CAM Visualization}{subsection.6.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Threshold Justification}{6}{subsubsection.6.1.1}\protected@file@percent }
-\newlabel{sec:threshold_justification}{{6.1.1}{6}{Threshold Justification}{subsubsection.6.1.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Explainable Trustworthiness Index (ETI)}{6}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Explainable Robustness Index (ERI)}{6}{subsection.6.3}\protected@file@percent }
-\citation{r26}
 \citation{r27}
+\citation{r31}
+\citation{r30}
 \citation{r28}
 \citation{r29}
-\citation{r30}
-\citation{r31}
 \citation{r32}
-\citation{r11}
-\citation{r33}
-\citation{r34}
+\citation{r26}
+\citation{r33,r34,r35}
 \citation{r35}
+\citation{r11}
+\citation{r39}
 \citation{r36}
 \citation{r37}
-\citation{r38}
-\citation{r39}
 \citation{r40}
+\citation{r38}
 \citation{r41}
 \citation{r42}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.1}BDMediLeaves}{7}{subsubsection.6.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.2}Flowers}{7}{subsubsection.6.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.3}Flowers Recognition KAGGLE Dataset}{7}{subsubsection.6.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Cross-Dataset Analysis}{7}{subsection.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Related Works}{7}{section.7}\protected@file@percent }
-\newlabel{related_works}{{7}{7}{Related Works}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Cross-Dataset Analysis}{17}{subsection.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Related Works}{17}{section.7}\protected@file@percent }
+\newlabel{related_works}{{7}{17}{Related Works}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Model Reliability and Trustworthiness}{17}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Predictive Robustness Under Perturbations}{17}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Explanation Quality, Localization, and Spurious Bias}{17}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{17}{section.8}\protected@file@percent }
+\newlabel{sec:conclusion}{{8}{17}{Conclusion}{section.8}{}}
 \bibstyle{ieeetr}
 \bibdata{cas-refs}
 \bibcite{r1}{{1}{}{{}}{{}}}
@@ -113,39 +184,49 @@
 \bibcite{r11}{{11}{}{{}}{{}}}
 \bibcite{r12}{{12}{}{{}}{{}}}
 \bibcite{r13}{{13}{}{{}}{{}}}
-\bibcite{r14}{{14}{}{{}}{{}}}
-\bibcite{r15}{{15}{}{{}}{{}}}
-\bibcite{r16}{{16}{}{{}}{{}}}
-\bibcite{r17}{{17}{}{{}}{{}}}
-\bibcite{r18}{{18}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{8}{section.8}\protected@file@percent }
-\newlabel{sec:conclusion}{{8}{8}{Conclusion}{section.8}{}}
-\bibcite{r19}{{19}{}{{}}{{}}}
-\bibcite{r20}{{20}{}{{}}{{}}}
-\bibcite{r21}{{21}{}{{}}{{}}}
-\bibcite{r22}{{22}{}{{}}{{}}}
-\bibcite{r23}{{23}{}{{}}{{}}}
-\bibcite{r24}{{24}{}{{}}{{}}}
-\bibcite{r25}{{25}{}{{}}{{}}}
-\bibcite{r26}{{26}{}{{}}{{}}}
-\bibcite{r27}{{27}{}{{}}{{}}}
-\bibcite{r28}{{28}{}{{}}{{}}}
-\bibcite{r29}{{29}{}{{}}{{}}}
-\bibcite{r30}{{30}{}{{}}{{}}}
-\bibcite{r31}{{31}{}{{}}{{}}}
-\bibcite{r32}{{32}{}{{}}{{}}}
-\bibcite{r33}{{33}{}{{}}{{}}}
-\bibcite{r34}{{34}{}{{}}{{}}}
-\bibcite{r35}{{35}{}{{}}{{}}}
-\bibcite{r36}{{36}{}{{}}{{}}}
-\bibcite{r37}{{37}{}{{}}{{}}}
-\bibcite{r38}{{38}{}{{}}{{}}}
-\bibcite{r39}{{39}{}{{}}{{}}}
-\bibcite{r40}{{40}{}{{}}{{}}}
-\bibcite{r41}{{41}{}{{}}{{}}}
-\bibcite{r42}{{42}{}{{}}{{}}}
-\csxdef{lastpage}{9}
+\bibcite{r22}{{14}{}{{}}{{}}}
+\bibcite{r23}{{15}{}{{}}{{}}}
+\bibcite{r27}{{16}{}{{}}{{}}}
+\bibcite{r30}{{17}{}{{}}{{}}}
+\bibcite{r29}{{18}{}{{}}{{}}}
+\bibcite{r28}{{19}{}{{}}{{}}}
+\bibcite{r32}{{20}{}{{}}{{}}}
+\bibcite{r38}{{21}{}{{}}{{}}}
+\bibcite{r36}{{22}{}{{}}{{}}}
+\bibcite{r41}{{23}{}{{}}{{}}}
+\bibcite{r40}{{24}{}{{}}{{}}}
+\bibcite{r14}{{25}{}{{}}{{}}}
+\bibcite{r15}{{26}{}{{}}{{}}}
+\bibcite{r16}{{27}{}{{}}{{}}}
+\bibcite{r17}{{28}{}{{}}{{}}}
+\bibcite{r18}{{29}{}{{}}{{}}}
+\bibcite{r19}{{30}{}{{}}{{}}}
+\bibcite{r20}{{31}{}{{}}{{}}}
+\bibcite{r21}{{32}{}{{}}{{}}}
+\bibcite{r200}{{33}{}{{}}{{}}}
+\bibcite{r202}{{34}{}{{}}{{}}}
+\bibcite{r203}{{35}{}{{}}{{}}}
+\bibcite{r204}{{36}{}{{}}{{}}}
+\bibcite{r205}{{37}{}{{}}{{}}}
+\bibcite{r206}{{38}{}{{}}{{}}}
+\bibcite{r102}{{39}{}{{}}{{}}}
+\bibcite{r103}{{40}{}{{}}{{}}}
+\bibcite{r104}{{41}{}{{}}{{}}}
+\bibcite{r105}{{42}{}{{}}{{}}}
+\bibcite{r106}{{43}{}{{}}{{}}}
+\bibcite{r107}{{44}{}{{}}{{}}}
+\bibcite{r24}{{45}{}{{}}{{}}}
+\bibcite{r25}{{46}{}{{}}{{}}}
+\bibcite{r31}{{47}{}{{}}{{}}}
+\bibcite{r26}{{48}{}{{}}{{}}}
+\bibcite{r33}{{49}{}{{}}{{}}}
+\bibcite{r34}{{50}{}{{}}{{}}}
+\bibcite{r35}{{51}{}{{}}{{}}}
+\bibcite{r39}{{52}{}{{}}{{}}}
+\bibcite{r37}{{53}{}{{}}{{}}}
+\bibcite{r42}{{54}{}{{}}{{}}}
+\csxdef{lastpage}{19}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Comparison between traditional accuracy and the proposed XAI-based metrics (ETI and ERI). Although both Xception and the custom CNN achieve identical $99.45\%$ validation accuracy, Grad-CAM heatmaps reveal that the custom CNN relies on background context. The proposed ETI and ERI metrics successfully capture this flaw by producing lower scores for the custom model.}}{10}{figure.1}\protected@file@percent }
-\newlabel{fig:figure1}{{1}{10}{Comparison between traditional accuracy and the proposed XAI-based metrics (ETI and ERI). Although both Xception and the custom CNN achieve identical $99.45\%$ validation accuracy, Grad-CAM heatmaps reveal that the custom CNN relies on background context. The proposed ETI and ERI metrics successfully capture this flaw by producing lower scores for the custom model}{figure.1}{}}
-\gdef \@abspage@last{10}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Comparison between traditional accuracy and the proposed XAI-based metrics (ETI and ERI). Although both Xception and the custom CNN achieve identical $99.45\%$ validation accuracy, Grad-CAM heatmaps reveal that the custom CNN relies on background context. The proposed ETI and ERI metrics successfully capture this flaw by producing lower scores for the custom model.}}{20}{figure.1}\protected@file@percent }
+\newlabel{fig:figure1}{{1}{20}{Comparison between traditional accuracy and the proposed XAI-based metrics (ETI and ERI). Although both Xception and the custom CNN achieve identical $99.45\%$ validation accuracy, Grad-CAM heatmaps reveal that the custom CNN relies on background context. The proposed ETI and ERI metrics successfully capture this flaw by producing lower scores for the custom model}{figure.1}{}}
+\gdef \@abspage@last{20}
