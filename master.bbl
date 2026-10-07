@@ -68,217 +68,247 @@ K.~Xiao, L.~Engstrom, A.~Ilyas, and A.~Madry, ``Noise or signal: The role of
   image backgrounds in object recognition,'' {\em arXiv preprint
   arXiv:2006.09994}, 2020.
 
-\bibitem{r22}
+\bibitem{ref14}
 F.~Javed, S.~Ruijs, and A.~Kosiakova, ``Beyond accuracy: Reliability and
   uncertainty estimation in convolutional neural networks,'' {\em Available at
   SSRN 6030753}.
 
-\bibitem{r23}
+\bibitem{ref15}
 S.~Ao, S.~Rueger, and A.~Siddharthan, ``Empirical optimal risk to quantify
   model trustworthiness for failure detection,'' {\em arXiv preprint
   arXiv:2308.03179}, 2023.
 
-\bibitem{r27}
+\bibitem{ref16}
 D.~Hendrycks and T.~Dietterich, ``Benchmarking neural network robustness to
   common corruptions and perturbations,'' {\em arXiv preprint
   arXiv:1903.12261}, 2019.
 
-\bibitem{r30}
+\bibitem{ref17}
 D.~Hendrycks, N.~Mu, E.~D. Cubuk, B.~Zoph, J.~Gilmer, and B.~Lakshminarayanan,
   ``Augmix: A simple data processing method to improve robustness and
   uncertainty,'' {\em arXiv preprint arXiv:1912.02781}, 2019.
 
-\bibitem{r29}
+\bibitem{ref18}
 R.~Taori, A.~Dave, V.~Shankar, N.~Carlini, B.~Recht, and L.~Schmidt,
   ``Measuring robustness to natural distribution shifts in image
   classification,'' {\em Advances in neural information processing systems},
   vol.~33, pp.~18583--18599, 2020.
 
-\bibitem{r28}
+\bibitem{ref19}
 D.~Su, H.~Zhang, H.~Chen, J.~Yi, P.-Y. Chen, and Y.~Gao, ``Is robustness the
   cost of accuracy?--a comprehensive study on the robustness of 18 deep image
   classification models,'' in {\em European Conference on Computer Vision},
   pp.~644--661, Springer, 2018.
 
-\bibitem{r32}
+\bibitem{ref20}
 J.~Guo, W.~Bao, J.~Wang, Y.~Ma, X.~Gao, G.~Xiao, A.~Liu, J.~Dong, X.~Liu, and
   W.~Wu, ``A comprehensive evaluation framework for deep model robustness,''
   {\em Pattern Recognition}, vol.~137, p.~109308, 2023.
 
-\bibitem{r38}
+\bibitem{ref21}
 S.~Repetto, I.~Maljkovic, M.~Lotto, A.~E. Cin{\`a}, S.~Vascon, and F.~Roli,
   ``Evaluating the robustness of explainable ai in medical image recognition
   under natural and adversarial data corruption,'' {\em Machine Learning},
   vol.~115, no.~1, p.~4, 2026.
 
-\bibitem{r36}
+\bibitem{ref22}
 S.~Rahimiaghdam and H.~Alemdar, ``Evaluating the quality of visual explanations
   on chest x-ray images for thorax diseases classification,'' {\em Neural
   Computing and Applications}, vol.~36, no.~17, pp.~10239--10255, 2024.
 
-\bibitem{r41}
+\bibitem{ref23}
 R.~C. Fong and A.~Vedaldi, ``Interpretable explanations of black boxes by
   meaningful perturbation,'' in {\em 2017 IEEE international conference on
   computer vision (ICCV)}, pp.~3449--3457, IEEE, 2017.
 
-\bibitem{r40}
+\bibitem{ref24}
 R.~Guidotti, ``Evaluating local explanation methods on ground truth,'' {\em
   Artificial Intelligence}, vol.~291, p.~103428, 2021.
 
-\bibitem{r14}
+\bibitem{ref25}
 I.~Kim, S.~Rajaraman, and S.~Antani, ``Visual interpretation of convolutional
   neural network predictions in classifying medical image modalities,'' {\em
   Diagnostics}, vol.~9, no.~2, p.~38, 2019.
 
-\bibitem{r15}
+\bibitem{ref26}
 A.~S.~M. Sayeed, S.~A. Birahim, M.~S. Ullah, Y.~Islam, A.~Paul, M.~A. Hasan,
   M.~Ahsan, and M.~Kowalski, ``Explainable and secure federated learning for
   privacy-enhancing skin cancer classification using a lightweight multi-scale
   cnn,'' {\em Scientific Reports}, vol.~16, no.~1, p.~11414, 2026.
 
-\bibitem{r16}
+\bibitem{ref27}
 A.~M. Sarhan and M.~A. Shaheen, ``Egypli: A real-life annotated image dataset
   for egyptian plant leaf identification,'' {\em Scientific Data}, 2026.
 
-\bibitem{r17}
+\bibitem{ref28}
 S.~Islam, M.~R. Ahmed, S.~Islam, M.~M.~A. Rishad, S.~Ahmed, T.~R. Utshow, and
   M.~I. Siam, ``Bdmedileaves: A leaf images dataset for bangladeshi medicinal
   plants identification,'' {\em Data in Brief}, vol.~50, p.~109488, 2023.
 
-\bibitem{r18}
+\bibitem{ref29}
 T.~T. Team, ``Flowers.''
   \url{http://download.tensorflow.org/example_images/flower_photos.tgz}, jan
   2019.
 
-\bibitem{r19}
+\bibitem{ref30}
 A.~Mamaev, ``Flowers recognition | kaggle,'' 2018.
 \newblock https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
   (accessed July 13, 2026).
 
-\bibitem{r20}
+\bibitem{ref31}
 S.~Balasubaramanian, M.~A. Shah, {\em et~al.}, ``Restricted boltzmann machine
   with sobel filter dense adversarial noise secured layer framework for flower
   species recognition,'' {\em Scientific Reports}, vol.~15, no.~1, p.~12315,
   2025.
 
-\bibitem{r21}
+\bibitem{ref32}
 M.~To{\u{g}}a{\c{c}}ar, B.~Ergen, and Z.~C{\"o}mert, ``Classification of flower
   species by using features extracted from the intersection of feature
   selection methods in convolutional neural network models,'' {\em
   Measurement}, vol.~158, p.~107703, 2020.
 
-\bibitem{r200}
+\bibitem{ref33}
+C.~Kamann and C.~Rother, ``Benchmarking the robustness of semantic segmentation
+  models with respect to common corruptions,'' {\em International journal of
+  computer vision}, vol.~129, no.~2, pp.~462--483, 2021.
+
+\bibitem{ref34}
 M.~Sandler, A.~Howard, M.~Zhu, A.~Zhmoginov, and L.-C. Chen, ``Mobilenetv2:
   Inverted residuals and linear bottlenecks,'' in {\em 2018 IEEE/CVF conference
   on computer vision and pattern recognition}, pp.~4510--4520, Ieee, 2018.
 
-\bibitem{r202}
+\bibitem{ref35}
+F.~Chollet, ``Xception: Deep learning with depthwise separable convolutions,''
+  in {\em 2017 IEEE conference on computer vision and pattern recognition
+  (CVPR)}, pp.~1800--1807, Ieee, 2017.
+
+\bibitem{ref36}
 G.~Huang, Z.~Liu, L.~Van Der~Maaten, and K.~Q. Weinberger, ``Densely connected
   convolutional networks,'' in {\em 2017 IEEE conference on computer vision and
   pattern recognition (CVPR)}, pp.~2261--2269, Ieee, 2017.
 
-\bibitem{r203}
+\bibitem{ref37}
 C.~Szegedy, S.~Ioffe, V.~Vanhoucke, and A.~Alemi, ``Inception-v4,
   inception-resnet and the impact of residual connections on learning,'' in
   {\em Proceedings of the AAAI conference on artificial intelligence}, vol.~31,
   2017.
 
-\bibitem{r204}
+\bibitem{ref38}
 K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
   large-scale image recognition,'' {\em arXiv preprint arXiv:1409.1556}, 2014.
 
-\bibitem{r205}
+\bibitem{ref39}
 C.~Szegedy, V.~Vanhoucke, S.~Ioffe, J.~Shlens, and Z.~Wojna, ``Rethinking the
   inception architecture for computer vision,'' in {\em Proceedings of the IEEE
   conference on computer vision and pattern recognition}, pp.~2818--2826, 2016.
 
-\bibitem{r206}
+\bibitem{ref40}
 K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
   recognition,'' in {\em Proceedings of the IEEE conference on computer vision
   and pattern recognition}, pp.~770--778, 2016.
 
-\bibitem{r102}
+\bibitem{ref41}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei, ``Imagenet: A
+  large-scale hierarchical image database,'' in {\em 2009 IEEE conference on
+  computer vision and pattern recognition}, pp.~248--255, Ieee, 2009.
+
+\bibitem{ref42}
+N.~Srivastava, G.~Hinton, A.~Krizhevsky, I.~Sutskever, and R.~Salakhutdinov,
+  ``Dropout: a simple way to prevent neural networks from overfitting,'' {\em
+  The journal of machine learning research}, vol.~15, no.~1, pp.~1929--1958,
+  2014.
+
+\bibitem{ref43}
+Y.~LeCun, L.~Bottou, Y.~Bengio, and P.~Haffner, ``Gradient-based learning
+  applied to document recognition,'' {\em Proceedings of the IEEE}, vol.~86,
+  no.~11, pp.~2278--2324, 1998.
+
+\bibitem{ref44}
+D.~P. Kingma and J.~Ba, ``Adam: A method for stochastic optimization,'' {\em
+  arXiv preprint arXiv:1412.6980}, 2014.
+
+\bibitem{ref45}
 T.~Panboonyuen, ``Seeing isn't always believing: Analysis of grad-cam
   faithfulness and localization reliability in lung cancer ct classification,''
   {\em arXiv preprint arXiv:2601.12826}, 2026.
 
-\bibitem{r103}
+\bibitem{ref46}
 A.~Chattopadhay, A.~Sarkar, P.~Howlader, and V.~N. Balasubramanian,
   ``Grad-cam++: Generalized gradient-based visual explanations for deep
   convolutional networks,'' in {\em 2018 IEEE winter conference on applications
   of computer vision (WACV)}, pp.~839--847, IEEE, 2018.
 
-\bibitem{r104}
+\bibitem{ref47}
 P.-J. Kindermans, S.~Hooker, J.~Adebayo, M.~Alber, K.~T. Sch{\"u}tt,
   S.~D{\"a}hne, D.~Erhan, and B.~Kim, ``The (un) reliability of saliency
   methods,'' in {\em Explainable AI: Interpreting, explaining and visualizing
   deep learning}, pp.~267--280, Springer, 2019.
 
-\bibitem{r105}
+\bibitem{ref48}
 H.~Wang, Z.~Wang, M.~Du, F.~Yang, Z.~Zhang, S.~Ding, P.~Mardziel, and X.~Hu,
   ``Score-cam: Score-weighted visual explanations for convolutional neural
   networks,'' in {\em 2020 IEEE/CVF conference on computer vision and pattern
   recognition workshops (CVPRW)}, pp.~111--119, IEEE, 2020.
 
-\bibitem{r106}
+\bibitem{ref49}
 P.-T. Jiang, C.-B. Zhang, Q.~Hou, M.-M. Cheng, and Y.~Wei, ``Layercam:
   Exploring hierarchical class activation maps for localization,'' {\em IEEE
   transactions on image processing}, vol.~30, pp.~5875--5888, 2021.
 
-\bibitem{r107}
+\bibitem{ref50}
 V.~Petsiuk, A.~Das, and K.~Saenko, ``Rise: Randomized input sampling for
   explanation of black-box models,'' {\em arXiv preprint arXiv:1806.07421},
   2018.
 
-\bibitem{r24}
+\bibitem{ref51}
 A.~Nastoska, B.~Jancheska, M.~Rizinski, and D.~Trajanov, ``Evaluating
   trustworthiness in ai: Risks, metrics, and applications across industries,''
   {\em Electronics}, vol.~14, no.~13, p.~2717, 2025.
 
-\bibitem{r25}
+\bibitem{ref52}
 M.~Pal, H.~N. Saha, and A.~Chakrabarti, ``The trust-aware xai (taxai)
   framework: a quantitative model for interpretable and reliable clinical ai
   systems,'' {\em Scientific Reports}, 2026.
 
-\bibitem{r31}
+\bibitem{ref53}
 S.~Schneider, E.~Rusak, L.~Eck, O.~Bringmann, W.~Brendel, and M.~Bethge,
   ``Improving robustness against common corruptions by covariate shift
   adaptation,'' {\em Advances in neural information processing systems},
   vol.~33, pp.~11539--11551, 2020.
 
-\bibitem{r26}
+\bibitem{ref54}
 F.~Zhang, Q.~Wang, and J.~Zhao, ``Ar2: Attention-guided repair for the
   robustness of cnns against common corruptions,'' {\em arXiv preprint
   arXiv:2507.06332}, 2025.
 
-\bibitem{r33}
+\bibitem{ref55}
 T.~Mahmud, K.~Barua, A.~Barua, N.~Basnin, S.~Das, M.~S. Hossain, and
   K.~Andersson, ``Explainable ai for tomato leaf disease detection: Insights
   into model interpretability,'' in {\em 2023 26th International Conference on
   Computer and Information Technology (ICCIT)}, pp.~1--6, IEEE, 2023.
 
-\bibitem{r34}
+\bibitem{ref56}
 B.~Singh, R.~P. Sharma, and S.~Dey, ``Interpretable plant leaf disease
   detection using attention-enhanced cnn,'' {\em arXiv preprint
   arXiv:2512.17864}, 2025.
 
-\bibitem{r35}
+\bibitem{ref57}
 S.~M. Shawon, F.~L. Niha, O.~H. Sinan, M.~J. Abed, M.~Al~Qwaid, M.~T. Sarker,
   and H.~Zubair, ``Integrating federated learning and explainable ai for plant
   disease detection: A systematic review of recent advances in precision
   agriculture,'' {\em International Journal of Computational Intelligence
   Systems}, 2026.
 
-\bibitem{r39}
+\bibitem{ref58}
 G.~Zheng, W.~Ye, and A.~Zhang, ``Shortcutprobe: Probing prediction shortcuts
   for learning robust models,'' {\em arXiv preprint arXiv:2505.13910}, 2025.
 
-\bibitem{r37}
+\bibitem{ref59}
 H.~Baniecki, M.~Chrabaszcz, A.~Holzinger, B.~Pfeifer, A.~Saranti, and
   P.~Biecek, ``Be careful when evaluating explanations regarding ground
   truth,'' {\em arXiv preprint arXiv:2311.04813}, 2023.
 
-\bibitem{r42}
+\bibitem{ref60}
 E.~Kim, S.~Kim, J.~Lee, H.~Kim, and S.~Yoon, ``Bridging the gap between
   classification and localization for weakly supervised object localization,''
   in {\em 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition

@@ -41,6 +41,7 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, positioning}
 \usepackage{tabularx} % Add to preamble
+\usepackage{float}
 
 %%%Author macros
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
@@ -217,10 +218,10 @@
 	
 	\zahid{need a ref to all the methods mentioned below}
 	Prior literature has established diverse methodologies for evaluating the reliability, robustness, and explanation quality of convolutional neural networks (CNNs). 
-	Specifically, reliability has been assessed via uncertainty estimation \cite{r22}, calibration confidence scoring,  failure detection, and risk-coverage trade-offs \cite{r23}, 
+	Specifically, reliability has been assessed via uncertainty estimation \cite{ref14}, calibration confidence scoring,  failure detection, and risk-coverage trade-offs \cite{ref15}, 
     %and broader trustworthiness frameworks \cite{}. 
-	Robustness is typically evaluated by measuring performance degradation under common corruptions \cite{r27}\cite{r30}, natural distribution shifts \cite{r29}, and targeted input perturbations \cite{r28, r32}, with recent efforts also examining how corruptions affect explanation stability \cite{r38}. 
-	Concurrently, explanation quality and visual feature reliance have been measured using faithfulness metrics \cite{r36,r41}, ground-truth alignment \cite{}, and the spatial overlap between visual explanations and target object regions \cite{r40}.
+	Robustness is typically evaluated by measuring performance degradation under common corruptions \cite{ref16}\cite{ref17}, natural distribution shifts \cite{ref18}, and targeted input perturbations \cite{ref19, ref20}, with recent efforts also examining how corruptions affect explanation stability \cite{ref21}. 
+	Concurrently, explanation quality and visual feature reliance have been measured using faithfulness metrics \cite{ref22,ref23}, ground-truth alignment, and the spatial overlap between visual explanations and target object regions \cite{ref24}.
 	
 	Despite these advances, existing evaluation methods typically focus on isolated dimensions. 
 	%Existing methods lack a unified, model-level evaluation framework that simultaneously accounts for predictive accuracy, the spatial fidelity of decision-relevant visual evidence, and the joint stability of both (accuracy and spatial fidelity) under input perturbations. 
@@ -258,6 +259,8 @@
 		The proposed ETI and ERI metrics successfully capture this flaw by producing lower scores for the custom model.}
 		\label{fig:figure1}
 	\end{figure}
+
+ 
 	
 	% solution specific to the problem statement
 	%Figure \ref{fig:figure1} illustrates the distinctive characteristic of our XAI based metrics over the traditinal accuracy.  
@@ -280,7 +283,7 @@
 	%We use Grad-CAM \cite{r6} to identify the image regions contributing to the model's prediction.
 	%LMOS quantifies the proportion of the model's decision-relevant activation that overlaps with the annotated target-object region. 
 	%Grad-CAM highlights key predictive regions using a color heatmap, where red and yellow denote the highest activation and strongest influence on the decision.
-	It is observed that in Grad-CAM visualizations, red and yellow regions are activated most i.e., red and yellow have greater influence than other colors on models' predictions \cite{r14,r15}. 
+	It is observed that in Grad-CAM visualizations, red and yellow regions are activated most i.e., red and yellow have greater influence than other colors on models' predictions \cite{ref25,ref26}. 
 	%So we consider them as decision-relevant regions. \zahid{any ref to this??}. 
    	We integrate this principle into LMOS; a higher LMOS value indicates that a larger proportion of the model's highlighted regions falls within the target object boundary rather than the background.
 	%So we consider them as decision-relevant. Therefore, a higher LMOS indicates that a larger proportion of the model's highlighted regions is located within the target object rather than outside it. LMOS provides a quantitative measure that can be compared across CNN architectures and datasets.
@@ -308,7 +311,7 @@
 	%We evaluate nine perturbations, including \textit{Gaussian noise}, \textit{Gaussian blur}, \textit{brightness adjustment}, \textit{hue shift}, \textit{contrast adjustment}, \textit{gamma correction}, \textit{motion blur}, \textit{JPEG compression}, \textit{and random occlusion}. 
 	%For each CNN architecture, ETI is calculated on clean images, while ERI is calculated from accuracy stability and LMOS stability across the evaluated perturbations.
 	
-	We comprehensively evaluate the proposed metrics using four real-world datasets comprising two leaf image datasets:  EPLI \cite{r16}, BDML\cite{r17} and two flower image datasets: FLRS \cite{r18}, FR \cite{r19}. 
+	We comprehensively evaluate the proposed metrics using four real-world datasets comprising two leaf image datasets:  EPLI \cite{ref27}, BDML\cite{ref28} and two flower image datasets: FLRS \cite{ref29}, FR \cite{ref30}. 
 	Eight CNN architectures are trained and evaluated on the datasets. 
 	%We demonstrate the importance of combining accuracy with LMOS in ETI. 
 	%For example, a custom CNN achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.1900, resulting in the lowest ETI score of 0.5922 among the evaluated models. Its LMOS is only 0.1900, indicating that only 19.00\% of its decision-relevant activation, on average, falls within the annotated target-object regions, while the remaining 81.00\% lies outside these regions. 
@@ -554,25 +557,25 @@
 	%KAGGLE dataset \cite{r13}. 
 	
 	\begin{itemize}
-		\item \textbf{EPLI}: EPLI (introduced as EgyPLI in \cite{r16}) contains 3,588 JPG images of size $256\times256$ pixels.  
+		\item \textbf{EPLI}: EPLI (introduced as EgyPLI in \cite{ref27}) contains 3,588 JPG images of size $256\times256$ pixels.  
 		There are images of 8 species including apple, berry, fig, guava, orange, plum, persimmon, and tomato. 
 		%, including both normal and diseased leaves. \zahid{are these are images of leaves or the fruits?} 
 		%The images were captured under natural uncontrolled environment. 
 		%The images are in JPG format and the size is $256\times256$. 
-		The dataset is annotated for image‑level classification  \cite{r16}.
+		The dataset is annotated for image‑level classification  \cite{ref27}.
 		
-		\item \textbf{BDML:} BDML(also known as BDMediLeaves \cite{r17}) is a dataset of 2,029 original leaf images (augmented to 38,606) from 10 medicinal plant species. 
+		\item \textbf{BDML:} BDML(also known as BDMediLeaves \cite{ref28}) is a dataset of 2,029 original leaf images (augmented to 38,606) from 10 medicinal plant species. 
 		They are captured with an iPhone 13 under natural light at $3024\times 4032$ resolution. 
-		This dataset is designed for machine learning‑based species identification. We used the original dataset (not the augmented one) in our experiments \cite{r17}.
+		This dataset is designed for machine learning‑based species identification. We used the original dataset (not the augmented one) in our experiments \cite{ref28}.
 		
-		\item \textbf{FLRS}: FLRS (or Flowers \cite{r18}) is a large image dataset for flower classification containing 3,670 training images of five flower species including daisies, tulips, sunflowers, dandelions, and roses. 
-		It is available through the TensorFlow Datasets (TFDS) collection \cite{r18}. 
+		\item \textbf{FLRS}: FLRS (or Flowers \cite{ref29}) is a large image dataset for flower classification containing 3,670 training images of five flower species including daisies, tulips, sunflowers, dandelions, and roses. 
+		It is available through the TensorFlow Datasets (TFDS) collection \cite{ref29}. In this dataset, image resolution is not fixed.  
 		\zahid{what is the resolution of the images in this dataset?}
 		
-		\item \textbf{FR}:  This kaggle \cite{r19} dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
-		However, the kaggle version contains 4,242 JPG images of resulation of $320\times240$ pixels. 
+		\item \textbf{FR}:  This kaggle \cite{ref30} dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
+		However, the kaggle version contains 4,317 JPG images of resulation of $320\times240$ pixels. 
 		Although the image classes are the same as FLRS, the image samples are different. 
-		This dataset is used in previous research \cite {r20, r21}.
+		This dataset is used in previous research \cite {ref31, ref32}.
 		%\zahid{is this different than the above FLRS?}
 	\end{itemize}
 	
@@ -597,7 +600,7 @@
 
 	\subsection{Perturbation methods}
 	\label{sec:perturbation_methods}
-	To evaluate the robustness of the proposed framework under distribution shifts and common image corruptions, we have applied nine image perturbation methods to the test set. 
+	To evaluate the robustness of the proposed framework under distribution shifts and common image corruptions, we have applied nine image perturbation methods to the test set. These types of perturbations were used for robustness measurement in previous works \cite{ref16, ref33}.
 	%As summarized in Table~\ref{tab:perturbations}, 
 	\zahid{if anything in the table is missing below, add it in the corresponding bullet}
 	%These perturbations simulate realistic degradations that may occur during image acquisition, compression, transmission, or environmental variation. 
@@ -633,13 +636,13 @@
 	\label{sec:cnn_architectures}
 	In our experiments, we have used the following CNN models:
 	\begin{itemize}
-		\item \textbf{MobileNetV2}: MobileNetV2 is a lightweight CNN architecture designed to achieve a favorable trade-off between classification performance and computational efficiency. It employs inverted residual blocks with linear bottlenecks and lightweight depthwise convolutions to reduce computational cost while maintaining effective feature representations\cite{r200}.
-		\item \textbf{Xception}: Xception is based on depthwise separable convolutions and can be viewed as an extension of the Inception design in which spatial and channel-wise feature learning are more explicitly separated. The architecture provides an efficient use of model parameters while maintaining strong image classification performance \ cite {r201}.
-		\item \textbf{DenseNet121}: DenseNet121 introduces dense connectivity, in which each layer receives feature maps from all preceding layers within a dense block. This design encourages feature reuse, strengthens feature propagation, and helps alleviate the vanishing-gradient problem while maintaining relatively efficient parameter usage \cite{r202}.
-		\item \textbf{InceptionResNetV2}: InceptionResNetV2 combines the multi-branch Inception architecture with residual connections to facilitate the training of deep networks. The residual connections accelerate optimization and enable effective learning in a computationally efficient Inception-based architecture \cite{r203}. 
-		\item \textbf{VGG16}: VGG16 is a deep convolutional architecture that uses a simple and uniform design based primarily on stacked $3\times3$ convolutional filters followed by pooling layers. Its increased depth and straightforward architecture have made it a widely used baseline for image classification and transfer learning \cite{r204}
-		\item \textbf{InceptionV3}: InceptionV3 employs factorized convolutions and carefully designed Inception modules to increase representational capacity while controlling computational cost. The architecture also incorporates auxiliary classification and other design improvements to achieve effective image recognition performance \cite{r205}.
-		\item \textbf{ResNet50}: ResNet50 employs residual learning through shortcut connections that allow layers to learn residual mappings with respect to their inputs. This design facilitates the optimization of deeper networks and enables the effective learning of hierarchical visual representations \cite{r206}.
+		\item \textbf{MobileNetV2}: MobileNetV2 is a lightweight CNN architecture designed to achieve a favorable trade-off between classification performance and computational efficiency. It employs inverted residual blocks with linear bottlenecks and lightweight depthwise convolutions to reduce computational cost while maintaining effective feature representations\cite{ref34}.
+		\item \textbf{Xception}: Xception is based on depthwise separable convolutions and can be viewed as an extension of the Inception design in which spatial and channel-wise feature learning are more explicitly separated. The architecture provides an efficient use of model parameters while maintaining strong image classification performance \cite {ref35}.
+		\item \textbf{DenseNet121}: DenseNet121 introduces dense connectivity, in which each layer receives feature maps from all preceding layers within a dense block. This design encourages feature reuse, strengthens feature propagation, and helps alleviate the vanishing-gradient problem while maintaining relatively efficient parameter usage \cite{ref36}.
+		\item \textbf{InceptionResNetV2}: InceptionResNetV2 combines the multi-branch Inception architecture with residual connections to facilitate the training of deep networks. The residual connections accelerate optimization and enable effective learning in a computationally efficient Inception-based architecture \cite{ref37}. 
+		\item \textbf{VGG16}: VGG16 is a deep convolutional architecture that uses a simple and uniform design based primarily on stacked $3\times3$ convolutional filters followed by pooling layers. Its increased depth and straightforward architecture have made it a widely used baseline for image classification and transfer learning \cite{ref38}
+		\item \textbf{InceptionV3}: InceptionV3 employs factorized convolutions and carefully designed Inception modules to increase representational capacity while controlling computational cost. The architecture also incorporates auxiliary classification and other design improvements to achieve effective image recognition performance \cite{ref39}.
+		\item \textbf{ResNet50}: ResNet50 employs residual learning through shortcut connections that allow layers to learn residual mappings with respect to their inputs. This design facilitates the optimization of deeper networks and enables the effective learning of hierarchical visual representations \cite{ref40}.
 		\item \textbf{CustomCNN}: In this research, it has been developed as the original EPLI research.
 	\end{itemize}
 	
@@ -768,12 +771,12 @@
 	
 	\subsection{Training Configurations}
 	We used TensorFlow/Keras on the Kaggle \zahid{cite kaggle} environment with two NVIDIA Tesla T4 GPUs to trainining and evaluation of all the CNN models in our experiments. 
-	The training configuration has followed the settings adopted in the original EPLI study\cite{r10}. \zahid{what are these? please specify. is it only for EgyPLI or all 4 datasets??}
-	The custom CNN was trained from scratch, while other models have been initialized with ImageNet-pretrained weights \zahid{cite here} and their backbone layers have been frozen.
+	The training configuration has followed the settings adopted in the original EPLI study\cite{ref27}. \zahid{what are these? please specify. is it only for EgyPLI or all 4 datasets??}
+	The custom CNN was trained from scratch, while other models have been initialized with ImageNet-pretrained weights \cite{ref41} \zahid{cite here} and their backbone layers have been frozen.
 	
-	For the pretrained models, the original classification heads have been removed and replaced with a common classification head consisting of Global Average Pooling \zahid{cite}, a dropout layer \zahid{cite} with dropout rate 0.3, a fully connected layer with 128 ReLU units \zahid{cite}, and the final softmax layer has been configured according to the number of classes in each dataset.
+	For the pretrained models, the original classification heads have been removed and replaced with a common classification head consisting of Global Average Pooling \zahid{cite}, a dropout layer \cite{ref42} \zahid{cite} with dropout rate 0.3, a fully connected layer \cite{ref43} with 128 ReLU units \zahid{cite}, and the final softmax layer has been configured according to the number of classes in each dataset.
 	%The custom CNN has followed its original convolutional architecture. 
-	The Adam optimiser \zahid{cite} has been used with a learning rate of $5\times10^{-5}$ and categorical cross-entropy loss \zahid{arg1} in all model optimizations.
+	The Adam optimiser \cite{ref44} \zahid{cite} has been used with a learning rate of $5\times10^{-5}$ and categorical cross-entropy loss \zahid{arg1} in all model optimizations.
 	%We have used TensorFlow/Keras Functional API, while the original EgyPLI research used the sequential API. This implementation choice does not alter the underlying CNN architectures or their corresponding backbone configurations.
 	
 	%The trained models have been subsequently evaluated on clean and perturbed test images. Their classification accuracy and Grad-CAM-based LMOS have been used to calculate accuracy stability, LMOS stability, ETI, and ERI.
@@ -1774,7 +1777,7 @@ Overall, the cross-dataset analysis demonstrates that ETI and ERI capture differ
 
 %\noindent\textbf{Limitations and Future Works}
 
-Despite the strengths of this study, there are some limitations. ETI and ERI consider only two properties: accuracy and object focus alignment. To evaluate the whole scenario, many properties may need to be considered. Some research raises questions about Explainable AI methods such as Grad-CAM    \cite{r102}\cite{r103}\cite{r104}. In the future, we have a plan to extend ETI and ERI to other XAI methods such as Grad-CAM++\cite{r103}, Score-CAM\cite{r105}, LayerCAM\cite{r106}, and Rise \cite{r107} to assess the sensitivity of the proposed metrics to the choice of explainability technique. We will try to adapt ETI and ERI for other computer vision tasks, including object detection, semantic segmentation, and vision-language models. 
+Despite the strengths of this study, there are some limitations. ETI and ERI consider only two properties: accuracy and object focus alignment. To evaluate the whole scenario, many properties may need to be considered. Some research raises questions about Explainable AI methods such as Grad-CAM    \cite{ref45}\cite{ref46}\cite{ref47}. In the future, we have a plan to extend ETI and ERI to other XAI methods such as Grad-CAM++\cite{ref46}, Score-CAM\cite{ref48}, LayerCAM\cite{ref49}, and Rise \cite{ref50} to assess the sensitivity of the proposed metrics to the choice of explainability technique. We will try to adapt ETI and ERI for other computer vision tasks, including object detection, semantic segmentation, and vision-language models. 
 
 	%\subsubsection{EgyPLI}
 	%\subsubsection{BDMediLeaves}
@@ -1790,40 +1793,40 @@ Despite the strengths of this study, there are some limitations. ETI and ERI con
     
 	\subsection{Model Reliability and Trustworthiness}
 	To move beyond standard classification accuracy, recent studies have increasingly focused on quantifying model reliability through uncertainty estimation and calibration. 
-    Javed et al. \cite{r22} integrated Bayesian Monte Carlo Dropout with nonparametric Conformal Prediction to address overconfidence in deep neural networks. 
-    To better evaluate model performance under uncertainty, Ao et al. \cite{r23} introduced the Excess Area Under the Optimal Risk-Coverage Curve ($\mathrm{E\text{-}AUoptRC}$) and the Trust Index ($\mathrm{TI}$), offering a risk-coverage perspective on model trustworthiness. 
+    Javed et al. \cite{ref14} integrated Bayesian Monte Carlo Dropout with nonparametric Conformal Prediction to address overconfidence in deep neural networks. 
+    To better evaluate model performance under uncertainty, Ao et al. \cite{ref15} introduced the Excess Area Under the Optimal Risk-Coverage Curve ($\mathrm{E\text{-}AUoptRC}$) and the Trust Index ($\mathrm{TI}$), offering a risk-coverage perspective on model trustworthiness. 
 
-	At a broader level, Nastoska et al. \cite{r24} provided a comprehensive review of AI trustworthiness criteria by evaluating industrial compliance against the NIST AI Risk Management Framework and ISO/IEC standards. 
-	In domain-specific applications, Pal et al. \cite{r25} proposed the Trust-Aware Explainable Artificial Intelligence ($\mathrm{TAXAI}$) framework, which yields a normalized score by combining algorithmic transparency, interpretability alignment, and compliance reliability. 
+	At a broader level, Nastoska et al. \cite{ref51} provided a comprehensive review of AI trustworthiness criteria by evaluating industrial compliance against the NIST AI Risk Management Framework and ISO/IEC standards. 
+	In domain-specific applications, Pal et al. \cite{ref52} proposed the Trust-Aware Explainable Artificial Intelligence ($\mathrm{TAXAI}$) framework, which yields a normalized score by combining algorithmic transparency, interpretability alignment, and compliance reliability. 
 	While these frameworks advance the quantification of predictive trust, they generally evaluate reliability without explicitly measuring the spatial fidelity or stability of visual explanations under environmental perturbations.
 
 	\subsection{Predictive Robustness Under Perturbations}
 	Evaluating model performance under distribution shifts and input corruptions is essential for reliable deployment. 
-	Hendrycks and Dietterich \cite{r27} established foundational benchmarks known as ImageNet-C and ImageNet-P, to measure classification degradation under common corruptions and perturbations. 
-	Extending this, Schneider et al. \cite{r31} demonstrated that test-time covariate-shift adaptation can substantially recover predictive performance under corruptions, while Hendrycks et al. \cite{r30} proposed AugMix to improve model robustness while preserving clean accuracy. 
-	Beyond common corruptions, Su et al. \cite{r28} and Taori et al. \cite{r29} investigated adversarial and natural distribution shifts, demonstrating that high standard accuracy does not guarantee robustness and advocating for independent robustness evaluations. 
-	Furthermore, Guo et al. \cite{r32} compiled a 23-metric framework targeting adversarial data and model vulnerabilities.
+	Hendrycks and Dietterich \cite{ref16} established foundational benchmarks known as ImageNet-C and ImageNet-P, to measure classification degradation under common corruptions and perturbations. 
+	Extending this, Schneider et al. \cite{ref53} demonstrated that test-time covariate-shift adaptation can substantially recover predictive performance under corruptions, while Hendrycks et al. \cite{ref17} proposed AugMix to improve model robustness while preserving clean accuracy. 
+	Beyond common corruptions, Su et al. \cite{ref19} and Taori et al. \cite{ref18} investigated adversarial and natural distribution shifts, demonstrating that high standard accuracy does not guarantee robustness and advocating for independent robustness evaluations. 
+	Furthermore, Guo et al. \cite{ref20} compiled a 23-metric framework targeting adversarial data and model vulnerabilities.
 
 	While these works establish rigorous protocols for evaluating accuracy under stress, they focus exclusively on output predictions. 
 	A few recent efforts have attempted to incorporate explainability into robustness routines. 
-	Zhang et al. \cite{r26} proposed $\mathrm{AR^2}$, aligning Class Activation Maps (CAMs) between clean and corrupted images during training to enforce feature consistency. 
+	Zhang et al. \cite{ref54} proposed $\mathrm{AR^2}$, aligning Class Activation Maps (CAMs) between clean and corrupted images during training to enforce feature consistency. 
 	However, $\mathrm{AR^2}$ operates as a model repair mechanism rather than a quantitative evaluation index. 
 	In contrast, our proposed Explainable Robustness Index ($\mathrm{ERI}$) directly quantifies the joint stability of both predictive performance and Grad-CAM visual evidence under input perturbations.
 
 	\subsection{Explanation Quality, Localization, and Spurious Bias}
-	Visual explanation techniques e.g., Grad-CAM, Attention maps, and Layer-wise Relevance Propagation (LRP) are widely deployed to interpret CNN decisions in sensitive domains, including smart farming and plant pathology \cite{r33, r34, r35}. 
-	However, as highlighted by Shawon et al. \cite{r35}, high accuracy and visual heatmaps do not automatically guarantee model generalization under real-world variability. 
+	Visual explanation techniques e.g., Grad-CAM, Attention maps, and Layer-wise Relevance Propagation (LRP) are widely deployed to interpret CNN decisions in sensitive domains, including smart farming and plant pathology \cite{ref55, ref56, ref57}. 
+	However, as highlighted by Shawon et al. \cite{ref57}, high accuracy and visual heatmaps do not automatically guarantee model generalization under real-world variability. 
 	A critical challenge remains the reliance on shortcut learning and background bias. 
 	Bassi et al. \cite{r11} demonstrated that synthetic background biases heavily influence deep models, showing that LRP heatmaps can expose and mitigate shortcut learning without incurring high computational costs. 
-	Similarly, Zheng et al. \cite{r39} introduced ShortcutProbe to detect and retrain networks against prediction shortcuts without manual annotations.
+	Similarly, Zheng et al. \cite{ref58} introduced ShortcutProbe to detect and retrain networks against prediction shortcuts without manual annotations.
 	
 	A fundamental bottleneck in Explainable AI (XAI) is the scarcity of quantitative metrics for evaluating explanation quality. 
-	Addressing this, Rahimiaghdam and Alemdar \cite{r36} formulated evaluative metrics for medical imaging, while Baniecki et al. \cite{r37} proposed aligning model explanation pipelines directly with ground-truth segmentation masks. 
-	Ground-truth-based evaluation was further advanced by Guidotti et al. \cite{r40}, who evaluated local explanation methods against annotated object bounds. 
+	Addressing this, Rahimiaghdam and Alemdar \cite{ref22} formulated evaluative metrics for medical imaging, while Baniecki et al. \cite{ref59} proposed aligning model explanation pipelines directly with ground-truth segmentation masks. 
+	Ground-truth-based evaluation was further advanced by Guidotti et al. \cite{ref24}, who evaluated local explanation methods against annotated object bounds. 
 	Inspired by this perspective, our proposed Localization Mask Overlap Score ($\mathrm{LMOS}$) quantifies the spatial alignment between Grad-CAM visual evidence and target object regions. 
 	
-	Regarding explanation stability, Repetto et al. \cite{r38} systematically measured the sensitivity of XAI techniques under natural noise and adversarial manipulations that alter explanations without affecting predictions. 
-	Finally, Fong and Vedaldi \cite{r41} and Kim et al. \cite{r42} analyzed black-box attribution and weakly supervised localization, observing that CAM-based methods often concentrate on localized, highly discriminative parts rather than full object extents. 
+	Regarding explanation stability, Repetto et al. \cite{ref21} systematically measured the sensitivity of XAI techniques under natural noise and adversarial manipulations that alter explanations without affecting predictions. 
+	Finally, Fong and Vedaldi \cite{ref23} and Kim et al. \cite{ref60} analyzed black-box attribution and weakly supervised localization, observing that CAM-based methods often concentrate on localized, highly discriminative parts rather than full object extents. 
 	Our framework builds upon these insights by offering a unified, quantitative evaluation of spatial overlap ($\mathrm{LMOS}$), explanation quality ($\mathrm{ETI}$), and perturbation stability ($\mathrm{ERI}$).
 
 	
