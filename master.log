@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  7 OCT 2026 19:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  8 OCT 2026 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1507,7 +1507,7 @@ ine 587.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 43.
+ine 58.
 )
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 611.
@@ -1553,7 +1553,16 @@ Overfull \hbox (1.60641pt too wide) in paragraph at lines 641--642
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 643.
-
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 645.
+[6
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.645 		\item \textbf
+                     {ResNet50}: ResNet50 employs residual learning through ...
+]
 Overfull \hbox (6.408pt too wide) in paragraph at lines 645--646
 []\T1/stix/b/n/10 ResNet50\T1/stix/m/n/10 : ResNet50 em-ploys resid-ual learn-i
 ng through
@@ -1566,15 +1575,6 @@ ine 654.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 654.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 655.
-[6
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.655 	
-       ]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 656.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 657.
@@ -1584,7 +1584,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 659.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 666.
-<images/threshold/EPLY/GradCAM_Results/Original/img_0004.png, id=176, 300.12125
+<images/threshold/EPLY/GradCAM_Results/Original/img_0004.png, id=174, 300.12125
 pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Original/img_0004.png Graphic file 
 (type png)
@@ -1592,7 +1592,7 @@ File: images/threshold/EPLY/GradCAM_Results/Original/img_0004.png Graphic file
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Original/img_000
 4.png  used on input line 683.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Masked/img_0004.png, id=177, 300.12125pt
+<images/threshold/EPLY/GradCAM_Results/Masked/img_0004.png, id=175, 300.12125pt
  x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Masked/img_0004.png Graphic file (t
 ype png)
@@ -1600,7 +1600,7 @@ ype png)
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Masked/img_0004.
 png  used on input line 684.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004.png, id=178, 300.12125p
+<images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004.png, id=176, 300.12125p
 t x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004.png Graphic file (
 type png)
@@ -1608,7 +1608,7 @@ type png)
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004
 .png  used on input line 685.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Threshold_05/img_0004.png, id=179, 300.1
+<images/threshold/EPLY/GradCAM_Results/Threshold_05/img_0004.png, id=177, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Threshold_05/img_0004.png Graphic f
 ile (type png)
@@ -1616,7 +1616,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Threshold_05/img
 _0004.png  used on input line 686.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Threshold_06/img_0004.png, id=180, 300.1
+<images/threshold/EPLY/GradCAM_Results/Threshold_06/img_0004.png, id=178, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Threshold_06/img_0004.png Graphic f
 ile (type png)
@@ -1624,7 +1624,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Threshold_06/img
 _0004.png  used on input line 687.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Threshold_07/img_0004.png, id=181, 300.1
+<images/threshold/EPLY/GradCAM_Results/Threshold_07/img_0004.png, id=179, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Threshold_07/img_0004.png Graphic f
 ile (type png)
@@ -1632,7 +1632,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Threshold_07/img
 _0004.png  used on input line 688.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Threshold_08/img_0004.png, id=182, 300.1
+<images/threshold/EPLY/GradCAM_Results/Threshold_08/img_0004.png, id=180, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Threshold_08/img_0004.png Graphic f
 ile (type png)
@@ -1640,7 +1640,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Threshold_08/img
 _0004.png  used on input line 689.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Original/img_0000.png, id=183, 300.12125
+<images/threshold/BDML/GradCAM_Results/Original/img_0000.png, id=181, 300.12125
 pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Original/img_0000.png Graphic file 
 (type png)
@@ -1648,7 +1648,7 @@ File: images/threshold/BDML/GradCAM_Results/Original/img_0000.png Graphic file
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Original/img_000
 0.png  used on input line 693.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Masked/img_0000.png, id=184, 300.12125pt
+<images/threshold/BDML/GradCAM_Results/Masked/img_0000.png, id=182, 300.12125pt
  x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Masked/img_0000.png Graphic file (t
 ype png)
@@ -1656,7 +1656,7 @@ ype png)
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Masked/img_0000.
 png  used on input line 694.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/GradCAM/img_0000.png, id=185, 300.12125p
+<images/threshold/BDML/GradCAM_Results/GradCAM/img_0000.png, id=183, 300.12125p
 t x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/GradCAM/img_0000.png Graphic file (
 type png)
@@ -1664,7 +1664,7 @@ type png)
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/GradCAM/img_0000
 .png  used on input line 695.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Threshold_05/img_0000.png, id=186, 300.1
+<images/threshold/BDML/GradCAM_Results/Threshold_05/img_0000.png, id=184, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Threshold_05/img_0000.png Graphic f
 ile (type png)
@@ -1672,7 +1672,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Threshold_05/img
 _0000.png  used on input line 696.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Threshold_06/img_0000.png, id=187, 300.1
+<images/threshold/BDML/GradCAM_Results/Threshold_06/img_0000.png, id=185, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Threshold_06/img_0000.png Graphic f
 ile (type png)
@@ -1680,7 +1680,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Threshold_06/img
 _0000.png  used on input line 697.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Threshold_07/img_0000.png, id=188, 300.1
+<images/threshold/BDML/GradCAM_Results/Threshold_07/img_0000.png, id=186, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Threshold_07/img_0000.png Graphic f
 ile (type png)
@@ -1688,7 +1688,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Threshold_07/img
 _0000.png  used on input line 698.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Threshold_08/img_0000.png, id=189, 300.1
+<images/threshold/BDML/GradCAM_Results/Threshold_08/img_0000.png, id=187, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Threshold_08/img_0000.png Graphic f
 ile (type png)
@@ -1696,7 +1696,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Threshold_08/img
 _0000.png  used on input line 699.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Original/img_0014.png, id=190, 300.12125
+<images/threshold/FLRS/GradCAM_Results/Original/img_0014.png, id=188, 300.12125
 pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Original/img_0014.png Graphic file 
 (type png)
@@ -1704,7 +1704,7 @@ File: images/threshold/FLRS/GradCAM_Results/Original/img_0014.png Graphic file
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Original/img_001
 4.png  used on input line 703.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Masked/img_0014.png, id=191, 300.12125pt
+<images/threshold/FLRS/GradCAM_Results/Masked/img_0014.png, id=189, 300.12125pt
  x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Masked/img_0014.png Graphic file (t
 ype png)
@@ -1712,7 +1712,7 @@ ype png)
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Masked/img_0014.
 png  used on input line 704.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014.png, id=192, 300.12125p
+<images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014.png, id=190, 300.12125p
 t x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014.png Graphic file (
 type png)
@@ -1720,7 +1720,7 @@ type png)
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014
 .png  used on input line 705.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Threshold_05/img_0014.png, id=193, 300.1
+<images/threshold/FLRS/GradCAM_Results/Threshold_05/img_0014.png, id=191, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Threshold_05/img_0014.png Graphic f
 ile (type png)
@@ -1728,7 +1728,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Threshold_05/img
 _0014.png  used on input line 706.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Threshold_06/img_0014.png, id=194, 300.1
+<images/threshold/FLRS/GradCAM_Results/Threshold_06/img_0014.png, id=192, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Threshold_06/img_0014.png Graphic f
 ile (type png)
@@ -1736,7 +1736,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Threshold_06/img
 _0014.png  used on input line 707.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Threshold_07/img_0014.png, id=195, 300.1
+<images/threshold/FLRS/GradCAM_Results/Threshold_07/img_0014.png, id=193, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Threshold_07/img_0014.png Graphic f
 ile (type png)
@@ -1744,7 +1744,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Threshold_07/img
 _0014.png  used on input line 708.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Threshold_08/img_0014.png, id=196, 300.1
+<images/threshold/FLRS/GradCAM_Results/Threshold_08/img_0014.png, id=194, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Threshold_08/img_0014.png Graphic f
 ile (type png)
@@ -1752,7 +1752,7 @@ ile (type png)
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Threshold_08/img
 _0014.png  used on input line 709.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Original/img_0013.png, id=197, 300.12125pt
+<images/threshold/FR/GradCAM_Results/Original/img_0013.png, id=195, 300.12125pt
  x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Original/img_0013.png Graphic file (t
 ype png)
@@ -1760,7 +1760,7 @@ ype png)
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Original/img_0013.
 png  used on input line 713.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Masked/img_0013.png, id=198, 300.12125pt x
+<images/threshold/FR/GradCAM_Results/Masked/img_0013.png, id=196, 300.12125pt x
  300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Masked/img_0013.png Graphic file (typ
 e png)
@@ -1768,7 +1768,7 @@ e png)
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Masked/img_0013.pn
 g  used on input line 714.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/GradCAM/img_0013.png, id=199, 300.12125pt 
+<images/threshold/FR/GradCAM_Results/GradCAM/img_0013.png, id=197, 300.12125pt 
 x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/GradCAM/img_0013.png Graphic file (ty
 pe png)
@@ -1776,7 +1776,7 @@ pe png)
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/GradCAM/img_0013.p
 ng  used on input line 715.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Threshold_05/img_0013.png, id=200, 300.121
+<images/threshold/FR/GradCAM_Results/Threshold_05/img_0013.png, id=198, 300.121
 25pt x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Threshold_05/img_0013.png Graphic fil
 e (type png)
@@ -1784,7 +1784,7 @@ e (type png)
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Threshold_05/img_0
 013.png  used on input line 716.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Threshold_06/img_0013.png, id=201, 300.121
+<images/threshold/FR/GradCAM_Results/Threshold_06/img_0013.png, id=199, 300.121
 25pt x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Threshold_06/img_0013.png Graphic fil
 e (type png)
@@ -1792,7 +1792,7 @@ e (type png)
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Threshold_06/img_0
 013.png  used on input line 717.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Threshold_07/img_0013.png, id=202, 300.121
+<images/threshold/FR/GradCAM_Results/Threshold_07/img_0013.png, id=200, 300.121
 25pt x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Threshold_07/img_0013.png Graphic fil
 e (type png)
@@ -1800,7 +1800,7 @@ e (type png)
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Threshold_07/img_0
 013.png  used on input line 718.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Threshold_08/img_0013.png, id=203, 300.121
+<images/threshold/FR/GradCAM_Results/Threshold_08/img_0013.png, id=201, 300.121
 25pt x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Threshold_08/img_0013.png Graphic fil
 e (type png)
@@ -1855,45 +1855,8 @@ LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
 rmal on input line 761.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 761.
-[7
-pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.761 .../o acc}} = \frac{S_{\mathrm{LMOS}}}{2}.$$
-                                                   <./images/threshold/EPLY/Gra
-dCAM_Results/Original/img_0004.png (PNG copy)> <./images/threshold/EPLY/GradCAM
-_Results/Masked/img_0004.png (PNG copy)> <./images/threshold/EPLY/GradCAM_Resul
-ts/GradCAM/img_0004.png (PNG copy)> <./images/threshold/EPLY/GradCAM_Results/Th
-reshold_05/img_0004.png (PNG copy)> <./images/threshold/EPLY/GradCAM_Results/Th
-reshold_06/img_0004.png (PNG copy)> <./images/threshold/EPLY/GradCAM_Results/Th
-reshold_07/img_0004.png (PNG copy)> <./images/threshold/EPLY/GradCAM_Results/Th
-reshold_08/img_0004.png (PNG copy)> <./images/threshold/BDML/GradCAM_Results/Or
-iginal/img_0000.png (PNG copy)> <./images/threshold/BDML/GradCAM_Results/Masked
-/img_0000.png (PNG copy)> <./images/threshold/BDML/GradCAM_Results/GradCAM/img_
-0000.png (PNG copy)> <./images/threshold/BDML/GradCAM_Results/Threshold_05/img_
-0000.png (PNG copy)> <./images/threshold/BDML/GradCAM_Results/Threshold_06/img_
-0000.png (PNG copy)> <./images/threshold/BDML/GradCAM_Results/Threshold_07/img_
-0000.png (PNG copy)> <./images/threshold/BDML/GradCAM_Results/Threshold_08/img_
-0000.png (PNG copy)> <./images/threshold/FLRS/GradCAM_Results/Original/img_0014
-.png (PNG copy)> <./images/threshold/FLRS/GradCAM_Results/Masked/img_0014.png (
-PNG copy)> <./images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014.png (PNG c
-opy)> <./images/threshold/FLRS/GradCAM_Results/Threshold_05/img_0014.png (PNG c
-opy)> <./images/threshold/FLRS/GradCAM_Results/Threshold_06/img_0014.png (PNG c
-opy)> <./images/threshold/FLRS/GradCAM_Results/Threshold_07/img_0014.png (PNG c
-opy)> <./images/threshold/FLRS/GradCAM_Results/Threshold_08/img_0014.png (PNG c
-opy)> <./images/threshold/FR/GradCAM_Results/Original/img_0013.png (PNG copy)> 
-<./images/threshold/FR/GradCAM_Results/Masked/img_0013.png (PNG copy)> <./image
-s/threshold/FR/GradCAM_Results/GradCAM/img_0013.png (PNG copy)> <./images/thres
-hold/FR/GradCAM_Results/Threshold_05/img_0013.png (PNG copy)> <./images/thresho
-ld/FR/GradCAM_Results/Threshold_06/img_0013.png (PNG copy)> <./images/threshold
-/FR/GradCAM_Results/Threshold_07/img_0013.png (PNG copy)> <./images/threshold/F
-R/GradCAM_Results/Threshold_08/img_0013.png (PNG copy)>]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 761.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 779.
-
 (tables/tbl_sample_xai.tex
 
 Package array Warning: Column C is already defined on input line 2.
@@ -1902,7 +1865,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 11.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 195.
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png, id=217, 
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png, id=209, 
 300.12125pt x 300.12125pt>
 File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png Grap
 hic file (type png)
@@ -1917,7 +1880,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png, id=218,
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png, id=210,
  300.12125pt x 300.12125pt>
 File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png Gra
 phic file (type png)
@@ -1932,7 +1895,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png, id=219, 300
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png, id=211, 300
 .12125pt x 300.12125pt>
 File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png Graphic
  file (type png)
@@ -1947,7 +1910,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png, id=220, 300.1
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png, id=212, 300.1
 2125pt x 300.12125pt>
 File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png Graphic f
 ile (type png)
@@ -1962,7 +1925,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png, id=221, 300.
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png, id=213, 300.
 12125pt x 300.12125pt>
 File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png Graphic 
 file (type png)
@@ -1977,7 +1940,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png, id=222, 
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png, id=214, 
 300.12125pt x 300.12125pt>
 File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png Grap
 hic file (type png)
@@ -1992,8 +1955,8 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png, id=22
-3, 300.12125pt x 300.12125pt>
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png, id=21
+5, 300.12125pt x 300.12125pt>
 File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png G
 raphic file (type png)
 <use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png>
@@ -2009,7 +1972,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 195.
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png, id=224
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png, id=216
 , 224.84pt x 224.84pt>
 File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png Gr
 aphic file (type png)
@@ -2024,8 +1987,8 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png, id=22
-5, 224.84pt x 224.84pt>
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png, id=21
+7, 224.84pt x 224.84pt>
 File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png G
 raphic file (type png)
 <use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png>
@@ -2039,7 +2002,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png, id=226, 2
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png, id=218, 2
 24.84pt x 224.84pt>
 File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png Graph
 ic file (type png)
@@ -2054,7 +2017,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png, id=227, 224
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png, id=219, 224
 .84pt x 224.84pt>
 File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png Graphic
  file (type png)
@@ -2069,7 +2032,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png, id=228, 22
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png, id=220, 22
 4.84pt x 224.84pt>
 File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png Graphi
 c file (type png)
@@ -2084,7 +2047,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png, id=229
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png, id=221
 , 224.84pt x 224.84pt>
 File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png Gr
 aphic file (type png)
@@ -2100,7 +2063,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []
 
 <images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png, id=
-230, 224.84pt x 224.84pt>
+222, 224.84pt x 224.84pt>
 File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png
  Graphic file (type png)
 <use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png>
@@ -2117,7 +2080,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 195.
-<images/Introduction/BDML/Xception/IMG_9012_original.png, id=231, 300.12125pt x
+<images/Introduction/BDML/Xception/IMG_9012_original.png, id=223, 300.12125pt x
  300.12125pt>
 File: images/Introduction/BDML/Xception/IMG_9012_original.png Graphic file (typ
 e png)
@@ -2132,7 +2095,7 @@ Overfull \hbox (23.7851pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Xception/IMG_9012_segmented.png, id=232, 300.12125pt 
+<images/Introduction/BDML/Xception/IMG_9012_segmented.png, id=224, 300.12125pt 
 x 300.12125pt>
 File: images/Introduction/BDML/Xception/IMG_9012_segmented.png Graphic file (ty
 pe png)
@@ -2147,7 +2110,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Xception/IMG_9012_clean.png, id=233, 300.12125pt x 30
+<images/Introduction/BDML/Xception/IMG_9012_clean.png, id=225, 300.12125pt x 30
 0.12125pt>
 File: images/Introduction/BDML/Xception/IMG_9012_clean.png Graphic file (type p
 ng)
@@ -2162,7 +2125,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Xception/IMG_9012_hue.png, id=234, 300.12125pt x 300.
+<images/Introduction/BDML/Xception/IMG_9012_hue.png, id=226, 300.12125pt x 300.
 12125pt>
 File: images/Introduction/BDML/Xception/IMG_9012_hue.png Graphic file (type png
 )
@@ -2177,7 +2140,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Xception/IMG_9012_blur.png, id=235, 300.12125pt x 300
+<images/Introduction/BDML/Xception/IMG_9012_blur.png, id=227, 300.12125pt x 300
 .12125pt>
 File: images/Introduction/BDML/Xception/IMG_9012_blur.png Graphic file (type pn
 g)
@@ -2192,7 +2155,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Xception/IMG_9012_contrast.png, id=236, 300.12125pt x
+<images/Introduction/BDML/Xception/IMG_9012_contrast.png, id=228, 300.12125pt x
  300.12125pt>
 File: images/Introduction/BDML/Xception/IMG_9012_contrast.png Graphic file (typ
 e png)
@@ -2207,7 +2170,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Xception/IMG_9012_compression.png, id=237, 300.12125p
+<images/Introduction/BDML/Xception/IMG_9012_compression.png, id=229, 300.12125p
 t x 300.12125pt>
 File: images/Introduction/BDML/Xception/IMG_9012_compression.png Graphic file (
 type png)
@@ -2224,7 +2187,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 195.
-<images/Introduction/BDML/Inception_V3/IMG_9012_original.png, id=238, 224.84pt 
+<images/Introduction/BDML/Inception_V3/IMG_9012_original.png, id=230, 224.84pt 
 x 224.84pt>
 File: images/Introduction/BDML/Inception_V3/IMG_9012_original.png Graphic file 
 (type png)
@@ -2239,7 +2202,7 @@ Overfull \hbox (23.7851pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png, id=239, 224.84pt
+<images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png, id=231, 224.84pt
  x 224.84pt>
 File: images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png Graphic file
  (type png)
@@ -2254,7 +2217,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Inception_V3/IMG_9012_clean.png, id=240, 224.84pt x 2
+<images/Introduction/BDML/Inception_V3/IMG_9012_clean.png, id=232, 224.84pt x 2
 24.84pt>
 File: images/Introduction/BDML/Inception_V3/IMG_9012_clean.png Graphic file (ty
 pe png)
@@ -2269,7 +2232,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Inception_V3/IMG_9012_hue.png, id=241, 224.84pt x 224
+<images/Introduction/BDML/Inception_V3/IMG_9012_hue.png, id=233, 224.84pt x 224
 .84pt>
 File: images/Introduction/BDML/Inception_V3/IMG_9012_hue.png Graphic file (type
  png)
@@ -2284,7 +2247,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Inception_V3/IMG_9012_blur.png, id=242, 224.84pt x 22
+<images/Introduction/BDML/Inception_V3/IMG_9012_blur.png, id=234, 224.84pt x 22
 4.84pt>
 File: images/Introduction/BDML/Inception_V3/IMG_9012_blur.png Graphic file (typ
 e png)
@@ -2299,7 +2262,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png, id=243, 224.84pt 
+<images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png, id=235, 224.84pt 
 x 224.84pt>
 File: images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png Graphic file 
 (type png)
@@ -2316,7 +2279,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
  []|[]| 
  []
 
-<images/Introduction/BDML/Inception_V3/IMG_9012_compression.png, id=244, 224.84
+<images/Introduction/BDML/Inception_V3/IMG_9012_compression.png, id=236, 224.84
 pt x 224.84pt>
 File: images/Introduction/BDML/Inception_V3/IMG_9012_compression.png Graphic fi
 le (type png)
@@ -2338,7 +2301,7 @@ ine 204.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 388.
 <images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_origina
-l.png, id=245, 300.12125pt x 300.12125pt>
+l.png, id=237, 300.12125pt x 300.12125pt>
 File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_or
 iginal.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_ori
@@ -2354,7 +2317,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_segment
-ed.png, id=246, 300.12125pt x 300.12125pt>
+ed.png, id=238, 300.12125pt x 300.12125pt>
 File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_se
 gmented.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_seg
@@ -2370,7 +2333,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_clean.p
-ng, id=247, 300.12125pt x 300.12125pt>
+ng, id=239, 300.12125pt x 300.12125pt>
 File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_cl
 ean.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_cle
@@ -2386,7 +2349,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue.png
-, id=248, 300.12125pt x 300.12125pt>
+, id=240, 300.12125pt x 300.12125pt>
 File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hu
 e.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue
@@ -2402,7 +2365,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blur.pn
-g, id=249, 300.12125pt x 300.12125pt>
+g, id=241, 300.12125pt x 300.12125pt>
 File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_bl
 ur.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blu
@@ -2418,7 +2381,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_contras
-t.png, id=250, 300.12125pt x 300.12125pt>
+t.png, id=242, 300.12125pt x 300.12125pt>
 File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_co
 ntrast.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_con
@@ -2434,7 +2397,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_compres
-sion.png, id=251, 300.12125pt x 300.12125pt>
+sion.png, id=243, 300.12125pt x 300.12125pt>
 File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_co
 mpression.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_com
@@ -2452,7 +2415,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 388.
 <images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_ori
-ginal.png, id=252, 224.84pt x 224.84pt>
+ginal.png, id=244, 224.84pt x 224.84pt>
 File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
 e_original.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
@@ -2468,7 +2431,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_seg
-mented.png, id=253, 224.84pt x 224.84pt>
+mented.png, id=245, 224.84pt x 224.84pt>
 File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
 e_segmented.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
@@ -2484,7 +2447,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_cle
-an.png, id=254, 224.84pt x 224.84pt>
+an.png, id=246, 224.84pt x 224.84pt>
 File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
 e_clean.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
@@ -2500,7 +2463,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_hue
-.png, id=255, 224.84pt x 224.84pt>
+.png, id=247, 224.84pt x 224.84pt>
 File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
 e_hue.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
@@ -2516,7 +2479,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_blu
-r.png, id=256, 224.84pt x 224.84pt>
+r.png, id=248, 224.84pt x 224.84pt>
 File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
 e_blur.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
@@ -2532,7 +2495,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_con
-trast.png, id=257, 224.84pt x 224.84pt>
+trast.png, id=249, 224.84pt x 224.84pt>
 File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
 e_contrast.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
@@ -2548,7 +2511,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_com
-pression.png, id=258, 224.84pt x 224.84pt>
+pression.png, id=250, 224.84pt x 224.84pt>
 File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
 e_compression.png Graphic file (type png)
 <use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
@@ -2565,7 +2528,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 388.
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png, id=259, 
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png, id=251, 
 300.12125pt x 300.12125pt>
 File: images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png Grap
 hic file (type png)
@@ -2580,7 +2543,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []|[]| 
  []
 
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png, id=260,
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png, id=252,
  300.12125pt x 300.12125pt>
 File: images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png Gra
 phic file (type png)
@@ -2595,7 +2558,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []|[]| 
  []
 
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png, id=261, 300
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png, id=253, 300
 .12125pt x 300.12125pt>
 File: images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png Graphic
  file (type png)
@@ -2610,7 +2573,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []|[]| 
  []
 
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png, id=262, 300.1
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png, id=254, 300.1
 2125pt x 300.12125pt>
 File: images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png Graphic f
 ile (type png)
@@ -2625,7 +2588,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []|[]| 
  []
 
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png, id=263, 300.
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png, id=255, 300.
 12125pt x 300.12125pt>
 File: images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png Graphic 
 file (type png)
@@ -2640,7 +2603,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []|[]| 
  []
 
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png, id=264, 
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png, id=256, 
 300.12125pt x 300.12125pt>
 File: images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png Grap
 hic file (type png)
@@ -2655,8 +2618,8 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []|[]| 
  []
 
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png, id=26
-5, 300.12125pt x 300.12125pt>
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png, id=25
+7, 300.12125pt x 300.12125pt>
 File: images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png G
 raphic file (type png)
 <use images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png>
@@ -2673,7 +2636,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 388.
 <images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png, id=2
-66, 224.84pt x 224.84pt>
+58, 224.84pt x 224.84pt>
 File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png 
 Graphic file (type png)
 <use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png>
@@ -2688,7 +2651,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png, id=
-267, 224.84pt x 224.84pt>
+259, 224.84pt x 224.84pt>
 File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png
  Graphic file (type png)
 <use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png>
@@ -2703,7 +2666,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []|[]| 
  []
 
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png, id=268,
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png, id=260,
  224.84pt x 224.84pt>
 File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png Gra
 phic file (type png)
@@ -2718,7 +2681,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []|[]| 
  []
 
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png, id=269, 2
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png, id=261, 2
 24.84pt x 224.84pt>
 File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png Graph
 ic file (type png)
@@ -2733,7 +2696,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []|[]| 
  []
 
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png, id=270, 
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png, id=262, 
 224.84pt x 224.84pt>
 File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png Grap
 hic file (type png)
@@ -2749,7 +2712,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png, id=2
-71, 224.84pt x 224.84pt>
+63, 224.84pt x 224.84pt>
 File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png 
 Graphic file (type png)
 <use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png>
@@ -2764,7 +2727,7 @@ Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
  []
 
 <images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.png, i
-d=272, 224.84pt x 224.84pt>
+d=264, 224.84pt x 224.84pt>
 File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.p
 ng Graphic file (type png)
 <use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.pn
@@ -2783,13 +2746,64 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 388.
 )
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 799.
+ine 797.
+ [7]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 811.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 867.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 867.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 868.
  [8
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.868 \end{table*}
+                   <./images/threshold/EPLY/GradCAM_Results/Original/img_0004.p
+ng (PNG copy)> <./images/threshold/EPLY/GradCAM_Results/Masked/img_0004.png (PN
+G copy)> <./images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004.png (PNG cop
+y)> <./images/threshold/EPLY/GradCAM_Results/Threshold_05/img_0004.png (PNG cop
+y)> <./images/threshold/EPLY/GradCAM_Results/Threshold_06/img_0004.png (PNG cop
+y)> <./images/threshold/EPLY/GradCAM_Results/Threshold_07/img_0004.png (PNG cop
+y)> <./images/threshold/EPLY/GradCAM_Results/Threshold_08/img_0004.png (PNG cop
+y)> <./images/threshold/BDML/GradCAM_Results/Original/img_0000.png (PNG copy)> 
+<./images/threshold/BDML/GradCAM_Results/Masked/img_0000.png (PNG copy)> <./ima
+ges/threshold/BDML/GradCAM_Results/GradCAM/img_0000.png (PNG copy)> <./images/t
+hreshold/BDML/GradCAM_Results/Threshold_05/img_0000.png (PNG copy)> <./images/t
+hreshold/BDML/GradCAM_Results/Threshold_06/img_0000.png (PNG copy)> <./images/t
+hreshold/BDML/GradCAM_Results/Threshold_07/img_0000.png (PNG copy)> <./images/t
+hreshold/BDML/GradCAM_Results/Threshold_08/img_0000.png (PNG copy)> <./images/t
+hreshold/FLRS/GradCAM_Results/Original/img_0014.png (PNG copy)> <./images/thres
+hold/FLRS/GradCAM_Results/Masked/img_0014.png (PNG copy)> <./images/threshold/F
+LRS/GradCAM_Results/GradCAM/img_0014.png (PNG copy)> <./images/threshold/FLRS/G
+radCAM_Results/Threshold_05/img_0014.png (PNG copy)> <./images/threshold/FLRS/G
+radCAM_Results/Threshold_06/img_0014.png (PNG copy)> <./images/threshold/FLRS/G
+radCAM_Results/Threshold_07/img_0014.png (PNG copy)> <./images/threshold/FLRS/G
+radCAM_Results/Threshold_08/img_0014.png (PNG copy)> <./images/threshold/FR/Gra
+dCAM_Results/Original/img_0013.png (PNG copy)> <./images/threshold/FR/GradCAM_R
+esults/Masked/img_0013.png (PNG copy)> <./images/threshold/FR/GradCAM_Results/G
+radCAM/img_0013.png (PNG copy)> <./images/threshold/FR/GradCAM_Results/Threshol
+d_05/img_0013.png (PNG copy)> <./images/threshold/FR/GradCAM_Results/Threshold_
+06/img_0013.png (PNG copy)> <./images/threshold/FR/GradCAM_Results/Threshold_07
+/img_0013.png (PNG copy)> <./images/threshold/FR/GradCAM_Results/Threshold_08/i
+mg_0013.png (PNG copy)>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 873.
+ [9
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.799 
+l.873 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.873 
        <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png 
 (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmente
 d.png (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_cl
@@ -2817,54 +2831,40 @@ y)> <./images/Introduction/BDML/Inception_V3/IMG_9012_clean.png (PNG copy)> <./
 images/Introduction/BDML/Inception_V3/IMG_9012_hue.png (PNG copy)> <./images/In
 troduction/BDML/Inception_V3/IMG_9012_blur.png (PNG copy)> <./images/Introducti
 on/BDML/Inception_V3/IMG_9012_contrast.png (PNG copy)> <./images/Introduction/B
-DML/Inception_V3/IMG_9012_compression.png (PNG copy)>]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 811.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 867.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 867.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 876.
- [9
-pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.876 
-       <./images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276
-e_original.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Xception/1
-1944957684_2cc806276e_segmented.png (PNG copy)> <./images/Introduction/tensorfl
-ow_dataset/Xception/11944957684_2cc806276e_clean.png (PNG copy)> <./images/Intr
-oduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue.png (PNG copy)>
- <./images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blur
-.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Xception/11944957684
-_2cc806276e_contrast.png (PNG copy)> <./images/Introduction/tensorflow_dataset/
-Xception/11944957684_2cc806276e_compression.png (PNG copy)> <./images/Introduct
-ion/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_original.png (PNG co
-py)> <./images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc8062
-76e_segmented.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Incepti
-on_V3/11944957684_2cc806276e_clean.png (PNG copy)> <./images/Introduction/tenso
-rflow_dataset/Inception_V3/11944957684_2cc806276e_hue.png (PNG copy)> <./images
-/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_blur.png (
-PNG copy)> <./images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2
-cc806276e_contrast.png (PNG copy)> <./images/Introduction/tensorflow_dataset/In
-ception_V3/11944957684_2cc806276e_compression.png (PNG copy)> <./images/Introdu
-ction/FR/Xception/4668543441_79040ca329_n_original.png (PNG copy)> <./images/In
-troduction/FR/Xception/4668543441_79040ca329_n_segmented.png (PNG copy)> <./ima
-ges/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png (PNG copy)> <./i
-mages/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png (PNG copy)> <./i
-mages/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png (PNG copy)> <./
-images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png (PNG copy)
-> <./images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png (P
-NG copy)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_origin
-al.png (PNG copy)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329
-_n_segmented.png (PNG copy)> <./images/Introduction/FR/Inception_V3/4668543441_
-79040ca329_n_clean.png (PNG copy)> <./images/Introduction/FR/Inception_V3/46685
-43441_79040ca329_n_hue.png (PNG copy)> <./images/Introduction/FR/Inception_V3/4
-668543441_79040ca329_n_blur.png (PNG copy)> <./images/Introduction/FR/Inception
-_V3/4668543441_79040ca329_n_contrast.png (PNG copy)> <./images/Introduction/FR/
-Inception_V3/4668543441_79040ca329_n_compression.png (PNG copy)>]
+DML/Inception_V3/IMG_9012_compression.png (PNG copy)> <./images/Introduction/te
+nsorflow_dataset/Xception/11944957684_2cc806276e_original.png (PNG copy)> <./im
+ages/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_segmented.
+png (PNG copy)> <./images/Introduction/tensorflow_dataset/Xception/11944957684_
+2cc806276e_clean.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Xcep
+tion/11944957684_2cc806276e_hue.png (PNG copy)> <./images/Introduction/tensorfl
+ow_dataset/Xception/11944957684_2cc806276e_blur.png (PNG copy)> <./images/Intro
+duction/tensorflow_dataset/Xception/11944957684_2cc806276e_contrast.png (PNG co
+py)> <./images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_
+compression.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Inception
+_V3/11944957684_2cc806276e_original.png (PNG copy)> <./images/Introduction/tens
+orflow_dataset/Inception_V3/11944957684_2cc806276e_segmented.png (PNG copy)> <.
+/images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_cle
+an.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Inception_V3/11944
+957684_2cc806276e_hue.png (PNG copy)> <./images/Introduction/tensorflow_dataset
+/Inception_V3/11944957684_2cc806276e_blur.png (PNG copy)> <./images/Introductio
+n/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_contrast.png (PNG copy
+)> <./images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
+e_compression.png (PNG copy)> <./images/Introduction/FR/Xception/4668543441_790
+40ca329_n_original.png (PNG copy)> <./images/Introduction/FR/Xception/466854344
+1_79040ca329_n_segmented.png (PNG copy)> <./images/Introduction/FR/Xception/466
+8543441_79040ca329_n_clean.png (PNG copy)> <./images/Introduction/FR/Xception/4
+668543441_79040ca329_n_hue.png (PNG copy)> <./images/Introduction/FR/Xception/4
+668543441_79040ca329_n_blur.png (PNG copy)> <./images/Introduction/FR/Xception/
+4668543441_79040ca329_n_contrast.png (PNG copy)> <./images/Introduction/FR/Xcep
+tion/4668543441_79040ca329_n_compression.png (PNG copy)> <./images/Introduction
+/FR/Inception_V3/4668543441_79040ca329_n_original.png (PNG copy)> <./images/Int
+roduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png (PNG copy)> <./
+images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png (PNG copy
+)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png (PNG 
+copy)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png 
+(PNG copy)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_cont
+rast.png (PNG copy)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca3
+29_n_compression.png (PNG copy)>]
 Underfull \hbox (badness 1297) in paragraph at lines 877--878
 []\T1/stix/m/n/10 A sim-i-lar trend is ob-served on the BDML dataset.
  []
@@ -2880,13 +2880,13 @@ Underfull \hbox (badness 1436) in paragraph at lines 877--878
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 882.
+ine 880.
 [10
 pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.882 
+l.880 
       ]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 889.
@@ -2905,24 +2905,24 @@ ine 1048.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 1091.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1110.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1157.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1158.
+ine 1103.
  [11
 pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1158 \end{table*}
-                   
+l.1103 
+       
 pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1158 \end{table*}
-                   ]
+l.1103 
+       ]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1110.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1157.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 1162.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -2976,26 +2976,26 @@ Underfull \hbox (badness 2253) in paragraph at lines 1534--1535
 \T1/stix/m/n/10 Res-NetV2 (0.9783). Most pre-trained ar-chi-tec-tures have
  []
 
-
-Overfull \hbox (4.31546pt too wide) in paragraph at lines 1536--1537
-\T1/stix/m/n/10 high-est mean LMOS sta-bil-ity (0.8741), fol-lowed by ResNet50
- []
-
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1537.
+ine 1535.
 [12
 pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1537 
+l.1535 
        
 pdfTeX warning (ext4): destination with the same identifier (name{table.10}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1537 
+l.1535 
        ]
+Overfull \hbox (4.31546pt too wide) in paragraph at lines 1536--1537
+\T1/stix/m/n/10 high-est mean LMOS sta-bil-ity (0.8741), fol-lowed by ResNet50
+ []
+
+
 Overfull \hbox (0.4763pt too wide) in paragraph at lines 1538--1539
 []\T1/stix/m/n/10 Combining the two sta-bil-ity com-po-nents, Ta-ble [][]17[][]
  shows
@@ -3006,7 +3006,37 @@ Underfull \hbox (badness 2707) in paragraph at lines 1538--1539
 \T1/stix/m/n/10 In-cep-tion-Res-NetV2 (0.8900). Xcep-tion has con-sis-tently
  []
 
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1540.
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{table.11}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1540 T
+        he ranking and ablation analysis in Table~\ref{tab:eri_ablation_rank...
 
+pdfTeX warning (ext4): destination with the same identifier (name{table.12}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1540 T
+        he ranking and ablation analysis in Table~\ref{tab:eri_ablation_rank...
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.13}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1540 T
+        he ranking and ablation analysis in Table~\ref{tab:eri_ablation_rank...
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.14}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1540 T
+        he ranking and ablation analysis in Table~\ref{tab:eri_ablation_rank...
+]
 Underfull \hbox (badness 1810) in paragraph at lines 1540--1541
 \T1/stix/m/n/10 con-firms the im-por-tance of in-cor-po-rat-ing both com-po-
  []
@@ -3034,31 +3064,31 @@ ine 1702.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 1745.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1752.
-[13
-pdfTeX warning (ext4): destination with the same identifier (name{table.11}) ha
+ine 1754.
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{table.15}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1752 
+l.1754 
        
-pdfTeX warning (ext4): destination with the same identifier (name{table.12}) ha
+pdfTeX warning (ext4): destination with the same identifier (name{table.16}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1752 
+l.1754 
        
-pdfTeX warning (ext4): destination with the same identifier (name{table.13}) ha
+pdfTeX warning (ext4): destination with the same identifier (name{table.17}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1752 
+l.1754 
        
-pdfTeX warning (ext4): destination with the same identifier (name{table.14}) ha
+pdfTeX warning (ext4): destination with the same identifier (name{table.18}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1752 
+l.1754 
        ]
 Overfull \hbox (0.6563pt too wide) in paragraph at lines 1755--1756
 []\T1/stix/m/n/10 By com-bin-ing both sta-bil-ity com-po-nents, Ta-ble [][]21[]
@@ -3070,63 +3100,37 @@ Underfull \hbox (badness 2042) in paragraph at lines 1755--1756
 \T1/stix/m/n/10 fol-lowed by DenseNet121 (0.9393), In-cep-tion-Res-NetV2
  []
 
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1756.
-[14
-pdfTeX warning (ext4): destination with the same identifier (name{table.15}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1756 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{table.16}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1756 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{table.17}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1756 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{table.18}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1756 
-       ]
+
 Underfull \hbox (badness 1394) in paragraph at lines 1757--1758
 \T1/stix/m/n/10 ResNet50 has achieved a rel-a-tively high LMOS sta-bil-
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1762.
+ine 1758.
 [15
 pdfTeX warning (ext4): destination with the same identifier (name{table.19}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1762 
+l.1758 
        
 pdfTeX warning (ext4): destination with the same identifier (name{table.20}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1762 
+l.1758 
        
 pdfTeX warning (ext4): destination with the same identifier (name{table.21}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1762 
+l.1758 
        
 pdfTeX warning (ext4): destination with the same identifier (name{table.22}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1762 
+l.1758 
        ]
 Overfull \hbox (2.3472pt too wide) in paragraph at lines 1763--1764
 \T1/stix/m/n/10 and 0.8657, re-spec-tively, while Xcep-tion has achieved 0.8791
@@ -3151,7 +3155,7 @@ Underfull \hbox (badness 1052) in paragraph at lines 1775--1776
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1781.
+ine 1776.
 [16]
 LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
 rmal on input line 1797.
@@ -3192,7 +3196,7 @@ ine 1830.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 1830.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1838.
+ine 1831.
 [17]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 8.50006pt on input line 1855.
@@ -3218,7 +3222,7 @@ Underfull \hbox (badness 1931) in paragraph at lines 1860--1861
 
 (master.bbl
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 90.
+ine 65.
  [18]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 150.
@@ -3255,7 +3259,9 @@ Underfull \hbox (badness 2460) in paragraph at lines 259--262
 it/8 arXiv preprint
  []
 
-
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 268.
+[19]
 Underfull \hbox (badness 1939) in paragraph at lines 291--294
 []\T1/stix/m/n/8 B. Singh, R. P. Sharma, and S. Dey, ``In-ter-pretable plant le
 af
@@ -3267,9 +3273,7 @@ Underfull \hbox (badness 2197) in paragraph at lines 291--294
 /it/8 arXiv preprint
  []
 
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 294.
-[19]
+
 Underfull \hbox (badness 1253) in paragraph at lines 303--305
 []\T1/stix/m/n/8 G. Zheng, W. Ye, and A. Zhang, ``Short-cut-probe: Prob-ing pre
 -
@@ -3301,11 +3305,11 @@ Package rerunfilecheck Info: File `master.out' has not changed.
 Here is how much of TeX's memory you used:
  32386 strings out of 467501
  669319 string characters out of 5408550
- 1073625 words of memory out of 5000000
+ 1056529 words of memory out of 5000000
  60955 multiletter control sequences out of 15000+600000
  740306 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,21n,98p,1637b,1370s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 92i,21n,98p,1637b,1352s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/
 Inconsolata-zi4r.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/stix/STIXGeneral-Bold.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/
@@ -3326,7 +3330,7 @@ AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/
 Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.p
 fb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-m
 athscr.pfb>
-Output written on master.pdf (20 pages, 9133939 bytes).
+Output written on master.pdf (20 pages, 9135107 bytes).
 PDF statistics:
  564 PDF objects out of 1000 (max. 8388607)
  140 named destinations out of 1000 (max. 500000)
