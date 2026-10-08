@@ -774,7 +774,7 @@
 	The training configuration has followed the settings adopted in the original EPLI study\cite{ref27}. \zahid{what are these? please specify. is it only for EgyPLI or all 4 datasets??}
 	The custom CNN was trained from scratch, while other models have been initialized with ImageNet-pretrained weights \cite{ref41} \zahid{cite here} and their backbone layers have been frozen.
 	
-	For the pretrained models, the original classification heads have been removed and replaced with a common classification head consisting of Global Average Pooling \zahid{cite}, a dropout layer \cite{ref42} \zahid{cite} with dropout rate 0.3, a fully connected layer \cite{ref43} with 128 ReLU units \zahid{cite}, and the final softmax layer has been configured according to the number of classes in each dataset.
+	For the pretrained models, the original classification heads have been removed and replaced with a common classification head consisting of Global Average Pooling \zahid{cite}, a dropout layer \cite{ref42} \zahid{cite} with dropout rate 0.3, a fully connected layer with 128 ReLU units  \cite{ref43} \zahid{cite}, and the final softmax layer has been configured according to the number of classes in each dataset.
 	%The custom CNN has followed its original convolutional architecture. 
 	The Adam optimiser \cite{ref44} \zahid{cite} has been used with a learning rate of $5\times10^{-5}$ and categorical cross-entropy loss \zahid{arg1} in all model optimizations.
 	%We have used TensorFlow/Keras Functional API, while the original EgyPLI research used the sequential API. This implementation choice does not alter the underlying CNN architectures or their corresponding backbone configurations.
@@ -1756,7 +1756,7 @@ By combining both stability components, Table~\ref{tab:eri_perturbation_flowers_
 
 The ranking and ablation results in Table~\ref{tab:eri_ablation_ranking_flowers_recognition} further emphasize the complementary nature of the two ERI components. Xception has ranked first with an ERI of 0.9689, while DenseNet121 ranked second with 0.9393. Notably, ResNet50 has achieved a relatively high LMOS stability (0.8960) but had substantially lower accuracy stability (0.8944), resulting in an ERI of 0.8952. Conversely, InceptionV3 has maintained very high accuracy stability (0.9795) but had considerably lower LMOS stability (0.7858), yielding an ERI of only 0.8827. Thus, high predictive stability or high explanatory stability alone is insufficient to ensure a high ERI. The substantial reduction in score when either component is excluded further supports the use of both prediction and explanation stability for a more comprehensive assessment of CNN reliability. 
 
-\subsection{Cross-Dataset Analysis of ETI and ERI}
+\subsection{Cross-Dataset Analysis}
 
 The cross-dataset results provide a broader assessment of the proposed ETI and ERI metrics and reveal several consistent patterns across different visual domains. As shown in Tables~\ref{tab:eti_all_datasets} and the corresponding ERI results, the relative performance of the CNN architectures is influenced not only by their classification capability but also by the quality and stability of their visual explanations. While ETI evaluates a model by jointly considering classification accuracy and mean LMOS, ERI focuses on the stability of both prediction and explanation under input perturbations. Therefore, the two metrics provide complementary perspectives on CNN reliability.
 
@@ -1777,14 +1777,14 @@ Overall, the cross-dataset analysis demonstrates that ETI and ERI capture differ
 
 %\noindent\textbf{Limitations and Future Works}
 
-Despite the strengths of this study, there are some limitations. ETI and ERI consider only two properties: accuracy and object focus alignment. To evaluate the whole scenario, many properties may need to be considered. Some research raises questions about Explainable AI methods such as Grad-CAM    \cite{ref45}\cite{ref46}\cite{ref47}. In the future, we have a plan to extend ETI and ERI to other XAI methods such as Grad-CAM++\cite{ref46}, Score-CAM\cite{ref48}, LayerCAM\cite{ref49}, and Rise \cite{ref50} to assess the sensitivity of the proposed metrics to the choice of explainability technique. We will try to adapt ETI and ERI for other computer vision tasks, including object detection, semantic segmentation, and vision-language models. 
+Despite the strengths of this study, there are some limitations. ETI and ERI consider only two properties: accuracy and object focus alignment. To evaluate the whole scenario, many properties may need to be considered. Some research raises questions about Explainable AI methods such as Grad-CAM    \cite{ref45,ref46,ref47}. In the future, we have a plan to extend ETI and ERI to other XAI methods such as Grad-CAM++\cite{ref46}, Score-CAM\cite{ref48}, LayerCAM\cite{ref49}, and Rise \cite{ref50} to assess the sensitivity of the proposed metrics to the choice of explainability technique. We will try to adapt ETI and ERI for other computer vision tasks, including object detection, semantic segmentation, and vision-language models. 
 
 	%\subsubsection{EgyPLI}
 	%\subsubsection{BDMediLeaves}
 	%\subsubsection{Flowers}
 	%\subsubsection{Flowers Recognition KAGGLE Dataset}
 	
-	\subsection{Cross-Dataset Analysis}
+	
 	
 	%\input{tables/tbl_sample_xai.tex}
 	
