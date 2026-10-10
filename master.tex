@@ -134,8 +134,17 @@
 	\newcommand{\zahid}[1]{{\color{green}#1}}
 	
 	\begin{abstract}
-	\zahid{tbd}
-	Deep neural networks often achieve high classification accuracy. Despite high accuracy, the reliability of CNN models remains a concern. Sometimes CNN models may rely on background or irrelevant features, undermining trustworthiness. Besides, with the use of perturbations, models' accuracy and object reliance may decline. Such degradation raises questions about their robustness. In this research, we have proposed two novel evaluation metrics: the \textbf{Explainable Trustworthy Index (ETI)} and the \textbf{Explainable Robustness Index (ERI)}. ETI combines accuracy with the \textbf{Localization Mask Overlap Score (LMOS)}, which measures the proportion of Grad-CAM salient pixels that fall within the ground-truth object regions. A model with high ETI clearly indicates that both its accuracy and object reliance are high and satisfactory. ERI extends this to perturbed inputs by jointly evaluating accuracy stability and LMOS stability.  Like ETI, a model with high ERI indicates that both its accuracy and object focus remain stable under the use of perturbations. We have used eight CNN architectures on four datasets and nine perturbations (e.g., noise, blur, motion blur, occlusion) to calculate ETI and ERI. We have demonstrated that high accuracy sometimes does not guarantee high ETI or ERI. For instance, on the EPLI dataset, Custom CNN has achieved 99.45\% accuracy but the lowest ETI (0.5922) due to poor object localization. It has also provided the lowest ERI. ETI and ERI provide a more holistic assessment of model reliability for safety-critical applications.
+	Convolutional neural networks (CNNs) can achieve high classification accuracy while grounding their predictions on background or irrelevant image regions.
+	Furthermore, external input perturbations can alter both what the models predict and what evidence they cosider for making the predictions. 
+	Accuracy-based evaluation captures neither problem. 
+	We propose two complementary model-level metrics that integrate predictive performance with explanation quality. 
+	The Explainable Trustworthy Index (ETI) combines classification accuracy with the Localization Mask Overlap Score (LMOS).
+	LMOS is the proportion of salient Grad-CAM activation that falls within the ground-truth object mask. The Explainable Robustness Index (ERI) measures how well a model preserves both accuracy and LMOS under input perturbations, relative to its behavior on clean images. 
+	We evaluate both metrics on four real-world leaf and flower image datasets, using eight CNN architectures and nine perturbations, including noise, blur, and occlusion. The results show that accuracy and explanation quality frequently diverge. 
+	On the EPLI dataset, a Custom CNN attains 99.45\% accuracy, yet only 19\% of its salient activation falls on the leaf, giving it the lowest ETI (0.5922). 
+	Across all the datasets, DenseNet121 achieves the highest accuracy but the highest ETI on none, while Xception obtains the highest ERI on all four. 
+	Predictive and explanation stability also diverge: under contrast perturbation, the Custom CNN largely preserves its accuracy while its object focus shifts substantially, whereas ResNet50 shows the opposite pattern. 
+	ETI and ERI thus expose differences in reliability and robustness that accuracy alone conceals, providing complementary criteria for model evaluation and selection.
 	\end{abstract}
 	
 	% Use if graphical abstract is present
@@ -162,7 +171,7 @@
 	\section{Introduction}
 	\label{sec:introduction}
 	%\zahid{\textbf{We need to explain CNN reliability and XAI from title. }}
-	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such as medical imaging, agriculture, and astronomy, where predictions inform high-stakes decision-making processes \cite{r1, r2, r3, r4}. 
+	Convolutional Neural Networks (CNNs) have achieved remarkable performance in a wide range of domains such as analysis of medical imaging, agriculture, and astronomy, where predictions inform high-stakes decision-making processes \cite{r1, r2, r3, r4}. 
 	In such applications, classification accuracy is an essential performance measure, but accuracy alone does not necessarily indicate whether a model is reliable. 
 	A CNN model is considered more reliable when its predictions are grounded in task-relevant visual features rather than spurious correlations \cite{r5}.
 	%\zahid{Wu, J., Kang, W., Tang, H., Hong, Y., \& Yan, Y. (2024). On the faithfulness of vision transformer explanations. 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 10936–10945. https://doi.org/10.1109/cvpr52733.2024.01040
@@ -170,9 +179,10 @@
 	%\\
 	 %\zahid{provide one or model example images from your dataset with sample images and explain it.} \\
 	Therefore, beyond predictive accuracy, models must be quantitatively evaluated to determine whether their predictions depend on task-relevant regions rather than irrelevant background cues. % continuing introducing the problem 
-	Despite excellent accuracy, a model may not provide reliable predictions. Explainability methods, such as Grad-CAM \cite{r6}, show that a model may rely mainly on  background and irrelevant regions instead of  focused objects \cite{ r7, r8}. 
-	This raises questions about reliability and trustworthiness. 
+	%Despite excellent accuracy, a model may not provide reliable predictions. 
+	%This raises questions about reliability and trustworthiness of prediction models. 
 	%\zahid{we are not working to imrpove relaiability??}
+	Evaluating CNN models therefore requires asking not only whether its predictions are correct, but whether they are grounded on the target object or on the background around it.
 	
 	%\zahid{Traditional CNN model evaluation meausres fail to indicate the reliability of the correspoinding model.}
 	
@@ -185,23 +195,26 @@
 	%That is, a model maintaining relatively high accuracy under perturbations may become visually inconsistent  \cite{r4,r5,r9}. 
 	Model behavior can shift due to real-world perturbations e.g., \textit{noise}, \textit{blur}, \textit{lighting shifts}, \textit{compression}, and \textit{occlusion}. 
 	These distortions can alter both CNN accuracy and the visual regions driving predictions. 
-	Consequently, even when a model maintains relatively high accuracy under perturbations, its underlying visual explanations may still become inconsistent \cite{r5,r9}. 
-	Conventional robustness evaluation methods are primarily based on accuracy change under perturbation. 
+	%Consequently
+	Even when a model maintains relatively high accuracy under perturbations, its underlying visual explanations may still become inconsistent \cite{r5,r9}. 
+	Conventional robustness metrics are primarily based on accuracy and these may change under perturbations. 
 	They do not capture whether the model maintains consistent reliance on task-relevant regions under perturbed conditions. 
-	These observations motivate us to develop an evaluation framework that considers both predictive behavior and explanation behavior.
+	%These observations motivate us to develop an evaluation framework that considers both predictive behavior and explanation behavior.
 	% above paragraph is good to go
 	
 	% moving towards the generic solution
 	Explainable Artificial Intelligence (XAI) provides a framework for examining visual evidences used by CNNs for their predictions. 
 	In particular, Grad-CAM generates class-discriminative heatmaps that highlight image regions contributing to a model's predictions \cite{r6, r10}. 
+	Consequently, Grad-CAM may show whether a model rely mainly on  background and irrelevant regions instead of  focused objects \cite{ r7, r8}. 
+	%Explainability methods, such as Grad-CAM \cite{r6}, show that a model may rely mainly on  background and irrelevant regions instead of  focused objects \cite{ r7, r8}. 
 	We refer to the Grad-CAM heatmaps as explanations corresponding to a model's predictions. 
 	%The faithfulness of such explanations is an important consideration, since explanation scores should meaningfully reflect the influence of the corresponding image regions on the model’s predictions \cite{r10}. 
-	Such explanations can reveal whether a model achieves high accuracy by focusing substantially on background or other irrelevant regions rather than the target objects. 
-	Previous studies have shown that background information and spurious correlations can influence deep neural network decisions and may lead to shortcut learning \cite{r11, r12, r13}. %\zahid{add more relevent refs}. 
-	Consequently, a highly accurate model does not confirm that the predictions are made on appropriate object-level information. 
-	This creates an important distinction between predictive performance and explainable reliability. %Now it is necessary to evaluate whether a model's accuracy is based on task-relevant regions. 
+	%Such explanations can reveal whether a model achieves high accuracy by focusing substantially on background or other irrelevant regions rather than the target objects. 
+	Previous studies have shown that background information and spurious correlations can influence CNN decisions and may lead to shortcut learning \cite{r11, r12, r13}. %\zahid{add more relevent refs}. 
+	%Consequently, a highly accurate model does not confirm that the predictions are made on appropriate object-level information. 
+	%This creates an important distinction between predictive performance and explainable reliability. %Now it is necessary to evaluate whether a model's accuracy is based on task-relevant regions. 
 	%Motivated by these observations, we propose metrices combining accuracy and object focus.
-	Motivated by these observations, we propose metrics that integrate accuracy with object focus.
+	%Motivated by these observations, we propose metrics that integrate accuracy with object focus.
 	%This is the motivation for evaluating a framework that combines accuracy and object focus.
 	% above paragraph sounds okay
 	
@@ -216,24 +229,26 @@
 %	%This motivates 
 %	A complementary evaluation framework that jointly examines predictive performance, object-focused explanation quality, and explanation-aware robustness is still needed.
 	
-	\zahid{need a ref to all the methods mentioned below}
-	Prior literature has established diverse methodologies for evaluating the reliability, robustness, and explanation quality of convolutional neural networks (CNNs). 
-	Specifically, reliability has been assessed via uncertainty estimation \cite{ref14}, calibration confidence scoring,  failure detection, and risk-coverage trade-offs \cite{ref15}, 
+	%\zahid{need a ref to all the methods mentioned below}
+	Prior literature has presented diverse methodologies for reliability, robustness, and explanation quality of CNNs. 
+	More specifically, reliability has been assessed via uncertainty estimation, calibration confidence scoring,  failure detection, and risk-coverage trade-offs \cite{ref14, ref15}. 
     %and broader trustworthiness frameworks \cite{}. 
-	Robustness is typically evaluated by measuring performance degradation under common corruptions \cite{ref16}\cite{ref17}, natural distribution shifts \cite{ref18}, and targeted input perturbations \cite{ref19, ref20}, with recent efforts also examining how corruptions affect explanation stability \cite{ref21}. 
-	Concurrently, explanation quality and visual feature reliance have been measured using faithfulness metrics \cite{ref22,ref23}, ground-truth alignment, and the spatial overlap between visual explanations and target object regions \cite{ref24}.
-	
-	Despite these advances, existing evaluation methods typically focus on isolated dimensions. 
+	Robustness is typically evaluated by measuring performance degradation under common corruptions \cite{ref16, ref17}, natural distribution shifts \cite{ref18}, and targeted input perturbations \cite{ref19, ref20}. 
+	Recent efforts also examined how corruptions affect explanation stability \cite{ref21}. 
+	Explanation quality and visual feature reliance have been measured using faithfulness metrics, ground-truth alignment, and the spatial overlap between visual explanations and target object regions \cite{ref22, ref23, ref24}.
+	However, such localization measures are typically used to compare explanation methods on a fixed model, and are reported separately from accuracy rather than combined with it into a model-level score. 
+	Similarly, explanation-stability analyses \cite{ref21} quantify how much a heatmap changes under corruption, but not whether it remains on the target object, and treat this independently of changes in accuracy. 
+	Despite these advances, %existing evaluation methods typically focus on isolated dimensions. 
 	%Existing methods lack a unified, model-level evaluation framework that simultaneously accounts for predictive accuracy, the spatial fidelity of decision-relevant visual evidence, and the joint stability of both (accuracy and spatial fidelity) under input perturbations. 
-	Existing methods lack a unified, model-level evaluation framework that simultaneously accounts for predictive accuracy, the spatial fidelity of decision-relevant visual evidence, and their joint stability under input perturbations.
-	A model can maintain high accuracy, or even demonstrate stable performance under data drifts, while relying on spuriously correlated visual cues. 
-	Conversely, its underlying visual focus may shift drastically even when accuracy appears invariant. 
-	To address these limitations, a comprehensive evaluation framework is needed to jointly assess predictive performance, object-centric explanation quality, and explanation-aware robustness.
+	existing methods lack a unified, model-level evaluation framework that simultaneously accounts for predictive accuracy, the spatial fidelity of decision-relevant visual evidence, and their joint stability under input perturbations.
+	%A model can maintain high accuracy, or even demonstrate stable performance under data drifts, while relying on spuriously correlated visual cues. 
+	%The model's underlying visual focus may shift drastically even when accuracy appears invariant. 
+	%To address these limitations, a comprehensive evaluation framework is needed to jointly assess predictive performance, object-centric explanation quality, and explanation-aware robustness.
 		
 	% proposed solution
 	%To address this limitation (\zahid{we did not say the limitation yet}), 
-	We propose two novel evaluation metrics: Explainable Trustworthy Index (ETI) and Explainable Robustness Index (ERI) using XAI methods. 
-	Our objective is not to modify or improve CNN models, rather to provide quantitative measures for evaluating and comparing their reliability and robustness. 
+	We propose two novel evaluation metrics: \emph{Explainable Trustworthy Index (ETI)} and \emph{ Explainable Robustness Index (ERI)} using XAI methods. 
+	Our objective is not to improve CNN models, rather to provide quantitative measures for evaluating models and comparing their reliability and robustness. 
 	ETI measures baseline reliability on unperturbed images by jointly evaluating classification accuracy and object-focused explanation quality. 
 	In contrast, ERI measures robustness to input perturbations by assessing whether accuracy and explanation quality remain consistent with clean-image behavior.
 	%ETI evaluates model reliability on clean, unperturbed images by jointly considering classification accuracy and object-focused explanation quality. 
@@ -255,8 +270,12 @@
 	\begin{figure}[t]
 		\centering
 		\includegraphics[width=.98\columnwidth]{images/figure1.pdf}
-		\caption{Comparison between traditional accuracy and the proposed XAI-based metrics (ETI and ERI). Although both Xception and the custom CNN achieve identical $99.45\%$ validation accuracy, Grad-CAM heatmaps reveal that the custom CNN relies on background context. 
-		The proposed ETI and ERI metrics successfully capture this flaw by producing lower scores for the custom model.}
+		\caption{
+			%Comparison between traditional accuracy and the proposed XAI-based metrics (ETI and ERI). Although both Xception and the custom CNN achieve identical $99.45\%$ validation accuracy, Grad-CAM heatmaps reveal that the custom CNN relies on background context. 
+			%The proposed ETI and ERI metrics successfully capture this flaw by producing lower scores for the custom model.
+		Accuracy versus the proposed metrics for two models trained on the EPLI dataset. Xception and the Custom CNN achieve identical accuracy (99.45\%), but their Grad-CAM heatmaps for the same test image (right) differ: Xception's activation is concentrated on the leaf, whereas the Custom CNN's falls largely on the background. 
+		The proposed ETI and ERI reflect this difference.
+		}
 		\label{fig:figure1}
 	\end{figure}
 
@@ -270,14 +289,19 @@
 	%Inspecting the Grad-CAM heatmap reveals that infact the custom CNN model predicts based on the background rather than the leaf object. 
 	%Selecting the custom CNN based on the accuracy would be a wrong choice in this scenario and the proposed metrics indicating that. 
 	Figure~\ref{fig:figure1} illustrates the distinct advantages of our XAI-based metrics over traditional accuracy. 
-	Here, we show the predictions of two models - Xception  \zahid{cite the Xception paper} and a CustomCNN (detailed in Section~\ref{sec:cnn_architectures}) - on the same test image. 
-	Both models were trained on identical training data for a leaf classification task, with each achieving an accuracy of $99.45\%$ on the validation set. 
-	However, evaluating the models using our proposed metrics reveals that Xception achieves significantly higher ETI and ERI scores ($0.88$ and $0.93$) compared to the custom CNN ($0.59$ and $0.79$). 
-	Inspecting the Grad-CAM heatmaps confirms that the custom CNN relies heavily on background rather than the leaf object itself. 
-	While standard accuracy fails to identify this flaw, our proposed metrics correctly indicate that selecting the custom CNN would lead to sub-optimal model deployment.
+	%Here, we show the predictions of two models - 
+	Xception \cite {ref35} and the CustomCNN (detailed in Section~\ref{sec:cnn_architectures}), trained from identical data, both achieve $99.45\%$ accuracy on EPLI dataset \cite{ref27}, yet Xception obtains substantially higher ETI and ERI scores (0.88 and 0.93, versus 0.59 and 0.79). 
+	The Grad-CAM heatmaps show that the Custom CNN relies heavily on the background rather than the leaf. 
+	Accuracy alone rates the two models as equivalent, whereas ETI and ERI identify the Custom CNN as the weaker choice for deployment.
+	%- on the same test instance. 
+	%Both models were trained on identical training data for a leaf classification task and each achieved an accuracy of $99.45\%$ on the validation set. 
+	%However, evaluating the models using our proposed metrics reveals that Xception achieves significantly higher ETI and ERI scores ($0.88$ and $0.93$) compared to the custom CNN ($0.59$ and $0.79$). 
+	%The Grad-CAM heatmaps, on the right side of Figure~\ref{fig:figure1}, confirm that the custom CNN relies heavily on background rather than the leaf object itself. 
+	%While standard accuracy fails to identify this flaw, our proposed metrics correctly indicate that selecting the custom CNN would lead to sub-optimal model deployment.
 	
 	% solution idea
-	We introduce the Localization Mask Overlap Score (LMOS) to quantify object-focused explanation quality which is the proportion of the model's decision-relevant activation that overlaps with the annotated target-object region. 
+	We introduce a Localization Mask Overlap Score (LMOS) to quantify object-focused explanation quality.
+	LMOS indicates the proportion of a model's decision-relevant activation that overlaps with the annotated target-object region. 
 	LMOS is used in both ETI and ERI calculation.  
 	%For each test image, we create a ground-truth mask for the target object excluding the background. 
 	%We use Grad-CAM \cite{r6} to identify the image regions contributing to the model's prediction.
@@ -313,21 +337,28 @@
 	
 	We comprehensively evaluate the proposed metrics using four real-world datasets comprising two leaf image datasets:  EPLI \cite{ref27}, BDML\cite{ref28} and two flower image datasets: FLRS \cite{ref29}, FR \cite{ref30}. 
 	Eight CNN architectures are trained and evaluated on the datasets. 
+	The gap illustrated in Figure \ref{fig:figure1} is substantial: on EPLI, only 19\% of the Custom CNN's salient activation falls within the leaf, against 77.65\% for MobileNetV2, despite identical accuracy. %[Cross-dataset finding, e.g., “
+	%Across all four datasets, the model ranking by ETI differs from the ranking by accuracy in N cases.
+	This pattern holds across datasets: DenseNet121 achieves the highest accuracy on all four datasets yet the highest ETI on none, while Xception obtains the highest ERI on all four datasets.
+	%”] 
+	A low LMOS does not by itself establish shortcut learning or overfitting; rather, it quantifies how far a model’s salient activation diverges from the target object.
+	
+	
 	%We demonstrate the importance of combining accuracy with LMOS in ETI. 
 	%For example, a custom CNN achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.1900, resulting in the lowest ETI score of 0.5922 among the evaluated models. Its LMOS is only 0.1900, indicating that only 19.00\% of its decision-relevant activation, on average, falls within the annotated target-object regions, while the remaining 81.00\% lies outside these regions. 
 	%\zahid{what is the consequence??  e.g., XX\% of predictions are based on background??}
-	We demonstrate that a custom CNN  model achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.1900, resulting in the lowest ETI score of 0.5922 among the evaluated models. 
-	Its LMOS is only 0.1900, indicating that only 19.00\% of its decision-relevant activation, on average, falls within the annotated target-object regions, while the remaining 81.00\% lies outside these regions. 
-	In contrast, the MobileNetV2 model achieves 99.45\% accuracy (same as the custom CNN model) but obtains a substantially higher mean LMOS of 0.7765, indicating that 77.65\% of its decision-relevant activation falls within the target-object regions, with only 22.35\% outside them and an ETI of 0.8855. 
-	%\zahid{what is the consequence?? e.g., XX\% of predictions are based on background, must be less than custom CNN??}
-	This demonstrates that models with similar high accuracy can exhibit substantially different levels of object-focused reliance and the model with higher LMOS should be selected for real-world deployment. 
-	%A high accuracy score alone therefore cannot distinguish between a model that makes predictions while focusing on the target object and a model that achieves similar accuracy while emphasizing regions outside the target object. 
-	%Importantly, low LMOS does not by itself indicate shortcut learning, bias, or overfitting; rather. It provides quantitative evidence that the model's decision-relevant activation is insufficiently aligned with the target object, which demands further investigation.
-	Importantly, a low LMOS score does not inherently denote shortcut learning or overfitting, but rather quantifies the extent to which a model's salient activations diverge from the target object.
+%	We demonstrate that a custom CNN  model achieves 99.45\% classification accuracy on the EPLI dataset, yet its mean LMOS is only 0.19, resulting in the lowest ETI score of 0.5922 among the evaluated models. 
+%	The 0.19 LMOS indicates that only 19.00\% of its decision-relevant activation falls within the annotated target-object regions, while the remaining 81.00\% lies outside these regions. 
+%	In contrast, the MobileNetV2 model achieves 99.45\% accuracy (same as the custom CNN model) but obtains a substantially higher mean LMOS of 0.7765, indicating that 77.65\% of its decision-relevant activation falls within the target-object regions, with only 22.35\% outside them. %and an ETI of 0.8855. 
+%	%\zahid{what is the consequence?? e.g., XX\% of predictions are based on background, must be less than custom CNN??}
+%	This demonstrates that models with similar high accuracy can exhibit substantially different levels of object-focused reliance and the model with higher LMOS should be selected for real-world deployment. 
+%	%A high accuracy score alone therefore cannot distinguish between a model that makes predictions while focusing on the target object and a model that achieves similar accuracy while emphasizing regions outside the target object. 
+%	%Importantly, low LMOS does not by itself indicate shortcut learning, bias, or overfitting; rather. It provides quantitative evidence that the model's decision-relevant activation is insufficiently aligned with the target object, which demands further investigation.
+%	Importantly, a low LMOS score does not inherently denote shortcut learning or overfitting, but quantifies the extent to which a model's salient activations diverge from the target object.
 	
 	The proposed ERI combines \emph{accuracy stability} and \emph{LMOS stability} to provide a joint measure of explainable robustness. 
-	This distinction is important because predictive stability and explanation stability are not correlated. 
-	For example, in our experiments we observe that the Custom CNN model under contrast perturbation maintains relatively high accuracy stability of 0.8494 but has substantially lower LMOS stability of 0.4545 on the EPLI dataset. 
+	This distinction is important because predictive stability and explanation stability are not necessarily aligned. 
+	For example, in our experiments we observe that the Custom CNN \zahid{Custom CNN or CustomCNN or custom CNN? select one and use that consistently} model under contrast perturbation maintains relatively high accuracy stability of 0.8494 but has substantially lower LMOS stability of 0.4545 on the EPLI dataset. 
 	This indicates that, although its predictive performance remains comparatively stable, its object-focused explanation changes substantially relative to the clean-image condition. 
 	Conversely, the ResNet50 model exhibits relatively low accuracy stability of 0.4599 but higher LMOS stability of 0.7830 under the same perturbation, indicating that its object-focused explanation remains comparatively more consistent despite a larger change in predictive performance. 
 	%\zahid{what is the consequence of this??}
@@ -355,21 +386,21 @@
 	%A moderate/low ERI reveals that its accuracy, or focus on object, or both change with the use of perturbations.
 
     
-	---
-
-	\textbf{Two questions that the proposed measures can answer - How trustworty a model is? Trustworty means - predictions are based on real objects in the images. How robust a model is? Robustness means - performance of the model will not degrade under purturbations. }
-	
-	\zahid{
-	To show in exp:
-	\begin{itemize}
-		\item Acc high but not relaiable - may be low robustness or predictions based on BG. 
-		\item a model having high acc but low LMOS and has one or more of the mentioned problems
-		\item A model is trustworthy if it has high accuracy and high LMOS - show this. Idea: models with high ACC an high LMOS making more predictions based on objects in images rather than BGs
-		\item Show LMOS still works with purturbations and ACC and other traditional measure fails. 
-		\item Justify distinctions between EI and RI
-		\item Show - traditional measures fail under purturbations but proposed measures hold. 
-	\end{itemize}
-	}
+%	---
+%
+%	\textbf{Two questions that the proposed measures can answer - How trustworty a model is? Trustworty means - predictions are based on real objects in the images. How robust a model is? Robustness means - performance of the model will not degrade under purturbations. }
+%	
+%	\zahid{
+%	To show in exp:
+%	\begin{itemize}
+%		\item Acc high but not relaiable - may be low robustness or predictions based on BG. 
+%		\item a model having high acc but low LMOS and has one or more of the mentioned problems
+%		\item A model is trustworthy if it has high accuracy and high LMOS - show this. Idea: models with high ACC an high LMOS making more predictions based on objects in images rather than BGs
+%		\item Show LMOS still works with purturbations and ACC and other traditional measure fails. 
+%		\item Justify distinctions between EI and RI
+%		\item Show - traditional measures fail under purturbations but proposed measures hold. 
+%	\end{itemize}
+%	}
 
 	
 	\section{Problem Definition}
@@ -407,7 +438,8 @@
 	Let $S_{\mathrm{acc}}$ and $S _ {\mathrm{LMOS}}$ represent the overall accuracy stability (the model's stability to perform under purturbation) and LMOS stability (the model's stability to remain the object-focused for making predictions) of a model. 
 	Our second problem is to obtain an evaluation measure $R$ that jointly captures these two forms of stability across the evaluated perturbations: $R = \Phi(S_{\mathrm{acc}},  S_{\mathrm{LMOS}})$. 
 	We propose Explainable Robustness Index (ERI) to address this problem. 
-	Table \ref{tab:notation} describes the notations used in the article. \zahid{Recheck - table has all the notations and same as used in the text}
+	Table \ref{tab:notation} describes the notations used in the article. 
+	%\zahid{Recheck - table has all the notations and same as used in the text}
 	
 	%Therefore, the overall evaluation problem addressed in this study is to distinguish CNN architectures not only according to how accurately they classify clean images, but also according to whether their decision-relevant activation is aligned with the intended target object and whether both predictive performance and object-focused behavior remain stable under input perturbations. ETI addresses the first aspect on clean inputs, whereas ERI addresses the stability of these properties under perturbations. The two indices are complementary and are not intended to represent the overall trustworthiness or robustness of a CNN across all possible dimensions.
 	
@@ -471,7 +503,7 @@
 	We estimate the robustness of a model by measuring its' performance deviation under purturbation.  
 	%To evaluate performance robustness against input perturbations, we compute Accuracy Stability ($S_{\rm{acc}}$)  \zahid{if not introduced by you cite}, which measures the consistency between the classification accuracy on perturbed images and the baseline accuracy on clean test images.
 	Let $acc_c$ be the accuracy of a model on a clean dataset (not purturbed) and $acc_p$ denote the accuracy obtained on the same dataset after applying a specific perturbation $p$ (see Sec. \ref{sec:perturbation_methods} for all the purturbation methods used in this research). 
-	We intorduce the Accuracy Stability ($S_{\rm{acc}}$) score \zahid{if not introduced by you cite} under a specific perturbation $p$ as:
+	We intorduce the Accuracy Stability ($S_{\rm{acc}}$) score under a specific perturbation $p$ as:
 	%begin{equation}
 	$$	S_{\mathrm{acc}}^{p} = 1 - \frac{ | acc_c - acc_p | }
 	{acc_c + acc_p + \epsilon}$$
@@ -569,7 +601,9 @@
 		This dataset is designed for machine learning‑based species identification. We used the original dataset (not the augmented one) in our experiments \cite{ref28}.
 		
 		\item \textbf{FLRS}: FLRS (or Flowers \cite{ref29}) is a large image dataset for flower classification containing 3,670 training images of five flower species including daisies, tulips, sunflowers, dandelions, and roses. 
-		It is available through the TensorFlow Datasets (TFDS) collection \cite{ref29}. In this dataset, image resolution is not fixed.  
+		It is available through the TensorFlow Datasets (TFDS) collection \cite{ref29}. 
+		In this dataset, image resolution is not fixed.  
+		We resize the images to $XX \times YY$. 
 		\zahid{what is the resolution of the images in this dataset?}
 		
 		\item \textbf{FR}:  This kaggle \cite{ref30} dataset is very similar to the FLRS dataset above  consisting the same five species (daisies, dandelions, roses, sunflowers, and tulips). 
@@ -586,14 +620,14 @@
 	The BDML dataset is already splitted into training, validation and testing sets. 
 	We split the other three datasets into training, validation and test subsets with an approximate ratio of $80\%$, $10\%$ and $10\%$. 
 	Table \ref{tab:classwise_dataset_distribution} presents the class-wise training, validation, and test splits. 
-	\zahid{did you preserve the class distributions in the three splits?}
+	%\zahid{did you preserve the class distributions in the three splits?}
 		
-	\zahid{did you do this? or already in the sources?}
+	%\zahid{did you do this? or already in the sources?}
 	To simplify explainability and localization analysis, the test images have been manually annotated to generate corresponding JSON files. 
 	These JSON annotations describe the polygonal boundaries of the target leaf in each image. 
 	The JSON files have been converted into binary masks. 
 	Here, each mask represents only the target leaf region and excludes the background and other objects in the scene. 
-	\zahid{Table is missing BDML distribution}
+	%\zahid{Table is missing BDML distribution}
 	
 	\input{tables/tbl_dataset_distribution}
 
@@ -602,10 +636,11 @@
 	\label{sec:perturbation_methods}
 	To evaluate the robustness of the proposed framework under distribution shifts and common image corruptions, we have applied nine image perturbation methods to the test set. These types of perturbations were used for robustness measurement in previous works \cite{ref16, ref33}.
 	%As summarized in Table~\ref{tab:perturbations}, 
-	\zahid{if anything in the table is missing below, add it in the corresponding bullet}
+	%\zahid{if anything in the table is missing below, add it in the corresponding bullet}
 	%These perturbations simulate realistic degradations that may occur during image acquisition, compression, transmission, or environmental variation. 
 	The perturbation parameters have been fixed across all experiments to ensure reproducibility and enable fair comparisons among different CNN architectures. 
-	The details of the perturbations are given below: \zahid{missing references here. Add 1 or more references to papers applying these for the same reason? i.e., evaluation under purturbation}
+	The details of the perturbations are given below: 
+	%\zahid{missing references here. Add 1 or more references to papers applying these for the same reason? i.e., evaluation under purturbation}
 	
 	\begin{itemize}
 		\item \textbf{Gaussian Blur:} Applied using a $5 \times 5$ kernel to simulate the loss of fine spatial details caused by defocus or low-quality imaging conditions.
@@ -636,14 +671,14 @@
 	\label{sec:cnn_architectures}
 	In our experiments, we have used the following CNN models:
 	\begin{itemize}
-		\item \textbf{MobileNetV2}: MobileNetV2 is a lightweight CNN architecture designed to achieve a favorable trade-off between classification performance and computational efficiency. It employs inverted residual blocks with linear bottlenecks and lightweight depthwise convolutions to reduce computational cost while maintaining effective feature representations\cite{ref34}.
+		\item \textbf{MobileNetV2}: MobileNetV2 is a lightweight CNN architecture designed to achieve a favorable trade-off between classification performance and computational efficiency. It employs inverted residual blocks with linear bottlenecks and lightweight depthwise convolutions to reduce computational cost while maintaining effective feature representations \cite{ref34}.
 		\item \textbf{Xception}: Xception is based on depthwise separable convolutions and can be viewed as an extension of the Inception design in which spatial and channel-wise feature learning are more explicitly separated. The architecture provides an efficient use of model parameters while maintaining strong image classification performance \cite {ref35}.
 		\item \textbf{DenseNet121}: DenseNet121 introduces dense connectivity, in which each layer receives feature maps from all preceding layers within a dense block. This design encourages feature reuse, strengthens feature propagation, and helps alleviate the vanishing-gradient problem while maintaining relatively efficient parameter usage \cite{ref36}.
 		\item \textbf{InceptionResNetV2}: InceptionResNetV2 combines the multi-branch Inception architecture with residual connections to facilitate the training of deep networks. The residual connections accelerate optimization and enable effective learning in a computationally efficient Inception-based architecture \cite{ref37}. 
 		\item \textbf{VGG16}: VGG16 is a deep convolutional architecture that uses a simple and uniform design based primarily on stacked $3\times3$ convolutional filters followed by pooling layers. Its increased depth and straightforward architecture have made it a widely used baseline for image classification and transfer learning \cite{ref38}
 		\item \textbf{InceptionV3}: InceptionV3 employs factorized convolutions and carefully designed Inception modules to increase representational capacity while controlling computational cost. The architecture also incorporates auxiliary classification and other design improvements to achieve effective image recognition performance \cite{ref39}.
 		\item \textbf{ResNet50}: ResNet50 employs residual learning through shortcut connections that allow layers to learn residual mappings with respect to their inputs. This design facilitates the optimization of deeper networks and enables the effective learning of hierarchical visual representations \cite{ref40}.
-		\item \textbf{CustomCNN}: In this research, it has been developed as the original EPLI research.
+		\item \textbf{CustomCNN}: In this research, it has been developed as the original EPLI research  \cite{ref27}.
 	\end{itemize}
 	
 	
@@ -672,7 +707,7 @@
         \hline
         \textbf{Original Image} &
         \textbf{Masked Image} &
-        \textbf{Grad-CAM Visualization} &
+        \textbf{Grad-CAM Vis.} &
         \textbf{Threshold 0.5} &
         \textbf{Threshold 0.6} &
         \textbf{Threshold 0.7} &
@@ -687,7 +722,7 @@
         \includegraphics[width=0.13\textwidth]{images/threshold/EPLY/GradCAM_Results/Threshold_06/img_0004.png} &
         \includegraphics[width=0.13\textwidth]{images/threshold/EPLY/GradCAM_Results/Threshold_07/img_0004.png} &
         \includegraphics[width=0.13\textwidth]{images/threshold/EPLY/GradCAM_Results/Threshold_08/img_0004.png} \\
-        \hline
+        %\hline
 
         % Row 2
         \includegraphics[width=0.13\textwidth]{images/threshold/BDML/GradCAM_Results/Original/img_0000.png} &
@@ -697,7 +732,7 @@
         \includegraphics[width=0.13\textwidth]{images/threshold/BDML/GradCAM_Results/Threshold_06/img_0000.png} &
         \includegraphics[width=0.13\textwidth]{images/threshold/BDML/GradCAM_Results/Threshold_07/img_0000.png} &
         \includegraphics[width=0.13\textwidth]{images/threshold/BDML/GradCAM_Results/Threshold_08/img_0000.png} \\
-        \hline
+        %\hline
 
         % Row 3
         \includegraphics[width=0.13\textwidth]{images/threshold/FLRS/GradCAM_Results/Original/img_0014.png} &
@@ -707,7 +742,7 @@
         \includegraphics[width=0.13\textwidth]{images/threshold/FLRS/GradCAM_Results/Threshold_06/img_0014.png} &
         \includegraphics[width=0.13\textwidth]{images/threshold/FLRS/GradCAM_Results/Threshold_07/img_0014.png} &
         \includegraphics[width=0.13\textwidth]{images/threshold/FLRS/GradCAM_Results/Threshold_08/img_0014.png} \\
-        \hline
+       % \hline
 
         % Row 4
         \includegraphics[width=0.13\textwidth]{images/threshold/FR/GradCAM_Results/Original/img_0013.png} &
@@ -726,7 +761,9 @@
 	%The value of the heatmap binarization threshold $\tau$ is important because it determines whether the decision-relevant regions are allowed to pass for heatmap binarization. 
 	The choice of the threshold parameter $\tau$ is critical, as it governs the filtering of decision-relevant regions during heatmap binarization.
 	We experimented with $\tau \in \{0.5,0.6,0.7,0.8\}$. 
-	Results of the experiments are shown in Table \ref{tab:threshold_visualization}. \zahid{need to work on the figures}
+	Results of the experiments are shown in Table \ref{tab:threshold_visualization} including the original sample in the dataset (Original Image), the ground truth masks (Masked Image), Grad-CAM visualization (Grad-CAM Vis.) and effects of different $\tau$ as Threshold 0.5, Threshold 0.6, Threshold 0.7 and Threshold 0.8. 
+	%The columns in 
+	%\zahid{need to work on the figures}
 	
 	%At �� = 0.5, the binarized maps retain a large portion
 	%of the heatmap, including not only the highly activated
@@ -769,26 +806,27 @@
 	\zahid{Write about the accuray metric here and the Rank column in the tables.}
 	
 	
-	\subsection{Training Configurations}
-	We used TensorFlow/Keras on the Kaggle \zahid{cite kaggle} environment with two NVIDIA Tesla T4 GPUs to trainining and evaluation of all the CNN models in our experiments. 
-	The training configuration has followed the settings adopted in the original EPLI study\cite{ref27}. \zahid{what are these? please specify. is it only for EgyPLI or all 4 datasets??}
-	The custom CNN was trained from scratch, while other models have been initialized with ImageNet-pretrained weights \cite{ref41} \zahid{cite here} and their backbone layers have been frozen.
+	\subsection{Training configurations}
+	We used TensorFlow/Keras on the Kaggle\footnote{kaggle.com/} environment with two NVIDIA Tesla T4 GPUs to trainining and evaluation of all the CNN models in our experiments. 
+	The training configuration has followed the settings adopted in the original EPLI study \cite{ref27}. 
+	The custom CNN was trained from scratch, while other models have been initialized with ImageNet-pretrained weights \cite{ref41} and their backbone layers have been frozen.
 	
-	For the pretrained models, the original classification heads have been removed and replaced with a common classification head consisting of Global Average Pooling \zahid{cite}, a dropout layer \cite{ref42} \zahid{cite} with dropout rate 0.3, a fully connected layer with 128 ReLU units  \cite{ref43} \zahid{cite}, and the final softmax layer has been configured according to the number of classes in each dataset.
+	For the pretrained models, the original classification heads have been removed and replaced with a common classification head consisting of Global Average Pooling \zahid{Goodfellow, I., Bengio, Y., \& Courville, A. (2016). Deep Learning. MIT Press}, a dropout layer \cite{ref42} with dropout rate 0.3, a fully connected layer with 128 ReLU units  \cite{ref43}, and the final softmax layer has been configured according to the number of classes in each dataset.
 	%The custom CNN has followed its original convolutional architecture. 
-	The Adam optimiser \cite{ref44} \zahid{cite} has been used with a learning rate of $5\times10^{-5}$ and categorical cross-entropy loss \zahid{arg1} in all model optimizations.
+	The Adam optimiser \cite{ref44} has been used with a learning rate of $5\times10^{-5}$ and categorical cross-entropy loss \zahid{Goodfellow, I., Bengio, Y., \& Courville, A. (2016). Deep Learning. MIT Press} in all model optimizations.
 	%We have used TensorFlow/Keras Functional API, while the original EgyPLI research used the sequential API. This implementation choice does not alter the underlying CNN architectures or their corresponding backbone configurations.
 	
 	%The trained models have been subsequently evaluated on clean and perturbed test images. Their classification accuracy and Grad-CAM-based LMOS have been used to calculate accuracy stability, LMOS stability, ETI, and ERI.
 	
-	%----------------------------------------------------------
-	%-----------------RESULT & DISCUSSION-----------------
-	%----------------------------------------------------------
-	\section{Result and Discussion}
-    \input{tables/tbl_sample_xai.tex}
+%----------------------------------------------------------
+%-----------------RESULT & DISCUSSION-----------------
+%----------------------------------------------------------
+\section{Results and Discussion}
+
+\input{tables/tbl_sample_xai.tex}
 
     
-\subsection{Grad-CAM Visualization}
+\subsection{Grad-CAM visualization}
 \label{sec:gradcam_visualization}
 
 Tables~\ref{tab:model_robustness_leaves} and~\ref{tab:model_robustness_flower} present representative Grad-CAM visualizations with corresponding LMOS values across the four benchmark datasets. For each selected sample, the visualization strip contains the original input image, its ground-truth segmentation mask, the segmented target obtained by removing the background, and Grad-CAM visualizations under clean and perturbed conditions. These qualitative examples complement the quantitative ETI and ERI results by illustrating how different CNN architectures focus on the target object and how their attention patterns change under input perturbations.
@@ -801,74 +839,76 @@ The flower datasets further demonstrate that the relationship between classifica
 
 Overall, these visualizations reinforce the main motivation of ETI: classification accuracy alone is insufficient to characterize the reliability of a CNN when the model may base its prediction on regions unrelated to the target object. Models such as Xception demonstrate that strong classification performance can be accompanied by substantially better target-focused attention, whereas the Custom CNN and, in several cases, InceptionV3 exhibit a noticeable discrepancy between predictive performance and localization quality. The qualitative Grad-CAM results therefore provide an intuitive interpretation of the quantitative LMOS and ETI measurements and illustrate how the proposed evaluation framework can expose differences in model behavior that conventional accuracy metrics may overlook.
 
-    
-	%\subsubsection{Threshold Justification}
-	%\label{sec:threshold_justification}
 
-    
+% Ensure you have \usepackage{booktabs} and \usepackage{multirow} in your preamble
 \begin{table*}[htbp]
-\centering
-\caption{Comparison of classification accuracy, mean LMOS, ETI, and ablation variants across different CNN architectures on four benchmark datasets.}
-\label{tab:eti_all_datasets}
-\resizebox{\textwidth}{!}{%
-\footnotesize
-\begin{tabular}{|l|c|l|c|c|c|c|c|}
-\hline
-\textbf{Dataset} & \textbf{Rank} & \textbf{Model} & 
-\textbf{Acc} & $\overline{\mathbf{LMOS}}$ & 
-\textbf{ETI} & \textbf{ETI w/o Acc.} & 
-\textbf{ETI w/o LMOS} \\
-\hline
-
-\multirow{8}{*}{EPLI}
-&1&MobileNetV2&0.9945&0.7765&0.8855&0.3882&0.4972\\
-&2&Xception&0.9945&0.7638&0.8791&0.3819&0.4972\\
-&3&DenseNet121&1.0000&0.6964&0.8482&0.3482&0.5000\\
-&4&InceptionResNetV2&0.9889&0.5529&0.7709&0.2764&0.4945\\
-&5&VGG16&0.9834&0.5268&0.7551&0.2634&0.4917\\
-&6&InceptionV3&0.9917&0.3617&0.6767&0.1809&0.4958\\
-&7&ResNet50&0.6122&0.7256&0.6689&0.3628&0.3061\\
-&8&Custom CNN&0.9945&0.1900&0.5922&0.0950&0.4972\\
-\hline
-
-\multirow{8}{*}{BDML}
-&1&MobileNetV2&0.9703&0.7611&0.8657&0.3805&0.4851\\
-&2&Xception&0.9505&0.7800&0.8653&0.3900&0.4752\\
-&3&DenseNet121&0.9802&0.7118&0.8460&0.3559&0.4901\\
-&4&VGG16&0.8960&0.5873&0.7416&0.2936&0.4480\\
-&5&InceptionResNetV2&0.9059&0.5184&0.7122&0.2592&0.4530\\
-&6&InceptionV3&0.9307&0.3344&0.6325&0.1672&0.4653\\
-&7&ResNet50&0.4604&0.7817&0.6211&0.3909&0.2302\\
-&8&Custom CNN&0.7376&0.3310&0.5343&0.1655&0.3688\\
-\hline
-
-\multirow{8}{*}{ FLRS}
-&1&Xception&0.8828&0.6869&0.7849&0.3435&0.4414\\
-&2&DenseNet121&0.9046&0.6188&0.7617&0.3094&0.4523\\
-&3&MobileNetV2&0.8665&0.5958&0.7311&0.2979&0.4332\\
-&4&VGG16&0.8147&0.6311&0.7229&0.3155&0.4074\\
-&5&InceptionResNetV2&0.8501&0.5581&0.7041&0.2791&0.4251\\
-&6&InceptionV3&0.8229&0.3749&0.5989&0.1875&0.4114\\
-&7&ResNet50&0.5123&0.5623&0.5373&0.2812&0.2561\\
-&8&Custom CNN&0.7003&0.2891&0.4947&0.1446&0.3501\\
-\hline
-
-\multirow{8}{*}{FR}
-&1&Xception&0.9032&0.6029&0.7531&0.3015&0.4516\\
-&2&DenseNet121&0.9124&0.5382&0.7253&0.2691&0.4562\\
-&3&VGG16&0.8387&0.5786&0.7087&0.2893&0.4194\\
-&4&MobileNetV2&0.8986&0.5091&0.7038&0.2545&0.4493\\
-&5&InceptionResNetV2&0.8894&0.4705&0.6800&0.2353&0.4447\\
-&6&InceptionV3&0.8825&0.3063&0.5944&0.1531&0.4412\\
-&7&ResNet50&0.4977&0.4769&0.4873&0.2384&0.2488\\
-&8&Custom CNN&0.6820&0.2714&0.4767&0.1357&0.3410\\
-
-\hline
-\end{tabular}}
+	\centering
+	\caption{Comparison of classification accuracy, mean LMOS, ETI, and ablation variants across different CNN architectures on four benchmark datasets.}
+	\label{tab:eti_all_datasets}
+	\resizebox{\textwidth}{!}{%
+		\small
+		\begin{tabular}{lllcD{.}{.}{4}D{.}{.}{4}D{.}{.}{4}D{.}{.}{4}D{.}{.}{4}} % Note: D column alignment can also use standard 'r' if dcolumn is not loaded
+			\toprule
+			\textbf{Dataset} & \textbf{Rank} & \textbf{Model} & 
+			\textbf{Acc} & \multicolumn{1}{c}{$\overline{\mathbf{LMOS}}$} & 
+			\multicolumn{1}{c}{\textbf{ETI}} & \multicolumn{1}{c}{\textbf{ETI w/o Acc.}} & 
+			\multicolumn{1}{c}{\textbf{ETI w/o LMOS}} \\
+			\midrule
+			
+			\multirow{8}{*}{EPLI}
+			& 1 & MobileNetV2       & 0.9945 & 0.7765 & 0.8855 & 0.3882 & 0.4972 \\
+			& 2 & Xception          & 0.9945 & 0.7638 & 0.8791 & 0.3819 & 0.4972 \\
+			& 3 & DenseNet121       & 1.0000 & 0.6964 & 0.8482 & 0.3482 & 0.5000 \\
+			& 4 & InceptionResNetV2 & 0.9889 & 0.5529 & 0.7709 & 0.2764 & 0.4945 \\
+			& 5 & VGG16             & 0.9834 & 0.5268 & 0.7551 & 0.2634 & 0.4917 \\
+			& 6 & InceptionV3       & 0.9917 & 0.3617 & 0.6767 & 0.1809 & 0.4958 \\
+			& 7 & ResNet50          & 0.6122 & 0.7256 & 0.6689 & 0.3628 & 0.3061 \\
+			& 8 & Custom CNN        & 0.9945 & 0.1900 & 0.5922 & 0.0950 & 0.4972 \\
+			\addlinespace[0.5em]
+			\hline
+			\addlinespace[0.5em]
+			
+			\multirow{8}{*}{BDML}
+			& 1 & MobileNetV2       & 0.9703 & 0.7611 & 0.8657 & 0.3805 & 0.4851 \\
+			& 2 & Xception          & 0.9505 & 0.7800 & 0.8653 & 0.3900 & 0.4752 \\
+			& 3 & DenseNet121       & 0.9802 & 0.7118 & 0.8460 & 0.3559 & 0.4901 \\
+			& 4 & VGG16             & 0.8960 & 0.5873 & 0.7416 & 0.2936 & 0.4480 \\
+			& 5 & InceptionResNetV2 & 0.9059 & 0.5184 & 0.7122 & 0.2592 & 0.4530 \\
+			& 6 & InceptionV3       & 0.9307 & 0.3344 & 0.6325 & 0.1672 & 0.4653 \\
+			& 7 & ResNet50          & 0.4604 & 0.7817 & 0.6211 & 0.3909 & 0.2302 \\
+			& 8 & Custom CNN        & 0.7376 & 0.3310 & 0.5343 & 0.1655 & 0.3688 \\
+			\addlinespace[0.5em]
+			\hline
+			\addlinespace[0.5em]
+			
+			\multirow{8}{*}{FLRS}
+			& 1 & Xception          & 0.8828 & 0.6869 & 0.7849 & 0.3435 & 0.4414 \\
+			& 2 & DenseNet121       & 0.9046 & 0.6188 & 0.7617 & 0.3094 & 0.4523 \\
+			& 3 & MobileNetV2       & 0.8665 & 0.5958 & 0.7311 & 0.2979 & 0.4332 \\
+			& 4 & VGG16             & 0.8147 & 0.6311 & 0.7229 & 0.3155 & 0.4074 \\
+			& 5 & InceptionResNetV2 & 0.8501 & 0.5581 & 0.7041 & 0.2791 & 0.4251 \\
+			& 6 & InceptionV3       & 0.8229 & 0.3749 & 0.5989 & 0.1875 & 0.4114 \\
+			& 7 & ResNet50          & 0.5123 & 0.5623 & 0.5373 & 0.2812 & 0.2561 \\
+			& 8 & Custom CNN        & 0.7003 & 0.2891 & 0.4947 & 0.1446 & 0.3501 \\
+			\addlinespace[0.5em]
+			\hline
+			\addlinespace[0.5em]
+			
+			\multirow{8}{*}{FR}
+			& 1 & Xception          & 0.9032 & 0.6029 & 0.7531 & 0.3015 & 0.4516 \\
+			& 2 & DenseNet121       & 0.9124 & 0.5382 & 0.7253 & 0.2691 & 0.4562 \\
+			& 3 & VGG16             & 0.8387 & 0.5786 & 0.7087 & 0.2893 & 0.4194 \\
+			& 4 & MobileNetV2       & 0.8986 & 0.5091 & 0.7038 & 0.2545 & 0.4493 \\
+			& 5 & InceptionResNetV2 & 0.8894 & 0.4705 & 0.6800 & 0.2353 & 0.4447 \\
+			& 6 & InceptionV3       & 0.8825 & 0.3063 & 0.5944 & 0.1531 & 0.4412 \\
+			& 7 & ResNet50          & 0.4977 & 0.4769 & 0.4873 & 0.2384 & 0.2488 \\
+			& 8 & Custom CNN        & 0.6820 & 0.2714 & 0.4767 & 0.1357 & 0.3410 \\
+			\bottomrule
+	\end{tabular}}
 \end{table*}
     
-	\subsection{Explainable Trustworthiness Index (ETI)}
-    
+
+\subsection{Evaluation of the ETI}    
 Table~\ref{tab:eti_all_datasets} illustrates a detailed evaluation of the proposed Explainable Trustworthiness Index (ETI) across four benchmark datasets: EPLI, BDML, FLRS, and FR. ETI not only considers accuracy but also explanation quality. It integrates prediction accuracy and the mean Localization Mask Overlap Score (LMOS). Therefore, a model achieves a higher ETI only when it possesses both reliable classification capability and consistent focus on semantically meaningful image regions instead of the background. The results clearly indicate that accuracy alone is not enough to measure model trustworthiness. Several models have achieved competitive classification performance but fail to achieve higher ETI values due to poor localization quality.
 
 
@@ -884,652 +924,460 @@ Across all datasets, the ablation trends consistently show that the complete ETI
 
 
 
+
 \begin{table*}[t]
-\centering
-\caption{Accuracy stability of different CNN architectures on EPLI under various input perturbations.}
-\label{tab:accuracy_stability_egypli}
-
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Mean}\\
-\hline
-
-Custom CNN
-&0.9801&0.9958&0.9021&0.8711&0.8494&0.8033&0.9916&0.9986&0.9801&0.9302\\
-
-DenseNet121
-&0.9944&0.9845&1.0000&0.9986&0.9860&0.9916&0.9159&0.9930&1.0000&0.9849\\
-
-MobileNetV2
-&0.9441&0.9534&1.0000&0.9916&0.9902&0.9986&0.8816&0.9916&0.9830&0.9704\\
-
-InceptionResNetV2
-&0.9727&0.9829&0.9986&0.9986&0.9944&0.9915&0.9149&0.9887&0.9469&0.9766\\
-
-InceptionV3
-&0.9593&0.9771&0.9958&0.9972&0.9944&0.9915&0.9217&0.9757&0.9201&0.9703\\
-
-ResNet50
-&0.9816&0.6962&0.9955&0.9862&0.4599&0.8978&0.5316&0.9769&0.9113&0.8263\\
-
-VGG16
-&0.9828&0.9695&0.9958&0.9813&0.8380&0.9843&0.8284&0.9943&0.9481&0.9469\\
-
-Xception
-&0.9801&0.9902&0.9986&1.0000&0.9972&0.9958&0.9549&0.9958&0.9859&0.9887\\
-
-\hline
-\end{tabular}
+	\centering
+	\caption{Accuracy stability of different CNN architectures on EPLI under various input perturbations.}
+	\label{tab:accuracy_stability_egypli}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{3.5pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Mean} \\
+		\midrule
+		Custom CNN         & 0.9801 & 0.9958 & 0.9021 & 0.8711 & 0.8494 & 0.8033 & 0.9916 & 0.9986 & 0.9801 & 0.9302 \\
+		DenseNet121        & 0.9944 & 0.9845 & 1.0000 & 0.9986 & 0.9860 & 0.9916 & 0.9159 & 0.9930 & 1.0000 & 0.9849 \\
+		MobileNetV2        & 0.9441 & 0.9534 & 1.0000 & 0.9916 & 0.9902 & 0.9986 & 0.8816 & 0.9916 & 0.9830 & 0.9704 \\
+		InceptionResNetV2  & 0.9727 & 0.9829 & 0.9986 & 0.9986 & 0.9944 & 0.9915 & 0.9149 & 0.9887 & 0.9469 & 0.9766 \\
+		InceptionV3        & 0.9593 & 0.9771 & 0.9958 & 0.9972 & 0.9944 & 0.9915 & 0.9217 & 0.9757 & 0.9201 & 0.9703 \\
+		ResNet50           & 0.9816 & 0.6962 & 0.9955 & 0.9862 & 0.4599 & 0.8978 & 0.5316 & 0.9769 & 0.9113 & 0.8263 \\
+		VGG16              & 0.9828 & 0.9695 & 0.9958 & 0.9813 & 0.8380 & 0.9843 & 0.8284 & 0.9943 & 0.9481 & 0.9469 \\
+		Xception           & 0.9801 & 0.9902 & 0.9986 & 1.0000 & 0.9972 & 0.9958 & 0.9549 & 0.9958 & 0.9859 & 0.9887 \\
+		\bottomrule
+	\end{tabular}
 \end{table*}
 
 
-\begin{table*}[t]
-\centering
-\caption{LMOS stability of different CNN architectures on EPLI under various input perturbations.}
-\label{tab:lmos_stability_egypli}
-
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Mean}\\
-\hline
-
-Custom CNN
-&0.7525&0.7421&0.5343&0.5701&0.4545&0.5053&0.7242&0.9071&0.7376&0.6586\\
-
-DenseNet121
-&0.8322&0.8151&0.9352&0.8723&0.8256&0.8398&0.6551&0.8103&0.8402&0.8251\\
-
-MobileNetV2
-&0.8099&0.8200&0.9303&0.8910&0.8382&0.8763&0.7212&0.8393&0.8373&0.8404\\
-
-InceptionResNetV2
-&0.6846&0.6978&0.8646&0.8556&0.7867&0.7693&0.5969&0.7433&0.7177&0.7463\\
-
-InceptionV3
-&0.6550&0.6384&0.8425&0.8184&0.7378&0.7450&0.5560&0.6294&0.6426&0.6961\\
-
-ResNet50
-&0.8417&0.7607&0.9332&0.9070&0.7830&0.8010&0.7666&0.8410&0.8187&0.8281\\
-
-VGG16
-&0.7576&0.7014&0.8812&0.7836&0.5362&0.7432&0.5007&0.7693&0.6564&0.7033\\
-
-Xception
-&0.8540&0.8611&0.9482&0.9489&0.9122&0.8802&0.7613&0.8712&0.8877&0.8805\\
-
-
-\hline
-\end{tabular}
-\end{table*}
-
-\begin{table*}[t]
-\centering
-\caption{ERI of different CNN architectures on EPLI under individual input perturbations.}
-\label{tab:eri_perturbation_egypli}
-
-\scriptsize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Overall ERI}\\
-\hline
-
-Custom CNN
-&0.8663&0.8690&0.7182&0.7206&0.6520&0.6543&0.8579&0.9528&0.8589&0.7944\\
-
-DenseNet121
-&0.9133&0.8998&0.9676&0.9355&0.9058&0.9157&0.7855&0.9017&0.9201&0.9050\\
-
-MobileNetV2
-&0.8770&0.8867&0.9651&0.9413&0.9142&0.9375&0.8014&0.9155&0.9102&0.9054\\
-
-InceptionResNetV2
-&0.8286&0.8403&0.9316&0.9271&0.8905&0.8804&0.7559&0.8660&0.8323&0.8614\\
-
-InceptionV3
-&0.8072&0.8077&0.9192&0.9078&0.8661&0.8682&0.7389&0.8025&0.7813&0.8332\\
-
-ResNet50
-&0.9117&0.7285&0.9644&0.9466&0.6215&0.8494&0.6491&0.9089&0.8650&0.8272\\
-
-VGG16
-&0.8702&0.8355&0.9385&0.8824&0.6871&0.8638&0.6645&0.8818&0.8023&0.8251\\
-
-Xception
-&0.9170&0.9256&0.9734&0.9745&0.9547&0.9380&0.8581&0.9335&0.9368&0.9346\\
-
-\hline
-\end{tabular}
-\end{table*}
 
 
 \begin{table*}[t]
-\centering
-\caption{ERI ranking and ablation analysis of CNN architectures on EPLI}
-\label{tab:eri_ablation_ranking_egypli}
-
-\scriptsize
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.15}
-
-\begin{tabular}{|c|l|c|c|c|c|c|}
-\hline
-\textbf{Rank} &
-\textbf{Model} &
-\textbf{Accuracy Stability (mean)} &
-\textbf{LMOS Stability (mean)} &
-\textbf{ERI} &
-\textbf{ERI w/o Accuracy} &
-\textbf{ERI w/o LMOS} \\
-\hline
-
-1 & Xception
-&0.9887&0.8805&0.9346&0.4403&0.4944\\
-
-2 & MobileNetV2
-&0.9704&0.8404&0.9054&0.4202&0.4852\\
-
-3 & DenseNet121
-&0.9849&0.8251&0.9050&0.4125&0.4924\\
-
-4 & InceptionResNetV2
-&0.9766&0.7463&0.8614&0.3731&0.4883\\
-
-5 & InceptionV3
-&0.9703&0.6961&0.8332&0.3481&0.4852\\
-
-6 & ResNet50
-&0.8263&0.8281&0.8272&0.4140&0.4132\\
-
-7 & VGG16
-&0.9469&0.7033&0.8251&0.3517&0.4735\\
-
-8 & Custom CNN
-&0.9302&0.6586&0.7944&0.3293&0.4651\\
-
-\hline
-\end{tabular}
+	\centering
+	\caption{LMOS stability of different CNN architectures on EPLI under various input perturbations.}
+	\label{tab:lmos_stability_egypli}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{3.5pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Mean} \\
+		\midrule
+		Custom CNN         & 0.7525 & 0.7421 & 0.5343 & 0.5701 & 0.4545 & 0.5053 & 0.7242 & 0.9071 & 0.7376 & 0.6586 \\
+		DenseNet121        & 0.8322 & 0.8151 & 0.9352 & 0.8723 & 0.8256 & 0.8398 & 0.6551 & 0.8103 & 0.8402 & 0.8251 \\
+		MobileNetV2        & 0.8099 & 0.8200 & 0.9303 & 0.8910 & 0.8382 & 0.8763 & 0.7212 & 0.8393 & 0.8373 & 0.8404 \\
+		InceptionResNetV2  & 0.6846 & 0.6978 & 0.8646 & 0.8556 & 0.7867 & 0.7693 & 0.5969 & 0.7433 & 0.7177 & 0.7463 \\
+		InceptionV3        & 0.6550 & 0.6384 & 0.8425 & 0.8184 & 0.7378 & 0.7450 & 0.5560 & 0.6294 & 0.6426 & 0.6961 \\
+		ResNet50           & 0.8417 & 0.7607 & 0.9332 & 0.9070 & 0.7830 & 0.8010 & 0.7666 & 0.8410 & 0.8187 & 0.8281 \\
+		VGG16              & 0.7576 & 0.7014 & 0.8812 & 0.7836 & 0.5362 & 0.7432 & 0.5007 & 0.7693 & 0.6564 & 0.7033 \\
+		Xception           & 0.8540 & 0.8611 & 0.9482 & 0.9489 & 0.9122 & 0.8802 & 0.7613 & 0.8712 & 0.8877 & 0.8805 \\
+		\bottomrule
+	\end{tabular}
 \end{table*}
 
 
-	\subsection{Explainable Robustness Index (ERI)}
-	\noindent\textbf{EPLI}
 
+\begin{table*}[t]
+	\centering
+	\caption{ERI of different CNN architectures on EPLI under individual input perturbations.}
+	\label{tab:eri_perturbation_egypli}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{4pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Overall ERI} \\
+		\midrule
+		Custom CNN         & 0.8663 & 0.8690 & 0.7182 & 0.7206 & 0.6520 & 0.6543 & 0.8579 & 0.9528 & 0.8589 & 0.7944 \\
+		DenseNet121        & 0.9133 & 0.8998 & 0.9676 & 0.9355 & 0.9058 & 0.9157 & 0.7855 & 0.9017 & 0.9201 & 0.9050 \\
+		MobileNetV2        & 0.8770 & 0.8867 & 0.9651 & 0.9413 & 0.9142 & 0.9375 & 0.8014 & 0.9155 & 0.9102 & 0.9054 \\
+		InceptionResNetV2  & 0.8286 & 0.8403 & 0.9316 & 0.9271 & 0.8905 & 0.8804 & 0.7559 & 0.8660 & 0.8323 & 0.8614 \\
+		InceptionV3        & 0.8072 & 0.8077 & 0.9192 & 0.9078 & 0.8661 & 0.8682 & 0.7389 & 0.8025 & 0.7813 & 0.8332 \\
+		ResNet50           & 0.9117 & 0.7285 & 0.9644 & 0.9466 & 0.6215 & 0.8494 & 0.6491 & 0.9089 & 0.8650 & 0.8272 \\
+		VGG16              & 0.8702 & 0.8355 & 0.9385 & 0.8824 & 0.6871 & 0.8638 & 0.6645 & 0.8818 & 0.8023 & 0.8251 \\
+		Xception           & 0.9170 & 0.9256 & 0.9734 & 0.9745 & 0.9547 & 0.9380 & 0.8581 & 0.9335 & 0.9368 & 0.9346 \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+
+% Ensure you have \usepackage{graphicx} and \usepackage{booktabs} in your preamble
+\begin{table}[t]
+	\centering
+	\caption{ERI ranking and ablation analysis of CNN architectures on EPLI.}
+	\label{tab:eri_ablation_ranking_egypli}
+	
+	\tiny
+	\setlength{\tabcolsep}{3pt}
+	\renewcommand{\arraystretch}{1.1}
+	
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{r l *{5}{r}}
+			\toprule
+			\textbf{Rank} &
+			\textbf{Model} &
+			$S_{\text{acc}}$ &
+			$S_{\text{LMOS}}$ &
+			\textbf{ERI} &
+			$\mathrm{ERI}_{\text{w/o acc}}$ &
+			$\mathrm{ERI}_{\text{w/o LMOS}}$ \\
+			\midrule
+			1 & Xception          & 0.9887 & 0.8805 & 0.9346 & 0.4403 & 0.4944 \\
+			2 & MobileNetV2       & 0.9704 & 0.8404 & 0.9054 & 0.4202 & 0.4852 \\
+			3 & DenseNet121       & 0.9849 & 0.8251 & 0.9050 & 0.4125 & 0.4924 \\
+			4 & InceptionResNetV2 & 0.9766 & 0.7463 & 0.8614 & 0.3731 & 0.4883 \\
+			5 & InceptionV3       & 0.9703 & 0.6961 & 0.8332 & 0.3481 & 0.4852 \\
+			6 & ResNet50          & 0.8263 & 0.8281 & 0.8272 & 0.4140 & 0.4132 \\
+			7 & VGG16             & 0.9469 & 0.7033 & 0.8251 & 0.3517 & 0.4735 \\
+			8 & Custom CNN        & 0.9302 & 0.6586 & 0.7944 & 0.3293 & 0.4651 \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+\subsection{Evaluation of the ERI}
+%\noindent\textbf{EPLI}
 The ERI values of the evaluated CNN architectures have been assessed from both prediction stability and explanation stability. Table~\ref{tab:accuracy_stability_egypli} shows that most architectures have maintained high accuracy stability under common perturbations, particularly brightness, hue, gamma, and compression. Xception has achieved the highest mean accuracy stability (0.9887), followed by DenseNet121 (0.9849) and InceptionResNetV2 (0.9766). In contrast, ResNet50 has exhibited substantially lower stability (0.8263), mainly due to its sensitivity to blur, contrast, and motion blur. Although the Custom CNN has maintained a relatively high mean accuracy stability of 0.9302, its performance does not necessarily indicate reliable robustness when the stability of its explanations is considered.
 
 Table~\ref{tab:lmos_stability_egypli} reveals greater variation in explanation stability across architectures. Xception has achieved the highest mean LMOS stability (0.8805), followed by MobileNetV2 (0.8404) and ResNet50 (0.8281). The Custom CNN has shown considerably lower LMOS stability (0.6586), indicating that its Grad-CAM explanations have changed more substantially under perturbations despite relatively stable predictions. Motion blur generally has produced the largest degradation in explanation stability, while brightness and hue shifts are comparatively less disruptive for most architectures.
 
 The combined results are reflected in the ERI values in Table~\ref{tab:eri_perturbation_egypli}. Xception has achieved the highest overall ERI of 0.9346, demonstrating a strong balance between prediction and explanation stability across all perturbations. MobileNetV2 (0.9054) and DenseNet121 (0.9050) have followed closely. At the other end of the ranking, the Custom CNN has obtained the lowest ERI (0.7944), despite achieving a substantially higher accuracy stability than ResNet50. This demonstrates the importance of incorporating explanation stability into robustness assessment: high predictive stability alone does not guarantee stable and trustworthy model behavior. Across perturbations, brightness and hue generally have produced the highest ERI values, whereas motion blur is consistently among the most challenging perturbations.
 
-The ranking and ablation results in Table~\ref{tab:eri_ablation_ranking_egypli} further support this observation. Xception has ranked first with an ERI of 0.9346, while MobileNetV2 and DenseNet121 have ranked second and third, respectively. Removing either accuracy stability or LMOS stability substantially reduces the resulting score for every architecture, confirming that both components contribute meaningfully to the proposed ERI. Overall, the EPLI results demonstrate that ERI provides a more comprehensive characterization of CNN robustness by jointly considering whether predictions remain stable and whether the corresponding visual explanations remain consistent under input perturbations.
-
-
-
-\begin{table*}[t]
-\centering
-\caption{Accuracy stability of different CNN architectures on BDML under various input perturbations.}
-\label{tab:accuracy_stability_bdmedileaves}
-
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Mean} \\
-\hline
-
-Custom CNN
-&0.9689&0.7265&0.7319&0.8359&0.5174&0.8221&0.5943&0.9724&0.9084&0.7864\\
-
-DenseNet121
-&0.9794&0.9496&0.9924&0.9846&0.9846&0.9898&0.8750&0.9714&0.9714&0.9665\\
-
-MobileNetV2
-&0.9792&0.9111&0.9949&1.0000&0.9871&0.9949&0.8085&0.9574&0.9377&0.9523\\
-
-InceptionResNetV2
-&0.9513&0.9360&0.9917&0.9917&0.9890&0.9973&0.8738&0.9204&0.9452&0.9552\\
-
-InceptionV3
-&0.9810&0.9379&0.9838&0.9920&0.9865&0.9973&0.8876&0.9195&0.9038&0.9544\\
-
-ResNet50
-&0.9780&0.4103&0.8929&0.9738&0.3966&0.8929&0.4103&0.9186&0.9249&0.7553\\
-
-VGG16
-&1.0000&0.9538&0.9916&0.9803&0.8997&0.9745&0.8131&0.9888&0.9716&0.9526\\
-
-Xception
-&0.9760&0.8739&0.9895&0.9921&0.9868&0.9948&0.8805&0.9122&0.9183&0.9471\\
-
-\hline
-\end{tabular}
-\end{table*}
-
-\begin{table*}[t]
-\centering
-\caption{LMOS stability of different CNN architectures on BDML under various input perturbations.}
-\label{tab:lmos_stability_bdmedileaves}
-
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Mean} \\
-\hline
-
-Custom CNN
-&0.6527&0.5391&0.5192&0.5206&0.4322&0.4802&0.5138&0.7388&0.6041&0.5556\\
-
-DenseNet121
-&0.8505&0.7066&0.8788&0.8860&0.8255&0.8573&0.6538&0.8219&0.8365&0.8130\\
-
-MobileNetV2
-&0.8044&0.7037&0.8849&0.8624&0.7967&0.8231&0.6132&0.7769&0.7908&0.7840\\
-
-InceptionResNetV2
-&0.6655&0.6017&0.8148&0.7627&0.7656&0.7649&0.5920&0.6376&0.6674&0.6969\\
-
-InceptionV3
-&0.6297&0.5752&0.7254&0.7291&0.6905&0.6274&0.5267&0.5578&0.5659&0.6253\\
-
-ResNet50
-&0.9070&0.8051&0.8610&0.9044&0.7997&0.8418&0.8091&0.8880&0.8927&0.8565\\
-
-VGG16
-&0.8378&0.6823&0.7996&0.7550&0.6200&0.7023&0.4370&0.7505&0.7047&0.6988\\
-
-Xception
-&0.8693&0.7526&0.9185&0.9105&0.9097&0.8719&0.7333&0.8027&0.8747&0.8493\\
-
-\hline
-\end{tabular}
-\end{table*}
+The ranking and ablation results in Table~\ref{tab:eri_ablation_ranking_egypli} \zahid{explain the symbols used in the col header} further support this observation. Xception has ranked first with an ERI of 0.9346, while MobileNetV2 and DenseNet121 have ranked second and third, respectively. Removing either accuracy stability or LMOS stability substantially reduces the resulting score for every architecture, confirming that both components contribute meaningfully to the proposed ERI. Overall, the EPLI results demonstrate that ERI provides a more comprehensive characterization of CNN robustness by jointly considering whether predictions remain stable and whether the corresponding visual explanations remain consistent under input perturbations.
 
 
 \begin{table*}[t]
-\centering
-\caption{ERI of different CNN architectures on BDML under individual input perturbations}
-\label{tab:eri_perturbation_bdmedileaves}
-
-\scriptsize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Overall ERI} \\
-\hline
-
-Custom CNN
-&0.8108&0.6328&0.6256&0.6783&0.4748&0.6512&0.5541&0.8556&0.7563&0.6710\\
-
-DenseNet121
-&0.9150&0.8281&0.9356&0.9353&0.9051&0.9236&0.7644&0.8967&0.9040&0.8897\\
-
-MobileNetV2
-&0.8918&0.8074&0.9399&0.9312&0.8919&0.9090&0.7109&0.8672&0.8643&0.8682\\
-
-InceptionResNetV2
-&0.8084&0.7689&0.9033&0.8772&0.8773&0.8811&0.7329&0.7790&0.8063&0.8260\\
-
-InceptionV3
-&0.8054&0.7566&0.8546&0.8606&0.8385&0.8124&0.7072&0.7387&0.7349&0.7898\\
-
-ResNet50
-&0.9425&0.6077&0.8769&0.9391&0.5982&0.8674&0.6097&0.9033&0.9088&0.8059\\
-
-VGG16
-&0.9189&0.8181&0.8956&0.8677&0.7599&0.8384&0.6251&0.8697&0.8382&0.8257\\
-
-Xception
-&0.9227&0.8133&0.9540&0.9513&0.9483&0.9334&0.8069&0.8575&0.8965&0.8982\\
-
-\hline
-\end{tabular}
+	\centering
+	\caption{Accuracy stability of different CNN architectures on BDML under various input perturbations.}
+	\label{tab:accuracy_stability_bdmedileaves}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{3.5pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Mean} \\
+		\midrule
+		Custom CNN         & 0.9689 & 0.7265 & 0.7319 & 0.8359 & 0.5174 & 0.8221 & 0.5943 & 0.9724 & 0.9084 & 0.7864 \\
+		DenseNet121        & 0.9794 & 0.9496 & 0.9924 & 0.9846 & 0.9846 & 0.9898 & 0.8750 & 0.9714 & 0.9714 & 0.9665 \\
+		MobileNetV2        & 0.9792 & 0.9111 & 0.9949 & 1.0000 & 0.9871 & 0.9949 & 0.8085 & 0.9574 & 0.9377 & 0.9523 \\
+		InceptionResNetV2  & 0.9513 & 0.9360 & 0.9917 & 0.9917 & 0.9890 & 0.9973 & 0.8738 & 0.9204 & 0.9452 & 0.9552 \\
+		InceptionV3        & 0.9810 & 0.9379 & 0.9838 & 0.9920 & 0.9865 & 0.9973 & 0.8876 & 0.9195 & 0.9038 & 0.9544 \\
+		ResNet50           & 0.9780 & 0.4103 & 0.8929 & 0.9738 & 0.3966 & 0.8929 & 0.4103 & 0.9186 & 0.9249 & 0.7553 \\
+		VGG16              & 1.0000 & 0.9538 & 0.9916 & 0.9803 & 0.8997 & 0.9745 & 0.8131 & 0.9888 & 0.9716 & 0.9526 \\
+		Xception           & 0.9760 & 0.8739 & 0.9895 & 0.9921 & 0.9868 & 0.9948 & 0.8805 & 0.9122 & 0.9183 & 0.9471 \\
+		\bottomrule
+	\end{tabular}
 \end{table*}
 
-
+% Ensure you have \usepackage{booktabs} in your preamble
 \begin{table*}[t]
-\centering
-\caption{ERI ranking and ablation analysis of CNN architectures on BDML}
-\label{tab:eri_ablation_ranking_bdmedileaves}
-
-\scriptsize
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.15}
-
-\begin{tabular}{|c|l|c|c|c|c|c|}
-\hline
-\textbf{Rank} &
-\textbf{Model} &
-\textbf{Accuracy Stability (mean)} &
-\textbf{LMOS Stability (mean)} &
-\textbf{ERI} &
-\textbf{ERI w/o Accuracy} &
-\textbf{ERI w/o LMOS} \\
-\hline
-
-1 & Xception
-&0.9471&0.8493&0.8982&0.4246&0.4736\\
-
-2 & DenseNet121
-&0.9665&0.8130&0.8897&0.4065&0.4832\\
-
-3 & MobileNetV2
-&0.9523&0.7840&0.8682&0.3920&0.4762\\
-
-4 & InceptionResNetV2
-&0.9552&0.6969&0.8260&0.3485&0.4776\\
-
-5 & VGG16
-&0.9526&0.6988&0.8257&0.3494&0.4763\\
-
-6 & ResNet50
-&0.7553&0.8565&0.8059&0.4283&0.3777\\
-
-7 & InceptionV3
-&0.9544&0.6253&0.7898&0.3127&0.4772\\
-
-8 & Custom CNN
-&0.7864&0.5556&0.6710&0.2778&0.3932\\
-
-\hline
-\end{tabular}
+	\centering
+	\caption{LMOS stability of different CNN architectures on BDML under various input perturbations.}
+	\label{tab:lmos_stability_bdmedileaves}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{3.5pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Mean} \\
+		\midrule
+		Custom CNN         & 0.6527 & 0.5391 & 0.5192 & 0.5206 & 0.4322 & 0.4802 & 0.5138 & 0.7388 & 0.6041 & 0.5556 \\
+		DenseNet121        & 0.8505 & 0.7066 & 0.8788 & 0.8860 & 0.8255 & 0.8573 & 0.6538 & 0.8219 & 0.8365 & 0.8130 \\
+		MobileNetV2        & 0.8044 & 0.7037 & 0.8849 & 0.8624 & 0.7967 & 0.8231 & 0.6132 & 0.7769 & 0.7908 & 0.7840 \\
+		InceptionResNetV2  & 0.6655 & 0.6017 & 0.8148 & 0.7627 & 0.7656 & 0.7649 & 0.5920 & 0.6376 & 0.6674 & 0.6969 \\
+		InceptionV3        & 0.6297 & 0.5752 & 0.7254 & 0.7291 & 0.6905 & 0.6274 & 0.5267 & 0.5578 & 0.5659 & 0.6253 \\
+		ResNet50           & 0.9070 & 0.8051 & 0.8610 & 0.9044 & 0.7997 & 0.8418 & 0.8091 & 0.8880 & 0.8927 & 0.8565 \\
+		VGG16              & 0.8378 & 0.6823 & 0.7996 & 0.7550 & 0.6200 & 0.7023 & 0.4370 & 0.7505 & 0.7047 & 0.6988 \\
+		Xception           & 0.8693 & 0.7526 & 0.9185 & 0.9105 & 0.9097 & 0.8719 & 0.7333 & 0.8027 & 0.8747 & 0.8493 \\
+		\bottomrule
+	\end{tabular}
 \end{table*}
 
 
-\noindent\textbf{BDML}
+% Ensure you have \usepackage{booktabs} in your preamble
+\begin{table*}[t]
+	\centering
+	\caption{ERI of different CNN architectures on BDML under individual input perturbations.}
+	\label{tab:eri_perturbation_bdmedileaves}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{4pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Overall ERI} \\
+		\midrule
+		Custom CNN         & 0.8108 & 0.6328 & 0.6256 & 0.6783 & 0.4748 & 0.6512 & 0.5541 & 0.8556 & 0.7563 & 0.6710 \\
+		DenseNet121        & 0.9150 & 0.8281 & 0.9356 & 0.9353 & 0.9051 & 0.9236 & 0.7644 & 0.8967 & 0.9040 & 0.8897 \\
+		MobileNetV2        & 0.8918 & 0.8074 & 0.9399 & 0.9312 & 0.8919 & 0.9090 & 0.7109 & 0.8672 & 0.8643 & 0.8682 \\
+		InceptionResNetV2  & 0.8084 & 0.7689 & 0.9033 & 0.8772 & 0.8773 & 0.8811 & 0.7329 & 0.7790 & 0.8063 & 0.8260 \\
+		InceptionV3        & 0.8054 & 0.7566 & 0.8546 & 0.8606 & 0.8385 & 0.8124 & 0.7072 & 0.7387 & 0.7349 & 0.7898 \\
+		ResNet50           & 0.9425 & 0.6077 & 0.8769 & 0.9391 & 0.5982 & 0.8674 & 0.6097 & 0.9033 & 0.9088 & 0.8059 \\
+		VGG16              & 0.9189 & 0.8181 & 0.8956 & 0.8677 & 0.7599 & 0.8384 & 0.6251 & 0.8697 & 0.8382 & 0.8257 \\
+		Xception           & 0.9227 & 0.8133 & 0.9540 & 0.9513 & 0.9483 & 0.9334 & 0.8069 & 0.8575 & 0.8965 & 0.8982 \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+
+% Ensure you have \usepackage{graphicx} and \usepackage{booktabs} in your preamble
+\begin{table}[t]
+	\centering
+	\caption{ERI ranking and ablation analysis of CNN architectures on BDML.}
+	\label{tab:eri_ablation_ranking_bdmedileaves}
+	
+	\tiny
+	\setlength{\tabcolsep}{3pt}
+	\renewcommand{\arraystretch}{1.1}
+	
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{r l *{5}{r}}
+			\toprule
+			\textbf{Rank} &
+			\textbf{Model} &
+			$S_{\text{acc}}$ &
+			$S_{\text{LMOS}}$ &
+			\textbf{ERI} &
+			$\mathrm{ERI}_{\text{w/o acc}}$ &
+			$\mathrm{ERI}_{\text{w/o LMOS}}$ \\
+			\midrule
+			1 & Xception          & 0.9471 & 0.8493 & 0.8982 & 0.4246 & 0.4736 \\
+			2 & DenseNet121       & 0.9665 & 0.8130 & 0.8897 & 0.4065 & 0.4832 \\
+			3 & MobileNetV2       & 0.9523 & 0.7840 & 0.8682 & 0.3920 & 0.4762 \\
+			4 & InceptionResNetV2 & 0.9552 & 0.6969 & 0.8260 & 0.3485 & 0.4776 \\
+			5 & VGG16             & 0.9526 & 0.6988 & 0.8257 & 0.3494 & 0.4763 \\
+			6 & ResNet50          & 0.7553 & 0.8565 & 0.8059 & 0.4283 & 0.3777 \\
+			7 & InceptionV3       & 0.9544 & 0.6253 & 0.7898 & 0.3127 & 0.4772 \\
+			8 & Custom CNN        & 0.7864 & 0.5556 & 0.6710 & 0.2778 & 0.3932 \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+%\noindent\textbf{BDML}
 
 The results on BDML further demonstrate the complementary roles of prediction and explanation stability in evaluating CNN robustness. As shown in   Table~\ref{tab:accuracy_stability_bdmedileaves}, DenseNet121 has achieved the highest mean accuracy stability (0.9665), followed by InceptionResNetV2 (0.9552), VGG16 (0.9526), MobileNetV2 (0.9523), and InceptionV3 (0.9544). Xception has achieved a slightly lower mean accuracy stability of 0.9471 but maintained consistently high stability across most perturbations. In contrast, ResNet50 (0.7553) and the Custom CNN (0.7864) have been substantially more sensitive to several perturbations, particularly blur, contrast, and motion blur.
 
-The LMOS stability results in Table~\ref{tab:lmos_stability_bdmedileaves} show a different pattern. ResNet50 has achieved the highest mean LMOS stability (0.8565), closely followed by Xception (0.8493), whereas DenseNet121 and MobileNetV2 obtained 0.8130 and 0.7840, respectively. The Custom CNN exhibited the lowest LMOS stability (0.5556), indicating substantial changes in its Grad-CAM localization under perturbations. Similar to EgyPLI, motion blur generally caused strong degradation in explanation stability, while brightness and hue were comparatively less disruptive for the better-performing architectures.
+The LMOS stability results in Table~\ref{tab:lmos_stability_bdmedileaves} show a different pattern. ResNet50 has achieved the highest mean LMOS stability (0.8565), closely followed by Xception (0.8493), whereas DenseNet121 and MobileNetV2 obtained 0.8130 and 0.7840, respectively. The Custom CNN exhibited the lowest LMOS stability (0.5556), indicating substantial changes in its Grad-CAM localization under perturbations. Similar to EPLI, motion blur generally caused strong degradation in explanation stability, while brightness and hue were comparatively less disruptive for the better-performing architectures.
 
 The resulting ERI values in Table~\ref{tab:eri_perturbation_bdmedileaves} provide a more balanced assessment by jointly considering both dimensions. Xception has achieved the highest overall ERI (0.8982), followed by DenseNet121 (0.8897) and MobileNetV2 (0.8682). Although ResNet50 has exhibited the highest LMOS stability, its low accuracy stability has substantially reduced its overall ERI to 0.8059. Conversely, the Custom CNN has obtained the lowest ERI (0.6710), reflecting instability in both predictions and explanations. Across the perturbations, brightness and hue generally resulted in the highest ERI values, whereas contrast and motion blur have been among the most challenging transformations.
 
 The final ranking and ablation analysis in Table~\ref{tab:eri_ablation_ranking_bdmedileaves} confirms these observations. Xception has ranked first, demonstrating the strongest overall balance between predictive and explanatory robustness. DenseNet121 and MobileNetV2 have followed in second and third positions. Notably, removing either accuracy stability or LMOS stability substantially reduced the resulting score for all architectures, again indicating that both components are necessary for a meaningful ERI assessment. Overall, the BDML results reinforce the ability of ERI to distinguish models that may appear robust when evaluated solely on prediction stability but exhibit substantially different behavior in their visual explanations.
 
 
-\begin{table*}[t]
-\centering
-\caption{Accuracy stability of different CNN architectures on the FLRS dataset under various input perturbations.}
-\label{tab:accuracy_stability_tf_flowers}
-
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Mean} \\
-\hline
-
-Custom CNN
-&0.9902&0.9842&0.9553&0.8850&0.8527&0.9553&0.9741&0.9961&0.9822&0.9528\\
-
-DenseNet121
-&0.9847&0.9510&0.9909&0.9657&0.9878&0.9785&0.9273&0.9816&0.9689&0.9707\\
-
-MobileNetV2
-&0.9808&0.9539&0.9921&0.9921&0.9725&0.9905&0.9435&0.9742&0.9675&0.9741\\
-
-InceptionResNetV2
-&0.9770&0.9703&0.9870&0.9887&0.9984&0.9935&0.9720&0.9804&0.9370&0.9783\\
-
-InceptionV3
-&0.9967&0.9849&0.9950&0.9933&0.9917&0.9967&0.9477&0.9797&0.9883&0.9860\\
-
-ResNet50
-&1.0000&0.8287&0.9556&0.9920&0.6714&0.9783&0.7871&0.9613&0.9838&0.9064\\
-
-VGG16
-&0.9983&0.9725&0.9950&0.9672&0.9167&0.9966&0.9283&0.9967&0.9795&0.9723\\
-
-Xception
-&0.9985&0.9843&0.9938&1.0000&0.9922&0.9985&0.9682&0.9763&0.9763&0.9876\\
-
-\hline
-\end{tabular}
-\end{table*}
 
 \begin{table*}[t]
-\centering
-\caption{LMOS stability of different CNN architectures on the FLRS dataset under various input perturbations.}
-\label{tab:lmos_stability_tf_flowers}
-
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Mean} \\
-\hline
-
-Custom CNN
-&0.7787&0.7326&0.6323&0.5899&0.5376&0.6056&0.6934&0.8218&0.6951&0.6763\\
-
-DenseNet121
-&0.8577&0.7766&0.8921&0.8085&0.8384&0.8277&0.7809&0.8376&0.8382&0.8286\\
-
-MobileNetV2
-&0.7818&0.7627&0.8826&0.8121&0.7751&0.8115&0.7459&0.7510&0.8251&0.7942\\
-
-InceptionResNetV2
-&0.8068&0.7550&0.8578&0.8547&0.8234&0.8297&0.7444&0.7844&0.7600&0.8018\\
-
-InceptionV3
-&0.7358&0.6701&0.8221&0.7992&0.7877&0.7356&0.6244&0.6879&0.7307&0.7326\\
-
-ResNet50
-&0.9087&0.7728&0.8949&0.8864&0.7239&0.8407&0.7469&0.8621&0.8762&0.8347\\
-
-VGG16
-&0.8757&0.8135&0.8687&0.8143&0.7450&0.8218&0.7380&0.8750&0.8403&0.8214\\
-
-Xception
-&0.8573&0.8562&0.9176&0.9100&0.8993&0.8870&0.8249&0.8526&0.8619&0.8741\\
-
-\hline
-\end{tabular}
-\end{table*}
-
-\begin{table*}[t]
-\centering
-\caption{ERI of different CNN architectures on the FLRS dataset under individual input perturbations.}
-\label{tab:eri_perturbation_tf_flowers}
-
-\scriptsize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Overall ERI} \\
-\hline
-
-Custom CNN
-&0.8844&0.8584&0.7938&0.7374&0.6951&0.7805&0.8337&0.9089&0.8387&0.8146\\
-
-DenseNet121
-&0.9212&0.8638&0.9415&0.8871&0.9131&0.9031&0.8541&0.9096&0.9035&0.8997\\
-
-MobileNetV2
-&0.8813&0.8583&0.9374&0.9021&0.8738&0.9010&0.8447&0.8626&0.8963&0.8842\\
-
-InceptionResNetV2
-&0.8919&0.8627&0.9224&0.9217&0.9109&0.9116&0.8582&0.8824&0.8485&0.8900\\
-
-InceptionV3
-&0.8662&0.8275&0.9085&0.8962&0.8897&0.8661&0.7860&0.8338&0.8595&0.8593\\
-
-ResNet50
-&0.9544&0.8008&0.9253&0.9392&0.6976&0.9095&0.7670&0.9117&0.9300&0.8706\\
-
-VGG16
-&0.9370&0.8930&0.9319&0.8907&0.8308&0.9092&0.8332&0.9359&0.9099&0.8968\\
-
-Xception
-&0.9279&0.9203&0.9557&0.9550&0.9457&0.9427&0.8965&0.9144&0.9191&0.9308\\
-
-\hline
-\end{tabular}
+	\centering
+	\caption{Accuracy stability of different CNN architectures on the FLRS dataset under various input perturbations.}
+	\label{tab:accuracy_stability_tf_flowers}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{3.5pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Mean} \\
+		\midrule
+		Custom CNN         & 0.9902 & 0.9842 & 0.9553 & 0.8850 & 0.8527 & 0.9553 & 0.9741 & 0.9961 & 0.9822 & 0.9528 \\
+		DenseNet121        & 0.9847 & 0.9510 & 0.9909 & 0.9657 & 0.9878 & 0.9785 & 0.9273 & 0.9816 & 0.9689 & 0.9707 \\
+		MobileNetV2        & 0.9808 & 0.9539 & 0.9921 & 0.9921 & 0.9725 & 0.9905 & 0.9435 & 0.9742 & 0.9675 & 0.9741 \\
+		InceptionResNetV2  & 0.9770 & 0.9703 & 0.9870 & 0.9887 & 0.9984 & 0.9935 & 0.9720 & 0.9804 & 0.9370 & 0.9783 \\
+		InceptionV3        & 0.9967 & 0.9849 & 0.9950 & 0.9933 & 0.9917 & 0.9967 & 0.9477 & 0.9797 & 0.9883 & 0.9860 \\
+		ResNet50           & 1.0000 & 0.8287 & 0.9556 & 0.9920 & 0.6714 & 0.9783 & 0.7871 & 0.9613 & 0.9838 & 0.9064 \\
+		VGG16              & 0.9983 & 0.9725 & 0.9950 & 0.9672 & 0.9167 & 0.9966 & 0.9283 & 0.9967 & 0.9795 & 0.9723 \\
+		Xception           & 0.9985 & 0.9843 & 0.9938 & 1.0000 & 0.9922 & 0.9985 & 0.9682 & 0.9763 & 0.9763 & 0.9876 \\
+		\bottomrule
+	\end{tabular}
 \end{table*}
 
 
 \begin{table*}[t]
-\centering
-\caption{ERI ranking and ablation analysis of CNN architectures on the FLRS dataset}
-\label{tab:eri_ablation_ranking_tf_flowers}
-
-\scriptsize
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.15}
-
-\begin{tabular}{|c|l|c|c|c|c|c|}
-\hline
-\textbf{Rank} &
-\textbf{Model} &
-\textbf{Accuracy Stability (mean)} &
-\textbf{LMOS Stability (mean)} &
-\textbf{ERI} &
-\textbf{ERI w/o Accuracy} &
-\textbf{ERI w/o LMOS} \\
-\hline
-
-1 & Xception
-&0.9876&0.8741&0.9308&0.4371&0.4938\\
-
-2 & DenseNet121
-&0.9707&0.8286&0.8997&0.4143&0.4854\\
-
-3 & VGG16
-&0.9723&0.8214&0.8968&0.4107&0.4862\\
-
-4 & InceptionResNetV2
-&0.9783&0.8018&0.8900&0.4009&0.4891\\
-
-5 & MobileNetV2
-&0.9741&0.7942&0.8842&0.3971&0.4871\\
-
-6 & ResNet50
-&0.9064&0.8347&0.8706&0.4174&0.4532\\
-
-7 & InceptionV3
-&0.9860&0.7326&0.8593&0.3663&0.4930\\
-
-8 & Custom CNN
-&0.9528&0.6763&0.8146&0.3382&0.4764\\
-
-\hline
-\end{tabular}
+	\centering
+	\caption{LMOS stability of different CNN architectures on the FLRS dataset under various input perturbations.}
+	\label{tab:lmos_stability_tf_flowers}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{3.5pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Mean} \\
+		\midrule
+		Custom CNN         & 0.7787 & 0.7326 & 0.6323 & 0.5899 & 0.5376 & 0.6056 & 0.6934 & 0.8218 & 0.6951 & 0.6763 \\
+		DenseNet121        & 0.8577 & 0.7766 & 0.8921 & 0.8085 & 0.8384 & 0.8277 & 0.7809 & 0.8376 & 0.8382 & 0.8286 \\
+		MobileNetV2        & 0.7818 & 0.7627 & 0.8826 & 0.8121 & 0.7751 & 0.8115 & 0.7459 & 0.7510 & 0.8251 & 0.7942 \\
+		InceptionResNetV2  & 0.8068 & 0.7550 & 0.8578 & 0.8547 & 0.8234 & 0.8297 & 0.7444 & 0.7844 & 0.7600 & 0.8018 \\
+		InceptionV3        & 0.7358 & 0.6701 & 0.8221 & 0.7992 & 0.7877 & 0.7356 & 0.6244 & 0.6879 & 0.7307 & 0.7326 \\
+		ResNet50           & 0.9087 & 0.7728 & 0.8949 & 0.8864 & 0.7239 & 0.8407 & 0.7469 & 0.8621 & 0.8762 & 0.8347 \\
+		VGG16              & 0.8757 & 0.8135 & 0.8687 & 0.8143 & 0.7450 & 0.8218 & 0.7380 & 0.8750 & 0.8403 & 0.8214 \\
+		Xception           & 0.8573 & 0.8562 & 0.9176 & 0.9100 & 0.8993 & 0.8870 & 0.8249 & 0.8526 & 0.8619 & 0.8741 \\
+		\bottomrule
+	\end{tabular}
 \end{table*}
 
 
-\noindent\textbf{FLRS}
+\begin{table*}[t]
+	\centering
+	\caption{ERI of different CNN architectures on the FLRS dataset under individual input perturbations.}
+	\label{tab:eri_perturbation_tf_flowers}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{4pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Overall ERI} \\
+		\midrule
+		Custom CNN         & 0.8844 & 0.8584 & 0.7938 & 0.7374 & 0.6951 & 0.7805 & 0.8337 & 0.9089 & 0.8387 & 0.8146 \\
+		DenseNet121        & 0.9212 & 0.8638 & 0.9415 & 0.8871 & 0.9131 & 0.9031 & 0.8541 & 0.9096 & 0.9035 & 0.8997 \\
+		MobileNetV2        & 0.8813 & 0.8583 & 0.9374 & 0.9021 & 0.8738 & 0.9010 & 0.8447 & 0.8626 & 0.8963 & 0.8842 \\
+		InceptionResNetV2  & 0.8919 & 0.8627 & 0.9224 & 0.9217 & 0.9109 & 0.9116 & 0.8582 & 0.8824 & 0.8485 & 0.8900 \\
+		InceptionV3        & 0.8662 & 0.8275 & 0.9085 & 0.8962 & 0.8897 & 0.8661 & 0.7860 & 0.8338 & 0.8595 & 0.8593 \\
+		ResNet50           & 0.9544 & 0.8008 & 0.9253 & 0.9392 & 0.6976 & 0.9095 & 0.7670 & 0.9117 & 0.9300 & 0.8706 \\
+		VGG16              & 0.9370 & 0.8930 & 0.9319 & 0.8907 & 0.8308 & 0.9092 & 0.8332 & 0.9359 & 0.9099 & 0.8968 \\
+		Xception           & 0.9279 & 0.9203 & 0.9557 & 0.9550 & 0.9457 & 0.9427 & 0.8965 & 0.9144 & 0.9191 & 0.9308 \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+
+\begin{table}[t]
+	\centering
+	\caption{ERI ranking and ablation analysis of CNN architectures on the FLRS dataset.}
+	\label{tab:eri_ablation_ranking_tf_flowers}
+	
+	\tiny
+	\setlength{\tabcolsep}{2.5pt}
+	\renewcommand{\arraystretch}{1.1}
+	
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{r l *{5}{r}}
+			\toprule
+			\textbf{Rank} &
+			\textbf{Model} &
+			$S_{\text{acc}}$ &
+			$S_{\text{LMOS}}$ &
+			\textbf{ERI} &
+			$\mathrm{ERI}_{\text{w/o acc}}$ &
+			$\mathrm{ERI}_{\text{w/o LMOS}}$ \\
+			\midrule
+			1 & Xception          & 0.9876 & 0.8741 & 0.9308 & 0.4371 & 0.4938 \\
+			2 & DenseNet121       & 0.9707 & 0.8286 & 0.8997 & 0.4143 & 0.4854 \\
+			3 & VGG16             & 0.9723 & 0.8214 & 0.8968 & 0.4107 & 0.4862 \\
+			4 & InceptionResNetV2 & 0.9783 & 0.8018 & 0.8900 & 0.4009 & 0.4891 \\
+			5 & MobileNetV2       & 0.9741 & 0.7942 & 0.8842 & 0.3971 & 0.4871 \\
+			6 & ResNet50          & 0.9064 & 0.8347 & 0.8706 & 0.4174 & 0.4532 \\
+			7 & InceptionV3       & 0.9860 & 0.7326 & 0.8593 & 0.3663 & 0.4930 \\
+			8 & Custom CNN        & 0.9528 & 0.6763 & 0.8146 & 0.3382 & 0.4764 \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+%\noindent\textbf{FLRS}
 
 The results on the FLRS dataset further demonstrate the complementary roles of prediction and explanation stability in evaluating ERI. As shown in Table~\ref{tab:accuracy_stability_tf_flowers}, Xception has achieved the highest mean accuracy stability (0.9876), closely followed by InceptionV3 (0.9860) and InceptionResNetV2 (0.9783). Most pretrained architectures have maintained high prediction stability across perturbations, whereas ResNet50 has exhibited comparatively lower stability (0.9064), particularly under contrast, blur, and motion blur. The Custom CNN has also shown reduced stability under contrast and hue perturbations despite maintaining a relatively high overall mean of 0.9528.
 
@@ -1540,213 +1388,152 @@ Combining the two stability components, Table~\ref{tab:eri_perturbation_tf_flowe
 The ranking and ablation analysis in Table~\ref{tab:eri_ablation_ranking_tf_flowers} further confirms the importance of incorporating both components. Xception has ranked first with an ERI of 0.9308, followed by DenseNet121 (0.8997) and VGG16 (0.8968). Although InceptionV3 has achieved very high accuracy stability (0.9860), its lower LMOS stability (0.7326) reduced its overall ERI to 0.8593. Similarly, ResNet50 has achieved the second-highest LMOS stability (0.8347), but its lower accuracy stability (0.9064) compared to others limited its ERI to 0.8706. Removing either accuracy or LMOS stability substantially reduces the resulting score, demonstrating that ERI provides a more balanced assessment of CNNs' robustness than either predictive or explanatory stability alone.
 
 
-\begin{table*}[t]
-\centering
-\caption{Accuracy stability of different CNN architectures on the FR under various input perturbations.}
-\label{tab:accuracy_stability_flowers_recognition}
-
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Mean} \\
-\hline
-
-Custom CNN
-&0.9933&0.9828&0.9504&0.8872&0.8851&0.9704&0.9811&0.9949&0.9614&0.9563\\
-
-DenseNet121
-&0.9975&0.9767&0.9987&0.9781&0.9781&0.9898&0.9468&0.9741&0.9872&0.9808\\
-
-MobileNetV2
-&0.9750&0.9402&0.9896&0.9883&0.9857&0.9935&0.9516&0.9791&0.9791&0.9758\\
-
-InceptionResNetV2
-&0.9788&0.9802&0.9936&1.0000&0.9909&0.9909&0.9734&0.9869&0.9352&0.9811\\
-
-InceptionV3
-&0.9841&0.9773&0.9961&0.9961&0.9841&0.9908&0.9521&0.9800&0.9550&0.9795\\
-
-ResNet50
-&0.9640&0.8449&0.9714&0.9835&0.6584&0.9739&0.7514&0.9307&0.9714&0.8944\\
-
-VGG16
-&0.9931&0.9555&0.9945&0.9761&0.9102&0.9832&0.8851&0.9986&0.9832&0.9644\\
-
-Xception
-&0.9910&0.9962&0.9987&0.9975&0.9975&0.9897&0.9752&0.9831&0.9818&0.9901\\
-
-\hline
-\end{tabular}
-\end{table*}
 
 \begin{table*}[t]
-\centering
-\caption{LMOS stability of different CNN architectures on the FR under various input perturbations.}
-\label{tab:lmos_stability_flowers_recognition}
-
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Mean} \\
-\hline
-
-Custom CNN
-&0.8703&0.8340&0.7432&0.7218&0.6697&0.7233&0.8263&0.8870&0.7425&0.7798\\
-
-DenseNet121
-&0.9124&0.8823&0.9376&0.8907&0.9138&0.9102&0.8383&0.9085&0.8867&0.8978\\
-
-MobileNetV2
-&0.8420&0.8128&0.9088&0.8817&0.8623&0.8572&0.8231&0.8321&0.8666&0.8541\\
-
-InceptionResNetV2
-&0.8762&0.8427&0.9283&0.8963&0.9031&0.8905&0.8281&0.8689&0.8281&0.8736\\
-
-InceptionV3
-&0.7838&0.7453&0.8439&0.8416&0.8217&0.7972&0.7059&0.7697&0.7634&0.7858\\
-
-ResNet50
-&0.9363&0.8639&0.9226&0.9181&0.8441&0.9022&0.8536&0.9011&0.9223&0.8960\\
-
-VGG16
-&0.9321&0.8797&0.9242&0.8781&0.8303&0.9000&0.8449&0.9180&0.8846&0.8880\\
-
-Xception
-&0.9425&0.9469&0.9591&0.9667&0.9607&0.9653&0.9154&0.9339&0.9398&0.9478\\
-
-\hline
-\end{tabular}
-\end{table*}
-
-\begin{table*}[t]
-\centering
-\caption{ERI of different CNN architectures on the FR under individual input perturbations.}
-\label{tab:eri_perturbation_flowers_recognition}
-
-\scriptsize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.1}
-
-\begin{tabular}{|l|ccccccccc|c|}
-\hline
-\textbf{Model} &
-\textbf{Noise} &
-\textbf{Blur} &
-\textbf{Brightness} &
-\textbf{Hue} &
-\textbf{Contrast} &
-\textbf{Gamma} &
-\textbf{Motion Blur} &
-\textbf{Compression} &
-\textbf{Occlusion} &
-\textbf{Overall ERI} \\
-\hline
-
-Custom CNN
-&0.9318&0.9084&0.8468&0.8045&0.7774&0.8469&0.9037&0.9409&0.8519&0.8680\\
-
-DenseNet121
-&0.9549&0.9295&0.9682&0.9344&0.9459&0.9500&0.8925&0.9413&0.9369&0.9393\\
-
-MobileNetV2
-&0.9085&0.8765&0.9492&0.9350&0.9240&0.9254&0.8874&0.9056&0.9228&0.9149\\
-
-InceptionResNetV2
-&0.9275&0.9114&0.9609&0.9482&0.9470&0.9407&0.9007&0.9279&0.8817&0.9273\\
-
-InceptionV3
-&0.8840&0.8613&0.9200&0.9188&0.9029&0.8940&0.8290&0.8749&0.8592&0.8827\\
-
-ResNet50
-&0.9502&0.8544&0.9470&0.9508&0.7512&0.9381&0.8025&0.9159&0.9468&0.8952\\
-
-VGG16
-&0.9626&0.9176&0.9594&0.9271&0.8702&0.9416&0.8650&0.9583&0.9339&0.9262\\
-
-Xception
-&0.9667&0.9715&0.9789&0.9821&0.9791&0.9775&0.9453&0.9585&0.9608&0.9689\\
-
-\hline
-\end{tabular}
+	\centering
+	\caption{Accuracy stability of different CNN architectures on the FR dataset under various input perturbations.}
+	\label{tab:accuracy_stability_flowers_recognition}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{5pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+			\toprule
+			\textbf{Model} &
+			\textbf{Noise} &
+			\textbf{Blur} &
+			\textbf{Brightness} &
+			\textbf{Hue} &
+			\textbf{Contrast} &
+			\textbf{Gamma} &
+			\textbf{Motion Blur} &
+			\textbf{Compression} &
+			\textbf{Occlusion} &
+			\textbf{Mean} \\
+			\midrule
+			Custom CNN         & 0.9933 & 0.9828 & 0.9504 & 0.8872 & 0.8851 & 0.9704 & 0.9811 & 0.9949 & 0.9614 & 0.9563 \\
+			DenseNet121        & 0.9975 & 0.9767 & 0.9987 & 0.9781 & 0.9781 & 0.9898 & 0.9468 & 0.9741 & 0.9872 & 0.9808 \\
+			MobileNetV2        & 0.9750 & 0.9402 & 0.9896 & 0.9883 & 0.9857 & 0.9935 & 0.9516 & 0.9791 & 0.9791 & 0.9758 \\
+			InceptionResNetV2  & 0.9788 & 0.9802 & 0.9936 & 1.0000 & 0.9909 & 0.9909 & 0.9734 & 0.9869 & 0.9352 & 0.9811 \\
+			InceptionV3        & 0.9841 & 0.9773 & 0.9961 & 0.9961 & 0.9841 & 0.9908 & 0.9521 & 0.9800 & 0.9550 & 0.9795 \\
+			ResNet50           & 0.9640 & 0.8449 & 0.9714 & 0.9835 & 0.6584 & 0.9739 & 0.7514 & 0.9307 & 0.9714 & 0.8944 \\
+			VGG16              & 0.9931 & 0.9555 & 0.9945 & 0.9761 & 0.9102 & 0.9832 & 0.8851 & 0.9986 & 0.9832 & 0.9644 \\
+			Xception           & 0.9910 & 0.9962 & 0.9987 & 0.9975 & 0.9975 & 0.9897 & 0.9752 & 0.9831 & 0.9818 & 0.9901 \\
+			\bottomrule
+		\end{tabular}%
 \end{table*}
 
 
 \begin{table*}[t]
-\centering
-\caption{ERI ranking and ablation analysis of CNN architectures on the FR}
-\label{tab:eri_ablation_ranking_flowers_recognition}
-
-\scriptsize
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.15}
-
-\begin{tabular}{|c|l|c|c|c|c|c|}
-\hline
-\textbf{Rank} &
-\textbf{Model} &
-\textbf{Accuracy Stability (mean)} &
-\textbf{LMOS Stability (mean)} &
-\textbf{ERI} &
-\textbf{ERI w/o Accuracy} &
-\textbf{ERI w/o LMOS} \\
-\hline
-
-1 & Xception
-&0.9901&0.9478&0.9689&0.4739&0.4950\\
-
-2 & DenseNet121
-&0.9808&0.8978&0.9393&0.4489&0.4904\\
-
-3 & InceptionResNetV2
-&0.9811&0.8736&0.9273&0.4368&0.4905\\
-
-4 & VGG16
-&0.9644&0.8880&0.9262&0.4440&0.4822\\
-
-5 & MobileNetV2
-&0.9758&0.8541&0.9149&0.4270&0.4879\\
-
-6 & ResNet50
-&0.8944&0.8960&0.8952&0.4480&0.4472\\
-
-7 & InceptionV3
-&0.9795&0.7858&0.8827&0.3929&0.4898\\
-
-8 & Custom CNN
-&0.9563&0.7798&0.8680&0.3899&0.4781\\
-
-\hline
-\end{tabular}
+	\centering
+	\caption{LMOS stability of different CNN architectures on the FR dataset under various input perturbations.}
+	\label{tab:lmos_stability_flowers_recognition}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{5pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Mean} \\
+		\midrule
+		Custom CNN         & 0.8703 & 0.8340 & 0.7432 & 0.7218 & 0.6697 & 0.7233 & 0.8263 & 0.8870 & 0.7425 & 0.7798 \\
+		DenseNet121        & 0.9124 & 0.8823 & 0.9376 & 0.8907 & 0.9138 & 0.9102 & 0.8383 & 0.9085 & 0.8867 & 0.8978 \\
+		MobileNetV2        & 0.8420 & 0.8128 & 0.9088 & 0.8817 & 0.8623 & 0.8572 & 0.8231 & 0.8321 & 0.8666 & 0.8541 \\
+		InceptionResNetV2  & 0.8762 & 0.8427 & 0.9283 & 0.8963 & 0.9031 & 0.8905 & 0.8281 & 0.8689 & 0.8281 & 0.8736 \\
+		InceptionV3        & 0.7838 & 0.7453 & 0.8439 & 0.8416 & 0.8217 & 0.7972 & 0.7059 & 0.7697 & 0.7634 & 0.7858 \\
+		ResNet50           & 0.9363 & 0.8639 & 0.9226 & 0.9181 & 0.8441 & 0.9022 & 0.8536 & 0.9011 & 0.9223 & 0.8960 \\
+		VGG16              & 0.9321 & 0.8797 & 0.9242 & 0.8781 & 0.8303 & 0.9000 & 0.8449 & 0.9180 & 0.8846 & 0.8880 \\
+		Xception           & 0.9425 & 0.9469 & 0.9591 & 0.9667 & 0.9607 & 0.9653 & 0.9154 & 0.9339 & 0.9398 & 0.9478 \\
+		\bottomrule
+	\end{tabular}
 \end{table*}
 
 
-\noindent\textbf{FR}
+
+\begin{table*}[t]
+	\centering
+	\caption{ERI of different CNN architectures on the FR dataset under individual input perturbations.}
+	\label{tab:eri_perturbation_flowers_recognition}
+	
+	\scriptsize
+	\setlength{\tabcolsep}{4pt}
+	\renewcommand{\arraystretch}{1.15}
+	
+	\begin{tabular}{l *{9}{r} r}
+		\toprule
+		\textbf{Model} &
+		\textbf{Noise} &
+		\textbf{Blur} &
+		\textbf{Brightness} &
+		\textbf{Hue} &
+		\textbf{Contrast} &
+		\textbf{Gamma} &
+		\textbf{Motion Blur} &
+		\textbf{Compression} &
+		\textbf{Occlusion} &
+		\textbf{Overall ERI} \\
+		\midrule
+		Custom CNN         & 0.9318 & 0.9084 & 0.8468 & 0.8045 & 0.7774 & 0.8469 & 0.9037 & 0.9409 & 0.8519 & 0.8680 \\
+		DenseNet121        & 0.9549 & 0.9295 & 0.9682 & 0.9344 & 0.9459 & 0.9500 & 0.8925 & 0.9413 & 0.9369 & 0.9393 \\
+		MobileNetV2        & 0.9085 & 0.8765 & 0.9492 & 0.9350 & 0.9240 & 0.9254 & 0.8874 & 0.9056 & 0.9228 & 0.9149 \\
+		InceptionResNetV2  & 0.9275 & 0.9114 & 0.9609 & 0.9482 & 0.9470 & 0.9407 & 0.9007 & 0.9279 & 0.8817 & 0.9273 \\
+		InceptionV3        & 0.8840 & 0.8613 & 0.9200 & 0.9188 & 0.9029 & 0.8940 & 0.8290 & 0.8749 & 0.8592 & 0.8827 \\
+		ResNet50           & 0.9502 & 0.8544 & 0.9470 & 0.9508 & 0.7512 & 0.9381 & 0.8025 & 0.9159 & 0.9468 & 0.8952 \\
+		VGG16              & 0.9626 & 0.9176 & 0.9594 & 0.9271 & 0.8702 & 0.9416 & 0.8650 & 0.9583 & 0.9339 & 0.9262 \\
+		Xception           & 0.9667 & 0.9715 & 0.9789 & 0.9821 & 0.9791 & 0.9775 & 0.9453 & 0.9585 & 0.9608 & 0.9689 \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+
+
+\begin{table}[t]
+	\centering
+	\caption{ERI ranking and ablation analysis of CNN architectures on the FR dataset.}
+	\label{tab:eri_ablation_ranking_flowers_recognition}
+	
+	\tiny
+	\setlength{\tabcolsep}{2.5pt}
+	\renewcommand{\arraystretch}{1.1}
+	
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{r l *{5}{r}}
+			\toprule
+			\textbf{Rank} &
+			\textbf{Model} &
+			$S_{\text{acc}}$ &
+			$S_{\text{LMOS}}$ &
+			\textbf{ERI} &
+			$\mathrm{ERI}_{\text{w/o acc}}$ &
+			$\mathrm{ERI}_{\text{w/o LMOS}}$ \\
+			\midrule
+			1 & Xception          & 0.9901 & 0.9478 & 0.9689 & 0.4739 & 0.4950 \\
+			2 & DenseNet121       & 0.9808 & 0.8978 & 0.9393 & 0.4489 & 0.4904 \\
+			3 & InceptionResNetV2 & 0.9811 & 0.8736 & 0.9273 & 0.4368 & 0.4905 \\
+			4 & VGG16             & 0.9644 & 0.8880 & 0.9262 & 0.4440 & 0.4822 \\
+			5 & MobileNetV2       & 0.9758 & 0.8541 & 0.9149 & 0.4270 & 0.4879 \\
+			6 & ResNet50          & 0.8944 & 0.8960 & 0.8952 & 0.4480 & 0.4472 \\
+			7 & InceptionV3       & 0.9795 & 0.7858 & 0.8827 & 0.3929 & 0.4898 \\
+			8 & Custom CNN        & 0.9563 & 0.7798 & 0.8680 & 0.3899 & 0.4781 \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+
+%\noindent\textbf{FR}
 
 The results on the FR further validate the effectiveness of ERI in jointly evaluating predictive and explanatory robustness. As shown in Table~\ref{tab:accuracy_stability_flowers_recognition}, Xception has achieved the highest mean accuracy stability (0.9901), followed by InceptionResNetV2 (0.9811), DenseNet121 (0.9808), and InceptionV3 (0.9795). Most pretrained architectures have maintained high prediction stability across perturbations, whereas ResNet50 has shown substantially lower stability (0.8944), particularly under contrast and motion blur. The Custom CNN has also exhibited reduced stability under hue and contrast perturbations.
 
@@ -1756,19 +1543,19 @@ By combining both stability components, Table~\ref{tab:eri_perturbation_flowers_
 
 The ranking and ablation results in Table~\ref{tab:eri_ablation_ranking_flowers_recognition} further emphasize the complementary nature of the two ERI components. Xception has ranked first with an ERI of 0.9689, while DenseNet121 ranked second with 0.9393. Notably, ResNet50 has achieved a relatively high LMOS stability (0.8960) but had substantially lower accuracy stability (0.8944), resulting in an ERI of 0.8952. Conversely, InceptionV3 has maintained very high accuracy stability (0.9795) but had considerably lower LMOS stability (0.7858), yielding an ERI of only 0.8827. Thus, high predictive stability or high explanatory stability alone is insufficient to ensure a high ERI. The substantial reduction in score when either component is excluded further supports the use of both prediction and explanation stability for a more comprehensive assessment of CNN reliability. 
 
-\subsection{Cross-Dataset Analysis}
 
+\subsection{Cross-dataset analysis}
 The cross-dataset results provide a broader assessment of the proposed ETI and ERI metrics and reveal several consistent patterns across different visual domains. As shown in Tables~\ref{tab:eti_all_datasets} and the corresponding ERI results, the relative performance of the CNN architectures is influenced not only by their classification capability but also by the quality and stability of their visual explanations. While ETI evaluates a model by jointly considering classification accuracy and mean LMOS, ERI focuses on the stability of both prediction and explanation under input perturbations. Therefore, the two metrics provide complementary perspectives on CNN reliability.
 
 Across the four datasets, ETI shows a clear distinction between the two leaf datasets and the two flower datasets. The highest ETI values are observed on the leaf datasets, EPLI and BDML. Here, MobileNetV2 has achieved 0.8855 and 0.8657, respectively, while Xception has achieved 0.8791 and 0.8653. In comparison, the highest ETI values on the FLRS and FR are 0.7849 and 0.7531, respectively, both achieved by Xception. This difference indicates that the models generally achieve stronger combinations of classification accuracy and localization quality on the leaf datasets than on the flower datasets. The lower ETI values on the flower datasets are mainly associated with reduced LMOS values, indicating that accurately recognizing flower categories does not necessarily imply that the models consistently focus on the corresponding flower regions.
 
 Xception demonstrates particularly strong cross-dataset consistency for ETI. It ranks second on EPLI and BDML and first on both flower datasets. More importantly, Xception maintains relatively high LMOS values across all four datasets, ranging from 0.6029 on FR to 0.7800 on BDML. This consistency allows Xception to maintain a high ETI even when another architecture achieves slightly higher classification accuracy. For example, DenseNet121 has achieved the highest accuracy on EPLI, BDML, FLRS, and FR; especially on EPLI, it reaches 1.0000, yet it does not obtain the highest ETI on any of the four datasets. This provides strong cross-dataset evidence that classification accuracy alone is insufficient for assessing model trustworthiness. On EPLI, the Custom CNN has achieved 99.45 accuracy, but its object reliance is the lowest (only 0.19). ETI of the Custom CNN is always low, even when its accuracy is high. 
 
-The cross-dataset ERI results reveal a related but distinct pattern. Xception achieves the highest overall ERI on all four datasets, with values of 0.9346 on EgyPLI, 0.8982 on BDMediLeaves, 0.9308 on Flowers, and 0.9689 on FR. Its consistently strong performance in both accuracy stability and LMOS stability indicates that the architecture is comparatively resilient to input perturbations while preserving its explanation patterns. Particularly notable is its performance on the FR, where Xception achieves an accuracy stability of 0.9901 and an LMOS stability of 0.9478, resulting in an ERI of 0.9689. Furthermore, Xception remains the strongest model across individual perturbations on this dataset, demonstrating that its robustness is not attributable to a small number of favorable transformations. 
+The cross-dataset ERI results reveal a related but distinct pattern. Xception achieves the highest overall ERI on all four datasets, with values of 0.9346 on EPLI, 0.8982 on BDML, 0.9308 on Flowers \zahid{check this every where}, and 0.9689 on FR. Its consistently strong performance in both accuracy stability and LMOS stability indicates that the architecture is comparatively resilient to input perturbations while preserving its explanation patterns. Particularly notable is its performance on the FR, where Xception achieves an accuracy stability of 0.9901 and an LMOS stability of 0.9478, resulting in an ERI of 0.9689. Furthermore, Xception remains the strongest model across individual perturbations on this dataset, demonstrating that its robustness is not attributable to a small number of favorable transformations. 
 
 An important observation from the cross-dataset comparison is that ETI and ERI do not necessarily produce identical performance patterns. The FLRS dataset, for example, has a substantially lower ETI for Xception (0.7849) than EPLI (0.8791), but its ERI is very high (0.9308). Similarly, the FR produces the highest ERI for Xception (0.9689) despite having a lower ETI (0.7531). This difference is expected because ETI incorporates the absolute classification accuracy and mean LMOS, whereas ERI evaluates how consistently these properties are preserved when the input is perturbed. Consequently, a model may have moderate absolute performance but exhibit highly stable predictions and explanations, resulting in a high ERI. Thus, ETI and ERI should be interpreted as complementary rather than interchangeable measures.
 
-The results also demonstrate that weak explanatory behavior can remain a major limitation even when classification performance is high. The Custom CNN provides a clear example across the datasets. On EgyPLI, it achieves an accuracy of 0.9945 but has a very low LMOS of 0.1900, resulting in the lowest ETI of 0.5922. A similar pattern is observed on BDMediLeaves, Flowers, and the FR, where the Custom CNN consistently obtains among the lowest LMOS and ETI values. Its ERI performance is also comparatively weak, particularly because its explanation stability remains lower than that of the strongest pretrained architectures. These findings suggest that the proposed metrics can identify models whose apparent predictive performance is not accompanied by reliable or stable visual reasoning.
+The results also demonstrate that weak explanatory behavior can remain a major limitation even when classification performance is high. The Custom CNN provides a clear example across the datasets. On EPLI, it achieves an accuracy of 0.9945 but has a very low LMOS of 0.1900, resulting in the lowest ETI of 0.5922. A similar pattern is observed on BDML, FLRS, and the FR, where the Custom CNN consistently obtains among the lowest LMOS and ETI values. Its ERI performance is also comparatively weak, particularly because its explanation stability remains lower than that of the strongest pretrained architectures. These findings suggest that the proposed metrics can identify models whose apparent predictive performance is not accompanied by reliable or stable visual reasoning.
 
 ResNet50 provides another useful cross-dataset example of the complementary nature of the two metrics. It exhibits relatively high LMOS or LMOS stability in several datasets but suffers from substantially lower classification accuracy or accuracy stability. For instance, its accuracy on BDML, FLRS, and FR is only 0.4604, 0.5123, and 0.4977, respectively. Consequently, its ETI remains low despite comparatively reasonable localization scores. In the ERI evaluation, ResNet50 similarly demonstrates that strong explanation stability alone cannot compensate for poor predictive stability. This reinforces the central principle of the proposed framework: reliable CNN behavior requires both predictive and explanatory consistency.
 
