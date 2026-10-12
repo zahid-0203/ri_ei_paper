@@ -458,21 +458,30 @@
 	%\input{tables/notations}
 
     
-\begin{center}
-    \includegraphics[width=\columnwidth]{images/overview.png}
-    \captionof{figure}{System Overview of ETI and ERI}
+%\begin{center}
+%    \includegraphics[width=\columnwidth]{images/overview.png}
+%    \captionof{figure}{System Overview of ETI and ERI}
+%    \label{fig:system_overview}
+%\end{center}
+
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{images/overview.png}
+    \caption{System Overview of ETI and ERI}
     \label{fig:system_overview}
-\end{center}
+\end{figure*}
+
 
     
 	\section{System Overview}
     The overall framework of the proposed Explainable Trustworthy Index (ETI) and Explainable Robustness Index (ERI) is illustrated in Figure \ref{fig:system_overview}. The framework evaluates convolutional neural networks (CNNs) from complementary perspectives by considering classification performance, the alignment of model explanations with ground-truth object regions, and the stability of these properties under real-world image perturbations. The evaluation pipeline consists of dataset preparation, model training, explanation-based assessment, and the calculation of ETI and ERI for model comparison and ranking.
 
-First, the image datasets are collected. The annotated datasets are subsequently divided into training, validation, and testing subsets. The ground-truth masks are manually annotated to identify the target leaf or flower regions from testing images. Eight CNN architectures are trained and evaluated using the collected datasets. Classification accuracy is calculated on the test set to measure predictive performance. In parallel, Grad-CAM is applied to generate class-discriminative heatmaps, which are passed through threshold-based binarization to create masks for only red and yellow regions. Now masks are compared with the corresponding ground-truth masks. Now LMOS (Local Means Overlap Score) is calculated to measure what proportion of Grad-CAM activation overlaps with the ground-truth mask.
+First, the image datasets are collected. The annotated datasets are subsequently divided into training, validation, and testing subsets. The ground-truth masks are manually annotated to identify the target leaf or flower regions from testing images. Eight CNN architectures are trained and evaluated using the collected datasets. Classification accuracy is calculated on the test set to measure predictive performance. In parallel, Grad-CAM is applied to generate class-discriminative heatmaps, which are passed through threshold-based binarization to create masks for only red and yellow regions. Now masks are compared with the corresponding ground-truth masks. Now LMOS (Localization Mask Overlap Score) is calculated to measure what proportion of Grad-CAM activation overlaps with the ground-truth mask.
 
 The ETI combines classification accuracy and the mean LMOS into a single score that expresses whether a model maintains both predictive performance and explanation alignment. By integrating these two complementary measures, ETI distinguishes models that achieve similar classification accuracy but exhibit different levels of focus on the relevant object regions. The resulting scores are compared, and a ranking is made based on ETI values.
 
-To assess robustness, the testing images are subjected to a set of real-world image perturbations, including noise, blur, brightness and contrast changes, color transformations, gamma adjustment, motion blur, compression artifacts, and occlusion. Each perturbed test set is evaluated using the trained models and Grad-CAM explanations. Accuracy stability measures the consistency of classification performance between clean and perturbed images, whereas LMOS stability measures the consistency of explanation alignment with the ground-truth masks. These stability measures are combined to calculate ERI. It characterizes whether a model maintains both its predictive performance and explanation alignment under the applied perturbations. The ERI values are averaged across the evaluated perturbations to provide an overall robustness assessment.
+To assess robustness, the testing images are subjected to a set of real-world image perturbations, including noise, blur, brightness, hue, gamma adjustment, motion blur, compression artifacts, and occlusion. Each perturbed test set is evaluated using the trained models and Grad-CAM explanations. Accuracy stability measures the consistency of classification performance between clean and perturbed images, whereas LMOS stability measures the consistency of explanation alignment with the ground-truth masks. These stability measures are combined to calculate ERI. It characterizes whether a model maintains both its predictive performance and explanation alignment under the applied perturbations. The ERI values are averaged across the evaluated perturbations to provide an overall robustness assessment.
 
 Together, ETI and ERI provide complementary evaluation criteria: ETI assesses classification performance and explanation alignment, whereas ERI assesses the stability of these properties under image perturbations. This framework facilitates a more comprehensive comparison of CNN models than classification accuracy alone, particularly when models exhibit similar predictive performance but differ in explanation quality or robustness.
 	
