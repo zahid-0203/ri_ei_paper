@@ -93,22 +93,22 @@
 	%       linkedin=<linkedin id>,
 	%       gplus=<gplus id>]
 	
-	\author[1]{Ragib Mehedi}[orcid=0009-0003-1555-7338]
+	\author[1]{Ragib Mehedi}[orcid=https://orcid.org/0009-0003-1555-7338]
 	\ead{ragib6627@gmail.com}
 	\cormark[1]
 	\credit{Conceptualization, Methodology, Software, Investigation, Formal analysis, Writing – Original Draft, Writing – Review \& Editing}
 	
-	\author[1]{Azmain Inquaid Haque}
+	\author[1]{Azmain Inquaid Haque}[orcid=https://orcid.org/0009-0009-4032-2622]
 	\ead{azmaininquaidhaque@gmail.com}
 	\credit{Investigation, Data Curation, Software, Validation}
 	
-	\author[2]{Md. Nazmul Abdal}
+	\author[2]{Md. Nazmul Abdal}[orcid=https://orcid.org/0009-0001-5233-0920]
 	\ead{nazmul.abdal@ulab.edu.bd}
     \ead[url]{https://ulab.edu.bd/faculty/md-nazmul-abdal}
 	\credit{Data Curation}
 	
 	
-	\author[1]{Abdullah Al Noman}
+	\author[1]{Abdullah Al Noman}[orcid=https://orcid.org/0000-0001-7537-1402]
 	\ead{noman@cse.ku.ac.bd}
     \ead[url]{https://ku.ac.bd/discipline/cse/faculty/noman}
 	\cormark[1]
@@ -116,7 +116,7 @@
 	% Corresponding author indication
 	
 	
-	\author[1]{Md. Zahidul Islam}
+	\author[1]{Md. Zahidul Islam}[orcid=https://orcid.org/0000-0002-9209-9524]
 	\ead{zahid@cse.ku.ac.bd}
     \ead[url]{https://ku.ac.bd/discipline/cse/faculty/zahid}
 	\credit{Supervision, Writing – Review \& Editing }
@@ -154,9 +154,13 @@
 	%\end{graphicalabstract}
 	
 	% Research highlights
-	%\begin{highlights}
-	%	TBD
-	%\end{highlights}
+	\begin{highlights}
+		\item Proposed two novel metrics, ETI and ERI, to assess CNN trustworthiness and robustness
+\item Introduced LMOS, a Grad-CAM-based score linking model focus to ground-truth object regions
+\item Evaluated 8 CNN architectures on 4 leaf/flower datasets under 9 real-world perturbations
+\item High accuracy does not guarantee reliability: Custom CNN scored 99.45\% but had the lowest ETI (0.59) on EPLI
+\item Xception showed the most consistent explainable robustness across all datasets
+	\end{highlights}
 
     
 	
@@ -446,14 +450,31 @@
 	Our second problem is to obtain an evaluation measure $R$ that jointly captures these two forms of stability across the evaluated perturbations: $R = \Phi(S_{\mathrm{acc}},  S_{\mathrm{LMOS}})$. 
 	We propose Explainable Robustness Index (ERI) to address this problem. 
 	Table \ref{tab:notation} describes the notations used in the article. 
+    \input{tables/notations}
 	%\zahid{Recheck - table has all the notations and same as used in the text}
 	
 	%Therefore, the overall evaluation problem addressed in this study is to distinguish CNN architectures not only according to how accurately they classify clean images, but also according to whether their decision-relevant activation is aligned with the intended target object and whether both predictive performance and object-focused behavior remain stable under input perturbations. ETI addresses the first aspect on clean inputs, whereas ERI addresses the stability of these properties under perturbations. The two indices are complementary and are not intended to represent the overall trustworthiness or robustness of a CNN across all possible dimensions.
 	
-	\input{tables/notations}
-	
-	
+	%\input{tables/notations}
+
+    
+\begin{center}
+    \includegraphics[width=\columnwidth]{images/overview.png}
+    \captionof{figure}{System Overview of ETI and ERI}
+    \label{fig:system_overview}
+\end{center}
+
+    
 	\section{System Overview}
+    The overall framework of the proposed Explainable Trustworthy Index (ETI) and Explainable Robustness Index (ERI) is illustrated in Figure \ref{fig:system_overview}. The framework evaluates convolutional neural networks (CNNs) from complementary perspectives by considering classification performance, the alignment of model explanations with ground-truth object regions, and the stability of these properties under real-world image perturbations. The evaluation pipeline consists of dataset preparation, model training, explanation-based assessment, and the calculation of ETI and ERI for model comparison and ranking.
+
+First, the image datasets are collected. The annotated datasets are subsequently divided into training, validation, and testing subsets. The ground-truth masks are manually annotated to identify the target leaf or flower regions from testing images. Eight CNN architectures are trained and evaluated using the collected datasets. Classification accuracy is calculated on the test set to measure predictive performance. In parallel, Grad-CAM is applied to generate class-discriminative heatmaps, which are passed through threshold-based binarization to create masks for only red and yellow regions. Now masks are compared with the corresponding ground-truth masks. Now LMOS (Local Means Overlap Score) is calculated to measure what proportion of Grad-CAM activation overlaps with the ground-truth mask.
+
+The ETI combines classification accuracy and the mean LMOS into a single score that expresses whether a model maintains both predictive performance and explanation alignment. By integrating these two complementary measures, ETI distinguishes models that achieve similar classification accuracy but exhibit different levels of focus on the relevant object regions. The resulting scores are compared, and a ranking is made based on ETI values.
+
+To assess robustness, the testing images are subjected to a set of real-world image perturbations, including noise, blur, brightness and contrast changes, color transformations, gamma adjustment, motion blur, compression artifacts, and occlusion. Each perturbed test set is evaluated using the trained models and Grad-CAM explanations. Accuracy stability measures the consistency of classification performance between clean and perturbed images, whereas LMOS stability measures the consistency of explanation alignment with the ground-truth masks. These stability measures are combined to calculate ERI. It characterizes whether a model maintains both its predictive performance and explanation alignment under the applied perturbations. The ERI values are averaged across the evaluated perturbations to provide an overall robustness assessment.
+
+Together, ETI and ERI provide complementary evaluation criteria: ETI assesses classification performance and explanation alignment, whereas ERI assesses the stability of these properties under image perturbations. This framework facilitates a more comprehensive comparison of CNN models than classification accuracy alone, particularly when models exhibit similar predictive performance but differ in explanation quality or robustness.
 	
 	\section{Explainable Trustworthy Index and Explainable Robustness Index}
 	\label{sec:proposed_method}
@@ -932,7 +953,7 @@ A similar trend is observed on the BDML dataset. MobileNetV2 and Xception provid
 
 For the flower classification datasets, the ETI analysis reveals similar but dataset-dependent behavior. On the FLRS dataset, Xception achieves the highest ETI score of 0.7849, followed by DenseNet121 (0.7617) and MobileNetV2 (0.7311). Although DenseNet121 provides the highest accuracy (0.9046), Xception has achieved better overall ETI due to its higher LMOS value (0.6869). The FR also demonstrates the effectiveness of ETI in distinguishing models with similar predictive performance. Xception achieves the highest ETI score (0.7531), while DenseNet121 obtains the highest accuracy (0.9124). However, the lower LMOS of DenseNet121 (0.5382) reduces its ETI to 0.7253. These results confirm that the proposed metric provides additional insights beyond conventional accuracy ranking.
 
-The ablation results shown in Figure \ref{tab:eti_all_datasets} further validate the contribution of both components of ETI. The ``ETI without accuracy'' variant, which considers only LMOS information, produces substantially lower values across all datasets because explanation quality alone cannot represent complete model reliability. Similarly, the ``ETI without LMOS'' variant, which depends only on classification accuracy, fails to capture whether the model focuses on meaningful regions. For instance, in the EPLI dataset, the Custom CNN achieves an accuracy-based ETI value of 0.4972 when LMOS is removed, which incorrectly suggests competitive trustworthiness compared with stronger architectures. However, the complete ETI value decreases to 0.5922 due to its poor localization capability. This demonstrates that LMOS provides essential complementary information that cannot be obtained from accuracy alone.
+The ablation results shown in Table \ref{tab:eti_all_datasets} further validate the contribution of both components of ETI. The ``ETI without accuracy'' variant, which considers only LMOS information, produces substantially lower values across all datasets because explanation quality alone cannot represent complete model reliability. Similarly, the ``ETI without LMOS'' variant, which depends only on classification accuracy, fails to capture whether the model focuses on meaningful regions. For instance, in the EPLI dataset, the Custom CNN achieves an accuracy-based ETI value of 0.4972 when LMOS is removed, which incorrectly suggests competitive trustworthiness compared with stronger architectures. However, the complete ETI value decreases to 0.5922 due to its poor localization capability. This demonstrates that LMOS provides essential complementary information that cannot be obtained from accuracy alone.
 
 Across all datasets, the ablation trends consistently show that the complete ETI formulation produces a more balanced and discriminative evaluation compared with either individual component. The integration of accuracy and LMOS prevents the possibility of overestimation of models that achieve high classification scores through potentially unreliable visual reasoning. Overall, the experimental results from Table~\ref{tab:eti_all_datasets} demonstrate that ETI provides a more comprehensive measurement of CNNs by simultaneously evaluating predictive reliability and explanation quality.
 
@@ -1232,7 +1253,7 @@ Across all datasets, the ablation trends consistently show that the complete ETI
 
 The results in Tables \ref{tab:accuracy_stability_all} and \ref{tab:lmos_stability_all} demonstrate that the stability of CNN models varies across datasets and perturbation types. Xception exhibits consistently high accuracy stability, achieving the highest mean values on EPLI (0.9887), FLRS (0.9876), and FR (0.9901). On BDML, DenseNet121 achieves the highest mean accuracy stability of 0.9665, followed by InceptionResNetV2 (0.9552) and InceptionV3 (0.9544). These results indicate that several ImageNet-pretrained architectures maintain relatively consistent classification performance under the evaluated image perturbations. However, accuracy stability alone does not provide a complete picture of model reliability, as a model may preserve its predicted class while its decision-relevant regions change substantially.
 
-The mean LMOS stability results provide a complementary perspective. Xception achieves the highest mean LMOS stability on EPLI (0.8805), FLRS (0.8741), and FR (0.9478), whereas ResNet50 obtains the highest value on BDML (0.8565). Notably, ResNet50 does not achieve the highest accuracy stability on any of the four datasets, although its LMOS stability is particularly strong on BDML and FLRS. Conversely, a model's high accuracy stability does not necessarily guarantee equally high localization stability. For example, InceptionV3 exhibits high mean accuracy stability on FLRS (0.9860), but its mean LMOS stability is comparatively lower (0.7326). This difference highlights the distinction between maintaining a classification decision and consistently focusing on the relevant image regions under perturbation. Therefore, examining both stability measures provides a more informative comparison of the evaluated models than considering either measure independently.
+The mean LMOS stability results provide a complementary perspective. Xception achieves the highest mean LMOS stability on EPLI (0.8805), FLRS (0.8741), and FR (0.9478), whereas ResNet50 obtains the highest value on FR (0.8960). Notably, ResNet50 does not achieve the highest accuracy stability on any of the four datasets, although its LMOS stability is particularly strong on BDML and FLRS. Conversely, a model's high accuracy stability does not necessarily guarantee equally high localization stability. For example, InceptionV3 exhibits high mean accuracy stability on FLRS (0.9860), but its mean LMOS stability is comparatively lower (0.7326). This difference highlights the distinction between maintaining a classification decision and consistently focusing on the relevant image regions under perturbation. Therefore, examining both stability measures provide a more informative comparison of the evaluated models than considering either measure independently.
 
 Table \ref{tab:eri_perturbation_all} provides a perturbation-specific comparison of the evaluated architectures across EPLI, BDML, FLRS, and FR. The results show that model performance depends not only on the dataset but also on the type of image perturbation. Although several architectures demonstrate strong performance across multiple perturbations, their reliability is not uniform under all forms of image degradation. Motion blur is particularly challenging in the reported experiments, while blur and contrast changes also expose weaknesses in some models, particularly on BDML. These findings suggest that the effect of a perturbation cannot be characterized solely by its impact on classification performance; changes in the localization of decision-relevant regions must also be considered. The perturbation-specific results consequently help identify cases in which a model maintains comparatively stable predictions but exhibits weaker explanation stability, as well as cases in which both aspects remain relatively stable.
 
@@ -1253,8 +1274,8 @@ Across the four datasets, ETI shows a clear distinction between the two leaf dat
 
 Xception demonstrates particularly strong cross-dataset consistency for ETI. It ranks second on EPLI and BDML and first on both flower datasets. More importantly, Xception maintains relatively high LMOS values across all four datasets, ranging from 0.6029 on FR to 0.7800 on BDML. This consistency allows Xception to maintain a high ETI even when another architecture achieves slightly higher classification accuracy. For example, DenseNet121 has achieved the highest accuracy on EPLI, BDML, FLRS, and FR; especially on EPLI, it reaches 1.0000, yet it does not obtain the highest ETI on any of the four datasets. This provides strong cross-dataset evidence that classification accuracy alone is insufficient for assessing model trustworthiness. On EPLI, the Custom CNN has achieved 99.45 accuracy, but its object reliance is the lowest (only 0.19). ETI of the Custom CNN is always low, even when its accuracy is high. 
 
-The cross-dataset ERI results reveal a related but distinct pattern. Xception achieves the highest overall ERI on all four datasets, with values of 0.9346 on EPLI, 0.8982 on BDML, 0.9308 on Flowers %\zahid{check this every where}, 
-and 0.9689 on FR. Its consistently strong performance in both accuracy stability and LMOS stability indicates that the architecture is comparatively resilient to input perturbations while preserving its explanation patterns. Particularly notable is its performance on the FR, where Xception achieves an accuracy stability of 0.9901 and an LMOS stability of 0.9478, resulting in an ERI of 0.9689. Furthermore, Xception remains the strongest model across individual perturbations on this dataset, demonstrating that its robustness is not attributable to a small number of favorable transformations. 
+The cross-dataset ERI results reveal a related but distinct pattern. Xception achieves the highest overall ERI on all four datasets, with values of 0.9346 on EPLI, 0.8982 on BDML, 0.9308 on FLRS and 0.9689 on FR. %\zahid{check this every where}
+It's consistently strong performance in both accuracy stability and LMOS stability indicates that the architecture is comparatively resilient to input perturbations while preserving its explanation patterns. Particularly notable is its performance on the FR, where Xception achieves an accuracy stability of 0.9901 and an LMOS stability of 0.9478, resulting in an ERI of 0.9689. Furthermore, Xception remains the strongest model across individual perturbations on this dataset, demonstrating that its robustness is not attributable to a small number of favorable transformations. 
 
 An important observation from the cross-dataset comparison is that ETI and ERI do not necessarily produce identical performance patterns. The FLRS dataset, for example, has a substantially lower ETI for Xception (0.7849) than EPLI (0.8791), but its ERI is very high (0.9308). Similarly, the FR produces the highest ERI for Xception (0.9689) despite having a lower ETI (0.7531). This difference is expected because ETI incorporates the absolute classification accuracy and mean LMOS, whereas ERI evaluates how consistently these properties are preserved when the input is perturbed. Consequently, a model may have moderate absolute performance but exhibit highly stable predictions and explanations, resulting in a high ERI. Thus, ETI and ERI should be interpreted as complementary rather than interchangeable measures.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  12 OCT 2026 13:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  12 OCT 2026 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1180,709 +1180,1620 @@ Package caption Info: End \AtBeginDocument code.
 \verbatim@out=\write5
 \openout5 = `master.abs'.
 
+LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
+158.
 
-Underfull \hbox (badness 2707) in paragraph at lines 166--167
+(C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
+File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
+)
+Underfull \hbox (badness 2707) in paragraph at lines 170--171
 []\T1/stix/m/n/8 Explainable AI (XAI), Trust-wor-thi-
  []
 
+[0
+
+{C:/Users/samin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sami
+n/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-t1.enc}{C:/Users/sami
+n/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-ts1.enc}]
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 169.
+ne 173.
+
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
-e 169.
+e 173.
 
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 169
+LaTeX Font Info:    Trying to load font information for U+msa on input line 173
 .
 
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 169
+LaTeX Font Info:    Trying to load font information for U+msb on input line 173
 .
 
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
-ine 169.
+ine 173.
 
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
-e 169.
+e 173.
 
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
-ne 169.
+ne 173.
 
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
-e 169.
+e 173.
 
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
-e 169.
+e 173.
 
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
 )
-Overfull \hbox (123.62721pt too wide) detected at line 169
+Overfull \hbox (123.62721pt too wide) detected at line 173
 []
  []
 
 (master.abs)
 
-Package hyperref Warning: Ignoring empty anchor on input line 169.
+Package hyperref Warning: Ignoring empty anchor on input line 173.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 169.
+Package hyperref Warning: Ignoring empty anchor on input line 173.
 
-<thumbnails/cas-email.jpeg, id=6, 225.84375pt x 225.84375pt>
+<thumbnails/cas-email.jpeg, id=14, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
-Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 169.
+Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 173.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 16
-9.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 17
+3.
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 6.80005pt on input line 169.
+(Font)              scaled to size 6.80005pt on input line 173.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 169.
+Package hyperref Warning: Ignoring empty anchor on input line 173.
 
-<thumbnails/cas-url.jpeg, id=7, 225.84375pt x 225.84375pt>
+<thumbnails/cas-url.jpeg, id=15, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-url.jpeg Graphic file (type jpg)
 <use thumbnails/cas-url.jpeg>
-Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 169.
+Package pdftex.def Info: thumbnails/cas-url.jpeg  used on input line 173.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 
-Package hyperref Warning: Ignoring empty anchor on input line 169.
+Package hyperref Warning: Ignoring empty anchor on input line 173.
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 207--221
+Underfull \hbox (badness 1845) in paragraph at lines 211--225
 []\T1/stix/m/n/10 Explainable Ar-ti-fi-cial In-tel-li-gence (XAI) pro-vides a
  []
 
-[1{C:/Users/samin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sa
-min/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-t1.enc}
-
+[1
 
 {C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1
 -0.enc}{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/c
 m-super-t1.enc} <./thumbnails/cas-email.jpeg> <./thumbnails/cas-url.jpeg>]
-<images/figure1.jpg, id=70, 190.7928pt x 66.2675pt>
+<images/figure1.jpg, id=69, 190.7928pt x 66.2675pt>
 File: images/figure1.jpg Graphic file (type jpg)
 <use images/figure1.jpg>
-Package pdftex.def Info: images/figure1.jpg  used on input line 274.
+Package pdftex.def Info: images/figure1.jpg  used on input line 278.
 (pdftex.def)             Requested size: 238.25444pt x 82.7563pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 275.
+(caption)                particular \caption on input line 279.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (5.16556pt too wide) in paragraph at lines 308--319
+Overfull \hbox (5.16556pt too wide) in paragraph at lines 312--323
 []\T1/stix/m/n/10 We in-tro-duce a Lo-cal-iza-tion Mask Over-lap Score (LMOS)
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 308--319
+Underfull \hbox (badness 1509) in paragraph at lines 312--323
 \T1/stix/m/n/10 than other col-ors on mod-els' pre-dic-tions [[], []]. We
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 343--350
+Underfull \hbox (badness 1102) in paragraph at lines 347--354
 \T1/stix/m/n/10 ing four real-world datasets com-pris-ing two leaf im-age
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 343--350
+Underfull \hbox (badness 1552) in paragraph at lines 347--354
 \T1/stix/m/n/10 datasets: EPLI [[]], BDML[[]] and two flower im-age
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 364--374
+Underfull \hbox (badness 1546) in paragraph at lines 368--378
 []\T1/stix/m/n/10 The pro-posed ERI com-bines \T1/stix/m/it/10 ac-cu-racy sta-b
 il-ity \T1/stix/m/n/10 and
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 364--374
+Underfull \hbox (badness 1264) in paragraph at lines 368--378
 \T1/stix/m/n/10 This in-di-cates that, al-though its pre-dic-tive per-for-mance
 
  []
 
 
-Underfull \hbox (badness 1072) in paragraph at lines 364--374
+Underfull \hbox (badness 1072) in paragraph at lines 368--378
 \T1/stix/m/n/10 Con-versely, the ResNet50 model ex-hibits rel-a-tively low
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 364--374
+Underfull \hbox (badness 2368) in paragraph at lines 368--378
 \T1/stix/m/n/10 object-focused ex-pla-na-tion re-mains com-par-a-tively more
  []
 
 
-Underfull \hbox (badness 1515) in paragraph at lines 364--374
+Underfull \hbox (badness 1515) in paragraph at lines 368--378
 \T1/stix/m/n/10 be-hav-ior, or it may pre-serve its vi-sual fo-cus while its
  []
 
 [2 <./images/figure1.jpg>] (tables/notations.tex)
-LaTeX Font Info:    Freeze math alphabet allocation in version normal.
-(Font)              Allocated math groups: 14 (local: 2) on input line 474.
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 4
-74.
+<images/overview.png, id=105, 845.26315pt x 597.60106pt>
+File: images/overview.png Graphic file (type png)
+<use images/overview.png>
+Package pdftex.def Info: images/overview.png  used on input line 462.
+(pdftex.def)             Requested size: 238.25444pt x 168.43962pt.
 
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 463.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 469--470
+[]\T1/stix/m/n/10 The over-all frame-work of the pro-posed Ex-plain-able
+ []
+
+[3 <./images/overview.png (PNG copy)>]
+Underfull \hbox (badness 2293) in paragraph at lines 473--474
+\T1/stix/m/n/10 main-tains both pre-dic-tive per-for-mance and ex-pla-na-tion
+ []
+
+LaTeX Font Info:    Freeze math alphabet allocation in version normal.
+(Font)              Allocated math groups: 14 (local: 2) on input line 495.
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 4
+95.
 (C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 474.
+rmal on input line 495.
 LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 474.
+rmal on input line 495.
 LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 475.
+rmal on input line 496.
 LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 475.
+ne 496.
 LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 476.
+ne 497.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 476.
+ine 497.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 477.
+ine 498.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 478.
+ine 499.
 LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 485.
+rmal on input line 506.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 485.
+ine 506.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 486.
+ine 507.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 495.
-[3]
+ine 517.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 496.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 496.
+ine 517.
 LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 501.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 501.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 503.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 503.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 503.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 505.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 505.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 512.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 512.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 512.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 513.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 513.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 516.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 518.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 520.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 520.
+rmal on input line 522.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 522.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 522.
+ine 524.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 522.
+ine 524.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 522.
+ine 524.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 522.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 525.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 525.
+ine 526.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 525.
+ine 526.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 531.
+ine 533.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 533.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 533.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 534.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 534.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 537.
+[4]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 537.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 537.
+ine 539.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 537.
+ine 541.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 537.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 537.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 538.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 538.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 540.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 540.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 542.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 543.
+ine 541.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 543.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 545.
+ine 543.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 545.
+ine 543.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 547.
+ine 543.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 551.
+ine 543.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 546.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 546.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 551.
+ine 546.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 552.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 559.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 559.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 561.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 561.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 563.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 564.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 564.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 566.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 566.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 568.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 572.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 572.
 
-Overfull \hbox (5.82637pt too wide) in paragraph at lines 551--553
+Overfull \hbox (5.82637pt too wide) in paragraph at lines 572--574
 \T1/stix/m/n/10 all eval-u-ated per-tur-ba-tions $\LS2/stixcal/m/n/10 P$\T1/sti
 x/m/n/10 , the perturbation-specific LMOS
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 553.
+ine 574.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 568.
+ine 589.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 568.
+ine 589.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 568.
+ine 589.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 568.
+ine 589.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 568.
+ine 589.
 LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 573.
+rmal on input line 594.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 573.
+ine 594.
 LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 580.
+rmal on input line 601.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 580.
+ine 601.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 582.
+ine 603.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 582.
-LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-599.
-(C:\Users\samin\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
-File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
-)
+ine 603.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 599.
+ine 620.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 606.
+ine 628.
 
-[4]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 607.
-
-Underfull \hbox (badness 1132) in paragraph at lines 610--616
+Underfull \hbox (badness 1132) in paragraph at lines 631--637
 []\T1/stix/b/n/10 FLRS\T1/stix/m/n/10 : FLRS (or Flow-ers [[]]) is a large im-a
 ge
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 610--616
+Underfull \hbox (badness 1478) in paragraph at lines 631--637
 \T1/stix/m/n/10 di-men-sions and are re-sized to the re-quired in-put
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 618.
+ine 639.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 629.
+ine 643.
+[5]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 629.
+ine 650.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 629.
-(tables/tbl_dataset_distribution.tex
+ine 650.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 650.
+ (tables/tbl_dataset_distribution.tex
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 58.
 )
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 654.
+ine 675.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 658.
+ine 679.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 664.
+ine 685.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 664.
+ine 685.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 664.
+ine 685.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 665.
+ine 686.
 
-Overfull \hbox (1.95804pt too wide) in paragraph at lines 664--666
+Overfull \hbox (1.95804pt too wide) in paragraph at lines 685--687
 []\T1/stix/b/n/10 Contrast Ad-just-ment: \T1/stix/m/n/10 Mod-i-fied us-ing mean
 -centered
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 666.
-[5{C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-ts1.e
-nc}]
+ine 689.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 668.
+ine 689.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 668.
+ine 691.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 670.
-
-Underfull \hbox (badness 1215) in paragraph at lines 682--683
+ine 703.
+[6]
+Underfull \hbox (badness 1215) in paragraph at lines 703--704
 \T1/stix/m/n/10 with lin-ear bot-tle-necks and lightweight depth-wise
  []
 
 
-Overfull \hbox (1.11552pt too wide) in paragraph at lines 682--683
+Overfull \hbox (1.11552pt too wide) in paragraph at lines 703--704
 \T1/stix/m/n/10 con-vo-lu-tions to re-duce com-pu-ta-tional cost while main-
  []
 
 
-Overfull \hbox (1.60641pt too wide) in paragraph at lines 684--685
+Overfull \hbox (1.60641pt too wide) in paragraph at lines 705--706
 \T1/stix/m/n/10 prop-a-ga-tion, and helps al-le-vi-ate the vanishing-gradient
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 686.
+ine 707.
 
-Overfull \hbox (6.408pt too wide) in paragraph at lines 688--689
+Overfull \hbox (6.408pt too wide) in paragraph at lines 709--710
 []\T1/stix/b/n/10 ResNet50\T1/stix/m/n/10 : ResNet50 em-ploys resid-ual learn-i
 ng through
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 697.
+ine 718.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 698.
+ine 719.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 698.
+ine 719.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 700.
+ine 721.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 701.
+ine 722.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 703.
+ine 724.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 703.
+ine 724.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 710.
-<images/threshold/EPLY/GradCAM_Results/Original/img_0004.png, id=171, 300.12125
+ine 731.
+<images/threshold/EPLY/GradCAM_Results/Original/img_0004.png, id=183, 300.12125
 pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Original/img_0004.png Graphic file 
 (type png)
 <use images/threshold/EPLY/GradCAM_Results/Original/img_0004.png>
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Original/img_000
-4.png  used on input line 727.
+4.png  used on input line 748.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Masked/img_0004.png, id=172, 300.12125pt
+<images/threshold/EPLY/GradCAM_Results/Masked/img_0004.png, id=184, 300.12125pt
  x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Masked/img_0004.png Graphic file (t
 ype png)
 <use images/threshold/EPLY/GradCAM_Results/Masked/img_0004.png>
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Masked/img_0004.
-png  used on input line 728.
+png  used on input line 749.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004.png, id=173, 300.12125p
+<images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004.png, id=185, 300.12125p
 t x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004.png Graphic file (
 type png)
 <use images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004.png>
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/GradCAM/img_0004
-.png  used on input line 729.
+.png  used on input line 750.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Threshold_05/img_0004.png, id=174, 300.1
+<images/threshold/EPLY/GradCAM_Results/Threshold_05/img_0004.png, id=186, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Threshold_05/img_0004.png Graphic f
 ile (type png)
 <use images/threshold/EPLY/GradCAM_Results/Threshold_05/img_0004.png>
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Threshold_05/img
-_0004.png  used on input line 730.
+_0004.png  used on input line 751.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Threshold_06/img_0004.png, id=175, 300.1
+<images/threshold/EPLY/GradCAM_Results/Threshold_06/img_0004.png, id=187, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Threshold_06/img_0004.png Graphic f
 ile (type png)
 <use images/threshold/EPLY/GradCAM_Results/Threshold_06/img_0004.png>
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Threshold_06/img
-_0004.png  used on input line 731.
+_0004.png  used on input line 752.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Threshold_07/img_0004.png, id=176, 300.1
+<images/threshold/EPLY/GradCAM_Results/Threshold_07/img_0004.png, id=188, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Threshold_07/img_0004.png Graphic f
 ile (type png)
 <use images/threshold/EPLY/GradCAM_Results/Threshold_07/img_0004.png>
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Threshold_07/img
-_0004.png  used on input line 732.
+_0004.png  used on input line 753.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/EPLY/GradCAM_Results/Threshold_08/img_0004.png, id=177, 300.1
+<images/threshold/EPLY/GradCAM_Results/Threshold_08/img_0004.png, id=189, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/EPLY/GradCAM_Results/Threshold_08/img_0004.png Graphic f
 ile (type png)
 <use images/threshold/EPLY/GradCAM_Results/Threshold_08/img_0004.png>
 Package pdftex.def Info: images/threshold/EPLY/GradCAM_Results/Threshold_08/img
-_0004.png  used on input line 733.
+_0004.png  used on input line 754.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Original/img_0000.png, id=178, 300.12125
+<images/threshold/BDML/GradCAM_Results/Original/img_0000.png, id=190, 300.12125
 pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Original/img_0000.png Graphic file 
 (type png)
 <use images/threshold/BDML/GradCAM_Results/Original/img_0000.png>
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Original/img_000
-0.png  used on input line 737.
+0.png  used on input line 758.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Masked/img_0000.png, id=179, 300.12125pt
+<images/threshold/BDML/GradCAM_Results/Masked/img_0000.png, id=191, 300.12125pt
  x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Masked/img_0000.png Graphic file (t
 ype png)
 <use images/threshold/BDML/GradCAM_Results/Masked/img_0000.png>
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Masked/img_0000.
-png  used on input line 738.
+png  used on input line 759.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/GradCAM/img_0000.png, id=180, 300.12125p
+<images/threshold/BDML/GradCAM_Results/GradCAM/img_0000.png, id=192, 300.12125p
 t x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/GradCAM/img_0000.png Graphic file (
 type png)
 <use images/threshold/BDML/GradCAM_Results/GradCAM/img_0000.png>
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/GradCAM/img_0000
-.png  used on input line 739.
+.png  used on input line 760.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Threshold_05/img_0000.png, id=181, 300.1
+<images/threshold/BDML/GradCAM_Results/Threshold_05/img_0000.png, id=193, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Threshold_05/img_0000.png Graphic f
 ile (type png)
 <use images/threshold/BDML/GradCAM_Results/Threshold_05/img_0000.png>
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Threshold_05/img
-_0000.png  used on input line 740.
+_0000.png  used on input line 761.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Threshold_06/img_0000.png, id=182, 300.1
+<images/threshold/BDML/GradCAM_Results/Threshold_06/img_0000.png, id=194, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Threshold_06/img_0000.png Graphic f
 ile (type png)
 <use images/threshold/BDML/GradCAM_Results/Threshold_06/img_0000.png>
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Threshold_06/img
-_0000.png  used on input line 741.
+_0000.png  used on input line 762.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Threshold_07/img_0000.png, id=183, 300.1
+<images/threshold/BDML/GradCAM_Results/Threshold_07/img_0000.png, id=195, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Threshold_07/img_0000.png Graphic f
 ile (type png)
 <use images/threshold/BDML/GradCAM_Results/Threshold_07/img_0000.png>
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Threshold_07/img
-_0000.png  used on input line 742.
+_0000.png  used on input line 763.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/BDML/GradCAM_Results/Threshold_08/img_0000.png, id=184, 300.1
+<images/threshold/BDML/GradCAM_Results/Threshold_08/img_0000.png, id=196, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/BDML/GradCAM_Results/Threshold_08/img_0000.png Graphic f
 ile (type png)
 <use images/threshold/BDML/GradCAM_Results/Threshold_08/img_0000.png>
 Package pdftex.def Info: images/threshold/BDML/GradCAM_Results/Threshold_08/img
-_0000.png  used on input line 743.
+_0000.png  used on input line 764.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Original/img_0014.png, id=185, 300.12125
+<images/threshold/FLRS/GradCAM_Results/Original/img_0014.png, id=197, 300.12125
 pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Original/img_0014.png Graphic file 
 (type png)
 <use images/threshold/FLRS/GradCAM_Results/Original/img_0014.png>
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Original/img_001
-4.png  used on input line 747.
+4.png  used on input line 768.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Masked/img_0014.png, id=186, 300.12125pt
+<images/threshold/FLRS/GradCAM_Results/Masked/img_0014.png, id=198, 300.12125pt
  x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Masked/img_0014.png Graphic file (t
 ype png)
 <use images/threshold/FLRS/GradCAM_Results/Masked/img_0014.png>
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Masked/img_0014.
-png  used on input line 748.
+png  used on input line 769.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014.png, id=187, 300.12125p
+<images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014.png, id=199, 300.12125p
 t x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014.png Graphic file (
 type png)
 <use images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014.png>
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/GradCAM/img_0014
-.png  used on input line 749.
+.png  used on input line 770.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Threshold_05/img_0014.png, id=188, 300.1
+<images/threshold/FLRS/GradCAM_Results/Threshold_05/img_0014.png, id=200, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Threshold_05/img_0014.png Graphic f
 ile (type png)
 <use images/threshold/FLRS/GradCAM_Results/Threshold_05/img_0014.png>
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Threshold_05/img
-_0014.png  used on input line 750.
+_0014.png  used on input line 771.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Threshold_06/img_0014.png, id=189, 300.1
+<images/threshold/FLRS/GradCAM_Results/Threshold_06/img_0014.png, id=201, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Threshold_06/img_0014.png Graphic f
 ile (type png)
 <use images/threshold/FLRS/GradCAM_Results/Threshold_06/img_0014.png>
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Threshold_06/img
-_0014.png  used on input line 751.
+_0014.png  used on input line 772.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Threshold_07/img_0014.png, id=190, 300.1
+<images/threshold/FLRS/GradCAM_Results/Threshold_07/img_0014.png, id=202, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Threshold_07/img_0014.png Graphic f
 ile (type png)
 <use images/threshold/FLRS/GradCAM_Results/Threshold_07/img_0014.png>
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Threshold_07/img
-_0014.png  used on input line 752.
+_0014.png  used on input line 773.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FLRS/GradCAM_Results/Threshold_08/img_0014.png, id=191, 300.1
+<images/threshold/FLRS/GradCAM_Results/Threshold_08/img_0014.png, id=203, 300.1
 2125pt x 300.12125pt>
 File: images/threshold/FLRS/GradCAM_Results/Threshold_08/img_0014.png Graphic f
 ile (type png)
 <use images/threshold/FLRS/GradCAM_Results/Threshold_08/img_0014.png>
 Package pdftex.def Info: images/threshold/FLRS/GradCAM_Results/Threshold_08/img
-_0014.png  used on input line 753.
+_0014.png  used on input line 774.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Original/img_0013.png, id=192, 300.12125pt
+<images/threshold/FR/GradCAM_Results/Original/img_0013.png, id=204, 300.12125pt
  x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Original/img_0013.png Graphic file (t
 ype png)
 <use images/threshold/FR/GradCAM_Results/Original/img_0013.png>
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Original/img_0013.
-png  used on input line 757.
+png  used on input line 778.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Masked/img_0013.png, id=193, 300.12125pt x
+<images/threshold/FR/GradCAM_Results/Masked/img_0013.png, id=205, 300.12125pt x
  300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Masked/img_0013.png Graphic file (typ
 e png)
 <use images/threshold/FR/GradCAM_Results/Masked/img_0013.png>
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Masked/img_0013.pn
-g  used on input line 758.
+g  used on input line 779.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/GradCAM/img_0013.png, id=194, 300.12125pt 
+<images/threshold/FR/GradCAM_Results/GradCAM/img_0013.png, id=206, 300.12125pt 
 x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/GradCAM/img_0013.png Graphic file (ty
 pe png)
 <use images/threshold/FR/GradCAM_Results/GradCAM/img_0013.png>
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/GradCAM/img_0013.p
-ng  used on input line 759.
+ng  used on input line 780.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Threshold_05/img_0013.png, id=195, 300.121
+<images/threshold/FR/GradCAM_Results/Threshold_05/img_0013.png, id=207, 300.121
 25pt x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Threshold_05/img_0013.png Graphic fil
 e (type png)
 <use images/threshold/FR/GradCAM_Results/Threshold_05/img_0013.png>
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Threshold_05/img_0
-013.png  used on input line 760.
+013.png  used on input line 781.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Threshold_06/img_0013.png, id=196, 300.121
+<images/threshold/FR/GradCAM_Results/Threshold_06/img_0013.png, id=208, 300.121
 25pt x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Threshold_06/img_0013.png Graphic fil
 e (type png)
 <use images/threshold/FR/GradCAM_Results/Threshold_06/img_0013.png>
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Threshold_06/img_0
-013.png  used on input line 761.
+013.png  used on input line 782.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Threshold_07/img_0013.png, id=197, 300.121
+<images/threshold/FR/GradCAM_Results/Threshold_07/img_0013.png, id=209, 300.121
 25pt x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Threshold_07/img_0013.png Graphic fil
 e (type png)
 <use images/threshold/FR/GradCAM_Results/Threshold_07/img_0013.png>
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Threshold_07/img_0
-013.png  used on input line 762.
+013.png  used on input line 783.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
-<images/threshold/FR/GradCAM_Results/Threshold_08/img_0013.png, id=198, 300.121
+<images/threshold/FR/GradCAM_Results/Threshold_08/img_0013.png, id=210, 300.121
 25pt x 300.12125pt>
 File: images/threshold/FR/GradCAM_Results/Threshold_08/img_0013.png Graphic fil
 e (type png)
 <use images/threshold/FR/GradCAM_Results/Threshold_08/img_0013.png>
 Package pdftex.def Info: images/threshold/FR/GradCAM_Results/Threshold_08/img_0
-013.png  used on input line 763.
+013.png  used on input line 784.
 (pdftex.def)             Requested size: 64.28856pt x 64.28667pt.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 766.
+ine 787.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 769.
+ine 790.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 771.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 772.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 773.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 786.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 791.
-[6]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 791.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 791.
+ine 792.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 793.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 794.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 794.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 799.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 800.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 800.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 800.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 800.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 804.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 804.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 805.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 805.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 807.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 807.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 823.
+ine 812.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 823.
+ine 812.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 826.
- [7 <./images/threshold/EPLY/GradCAM_Results/Original/img_0004.png (PNG copy)> 
+ine 814.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 815.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 815.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 820.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 821.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 821.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 821.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 821.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 825.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 825.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 826.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 826.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 828.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 828.
+[7]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 828.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 844.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 844.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 851.
+ (tables/tbl_sample_xai.tex
+
+Package array Warning: Column C is already defined on input line 2.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 11.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png, id=233, 
+300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png Grap
+hic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
+9_original.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png, id=234,
+ 300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png Gra
+phic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
+9_segmented.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png, id=235, 300
+.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png Graphic
+ file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
+9_clean.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png, id=236, 300.1
+2125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png Graphic f
+ile (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
+9_hue.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png, id=237, 300.
+12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png Graphic 
+file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
+9_blur.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png, id=238, 
+300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png Grap
+hic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
+9_contrast.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png, id=23
+9, 300.12125pt x 300.12125pt>
+File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png G
+raphic file (type png)
+<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
+9_compression.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png, id=240
+, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png Gr
+aphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
+039_original.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png, id=24
+1, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png G
+raphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
+039_segmented.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png, id=242, 2
+24.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png Graph
+ic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
+039_clean.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png, id=243, 224
+.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png Graphic
+ file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
+039_hue.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png, id=244, 22
+4.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png Graphi
+c file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
+039_blur.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png, id=245
+, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png Gr
+aphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png>
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
+039_contrast.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png, id=
+246, 224.84pt x 224.84pt>
+File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png
+ Graphic file (type png)
+<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png>
+
+Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
+039_compression.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+<images/Introduction/BDML/Xception/IMG_9012_original.png, id=247, 300.12125pt x
+ 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_original.png Graphic file (typ
+e png)
+<use images/Introduction/BDML/Xception/IMG_9012_original.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_original.pn
+g  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (23.7851pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Xception/IMG_9012_segmented.png, id=248, 300.12125pt 
+x 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_segmented.png Graphic file (ty
+pe png)
+<use images/Introduction/BDML/Xception/IMG_9012_segmented.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_segmented.p
+ng  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Xception/IMG_9012_clean.png, id=249, 300.12125pt x 30
+0.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_clean.png Graphic file (type p
+ng)
+<use images/Introduction/BDML/Xception/IMG_9012_clean.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_clean.png  
+used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Xception/IMG_9012_hue.png, id=250, 300.12125pt x 300.
+12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_hue.png Graphic file (type png
+)
+<use images/Introduction/BDML/Xception/IMG_9012_hue.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_hue.png  us
+ed on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Xception/IMG_9012_blur.png, id=251, 300.12125pt x 300
+.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_blur.png Graphic file (type pn
+g)
+<use images/Introduction/BDML/Xception/IMG_9012_blur.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_blur.png  u
+sed on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Xception/IMG_9012_contrast.png, id=252, 300.12125pt x
+ 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_contrast.png Graphic file (typ
+e png)
+<use images/Introduction/BDML/Xception/IMG_9012_contrast.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_contrast.pn
+g  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Xception/IMG_9012_compression.png, id=253, 300.12125p
+t x 300.12125pt>
+File: images/Introduction/BDML/Xception/IMG_9012_compression.png Graphic file (
+type png)
+<use images/Introduction/BDML/Xception/IMG_9012_compression.png>
+Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_compression
+.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+<images/Introduction/BDML/Inception_V3/IMG_9012_original.png, id=254, 224.84pt 
+x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_original.png Graphic file 
+(type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_original.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_origina
+l.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (23.7851pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png, id=255, 224.84pt
+ x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png Graphic file
+ (type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_segment
+ed.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Inception_V3/IMG_9012_clean.png, id=256, 224.84pt x 2
+24.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_clean.png Graphic file (ty
+pe png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_clean.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_clean.p
+ng  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Inception_V3/IMG_9012_hue.png, id=257, 224.84pt x 224
+.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_hue.png Graphic file (type
+ png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_hue.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_hue.png
+  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Inception_V3/IMG_9012_blur.png, id=258, 224.84pt x 22
+4.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_blur.png Graphic file (typ
+e png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_blur.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_blur.pn
+g  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png, id=259, 224.84pt 
+x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png Graphic file 
+(type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_contras
+t.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+<images/Introduction/BDML/Inception_V3/IMG_9012_compression.png, id=260, 224.84
+pt x 224.84pt>
+File: images/Introduction/BDML/Inception_V3/IMG_9012_compression.png Graphic fi
+le (type png)
+<use images/Introduction/BDML/Inception_V3/IMG_9012_compression.png>
+Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_compres
+sion.png  used on input line 195.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
+ []|[]| 
+ []
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 195.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 204.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_origina
+l.png, id=261, 300.12125pt x 300.12125pt>
+File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_or
+iginal.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_ori
+ginal.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
+57684_2cc806276e_original.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_segment
+ed.png, id=262, 300.12125pt x 300.12125pt>
+File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_se
+gmented.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_seg
+mented.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
+57684_2cc806276e_segmented.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_clean.p
+ng, id=263, 300.12125pt x 300.12125pt>
+File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_cl
+ean.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_cle
+an.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
+57684_2cc806276e_clean.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue.png
+, id=264, 300.12125pt x 300.12125pt>
+File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hu
+e.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue
+.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
+57684_2cc806276e_hue.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blur.pn
+g, id=265, 300.12125pt x 300.12125pt>
+File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_bl
+ur.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blu
+r.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
+57684_2cc806276e_blur.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_contras
+t.png, id=266, 300.12125pt x 300.12125pt>
+File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_co
+ntrast.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_con
+trast.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
+57684_2cc806276e_contrast.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_compres
+sion.png, id=267, 300.12125pt x 300.12125pt>
+File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_co
+mpression.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_com
+pression.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
+57684_2cc806276e_compression.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_ori
+ginal.png, id=268, 224.84pt x 224.84pt>
+File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
+e_original.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
+_original.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
+944957684_2cc806276e_original.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_seg
+mented.png, id=269, 224.84pt x 224.84pt>
+File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
+e_segmented.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
+_segmented.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
+944957684_2cc806276e_segmented.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_cle
+an.png, id=270, 224.84pt x 224.84pt>
+File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
+e_clean.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
+_clean.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
+944957684_2cc806276e_clean.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_hue
+.png, id=271, 224.84pt x 224.84pt>
+File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
+e_hue.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
+_hue.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
+944957684_2cc806276e_hue.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_blu
+r.png, id=272, 224.84pt x 224.84pt>
+File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
+e_blur.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
+_blur.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
+944957684_2cc806276e_blur.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_con
+trast.png, id=273, 224.84pt x 224.84pt>
+File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
+e_contrast.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
+_contrast.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
+944957684_2cc806276e_contrast.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_com
+pression.png, id=274, 224.84pt x 224.84pt>
+File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
+e_compression.png Graphic file (type png)
+<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
+_compression.png>
+Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
+944957684_2cc806276e_compression.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png, id=275, 
+300.12125pt x 300.12125pt>
+File: images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png Grap
+hic file (type png)
+<use images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png>
+Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
+n_original.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png, id=276,
+ 300.12125pt x 300.12125pt>
+File: images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png Gra
+phic file (type png)
+<use images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png>
+Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
+n_segmented.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png, id=277, 300
+.12125pt x 300.12125pt>
+File: images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png Graphic
+ file (type png)
+<use images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png>
+Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
+n_clean.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png, id=278, 300.1
+2125pt x 300.12125pt>
+File: images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png Graphic f
+ile (type png)
+<use images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png>
+Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
+n_hue.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png, id=279, 300.
+12125pt x 300.12125pt>
+File: images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png Graphic 
+file (type png)
+<use images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png>
+Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
+n_blur.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png, id=280, 
+300.12125pt x 300.12125pt>
+File: images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png Grap
+hic file (type png)
+<use images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png>
+Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
+n_contrast.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png, id=28
+1, 300.12125pt x 300.12125pt>
+File: images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png G
+raphic file (type png)
+<use images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png>
+Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
+n_compression.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png, id=2
+82, 224.84pt x 224.84pt>
+File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png 
+Graphic file (type png)
+<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png>
+Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
+329_n_original.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png, id=
+283, 224.84pt x 224.84pt>
+File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png
+ Graphic file (type png)
+<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png>
+
+Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
+329_n_segmented.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png, id=284,
+ 224.84pt x 224.84pt>
+File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png Gra
+phic file (type png)
+<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png>
+Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
+329_n_clean.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png, id=285, 2
+24.84pt x 224.84pt>
+File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png Graph
+ic file (type png)
+<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png>
+Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
+329_n_hue.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png, id=286, 
+224.84pt x 224.84pt>
+File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png Grap
+hic file (type png)
+<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png>
+Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
+329_n_blur.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png, id=2
+87, 224.84pt x 224.84pt>
+File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png 
+Graphic file (type png)
+<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png>
+Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
+329_n_contrast.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.png, i
+d=288, 224.84pt x 224.84pt>
+File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.p
+ng Graphic file (type png)
+<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.pn
+g>
+Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
+329_n_compression.png  used on input line 388.
+(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+
+Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
+ []|[]| 
+ []
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 388.
+)
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 868.
+ [8 <./images/threshold/EPLY/GradCAM_Results/Original/img_0004.png (PNG copy)> 
 <./images/threshold/EPLY/GradCAM_Results/Masked/img_0004.png (PNG copy)> <./ima
 ges/threshold/EPLY/GradCAM_Results/GradCAM/img_0004.png (PNG copy)> <./images/t
 hreshold/EPLY/GradCAM_Results/Threshold_05/img_0004.png (PNG copy)> <./images/t
@@ -1911,898 +2822,8 @@ ng (PNG copy)> <./images/threshold/FR/GradCAM_Results/Threshold_06/img_0013.png
 PNG copy)> <./images/threshold/FR/GradCAM_Results/Threshold_08/img_0013.png (PN
 G copy)>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 830.
- (tables/tbl_sample_xai.tex
-
-Package array Warning: Column C is already defined on input line 2.
-
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 11.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png, id=229, 
-300.12125pt x 300.12125pt>
-File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png Grap
-hic file (type png)
-<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
-9_original.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png, id=230,
- 300.12125pt x 300.12125pt>
-File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png Gra
-phic file (type png)
-<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
-9_segmented.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png, id=231, 300
-.12125pt x 300.12125pt>
-File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png Graphic
- file (type png)
-<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
-9_clean.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png, id=232, 300.1
-2125pt x 300.12125pt>
-File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png Graphic f
-ile (type png)
-<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
-9_hue.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png, id=233, 300.
-12125pt x 300.12125pt>
-File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png Graphic 
-file (type png)
-<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_blur.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
-9_blur.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png, id=234, 
-300.12125pt x 300.12125pt>
-File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png Grap
-hic file (type png)
-<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_contrast.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
-9_contrast.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png, id=23
-5, 300.12125pt x 300.12125pt>
-File: images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png G
-raphic file (type png)
-<use images/Introduction/EgyPLI/Xception/IMG_20240710_162039_compression.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Xception/IMG_20240710_16203
-9_compression.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png, id=236
-, 224.84pt x 224.84pt>
-File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png Gr
-aphic file (type png)
-<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_original.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
-039_original.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png, id=23
-7, 224.84pt x 224.84pt>
-File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png G
-raphic file (type png)
-<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_segmented.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
-039_segmented.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png, id=238, 2
-24.84pt x 224.84pt>
-File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png Graph
-ic file (type png)
-<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_clean.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
-039_clean.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png, id=239, 224
-.84pt x 224.84pt>
-File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png Graphic
- file (type png)
-<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_hue.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
-039_hue.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png, id=240, 22
-4.84pt x 224.84pt>
-File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png Graphi
-c file (type png)
-<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_blur.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
-039_blur.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png, id=241
-, 224.84pt x 224.84pt>
-File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png Gr
-aphic file (type png)
-<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_contrast.png>
-Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
-039_contrast.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png, id=
-242, 224.84pt x 224.84pt>
-File: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png
- Graphic file (type png)
-<use images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162039_compression.png>
-
-Package pdftex.def Info: images/Introduction/EgyPLI/Custom_CNN/IMG_20240710_162
-039_compression.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-<images/Introduction/BDML/Xception/IMG_9012_original.png, id=243, 300.12125pt x
- 300.12125pt>
-File: images/Introduction/BDML/Xception/IMG_9012_original.png Graphic file (typ
-e png)
-<use images/Introduction/BDML/Xception/IMG_9012_original.png>
-Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_original.pn
-g  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (23.7851pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Xception/IMG_9012_segmented.png, id=244, 300.12125pt 
-x 300.12125pt>
-File: images/Introduction/BDML/Xception/IMG_9012_segmented.png Graphic file (ty
-pe png)
-<use images/Introduction/BDML/Xception/IMG_9012_segmented.png>
-Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_segmented.p
-ng  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Xception/IMG_9012_clean.png, id=245, 300.12125pt x 30
-0.12125pt>
-File: images/Introduction/BDML/Xception/IMG_9012_clean.png Graphic file (type p
-ng)
-<use images/Introduction/BDML/Xception/IMG_9012_clean.png>
-Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_clean.png  
-used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Xception/IMG_9012_hue.png, id=246, 300.12125pt x 300.
-12125pt>
-File: images/Introduction/BDML/Xception/IMG_9012_hue.png Graphic file (type png
-)
-<use images/Introduction/BDML/Xception/IMG_9012_hue.png>
-Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_hue.png  us
-ed on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Xception/IMG_9012_blur.png, id=247, 300.12125pt x 300
-.12125pt>
-File: images/Introduction/BDML/Xception/IMG_9012_blur.png Graphic file (type pn
-g)
-<use images/Introduction/BDML/Xception/IMG_9012_blur.png>
-Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_blur.png  u
-sed on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Xception/IMG_9012_contrast.png, id=248, 300.12125pt x
- 300.12125pt>
-File: images/Introduction/BDML/Xception/IMG_9012_contrast.png Graphic file (typ
-e png)
-<use images/Introduction/BDML/Xception/IMG_9012_contrast.png>
-Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_contrast.pn
-g  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Xception/IMG_9012_compression.png, id=249, 300.12125p
-t x 300.12125pt>
-File: images/Introduction/BDML/Xception/IMG_9012_compression.png Graphic file (
-type png)
-<use images/Introduction/BDML/Xception/IMG_9012_compression.png>
-Package pdftex.def Info: images/Introduction/BDML/Xception/IMG_9012_compression
-.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-<images/Introduction/BDML/Inception_V3/IMG_9012_original.png, id=250, 224.84pt 
-x 224.84pt>
-File: images/Introduction/BDML/Inception_V3/IMG_9012_original.png Graphic file 
-(type png)
-<use images/Introduction/BDML/Inception_V3/IMG_9012_original.png>
-Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_origina
-l.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (23.7851pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png, id=251, 224.84pt
- x 224.84pt>
-File: images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png Graphic file
- (type png)
-<use images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png>
-Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_segment
-ed.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Inception_V3/IMG_9012_clean.png, id=252, 224.84pt x 2
-24.84pt>
-File: images/Introduction/BDML/Inception_V3/IMG_9012_clean.png Graphic file (ty
-pe png)
-<use images/Introduction/BDML/Inception_V3/IMG_9012_clean.png>
-Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_clean.p
-ng  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Inception_V3/IMG_9012_hue.png, id=253, 224.84pt x 224
-.84pt>
-File: images/Introduction/BDML/Inception_V3/IMG_9012_hue.png Graphic file (type
- png)
-<use images/Introduction/BDML/Inception_V3/IMG_9012_hue.png>
-Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_hue.png
-  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Inception_V3/IMG_9012_blur.png, id=254, 224.84pt x 22
-4.84pt>
-File: images/Introduction/BDML/Inception_V3/IMG_9012_blur.png Graphic file (typ
-e png)
-<use images/Introduction/BDML/Inception_V3/IMG_9012_blur.png>
-Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_blur.pn
-g  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png, id=255, 224.84pt 
-x 224.84pt>
-File: images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png Graphic file 
-(type png)
-<use images/Introduction/BDML/Inception_V3/IMG_9012_contrast.png>
-Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_contras
-t.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-<images/Introduction/BDML/Inception_V3/IMG_9012_compression.png, id=256, 224.84
-pt x 224.84pt>
-File: images/Introduction/BDML/Inception_V3/IMG_9012_compression.png Graphic fi
-le (type png)
-<use images/Introduction/BDML/Inception_V3/IMG_9012_compression.png>
-Package pdftex.def Info: images/Introduction/BDML/Inception_V3/IMG_9012_compres
-sion.png  used on input line 195.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 195--195
- []|[]| 
- []
-
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 195.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 204.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_origina
-l.png, id=257, 300.12125pt x 300.12125pt>
-File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_or
-iginal.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_ori
-ginal.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
-57684_2cc806276e_original.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_segment
-ed.png, id=258, 300.12125pt x 300.12125pt>
-File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_se
-gmented.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_seg
-mented.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
-57684_2cc806276e_segmented.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_clean.p
-ng, id=259, 300.12125pt x 300.12125pt>
-File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_cl
-ean.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_cle
-an.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
-57684_2cc806276e_clean.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue.png
-, id=260, 300.12125pt x 300.12125pt>
-File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hu
-e.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_hue
-.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
-57684_2cc806276e_hue.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blur.pn
-g, id=261, 300.12125pt x 300.12125pt>
-File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_bl
-ur.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blu
-r.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
-57684_2cc806276e_blur.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_contras
-t.png, id=262, 300.12125pt x 300.12125pt>
-File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_co
-ntrast.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_con
-trast.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
-57684_2cc806276e_contrast.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_compres
-sion.png, id=263, 300.12125pt x 300.12125pt>
-File: images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_co
-mpression.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_com
-pression.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Xception/119449
-57684_2cc806276e_compression.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_ori
-ginal.png, id=264, 224.84pt x 224.84pt>
-File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
-e_original.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
-_original.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
-944957684_2cc806276e_original.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_seg
-mented.png, id=265, 224.84pt x 224.84pt>
-File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
-e_segmented.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
-_segmented.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
-944957684_2cc806276e_segmented.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_cle
-an.png, id=266, 224.84pt x 224.84pt>
-File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
-e_clean.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
-_clean.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
-944957684_2cc806276e_clean.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_hue
-.png, id=267, 224.84pt x 224.84pt>
-File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
-e_hue.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
-_hue.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
-944957684_2cc806276e_hue.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_blu
-r.png, id=268, 224.84pt x 224.84pt>
-File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
-e_blur.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
-_blur.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
-944957684_2cc806276e_blur.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_con
-trast.png, id=269, 224.84pt x 224.84pt>
-File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
-e_contrast.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
-_contrast.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
-944957684_2cc806276e_contrast.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_com
-pression.png, id=270, 224.84pt x 224.84pt>
-File: images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276
-e_compression.png Graphic file (type png)
-<use images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e
-_compression.png>
-Package pdftex.def Info: images/Introduction/tensorflow_dataset/Inception_V3/11
-944957684_2cc806276e_compression.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png, id=271, 
-300.12125pt x 300.12125pt>
-File: images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png Grap
-hic file (type png)
-<use images/Introduction/FR/Xception/4668543441_79040ca329_n_original.png>
-Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
-n_original.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png, id=272,
- 300.12125pt x 300.12125pt>
-File: images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png Gra
-phic file (type png)
-<use images/Introduction/FR/Xception/4668543441_79040ca329_n_segmented.png>
-Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
-n_segmented.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png, id=273, 300
-.12125pt x 300.12125pt>
-File: images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png Graphic
- file (type png)
-<use images/Introduction/FR/Xception/4668543441_79040ca329_n_clean.png>
-Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
-n_clean.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png, id=274, 300.1
-2125pt x 300.12125pt>
-File: images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png Graphic f
-ile (type png)
-<use images/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png>
-Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
-n_hue.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png, id=275, 300.
-12125pt x 300.12125pt>
-File: images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png Graphic 
-file (type png)
-<use images/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png>
-Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
-n_blur.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png, id=276, 
-300.12125pt x 300.12125pt>
-File: images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png Grap
-hic file (type png)
-<use images/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png>
-Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
-n_contrast.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png, id=27
-7, 300.12125pt x 300.12125pt>
-File: images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png G
-raphic file (type png)
-<use images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png>
-Package pdftex.def Info: images/Introduction/FR/Xception/4668543441_79040ca329_
-n_compression.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.90456pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png, id=2
-78, 224.84pt x 224.84pt>
-File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png 
-Graphic file (type png)
-<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.png>
-Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
-329_n_original.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png, id=
-279, 224.84pt x 224.84pt>
-File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png
- Graphic file (type png)
-<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png>
-
-Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
-329_n_segmented.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png, id=280,
- 224.84pt x 224.84pt>
-File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png Gra
-phic file (type png)
-<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png>
-Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
-329_n_clean.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png, id=281, 2
-24.84pt x 224.84pt>
-File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png Graph
-ic file (type png)
-<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png>
-Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
-329_n_hue.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png, id=282, 
-224.84pt x 224.84pt>
-File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png Grap
-hic file (type png)
-<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png>
-Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
-329_n_blur.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png, id=2
-83, 224.84pt x 224.84pt>
-File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png 
-Graphic file (type png)
-<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contrast.png>
-Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
-329_n_contrast.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-<images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.png, i
-d=284, 224.84pt x 224.84pt>
-File: images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.p
-ng Graphic file (type png)
-<use images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_compression.pn
-g>
-Package pdftex.def Info: images/Introduction/FR/Inception_V3/4668543441_79040ca
-329_n_compression.png  used on input line 388.
-(pdftex.def)             Requested size: 56.9055pt x 56.9063pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-
-Overfull \hbox (6.30954pt too wide) in paragraph at lines 388--388
- []|[]| 
- []
-
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 388.
-)
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 853.
- [8 <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png (PN
+ine 870.
+ [9 <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_original.png (PN
 G copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_segmented.p
 ng (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_clean
 .png (PNG copy)> <./images/Introduction/EgyPLI/Xception/IMG_20240710_162039_hue
@@ -2829,1235 +2850,1233 @@ y)> <./images/Introduction/BDML/Inception_V3/IMG_9012_segmented.png (PNG copy)>
 ges/Introduction/BDML/Inception_V3/IMG_9012_hue.png (PNG copy)> <./images/Intro
 duction/BDML/Inception_V3/IMG_9012_blur.png (PNG copy)> <./images/Introduction/
 BDML/Inception_V3/IMG_9012_contrast.png (PNG copy)> <./images/Introduction/BDML
-/Inception_V3/IMG_9012_compression.png (PNG copy)>]
+/Inception_V3/IMG_9012_compression.png (PNG copy)> <./images/Introduction/tenso
+rflow_dataset/Xception/11944957684_2cc806276e_original.png (PNG copy)> <./image
+s/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_segmented.png
+ (PNG copy)> <./images/Introduction/tensorflow_dataset/Xception/11944957684_2cc
+806276e_clean.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Xceptio
+n/11944957684_2cc806276e_hue.png (PNG copy)> <./images/Introduction/tensorflow_
+dataset/Xception/11944957684_2cc806276e_blur.png (PNG copy)> <./images/Introduc
+tion/tensorflow_dataset/Xception/11944957684_2cc806276e_contrast.png (PNG copy)
+> <./images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_com
+pression.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Inception_V3
+/11944957684_2cc806276e_original.png (PNG copy)> <./images/Introduction/tensorf
+low_dataset/Inception_V3/11944957684_2cc806276e_segmented.png (PNG copy)> <./im
+ages/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_clean.
+png (PNG copy)> <./images/Introduction/tensorflow_dataset/Inception_V3/11944957
+684_2cc806276e_hue.png (PNG copy)> <./images/Introduction/tensorflow_dataset/In
+ception_V3/11944957684_2cc806276e_blur.png (PNG copy)> <./images/Introduction/t
+ensorflow_dataset/Inception_V3/11944957684_2cc806276e_contrast.png (PNG copy)> 
+<./images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_c
+ompression.png (PNG copy)> <./images/Introduction/FR/Xception/4668543441_79040c
+a329_n_original.png (PNG copy)> <./images/Introduction/FR/Xception/4668543441_7
+9040ca329_n_segmented.png (PNG copy)> <./images/Introduction/FR/Xception/466854
+3441_79040ca329_n_clean.png (PNG copy)> <./images/Introduction/FR/Xception/4668
+543441_79040ca329_n_hue.png (PNG copy)> <./images/Introduction/FR/Xception/4668
+543441_79040ca329_n_blur.png (PNG copy)> <./images/Introduction/FR/Xception/466
+8543441_79040ca329_n_contrast.png (PNG copy)> <./images/Introduction/FR/Xceptio
+n/4668543441_79040ca329_n_compression.png (PNG copy)> <./images/Introduction/FR
+/Inception_V3/4668543441_79040ca329_n_original.png (PNG copy)> <./images/Introd
+uction/FR/Inception_V3/4668543441_79040ca329_n_segmented.png (PNG copy)> <./ima
+ges/Introduction/FR/Inception_V3/4668543441_79040ca329_n_clean.png (PNG copy)> 
+<./images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_hue.png (PNG cop
+y)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_blur.png (PN
+G copy)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_contras
+t.png (PNG copy)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329_
+n_compression.png (PNG copy)>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 860.
+ine 881.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 921.
+ine 942.
 
-Underfull \hbox (badness 1297) in paragraph at lines 931--932
+Underfull \hbox (badness 1297) in paragraph at lines 952--953
 []\T1/stix/m/n/10 A sim-i-lar trend is ob-served on the BDML dataset.
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 931--932
+Underfull \hbox (badness 1983) in paragraph at lines 952--953
 \T1/stix/m/n/10 mean-ing-ful vi-sual ex-pla-na-tions. For ex-am-ple, Xcep-tion
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 931--932
+Underfull \hbox (badness 1436) in paragraph at lines 952--953
 \T1/stix/m/n/10 achieves lower ac-cu-racy than DenseNet121 but ob-tains
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 933.
-[9 <./images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_or
-iginal.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Xception/11944
-957684_2cc806276e_segmented.png (PNG copy)> <./images/Introduction/tensorflow_d
-ataset/Xception/11944957684_2cc806276e_clean.png (PNG copy)> <./images/Introduc
-tion/tensorflow_dataset/Xception/11944957684_2cc806276e_hue.png (PNG copy)> <./
-images/Introduction/tensorflow_dataset/Xception/11944957684_2cc806276e_blur.png
- (PNG copy)> <./images/Introduction/tensorflow_dataset/Xception/11944957684_2cc
-806276e_contrast.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Xcep
-tion/11944957684_2cc806276e_compression.png (PNG copy)> <./images/Introduction/
-tensorflow_dataset/Inception_V3/11944957684_2cc806276e_original.png (PNG copy)>
- <./images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_
-segmented.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Inception_V
-3/11944957684_2cc806276e_clean.png (PNG copy)> <./images/Introduction/tensorflo
-w_dataset/Inception_V3/11944957684_2cc806276e_hue.png (PNG copy)> <./images/Int
-roduction/tensorflow_dataset/Inception_V3/11944957684_2cc806276e_blur.png (PNG 
-copy)> <./images/Introduction/tensorflow_dataset/Inception_V3/11944957684_2cc80
-6276e_contrast.png (PNG copy)> <./images/Introduction/tensorflow_dataset/Incept
-ion_V3/11944957684_2cc806276e_compression.png (PNG copy)> <./images/Introductio
-n/FR/Xception/4668543441_79040ca329_n_original.png (PNG copy)> <./images/Introd
-uction/FR/Xception/4668543441_79040ca329_n_segmented.png (PNG copy)> <./images/
-Introduction/FR/Xception/4668543441_79040ca329_n_clean.png (PNG copy)> <./image
-s/Introduction/FR/Xception/4668543441_79040ca329_n_hue.png (PNG copy)> <./image
-s/Introduction/FR/Xception/4668543441_79040ca329_n_blur.png (PNG copy)> <./imag
-es/Introduction/FR/Xception/4668543441_79040ca329_n_contrast.png (PNG copy)> <.
-/images/Introduction/FR/Xception/4668543441_79040ca329_n_compression.png (PNG c
-opy)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_original.p
-ng (PNG copy)> <./images/Introduction/FR/Inception_V3/4668543441_79040ca329_n_s
-egmented.png (PNG copy)> <./images/Introduction/FR/Inception_V3/4668543441_7904
-0ca329_n_clean.png (PNG copy)> <./images/Introduction/FR/Inception_V3/466854344
-1_79040ca329_n_hue.png (PNG copy)> <./images/Introduction/FR/Inception_V3/46685
-43441_79040ca329_n_blur.png (PNG copy)> <./images/Introduction/FR/Inception_V3/
-4668543441_79040ca329_n_contrast.png (PNG copy)> <./images/Introduction/FR/Ince
-ption_V3/4668543441_79040ca329_n_compression.png (PNG copy)>]
+ine 957.
+[10]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 936.
- [10]
+ine 965.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 944.
+ine 1035.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1014.
+ine 1041.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1020.
+ine 1105.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1084.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1090.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1154.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1160.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 1171.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1171.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 1172.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1172.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 1174.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1174.
-LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 1175.
+ine 1111.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 1175.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1226.
+ine 1181.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 1192.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1192.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 1193.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1193.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 1195.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1195.
+LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
+rmal on input line 1196.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1196.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1247.
 
-Underfull \hbox (badness 1024) in paragraph at lines 1233--1234
+Underfull \hbox (badness 1024) in paragraph at lines 1254--1255
 []\T1/stix/m/n/10 The re-sults in Ta-bles [][]7[][] and [][]8[][] demon-strate 
 that the
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1236.
+ine 1255.
 [11]
-Overfull \hbox (2.28465pt too wide) in paragraph at lines 1239--1240
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1260.
+ [12]
+Overfull \hbox (2.28465pt too wide) in paragraph at lines 1260--1261
 \T1/stix/m/n/10 Xcep-tion achieves the high-est over-all ERI on all four datase
 ts,
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1242.
-[12]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1248.
- [13]
-Overfull \hbox (2.3472pt too wide) in paragraph at lines 1252--1253
+ine 1267.
+[13]
+Overfull \hbox (2.3472pt too wide) in paragraph at lines 1273--1274
 \T1/stix/m/n/10 and 0.8657, re-spec-tively, while Xcep-tion has achieved 0.8791
 
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 1252--1253
+Underfull \hbox (badness 1701) in paragraph at lines 1273--1274
 \T1/stix/m/n/10 si-fi-ca-tion ac-cu-racy and lo-cal-iza-tion qual-ity on the le
 af
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1255.
+ine 1274.
 [14]
-Underfull \hbox (badness 1377) in paragraph at lines 1265--1266
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1281.
+ [15]
+Underfull \hbox (badness 1377) in paragraph at lines 1286--1287
 []\T1/stix/m/n/10 Overall, the cross-dataset anal-y-sis demon-strates that
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 1265--1266
+Underfull \hbox (badness 1052) in paragraph at lines 1286--1287
 \T1/stix/m/n/10 sub-stan-tially weaker ex-pla-na-tion qual-ity and ro-bust-ness
 .
  []
 
 LaTeX Font Info:    Nested math: keeping math alphabet allocation in version no
-rmal on input line 1287.
+rmal on input line 1308.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1287.
+ine 1308.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1287.
+ine 1308.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1290.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1292.
-[15]
-Underfull \hbox (badness 1946) in paragraph at lines 1294--1299
+ine 1311.
+
+Underfull \hbox (badness 1946) in paragraph at lines 1315--1320
 \T1/stix/m/n/10 Hendrycks and Di-et-terich [[]] es-tab-lished foun-da-tional
  []
 
 
-Underfull \hbox (badness 1072) in paragraph at lines 1294--1299
+Underfull \hbox (badness 1072) in paragraph at lines 1315--1320
 \T1/stix/m/n/10 and per-tur-ba-tions. Ex-tend-ing this, Schnei-der et al. [[]]
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 1294--1299
+Underfull \hbox (badness 1168) in paragraph at lines 1315--1320
 \T1/stix/m/n/10 al. [[]] in-ves-ti-gated ad-ver-sar-ial and nat-u-ral dis-tri-b
 u-tion
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1302.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1303.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1304.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1316.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1320.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1320.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1320.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1339.
+ine 1321.
 [16]
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 1345.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1348.
+ine 1323.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1324.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1325.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1337.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1341.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1341.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1341.
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 1366.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 1369.
 
-Overfull \hbox (3.16129pt too wide) in paragraph at lines 1350--1351
+Overfull \hbox (3.16129pt too wide) in paragraph at lines 1371--1372
 \T1/stix/m/n/10 Draft, Writ-ing ^^U Re-view & Edit-ing. \T1/stix/b/n/10 Az-main
  In-quaid Haque:
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 1350--1351
+Underfull \hbox (badness 1509) in paragraph at lines 1371--1372
 \T1/stix/m/n/10 In-ves-ti-ga-tion, Data Cu-ra-tion, Soft-ware, Val-i-da-tion. \
 T1/stix/b/n/10 Md.
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 1350--1351
+Underfull \hbox (badness 1931) in paragraph at lines 1371--1372
 \T1/stix/b/n/10 Naz-mul Ab-dal: \T1/stix/m/n/10 Data Cu-ra-tion. \T1/stix/b/n/1
 0 Ab-dul-lah Al No-man:
  []
 
-(master.bbl
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 123.
- [17]
+ine 1372.
+[17] (master.bbl
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 155.
 
@@ -4076,7 +4095,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--162
 \T1/stix/m/n/8 https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
  []
 
-
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 175.
+[18]
 Underfull \hbox (badness 7759) in paragraph at lines 219--223
 []\T1/stix/m/n/8 N. Sri-vas-tava, G. Hin-ton, A. Krizhevsky, I. Sutskever, and
  []
@@ -4119,8 +4140,8 @@ it/8 arXiv preprint
 
 )
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 1370.
- [18] (master.aux)
+ine 1391.
+ [19] (master.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-07-20>
@@ -4129,13 +4150,13 @@ Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33660 strings out of 467501
- 694013 string characters out of 5408550
- 1070101 words of memory out of 5000000
- 62235 multiletter control sequences out of 15000+600000
- 736864 words of font info for 184 fonts, out of 8000000 for 9000
+ 33676 strings out of 467501
+ 694388 string characters out of 5408550
+ 1093671 words of memory out of 5000000
+ 62248 multiletter control sequences out of 15000+600000
+ 739636 words of font info for 185 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,21n,117p,1078b,1238s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 92i,21n,117p,1078b,1280s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsolata/
 Inconsolata-zi4r.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/stix/STIXGeneral-Bold.pfb><C:/Users/samin/AppData/Local/Programs/MiKTeX/
@@ -4156,9 +4177,9 @@ AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/
 Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.p
 fb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-m
 athscr.pfb>
-Output written on master.pdf (18 pages, 8663704 bytes).
+Output written on master.pdf (20 pages, 9330899 bytes).
 PDF statistics:
- 526 PDF objects out of 1000 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
- 448 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 538 PDF objects out of 1000 (max. 8388607)
+ 130 named destinations out of 1000 (max. 500000)
+ 453 words of extra memory for PDF output out of 10000 (max. 10000000)
 
