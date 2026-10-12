@@ -5,39 +5,38 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
-Warning--I didn't find a database entry for ""
 Warning--empty year in ref14
 Warning--can't use both volume and number fields in ref37
-You've used 60 entries,
+You've used 61 entries,
             1876 wiz_defined-function locations,
-            794 strings with 15821 characters,
-and the built_in function-call counts, 17511 in all, are:
-= -- 1624
-> -- 862
+            798 strings with 15811 characters,
+and the built_in function-call counts, 17632 in all, are:
+= -- 1634
+> -- 866
 < -- 0
-+ -- 309
-- -- 249
-* -- 1255
-:= -- 2483
-add.period$ -- 61
-call.type$ -- 60
-change.case$ -- 60
++ -- 311
+- -- 250
+* -- 1259
+:= -- 2500
+add.period$ -- 62
+call.type$ -- 61
+change.case$ -- 61
 chr.to.int$ -- 0
-cite$ -- 62
-duplicate$ -- 944
-empty$ -- 1593
-format.name$ -- 249
-if$ -- 4238
+cite$ -- 63
+duplicate$ -- 948
+empty$ -- 1611
+format.name$ -- 250
+if$ -- 4269
 int.to.chr$ -- 0
-int.to.str$ -- 60
+int.to.str$ -- 61
 missing$ -- 58
-newline$ -- 184
-num.names$ -- 60
-pop$ -- 244
+newline$ -- 187
+num.names$ -- 61
+pop$ -- 251
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 633
+skip$ -- 637
 stack$ -- 0
 substring$ -- 1040
 swap$ -- 403
@@ -46,7 +45,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 148
-width$ -- 62
-write$ -- 567
-(There were 3 warnings)
+while$ -- 149
+width$ -- 63
+write$ -- 574
+(There were 2 warnings)
