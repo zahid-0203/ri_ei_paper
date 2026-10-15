@@ -1,5 +1,5 @@
 Convolutional neural networks (CNNs) can achieve high classification accuracy while grounding their predictions on background or irrelevant image regions.
-	Furthermore, external input perturbations can alter both what the models predict and what evidence they cosider for making the predictions.
+	Furthermore, external input perturbations can alter both what the models predict and what evidence they consider for making the predictions.
 	Accuracy-based evaluation captures neither problem.
 	We propose two complementary model-level metrics that integrate predictive performance with explanation quality.
 	The Explainable Trustworthy Index (ETI) combines classification accuracy with the Localization Mask Overlap Score (LMOS).
