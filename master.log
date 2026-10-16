@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  15 OCT 2026 10:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.23)  16 OCT 2026 18:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4044,25 +4044,7 @@ LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 8.50006pt on input line 1409.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 1412.
-
-Overfull \hbox (3.16129pt too wide) in paragraph at lines 1414--1415
-\T1/stix/m/n/10 Draft, Writ-ing ^^U Re-view & Edit-ing. \T1/stix/b/n/10 Az-main
- In-quaid Haque:
- []
-
-
-Underfull \hbox (badness 1509) in paragraph at lines 1414--1415
-\T1/stix/m/n/10 In-ves-ti-ga-tion, Data Cu-ra-tion, Soft-ware, Val-i-da-tion. \
-T1/stix/b/n/10 Md.
- []
-
-
-Underfull \hbox (badness 1931) in paragraph at lines 1414--1415
-\T1/stix/b/n/10 Naz-mul Ab-dal: \T1/stix/m/n/10 Data Cu-ra-tion. \T1/stix/b/n/1
-0 Ab-dul-lah Al No-man:
- []
-
-(master.bbl
+ (master.bbl
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 123.
  [18]
@@ -4137,10 +4119,10 @@ Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33685 strings out of 467501
- 694543 string characters out of 5408550
- 1071097 words of memory out of 5000000
- 62254 multiletter control sequences out of 15000+600000
+ 33684 strings out of 467501
+ 694532 string characters out of 5408550
+ 1071109 words of memory out of 5000000
+ 62253 multiletter control sequences out of 15000+600000
  742401 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,21n,117p,1078b,1238s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4164,7 +4146,7 @@ AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/
 Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.p
 fb><C:/Users/samin/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-m
 athscr.pfb>
-Output written on master.pdf (20 pages, 9258839 bytes).
+Output written on master.pdf (20 pages, 9258847 bytes).
 PDF statistics:
  544 PDF objects out of 1000 (max. 8388607)
  133 named destinations out of 1000 (max. 500000)
